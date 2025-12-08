@@ -1,0 +1,37 @@
+{
+  "who was vivekananda": {
+    "source": "Wikipedia",
+    "text": "Swami Vivekananda () (12 January 1863 – 4 July 1902), born Narendranath Datta, was an Indian Hindu monk, philosopher, author, religious teacher, and the chief disciple of the Indian mystic Ramakrishna. Vivekananda was a major figure in the introduction of Vedanta and Yoga to the Western world, and is credited with raising interfaith awareness and elevating Hinduism to the status of a major world religion.\nVivekananda showed an early inclination towards religion and spirituality.",
+    "confidence": 0.9,
+    "meta": {},
+    "sources": {
+      "Wikipedia": true
+    }
+  },
+  "why is dna so important": {
+    "source": "Wikipedia",
+    "text": "Junk DNA (non-functional DNA) is a DNA sequence that has no known biological function. Most organisms have some junk DNA in their genomes—mostly pseudogenes and fragments of transposons and viruses—but it is possible that some organisms have substantial amounts of junk DNA.\nAll protein-coding regions are generally considered to be functional elements in genomes. Additionally, non-protein coding regions such as genes for ribosomal RNA and transfer RNA, regulatory sequences, origins of replication, centromeres, telomeres, and scaffold attachment regions are considered as functional elements.",
+    "confidence": 0.9,
+    "meta": {},
+    "sources": {
+      "Wikipedia": true
+    }
+  },
+  "latest research on space": {
+    "source": "qa",
+    "text": "Main Answer (Qa):\nThe Indian Space Research Organisation (ISRO ) is the national space agency of India, headquartered in Bengaluru, Karnataka. It serves as the principal research and development arm of the Department of Space (DoS), overseen by the Prime Minister of India, with the Chairman of ISRO also serving as the chief executive of the DoS. It is primarily responsible for space-based operations, space exploration, international space cooperation and the development of related technologies.",
+    "confidence": 0.9,
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    },
+    "sources": {
+      "qa": true
+    }
+  }
+}

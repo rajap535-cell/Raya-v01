@@ -1,0 +1,26 @@
+{
+  "daily_pattern": {
+    "00-06": 0.7,
+    "06-09": 1.2,
+    "09-12": 1.0,
+    "12-15": 0.95,
+    "15-18": 1.05,
+    "18-22": 1.4,
+    "22-24": 0.9
+  },
+  "weekly_pattern": {
+    "monday": 1.05,
+    "tuesday": 1.0,
+    "wednesday": 1.0,
+    "thursday": 1.0,
+    "friday": 1.05,
+    "saturday": 0.9,
+    "sunday": 0.85
+  },
+  "seasonal_pattern": {
+    "winter": 0.95,
+    "summer": 1.15,
+    "monsoon": 1.0,
+    "post_monsoon": 1.05
+  }
+}

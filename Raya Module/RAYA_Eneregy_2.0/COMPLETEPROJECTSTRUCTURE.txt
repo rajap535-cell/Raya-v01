@@ -1,0 +1,34 @@
+raya-energy-ai-complete/
+├── app.py
+├── requirements.txt
+├── .env.sample
+├── run_local.sh
+├── README.md
+├── setup.sh
+├── modules/
+│   ├── __init__.py
+│   ├── imd.py
+│   ├── cea.py
+│   └── predictor.py
+├── utils/
+│   ├── __init__.py
+│   ├── validators.py
+│   └── helpers.py
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── app.js
+├── templates/
+│   └── index.html
+├── data/
+│   ├── historical_patterns.json
+│   └── sample_dataset.csv
+├── models/
+│   └── energy_predictor_model.pkl
+├── logs/
+│   └── .gitkeep
+└── tests/
+    ├── __init__.py
+    ├── test_imd.py
+    └── test_predictor.py

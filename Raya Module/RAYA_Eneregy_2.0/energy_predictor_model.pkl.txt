@@ -1,0 +1,12 @@
+# Create this file by running: python create_model.py
+import pickle
+import numpy as np
+
+class DummyModel:
+    def predict(self, X):
+        # Return random predictions between 2000-6000 MW
+        return np.random.randint(2000, 6000, len(X))
+
+model = DummyModel()
+with open('models/energy_predictor_model.pkl', 'wb') as f:
+    pickle.dump(model, f)

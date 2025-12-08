@@ -1,0 +1,1001 @@
+State,City,WaterAvailabilityIndex,EnergyStabilityIndex,PopulationDensity,TemperatureVariation,PollutionLevel
+Telangana,Warangal,0,0,599059,7,47
+Tamil Nadu,Coimbatore,1,1,587084,2,67
+West Bengal,Howrah,1,1,532433,12,21
+Rajasthan,Jaipur,1,0,751906,6,136
+West Bengal,Durgapur,1,1,408870,11,123
+Delhi,New Delhi,1,1,768536,9,23
+Rajasthan,Udaipur,0,0,719139,12,12
+Madhya Pradesh,Gwalior,1,1,549231,16,97
+Uttar Pradesh,Varanasi,0,0,377644,8,52
+Uttar Pradesh,Lucknow,1,0,774209,15,121
+Rajasthan,Jaipur,1,0,473072,7,161
+Gujarat,Ahmedabad,0,1,443796,2,157
+West Bengal,Kolkata,0,0,474939,9,43
+Uttar Pradesh,Kanpur,0,0,775667,2,59
+Madhya Pradesh,Bhopal,0,0,534029,14,151
+Karnataka,Mysuru,0,1,383446,16,125
+Gujarat,Vadodara,1,0,405484,5,67
+Telangana,Nizamabad,0,0,448889,4,69
+Madhya Pradesh,Gwalior,0,1,424577,15,13
+Karnataka,Bengaluru,0,0,403066,14,71
+West Bengal,Durgapur,1,1,508579,6,104
+Madhya Pradesh,Indore,1,0,539429,16,44
+Maharashtra,Nagpur,1,0,662858,2,123
+Maharashtra,Nagpur,1,1,514720,12,140
+Gujarat,Surat,0,1,529961,13,56
+Gujarat,Ahmedabad,1,0,404928,11,97
+Telangana,Hyderabad,0,0,632439,5,113
+Gujarat,Ahmedabad,0,0,581650,9,38
+Gujarat,Surat,0,0,407918,13,14
+Tamil Nadu,Chennai,1,1,355200,19,134
+Maharashtra,Mumbai,1,0,353186,18,31
+Delhi,New Delhi,0,0,442121,4,141
+West Bengal,Durgapur,0,1,522839,4,29
+Uttar Pradesh,Varanasi,1,0,623060,9,112
+Telangana,Warangal,0,1,619973,7,58
+Karnataka,Mangaluru,1,0,528606,12,97
+Uttar Pradesh,Varanasi,1,0,609603,15,19
+Madhya Pradesh,Bhopal,1,0,354679,13,118
+Karnataka,Mysuru,1,0,509592,10,58
+Rajasthan,Jodhpur,1,1,739295,16,179
+Gujarat,Ahmedabad,1,1,471466,17,27
+Tamil Nadu,Coimbatore,0,1,732049,5,165
+Gujarat,Vadodara,0,0,510491,18,36
+Tamil Nadu,Madurai,0,1,506058,4,10
+Uttar Pradesh,Varanasi,0,0,482894,19,141
+Telangana,Nizamabad,1,0,702314,8,73
+Rajasthan,Udaipur,0,1,727183,5,176
+Maharashtra,Nagpur,0,1,683528,3,27
+Rajasthan,Udaipur,1,1,643704,16,122
+Rajasthan,Jaipur,0,1,374531,18,128
+Madhya Pradesh,Indore,0,1,591532,3,100
+Madhya Pradesh,Indore,1,0,493912,14,134
+Delhi,New Delhi,0,0,366126,6,54
+West Bengal,Kolkata,1,1,441904,16,124
+West Bengal,Durgapur,0,0,670346,16,57
+Telangana,Warangal,0,0,688374,13,131
+Tamil Nadu,Chennai,0,0,711698,8,119
+Maharashtra,Pune,0,1,621691,12,167
+Madhya Pradesh,Bhopal,0,0,676098,6,165
+West Bengal,Howrah,0,0,485312,10,115
+Rajasthan,Jodhpur,0,0,738598,7,79
+Gujarat,Vadodara,0,1,471060,18,11
+Gujarat,Vadodara,1,0,764691,2,19
+West Bengal,Howrah,1,1,553774,4,43
+Karnataka,Mysuru,0,1,579832,3,151
+West Bengal,Kolkata,0,1,657439,14,58
+Madhya Pradesh,Bhopal,1,0,704360,9,32
+Delhi,New Delhi,1,0,456803,12,27
+Tamil Nadu,Coimbatore,1,0,395193,6,158
+Delhi,New Delhi,0,0,394096,13,33
+Rajasthan,Jaipur,0,1,603064,2,186
+Tamil Nadu,Chennai,0,1,757607,9,11
+Maharashtra,Mumbai,1,1,550985,9,47
+Rajasthan,Jodhpur,1,1,558024,14,68
+West Bengal,Howrah,0,0,639645,4,196
+Madhya Pradesh,Bhopal,1,1,718814,7,155
+Madhya Pradesh,Gwalior,1,0,386033,10,113
+Maharashtra,Mumbai,0,0,426210,15,189
+Madhya Pradesh,Gwalior,1,0,615704,18,167
+Gujarat,Vadodara,1,0,523995,16,42
+Madhya Pradesh,Indore,0,0,605060,18,79
+Delhi,New Delhi,0,0,710509,15,24
+West Bengal,Howrah,1,0,661727,12,119
+Delhi,New Delhi,0,0,728650,11,30
+West Bengal,Kolkata,1,0,424390,12,55
+Maharashtra,Mumbai,0,0,371070,4,18
+Madhya Pradesh,Indore,0,1,412359,13,26
+Karnataka,Bengaluru,0,0,532273,6,164
+Telangana,Warangal,0,1,616284,4,121
+Uttar Pradesh,Lucknow,1,1,544302,13,196
+Rajasthan,Udaipur,1,0,752655,2,28
+West Bengal,Howrah,1,1,661774,14,38
+Rajasthan,Jaipur,0,0,373184,19,146
+Rajasthan,Jaipur,1,0,697684,18,92
+Gujarat,Vadodara,0,1,763775,14,151
+Maharashtra,Nagpur,1,0,691701,4,95
+Karnataka,Mangaluru,0,0,480712,14,104
+West Bengal,Howrah,0,1,779720,4,138
+Tamil Nadu,Chennai,0,1,702477,14,18
+Uttar Pradesh,Kanpur,0,1,571776,16,110
+Rajasthan,Jodhpur,1,0,474562,10,163
+Gujarat,Surat,0,1,688701,11,73
+Madhya Pradesh,Gwalior,0,1,431529,10,18
+Delhi,New Delhi,1,1,624923,9,101
+Karnataka,Mysuru,0,1,365102,7,161
+Delhi,New Delhi,0,0,590693,14,162
+West Bengal,Howrah,1,1,512479,6,159
+West Bengal,Howrah,1,1,722124,14,123
+Madhya Pradesh,Indore,1,0,399831,8,101
+Telangana,Hyderabad,0,1,718173,6,98
+Telangana,Hyderabad,0,1,352777,3,33
+Madhya Pradesh,Gwalior,1,0,691099,5,126
+Madhya Pradesh,Bhopal,1,1,567171,19,122
+West Bengal,Durgapur,0,1,512194,6,50
+Tamil Nadu,Coimbatore,1,1,474158,11,198
+Karnataka,Mysuru,1,1,446698,3,145
+Tamil Nadu,Madurai,1,1,465558,17,197
+Uttar Pradesh,Varanasi,1,1,738617,17,98
+Karnataka,Bengaluru,1,1,456543,5,101
+Gujarat,Ahmedabad,1,0,462359,2,178
+Uttar Pradesh,Lucknow,1,1,735047,13,40
+Maharashtra,Nagpur,1,0,451837,16,157
+Delhi,New Delhi,1,0,510463,14,186
+West Bengal,Durgapur,1,0,711892,4,66
+Rajasthan,Jodhpur,0,0,772332,19,75
+Karnataka,Mysuru,1,1,741520,5,58
+Maharashtra,Nagpur,1,1,571789,14,138
+Delhi,New Delhi,0,0,413447,13,42
+Gujarat,Surat,1,0,581507,4,48
+Tamil Nadu,Chennai,0,1,543720,2,198
+Maharashtra,Mumbai,0,1,550830,6,134
+Telangana,Hyderabad,0,0,381006,7,95
+West Bengal,Howrah,1,1,768194,15,169
+Telangana,Hyderabad,1,0,422124,13,116
+Gujarat,Vadodara,0,0,547225,11,194
+Rajasthan,Udaipur,0,0,586132,11,61
+Tamil Nadu,Chennai,0,0,474055,13,107
+Uttar Pradesh,Lucknow,0,1,356241,8,39
+Uttar Pradesh,Lucknow,1,0,546932,11,52
+Tamil Nadu,Madurai,0,1,728032,17,140
+Madhya Pradesh,Indore,0,1,475177,2,108
+Karnataka,Mangaluru,1,0,725531,19,58
+Uttar Pradesh,Lucknow,1,0,625143,14,79
+Maharashtra,Pune,0,1,604497,10,157
+Delhi,New Delhi,0,0,503274,13,159
+Uttar Pradesh,Varanasi,1,0,701068,19,151
+West Bengal,Kolkata,0,1,605697,6,28
+Tamil Nadu,Chennai,1,1,706552,2,53
+Uttar Pradesh,Varanasi,0,1,436390,17,153
+Karnataka,Mangaluru,1,1,732016,18,197
+West Bengal,Durgapur,1,1,460252,4,66
+Uttar Pradesh,Kanpur,1,0,395724,7,151
+Gujarat,Surat,0,1,776505,4,24
+West Bengal,Durgapur,0,0,439904,15,17
+West Bengal,Howrah,0,1,470285,16,132
+West Bengal,Durgapur,0,0,524463,9,163
+Tamil Nadu,Chennai,1,1,573447,10,130
+Madhya Pradesh,Bhopal,1,1,615269,15,39
+Telangana,Nizamabad,0,0,456259,4,163
+Rajasthan,Jodhpur,1,0,584188,14,105
+Rajasthan,Jodhpur,0,1,522614,14,53
+Karnataka,Bengaluru,1,0,606852,5,16
+Karnataka,Bengaluru,0,1,359378,2,80
+Telangana,Nizamabad,0,1,697258,18,167
+Gujarat,Ahmedabad,1,0,577768,4,176
+Tamil Nadu,Chennai,0,1,375616,3,43
+Karnataka,Bengaluru,1,1,535813,12,157
+Rajasthan,Udaipur,1,1,355474,12,36
+Maharashtra,Pune,1,0,632738,9,100
+Uttar Pradesh,Kanpur,0,1,507269,5,88
+Madhya Pradesh,Indore,0,1,771194,3,96
+Rajasthan,Udaipur,1,0,548507,10,104
+Karnataka,Bengaluru,0,1,566631,10,73
+Rajasthan,Udaipur,1,0,733845,16,90
+Rajasthan,Udaipur,1,1,525953,14,50
+Gujarat,Ahmedabad,1,0,658591,8,124
+Tamil Nadu,Madurai,1,0,596914,12,144
+Uttar Pradesh,Lucknow,1,0,414623,2,98
+West Bengal,Howrah,1,1,518812,17,172
+Rajasthan,Jaipur,1,0,725111,17,113
+Karnataka,Mangaluru,0,1,506637,9,165
+Uttar Pradesh,Varanasi,0,0,572012,2,34
+Gujarat,Surat,1,1,450143,11,190
+West Bengal,Howrah,1,0,402459,5,67
+Uttar Pradesh,Kanpur,0,0,767634,17,25
+Telangana,Warangal,0,0,694766,18,126
+Karnataka,Bengaluru,1,0,563505,10,144
+West Bengal,Howrah,0,1,745909,14,199
+Uttar Pradesh,Lucknow,1,0,452059,19,177
+Rajasthan,Udaipur,1,1,717467,2,190
+West Bengal,Howrah,0,1,719076,14,96
+Madhya Pradesh,Indore,0,1,414727,13,132
+Gujarat,Vadodara,0,0,491095,10,40
+Telangana,Hyderabad,0,0,494770,2,99
+Tamil Nadu,Chennai,1,1,711117,10,199
+Uttar Pradesh,Lucknow,0,1,463988,3,136
+Gujarat,Vadodara,1,1,574998,4,145
+Telangana,Warangal,1,0,752076,7,161
+Uttar Pradesh,Varanasi,0,1,626107,14,73
+Madhya Pradesh,Bhopal,0,0,442062,5,173
+Tamil Nadu,Coimbatore,0,0,777176,17,130
+Madhya Pradesh,Bhopal,1,1,633047,4,91
+Karnataka,Bengaluru,1,0,754478,2,154
+Tamil Nadu,Coimbatore,0,1,737363,19,50
+Tamil Nadu,Madurai,1,1,682976,5,53
+Tamil Nadu,Coimbatore,0,0,639195,9,15
+Telangana,Hyderabad,1,1,534363,4,125
+Delhi,New Delhi,0,1,666237,4,96
+Maharashtra,Nagpur,1,0,501767,8,172
+Karnataka,Bengaluru,1,0,428564,4,149
+Rajasthan,Jaipur,0,0,469882,10,120
+Gujarat,Vadodara,0,0,411924,14,179
+Maharashtra,Nagpur,0,1,580023,9,53
+Maharashtra,Pune,1,0,569194,9,72
+Karnataka,Bengaluru,0,1,431580,6,150
+Tamil Nadu,Coimbatore,0,1,649155,14,62
+Tamil Nadu,Chennai,1,0,420458,12,90
+Madhya Pradesh,Gwalior,1,1,528391,15,88
+Telangana,Hyderabad,0,1,504369,2,169
+Delhi,New Delhi,1,1,529915,5,168
+Telangana,Nizamabad,1,1,749247,12,137
+Telangana,Warangal,1,0,519255,6,71
+Delhi,New Delhi,1,1,670960,8,78
+West Bengal,Howrah,0,1,600231,14,146
+Tamil Nadu,Madurai,0,1,366090,8,160
+Tamil Nadu,Madurai,1,1,587256,4,77
+Uttar Pradesh,Varanasi,0,1,378238,8,171
+Madhya Pradesh,Gwalior,1,0,708237,9,56
+Tamil Nadu,Chennai,0,0,438294,13,33
+Madhya Pradesh,Bhopal,0,1,389200,2,172
+Uttar Pradesh,Lucknow,0,1,440386,12,181
+Telangana,Hyderabad,1,0,519784,14,117
+Telangana,Hyderabad,1,0,616436,6,173
+West Bengal,Howrah,0,0,395076,7,182
+Telangana,Hyderabad,0,0,423973,3,111
+Karnataka,Mysuru,0,0,550267,7,144
+Madhya Pradesh,Indore,1,1,493832,15,178
+Maharashtra,Pune,0,1,546637,2,187
+Gujarat,Ahmedabad,0,0,456889,2,154
+Gujarat,Surat,0,1,533186,3,43
+Maharashtra,Pune,0,1,617120,10,138
+Delhi,New Delhi,0,0,353076,14,118
+Madhya Pradesh,Bhopal,0,1,516269,12,44
+Maharashtra,Pune,1,0,508049,10,142
+Telangana,Warangal,0,0,627352,15,162
+Gujarat,Surat,0,0,631191,4,187
+Uttar Pradesh,Varanasi,1,1,362022,3,89
+Maharashtra,Mumbai,0,1,428450,9,186
+West Bengal,Durgapur,1,0,487420,9,116
+Rajasthan,Jaipur,1,1,419449,16,123
+Madhya Pradesh,Gwalior,1,1,392809,10,102
+Uttar Pradesh,Lucknow,1,1,427307,19,103
+Tamil Nadu,Chennai,1,1,690111,10,110
+Uttar Pradesh,Varanasi,1,1,688174,8,82
+Tamil Nadu,Chennai,1,0,534022,9,70
+Karnataka,Mysuru,1,1,574826,16,46
+Uttar Pradesh,Kanpur,0,1,723796,15,65
+West Bengal,Howrah,1,0,469378,11,61
+Telangana,Hyderabad,1,0,712969,18,11
+Karnataka,Mangaluru,1,0,768199,6,12
+Madhya Pradesh,Gwalior,1,1,419851,9,95
+Madhya Pradesh,Bhopal,0,0,456886,6,195
+Karnataka,Bengaluru,1,0,637239,12,125
+Madhya Pradesh,Gwalior,1,0,496481,11,79
+Karnataka,Mangaluru,1,0,478379,10,49
+West Bengal,Durgapur,0,0,547459,12,148
+Uttar Pradesh,Lucknow,0,1,641533,3,127
+Gujarat,Ahmedabad,1,1,744888,2,48
+Rajasthan,Udaipur,1,1,548937,6,142
+Gujarat,Ahmedabad,1,0,399861,10,175
+Gujarat,Surat,1,0,538533,4,68
+Madhya Pradesh,Indore,0,0,469246,19,67
+Madhya Pradesh,Bhopal,0,0,491705,2,171
+Madhya Pradesh,Bhopal,0,0,411364,14,119
+Karnataka,Bengaluru,1,0,713964,8,69
+Uttar Pradesh,Kanpur,0,0,491577,9,53
+Telangana,Warangal,1,0,429353,8,89
+Maharashtra,Pune,1,0,527491,5,186
+Karnataka,Bengaluru,0,1,358697,6,33
+Madhya Pradesh,Bhopal,0,0,372501,11,22
+Telangana,Nizamabad,1,1,375298,4,71
+Telangana,Nizamabad,1,0,625783,16,120
+Rajasthan,Udaipur,0,1,565473,3,107
+Maharashtra,Mumbai,1,0,421520,10,112
+Telangana,Hyderabad,1,0,437147,3,38
+Delhi,New Delhi,1,0,765589,18,103
+West Bengal,Kolkata,1,0,707480,7,124
+Gujarat,Ahmedabad,1,1,772151,18,100
+Delhi,New Delhi,0,0,662014,8,199
+Maharashtra,Pune,1,0,359562,14,161
+Rajasthan,Jodhpur,1,0,584128,7,107
+West Bengal,Howrah,1,1,686111,16,199
+Karnataka,Mangaluru,0,0,582416,13,116
+Madhya Pradesh,Indore,0,0,703455,19,62
+Uttar Pradesh,Kanpur,1,1,635436,7,124
+Rajasthan,Jaipur,0,1,708543,16,63
+Rajasthan,Udaipur,1,0,532435,19,121
+West Bengal,Kolkata,0,1,432788,5,147
+Karnataka,Bengaluru,1,1,586573,14,160
+Gujarat,Vadodara,1,0,731604,17,39
+Delhi,New Delhi,0,0,420829,19,88
+Gujarat,Ahmedabad,1,1,710179,10,41
+Uttar Pradesh,Lucknow,1,1,502320,5,19
+West Bengal,Howrah,1,0,649796,13,118
+West Bengal,Durgapur,1,0,559554,5,196
+Madhya Pradesh,Bhopal,0,1,597865,15,106
+Uttar Pradesh,Kanpur,0,0,491370,5,127
+Karnataka,Mangaluru,0,0,746606,19,183
+Rajasthan,Udaipur,1,0,479507,4,172
+Gujarat,Ahmedabad,1,1,505109,8,13
+Uttar Pradesh,Kanpur,0,1,458184,14,142
+Telangana,Hyderabad,1,0,565875,12,95
+Rajasthan,Jodhpur,0,1,631403,15,148
+Madhya Pradesh,Bhopal,0,0,547523,4,62
+Rajasthan,Udaipur,0,0,481870,18,148
+Uttar Pradesh,Lucknow,0,1,444132,16,147
+Delhi,New Delhi,0,0,710121,15,174
+West Bengal,Durgapur,1,0,508084,14,123
+Rajasthan,Udaipur,1,0,601340,13,24
+West Bengal,Kolkata,1,0,599722,15,76
+Gujarat,Vadodara,1,0,448165,2,25
+Karnataka,Bengaluru,0,1,758548,7,139
+Tamil Nadu,Chennai,0,1,703310,5,38
+Karnataka,Mysuru,0,0,568927,19,89
+Gujarat,Surat,0,1,731484,17,78
+Maharashtra,Mumbai,0,0,640060,18,127
+Tamil Nadu,Coimbatore,0,1,522110,7,116
+Uttar Pradesh,Kanpur,0,1,505028,12,64
+Rajasthan,Jodhpur,1,0,424360,9,77
+Uttar Pradesh,Kanpur,1,1,398374,8,18
+Uttar Pradesh,Kanpur,0,0,553917,13,110
+Uttar Pradesh,Lucknow,1,0,550257,8,68
+Tamil Nadu,Chennai,1,1,764310,5,97
+West Bengal,Kolkata,1,0,565709,15,73
+Karnataka,Mangaluru,0,0,443518,19,22
+Telangana,Nizamabad,0,0,653666,11,129
+Maharashtra,Pune,1,1,673322,14,34
+Uttar Pradesh,Kanpur,0,0,488022,17,31
+Maharashtra,Nagpur,1,1,699575,19,18
+Madhya Pradesh,Bhopal,1,1,774510,5,26
+Uttar Pradesh,Lucknow,1,0,520674,9,195
+Maharashtra,Pune,0,1,354192,10,61
+Rajasthan,Jaipur,1,0,419349,8,35
+Madhya Pradesh,Indore,1,0,469473,2,119
+Karnataka,Mangaluru,1,1,350520,6,98
+Karnataka,Mysuru,0,1,412037,8,129
+West Bengal,Howrah,0,0,454163,5,78
+Maharashtra,Mumbai,0,0,392649,8,27
+Telangana,Warangal,0,1,751266,4,48
+Telangana,Nizamabad,1,1,426208,17,158
+Karnataka,Mangaluru,1,1,411568,5,127
+Telangana,Nizamabad,1,0,676217,6,25
+Telangana,Nizamabad,0,1,649508,6,112
+Uttar Pradesh,Kanpur,1,0,489413,9,61
+Karnataka,Mangaluru,0,0,423091,14,148
+West Bengal,Howrah,1,1,715315,10,127
+West Bengal,Kolkata,0,1,456441,19,45
+Uttar Pradesh,Varanasi,1,1,663028,11,23
+Rajasthan,Jaipur,0,1,649606,10,16
+Karnataka,Mysuru,0,0,378633,12,108
+Maharashtra,Mumbai,0,1,551372,15,93
+Madhya Pradesh,Bhopal,0,0,770647,15,96
+Rajasthan,Jaipur,0,1,732255,6,20
+West Bengal,Durgapur,1,0,368792,18,95
+Maharashtra,Pune,1,1,558097,14,112
+Uttar Pradesh,Varanasi,1,1,726712,17,146
+Rajasthan,Udaipur,0,1,473696,6,76
+Karnataka,Mysuru,0,1,548659,17,134
+Maharashtra,Nagpur,1,0,350343,3,164
+Madhya Pradesh,Indore,1,1,557819,15,130
+Uttar Pradesh,Varanasi,1,0,439709,2,89
+Karnataka,Bengaluru,0,0,483961,10,124
+Telangana,Hyderabad,1,1,597661,11,31
+Uttar Pradesh,Kanpur,1,0,661817,19,186
+Maharashtra,Nagpur,0,0,696818,16,27
+Telangana,Nizamabad,0,1,749592,3,197
+Maharashtra,Pune,1,0,597427,3,194
+West Bengal,Kolkata,0,1,680900,3,65
+Maharashtra,Nagpur,1,1,571315,6,80
+West Bengal,Kolkata,1,0,501151,14,156
+West Bengal,Kolkata,1,0,682512,9,138
+Maharashtra,Nagpur,0,0,441565,4,86
+Gujarat,Ahmedabad,0,0,583316,11,190
+Karnataka,Mysuru,1,1,540004,8,115
+Uttar Pradesh,Kanpur,1,1,369658,15,28
+Delhi,New Delhi,0,1,395571,18,191
+Maharashtra,Pune,0,0,446456,16,52
+Madhya Pradesh,Indore,1,0,361121,19,167
+Gujarat,Vadodara,0,1,590231,16,28
+Gujarat,Vadodara,1,0,547759,3,153
+Maharashtra,Pune,1,0,766912,6,185
+Rajasthan,Jodhpur,1,1,770446,8,106
+Tamil Nadu,Madurai,0,0,407166,9,147
+West Bengal,Durgapur,1,0,646071,5,88
+Karnataka,Mangaluru,1,0,444776,17,197
+Telangana,Warangal,1,0,529205,8,163
+Uttar Pradesh,Varanasi,1,0,419134,8,18
+Karnataka,Bengaluru,1,1,382511,13,68
+Rajasthan,Jaipur,0,0,557282,17,92
+Uttar Pradesh,Varanasi,0,1,765235,7,23
+Gujarat,Surat,0,0,733001,19,48
+Tamil Nadu,Madurai,0,0,540858,16,143
+Uttar Pradesh,Varanasi,1,1,432478,17,72
+Maharashtra,Nagpur,1,0,679844,15,92
+Gujarat,Ahmedabad,1,1,440903,14,46
+Gujarat,Ahmedabad,1,1,778465,11,146
+Madhya Pradesh,Bhopal,1,1,463242,16,128
+West Bengal,Howrah,1,0,484795,17,165
+West Bengal,Kolkata,0,0,658034,5,166
+Telangana,Warangal,1,1,655183,10,29
+Maharashtra,Nagpur,0,0,660014,3,86
+Maharashtra,Pune,1,1,427988,4,71
+Telangana,Warangal,1,1,768686,5,143
+Uttar Pradesh,Varanasi,0,1,741607,9,59
+Madhya Pradesh,Indore,0,0,764634,16,36
+Uttar Pradesh,Kanpur,1,0,525774,13,164
+Uttar Pradesh,Kanpur,0,1,569738,15,90
+Uttar Pradesh,Kanpur,0,1,761091,13,136
+Telangana,Nizamabad,0,1,621510,7,175
+Madhya Pradesh,Bhopal,1,1,491104,2,134
+West Bengal,Howrah,1,0,445246,2,150
+West Bengal,Howrah,0,1,387495,8,59
+Maharashtra,Mumbai,0,0,372510,11,182
+Telangana,Nizamabad,0,0,682294,2,128
+Madhya Pradesh,Indore,1,0,681341,19,112
+Rajasthan,Jodhpur,0,1,528543,18,124
+Karnataka,Bengaluru,0,1,573618,6,67
+Madhya Pradesh,Indore,0,1,643655,8,86
+Telangana,Nizamabad,0,1,673458,6,110
+Uttar Pradesh,Lucknow,1,0,355115,14,35
+Telangana,Nizamabad,1,0,453677,5,117
+Madhya Pradesh,Indore,0,1,615376,17,56
+Telangana,Hyderabad,1,0,393123,14,88
+Gujarat,Vadodara,1,1,461275,13,125
+Telangana,Hyderabad,1,1,608477,12,40
+Gujarat,Ahmedabad,0,1,714059,11,144
+Uttar Pradesh,Lucknow,1,1,466661,5,52
+Gujarat,Ahmedabad,1,1,756627,11,50
+Tamil Nadu,Madurai,1,0,396371,15,69
+Maharashtra,Pune,1,0,510803,4,93
+Tamil Nadu,Coimbatore,1,0,528810,11,57
+Telangana,Warangal,1,0,683266,12,30
+Gujarat,Ahmedabad,0,0,630323,10,12
+Tamil Nadu,Coimbatore,1,0,626289,6,140
+West Bengal,Durgapur,1,0,763902,6,157
+Karnataka,Mysuru,0,1,386572,8,51
+Rajasthan,Jodhpur,0,1,532480,6,24
+Karnataka,Mysuru,0,1,498925,12,53
+Madhya Pradesh,Indore,1,1,702768,5,137
+Telangana,Warangal,1,1,389158,13,154
+West Bengal,Howrah,0,0,569330,11,192
+Uttar Pradesh,Kanpur,0,1,370040,8,52
+Karnataka,Bengaluru,1,0,518709,18,22
+Maharashtra,Nagpur,0,1,741762,8,193
+West Bengal,Howrah,1,1,475760,4,119
+Delhi,New Delhi,0,0,585450,14,123
+Maharashtra,Nagpur,0,0,420880,3,52
+Madhya Pradesh,Indore,1,0,458512,3,91
+Karnataka,Mangaluru,0,0,377134,7,186
+Tamil Nadu,Coimbatore,0,1,618253,3,142
+Maharashtra,Pune,0,0,567956,3,37
+Gujarat,Vadodara,1,0,554078,8,176
+Rajasthan,Jaipur,1,0,548568,15,100
+West Bengal,Durgapur,1,1,724479,3,135
+Uttar Pradesh,Varanasi,0,1,555063,13,144
+Uttar Pradesh,Lucknow,1,1,762457,3,54
+Telangana,Hyderabad,1,0,596016,18,178
+West Bengal,Kolkata,1,0,610798,15,197
+Rajasthan,Jodhpur,1,0,357383,12,195
+Delhi,New Delhi,1,0,505151,9,64
+Gujarat,Vadodara,1,1,382174,13,191
+Delhi,New Delhi,1,1,435016,13,180
+Telangana,Hyderabad,1,0,774736,18,87
+Madhya Pradesh,Indore,1,1,497914,11,21
+Madhya Pradesh,Bhopal,0,1,609000,5,97
+Karnataka,Bengaluru,1,1,494261,19,199
+Gujarat,Vadodara,1,0,480240,9,33
+Karnataka,Bengaluru,0,1,743785,10,178
+Madhya Pradesh,Bhopal,1,1,417830,2,122
+West Bengal,Durgapur,0,1,354097,12,193
+Telangana,Hyderabad,1,0,652446,16,76
+Tamil Nadu,Chennai,1,1,350933,8,26
+Tamil Nadu,Coimbatore,0,0,421401,4,20
+Maharashtra,Mumbai,1,0,399192,4,136
+Tamil Nadu,Coimbatore,0,0,644834,7,182
+Gujarat,Ahmedabad,1,1,446955,15,192
+West Bengal,Durgapur,1,0,719154,13,26
+Karnataka,Bengaluru,0,1,627162,6,62
+Rajasthan,Jodhpur,0,0,761445,9,188
+Madhya Pradesh,Bhopal,0,0,774276,14,96
+Tamil Nadu,Madurai,0,1,541920,16,85
+Maharashtra,Mumbai,1,0,474793,7,63
+Uttar Pradesh,Varanasi,0,0,442603,14,35
+Rajasthan,Jodhpur,1,0,536537,12,174
+Tamil Nadu,Coimbatore,1,0,778946,12,81
+Gujarat,Vadodara,1,1,382136,15,28
+Telangana,Hyderabad,1,1,665644,9,149
+Tamil Nadu,Chennai,1,1,414003,11,154
+Madhya Pradesh,Indore,0,1,579460,6,48
+Tamil Nadu,Chennai,0,0,469786,5,31
+Karnataka,Bengaluru,1,0,665779,12,122
+Karnataka,Mysuru,1,1,411198,10,24
+Telangana,Warangal,1,1,765757,14,162
+Karnataka,Mangaluru,0,0,630317,19,176
+Madhya Pradesh,Indore,0,1,384899,10,25
+Uttar Pradesh,Lucknow,0,0,735748,16,189
+Delhi,New Delhi,0,0,700028,2,157
+Karnataka,Mangaluru,0,1,372914,14,168
+Tamil Nadu,Chennai,0,1,767333,7,112
+Madhya Pradesh,Gwalior,0,1,410389,3,50
+Tamil Nadu,Coimbatore,1,0,418564,11,79
+Karnataka,Bengaluru,1,1,711643,5,146
+Uttar Pradesh,Kanpur,0,0,608640,8,11
+Maharashtra,Nagpur,1,0,358098,11,53
+Madhya Pradesh,Indore,0,1,501051,13,158
+Madhya Pradesh,Bhopal,1,0,773657,11,92
+Karnataka,Bengaluru,0,0,639821,14,53
+Gujarat,Vadodara,0,1,432543,9,137
+Telangana,Warangal,0,0,484860,11,162
+Madhya Pradesh,Bhopal,0,1,561562,19,67
+West Bengal,Durgapur,0,1,608290,11,73
+Gujarat,Vadodara,1,1,625832,7,85
+Tamil Nadu,Chennai,1,1,745291,18,154
+Rajasthan,Udaipur,0,0,648083,13,157
+Gujarat,Ahmedabad,1,0,613748,5,56
+Madhya Pradesh,Bhopal,1,1,718049,7,125
+Karnataka,Bengaluru,0,0,617248,13,26
+Tamil Nadu,Chennai,0,1,385144,15,54
+Uttar Pradesh,Lucknow,1,0,421607,12,27
+Maharashtra,Nagpur,0,1,439709,19,56
+Rajasthan,Udaipur,0,0,394487,5,134
+Uttar Pradesh,Varanasi,0,1,616825,2,57
+Madhya Pradesh,Indore,0,1,486098,9,117
+Karnataka,Mangaluru,0,0,469118,5,90
+Gujarat,Ahmedabad,1,1,525628,9,36
+Karnataka,Mangaluru,0,1,487839,5,160
+Maharashtra,Nagpur,0,0,714597,3,112
+West Bengal,Howrah,1,1,538330,7,167
+Tamil Nadu,Madurai,1,0,774531,3,117
+West Bengal,Kolkata,1,1,611439,2,27
+West Bengal,Kolkata,0,1,459171,6,187
+Tamil Nadu,Coimbatore,0,0,732148,9,26
+Tamil Nadu,Coimbatore,1,1,762492,13,114
+Karnataka,Mangaluru,0,1,774867,8,99
+Karnataka,Bengaluru,1,0,390206,14,69
+Uttar Pradesh,Varanasi,0,1,657269,5,145
+Delhi,New Delhi,1,1,353913,17,18
+Karnataka,Mysuru,0,0,689281,6,20
+Madhya Pradesh,Bhopal,1,0,416373,6,98
+Tamil Nadu,Coimbatore,0,0,704439,14,52
+Uttar Pradesh,Kanpur,1,0,363164,8,36
+Telangana,Warangal,0,0,749028,16,77
+Madhya Pradesh,Indore,1,0,532050,5,55
+Rajasthan,Jodhpur,1,0,672815,6,135
+Tamil Nadu,Chennai,1,0,465002,10,197
+Gujarat,Surat,1,1,763837,6,162
+Tamil Nadu,Madurai,1,1,698612,17,165
+Uttar Pradesh,Varanasi,0,0,572055,17,130
+Karnataka,Mysuru,1,1,692511,5,72
+Tamil Nadu,Coimbatore,1,0,759622,10,131
+Gujarat,Vadodara,0,0,609299,2,88
+Tamil Nadu,Chennai,1,0,722974,11,139
+Karnataka,Mysuru,0,1,664303,14,92
+Tamil Nadu,Coimbatore,1,1,564122,11,105
+Uttar Pradesh,Lucknow,0,1,719697,13,181
+Uttar Pradesh,Kanpur,1,1,595256,8,133
+Maharashtra,Pune,1,0,682471,4,124
+West Bengal,Durgapur,0,1,412531,19,175
+Gujarat,Surat,0,1,725442,10,142
+Madhya Pradesh,Indore,0,1,357417,7,36
+Karnataka,Bengaluru,1,0,361397,18,41
+Maharashtra,Mumbai,0,0,766267,14,93
+Telangana,Warangal,0,0,388726,7,38
+Uttar Pradesh,Lucknow,1,0,566257,8,138
+Maharashtra,Mumbai,1,0,480937,4,26
+Telangana,Nizamabad,1,0,769201,14,62
+Uttar Pradesh,Lucknow,0,0,701729,15,193
+Maharashtra,Nagpur,1,0,635333,12,152
+Maharashtra,Mumbai,0,0,752801,8,58
+Maharashtra,Nagpur,0,0,759505,18,19
+Gujarat,Vadodara,1,1,564247,12,153
+Tamil Nadu,Chennai,1,1,515248,5,79
+Telangana,Nizamabad,1,1,545229,6,15
+Madhya Pradesh,Indore,1,1,516868,2,151
+Maharashtra,Mumbai,1,1,395382,11,135
+Karnataka,Mangaluru,1,1,710532,8,194
+Uttar Pradesh,Varanasi,0,0,723802,18,108
+West Bengal,Durgapur,1,1,775902,19,131
+Karnataka,Bengaluru,1,1,769683,3,164
+Telangana,Nizamabad,0,1,711691,8,40
+Tamil Nadu,Madurai,1,0,704193,13,65
+Karnataka,Bengaluru,0,0,694800,15,138
+Karnataka,Mysuru,1,1,638924,14,98
+Telangana,Nizamabad,0,0,691072,3,21
+Gujarat,Vadodara,1,1,403454,2,103
+Uttar Pradesh,Varanasi,1,1,657843,19,22
+Uttar Pradesh,Kanpur,1,0,723059,3,30
+Uttar Pradesh,Varanasi,0,0,523261,7,105
+West Bengal,Howrah,1,1,364171,10,143
+Madhya Pradesh,Gwalior,1,1,725800,11,23
+Rajasthan,Jodhpur,0,1,474849,16,97
+Delhi,New Delhi,1,0,458881,5,46
+Maharashtra,Mumbai,1,1,489759,3,71
+Rajasthan,Jaipur,0,1,414885,10,82
+Maharashtra,Nagpur,0,1,354467,6,174
+Karnataka,Bengaluru,0,1,530202,11,144
+Rajasthan,Udaipur,0,1,636575,7,117
+Gujarat,Ahmedabad,1,1,759950,3,106
+Rajasthan,Jaipur,1,0,497074,3,166
+Telangana,Nizamabad,0,1,741111,5,42
+Maharashtra,Nagpur,1,1,493930,14,99
+Uttar Pradesh,Lucknow,0,0,392486,2,162
+West Bengal,Durgapur,0,0,736064,13,182
+Karnataka,Bengaluru,0,1,510362,8,163
+Rajasthan,Udaipur,0,0,659903,5,178
+Gujarat,Ahmedabad,0,1,523715,19,72
+Uttar Pradesh,Kanpur,1,0,654716,13,189
+Tamil Nadu,Madurai,0,0,358557,19,70
+Maharashtra,Pune,1,1,682145,12,65
+Maharashtra,Mumbai,1,1,756279,2,173
+West Bengal,Kolkata,0,1,568558,10,130
+Maharashtra,Nagpur,0,0,405925,4,66
+Tamil Nadu,Chennai,1,1,544084,6,162
+Uttar Pradesh,Varanasi,0,0,402920,13,158
+Rajasthan,Udaipur,1,0,480450,16,162
+Tamil Nadu,Madurai,1,0,525818,19,131
+Gujarat,Surat,0,0,526679,6,34
+Gujarat,Surat,0,1,656305,5,49
+Karnataka,Mangaluru,0,0,475040,9,46
+Gujarat,Ahmedabad,1,0,634734,13,53
+Madhya Pradesh,Gwalior,0,0,602106,11,33
+Karnataka,Bengaluru,0,1,509368,14,179
+Telangana,Warangal,1,1,463091,4,38
+Uttar Pradesh,Kanpur,1,1,769808,15,123
+Karnataka,Mysuru,0,1,756648,4,141
+Gujarat,Surat,1,0,691451,18,126
+West Bengal,Howrah,0,1,371985,14,27
+Uttar Pradesh,Varanasi,0,1,615122,8,192
+Rajasthan,Jaipur,1,0,541732,18,22
+Gujarat,Ahmedabad,1,1,475014,2,60
+Gujarat,Ahmedabad,1,1,562989,9,150
+Karnataka,Bengaluru,0,0,645149,6,94
+Telangana,Hyderabad,1,0,481910,14,79
+Rajasthan,Jaipur,0,0,421365,13,52
+West Bengal,Howrah,1,1,717162,5,157
+Delhi,New Delhi,0,1,574317,13,99
+Maharashtra,Nagpur,0,0,724840,19,56
+Tamil Nadu,Madurai,1,0,747073,17,191
+Uttar Pradesh,Lucknow,1,1,408446,19,121
+West Bengal,Howrah,0,0,551603,8,192
+Madhya Pradesh,Bhopal,0,1,530557,10,25
+Tamil Nadu,Chennai,1,0,547350,3,52
+Karnataka,Mangaluru,1,0,692008,7,72
+Madhya Pradesh,Indore,0,1,618944,5,185
+Delhi,New Delhi,1,1,660832,4,66
+Delhi,New Delhi,0,0,500854,12,126
+Tamil Nadu,Madurai,0,1,521372,19,47
+Karnataka,Mangaluru,0,0,371413,14,115
+Telangana,Hyderabad,1,1,620023,15,130
+Telangana,Warangal,1,0,773394,5,184
+Madhya Pradesh,Gwalior,1,0,496312,4,161
+Telangana,Warangal,0,0,635290,7,124
+Karnataka,Mangaluru,1,0,419180,16,30
+Telangana,Nizamabad,0,1,603982,4,167
+Madhya Pradesh,Bhopal,1,1,571775,19,78
+Uttar Pradesh,Varanasi,0,0,651163,7,58
+Uttar Pradesh,Varanasi,1,0,358724,6,63
+Uttar Pradesh,Varanasi,0,1,575950,3,151
+Rajasthan,Udaipur,0,0,700983,17,59
+Gujarat,Surat,0,1,670765,19,122
+Karnataka,Mysuru,0,0,460742,19,176
+West Bengal,Durgapur,1,1,449251,7,194
+Madhya Pradesh,Gwalior,1,1,460485,14,100
+Maharashtra,Nagpur,0,0,714430,16,61
+Karnataka,Mysuru,1,0,699028,18,81
+Maharashtra,Nagpur,1,1,372133,2,68
+Uttar Pradesh,Varanasi,1,0,689610,15,98
+Rajasthan,Jaipur,0,1,715682,2,180
+Gujarat,Vadodara,1,1,534750,17,84
+Uttar Pradesh,Lucknow,0,1,387553,4,190
+Madhya Pradesh,Indore,1,0,698472,14,58
+Maharashtra,Nagpur,1,1,511365,11,112
+Uttar Pradesh,Kanpur,1,0,480613,18,87
+West Bengal,Howrah,1,0,454581,18,142
+Rajasthan,Jodhpur,0,1,558112,4,20
+Rajasthan,Jaipur,1,0,749720,17,83
+West Bengal,Kolkata,1,1,391025,19,144
+Telangana,Warangal,1,0,373169,8,199
+Telangana,Hyderabad,1,0,514597,7,83
+Rajasthan,Udaipur,0,1,634739,8,72
+Karnataka,Mysuru,0,1,358693,15,26
+Karnataka,Bengaluru,0,1,600213,4,78
+Madhya Pradesh,Gwalior,0,0,402006,11,156
+Uttar Pradesh,Varanasi,0,1,627798,17,161
+Madhya Pradesh,Bhopal,0,1,469933,4,172
+Maharashtra,Pune,1,1,420064,18,191
+Maharashtra,Pune,1,1,602573,2,113
+Karnataka,Mangaluru,1,0,754023,16,125
+Tamil Nadu,Chennai,0,1,371220,12,18
+Gujarat,Ahmedabad,0,0,598469,16,122
+Telangana,Nizamabad,0,0,749842,15,196
+Madhya Pradesh,Indore,1,1,519936,18,25
+Maharashtra,Pune,0,0,506607,15,180
+Tamil Nadu,Madurai,0,1,397593,6,116
+Rajasthan,Udaipur,0,1,640157,13,23
+Karnataka,Mysuru,0,0,387807,17,67
+Telangana,Nizamabad,1,1,465747,13,156
+Gujarat,Vadodara,1,1,472527,18,173
+West Bengal,Kolkata,1,0,634112,3,185
+West Bengal,Howrah,0,0,593697,16,117
+Telangana,Nizamabad,0,0,678531,9,71
+Tamil Nadu,Madurai,0,1,404557,10,196
+West Bengal,Howrah,0,1,599368,11,108
+Delhi,New Delhi,1,1,719405,6,19
+Rajasthan,Udaipur,1,0,777597,2,163
+Uttar Pradesh,Kanpur,1,0,764926,2,123
+Uttar Pradesh,Lucknow,0,1,772677,6,168
+West Bengal,Durgapur,1,0,456684,3,129
+Karnataka,Bengaluru,0,1,451218,14,25
+Rajasthan,Jaipur,1,0,622371,16,35
+West Bengal,Kolkata,0,0,614160,10,22
+Telangana,Nizamabad,1,0,738044,9,117
+Tamil Nadu,Coimbatore,1,0,472649,16,107
+Delhi,New Delhi,0,1,766002,8,145
+Madhya Pradesh,Bhopal,1,0,651548,8,198
+Gujarat,Ahmedabad,0,0,547047,10,30
+Tamil Nadu,Coimbatore,1,0,656600,7,49
+Rajasthan,Jodhpur,1,0,543698,8,10
+Maharashtra,Nagpur,0,0,405311,14,157
+Karnataka,Mangaluru,0,0,637629,9,182
+Maharashtra,Pune,1,0,504487,19,77
+Maharashtra,Pune,0,1,596992,8,158
+Gujarat,Ahmedabad,0,0,361743,7,109
+Maharashtra,Pune,0,1,467755,14,111
+Telangana,Hyderabad,1,1,554150,15,102
+Tamil Nadu,Chennai,0,1,660163,2,79
+West Bengal,Howrah,1,1,748915,16,72
+Tamil Nadu,Chennai,1,1,486701,13,181
+Maharashtra,Mumbai,0,0,418418,3,64
+Telangana,Hyderabad,0,0,650434,8,106
+Uttar Pradesh,Lucknow,1,0,775952,5,136
+Uttar Pradesh,Varanasi,1,1,681376,8,62
+Madhya Pradesh,Indore,1,0,673270,18,50
+West Bengal,Kolkata,0,1,404412,15,115
+Madhya Pradesh,Indore,1,0,468065,16,71
+Madhya Pradesh,Indore,0,1,560411,16,147
+Tamil Nadu,Chennai,1,0,481253,10,143
+Tamil Nadu,Madurai,1,1,621862,3,59
+Rajasthan,Jaipur,0,1,605110,14,139
+Rajasthan,Jodhpur,0,1,353612,4,18
+Uttar Pradesh,Varanasi,0,1,552235,19,126
+Telangana,Warangal,1,0,620438,5,25
+Gujarat,Vadodara,0,1,639827,6,83
+Telangana,Warangal,0,1,674527,6,40
+West Bengal,Kolkata,0,1,413021,4,130
+Telangana,Nizamabad,0,0,411049,16,176
+Tamil Nadu,Madurai,0,1,660275,19,127
+Telangana,Nizamabad,1,0,357726,14,89
+Maharashtra,Pune,1,1,662176,9,73
+Tamil Nadu,Chennai,0,1,706724,10,194
+Rajasthan,Udaipur,1,0,534895,3,162
+Uttar Pradesh,Varanasi,1,0,583717,17,120
+Madhya Pradesh,Bhopal,1,1,559030,13,193
+Gujarat,Ahmedabad,1,1,525703,5,143
+Maharashtra,Nagpur,1,1,354035,12,119
+Gujarat,Surat,1,0,578689,4,11
+Maharashtra,Pune,0,1,569042,4,50
+Uttar Pradesh,Kanpur,0,1,666382,4,32
+West Bengal,Howrah,1,1,591263,19,149
+Uttar Pradesh,Kanpur,0,0,552045,15,141
+Karnataka,Mysuru,1,0,753935,18,154
+Gujarat,Ahmedabad,1,1,664487,9,139
+Karnataka,Mysuru,1,1,642481,6,39
+Gujarat,Vadodara,0,0,465649,3,171
+Maharashtra,Pune,1,0,426039,12,39
+Delhi,New Delhi,0,0,486551,11,192
+Gujarat,Surat,0,0,608692,8,114
+Madhya Pradesh,Indore,0,0,415621,12,87
+Tamil Nadu,Madurai,0,1,457408,19,143
+Gujarat,Ahmedabad,1,0,453064,18,115
+Maharashtra,Pune,1,0,777959,5,156
+Maharashtra,Mumbai,0,0,396555,14,173
+Rajasthan,Jodhpur,0,0,654657,16,113
+Karnataka,Bengaluru,0,1,627907,15,109
+Telangana,Warangal,0,0,411435,19,139
+Karnataka,Mangaluru,1,1,548614,18,70
+Delhi,New Delhi,1,0,413323,17,90
+Maharashtra,Pune,1,0,629456,6,35
+Karnataka,Bengaluru,1,0,724267,5,18
+West Bengal,Howrah,1,1,404406,8,68
+Telangana,Hyderabad,0,1,574407,18,197
+Karnataka,Mangaluru,1,0,660076,13,129
+Madhya Pradesh,Bhopal,0,0,748444,7,179
+Karnataka,Mangaluru,0,0,590256,11,186
+Rajasthan,Jodhpur,0,0,727427,2,54
+Uttar Pradesh,Kanpur,0,1,448487,9,27
+Gujarat,Ahmedabad,1,0,687722,3,39
+Tamil Nadu,Madurai,1,1,563269,6,112
+Madhya Pradesh,Gwalior,0,1,409805,4,154
+Telangana,Hyderabad,0,1,737539,8,10
+Rajasthan,Jodhpur,0,1,611687,8,94
+Uttar Pradesh,Varanasi,0,0,454848,18,10
+Telangana,Nizamabad,1,0,459462,7,159
+Uttar Pradesh,Lucknow,1,1,396997,14,50
+Tamil Nadu,Chennai,0,1,731927,12,66
+Tamil Nadu,Madurai,1,1,578557,2,195
+Rajasthan,Jodhpur,1,0,374965,13,59
+Telangana,Hyderabad,0,1,423455,12,71
+Telangana,Nizamabad,0,0,557564,3,169
+Rajasthan,Jaipur,1,1,568203,12,123
+Rajasthan,Udaipur,0,0,704743,18,59
+Telangana,Warangal,0,1,514421,17,117
+Rajasthan,Jodhpur,0,1,639038,19,156
+Telangana,Nizamabad,0,0,525876,9,126
+Rajasthan,Jaipur,1,1,563963,12,83
+Uttar Pradesh,Varanasi,1,0,446111,3,29
+Maharashtra,Pune,1,0,668832,17,173
+West Bengal,Howrah,0,0,672042,4,25
+Uttar Pradesh,Kanpur,0,0,687848,15,103
+Telangana,Nizamabad,1,1,431287,4,58
+Maharashtra,Mumbai,1,0,637533,12,115
+Uttar Pradesh,Lucknow,1,0,527134,4,99
+Karnataka,Mysuru,1,1,496378,8,56
+West Bengal,Kolkata,1,1,578830,9,37
+Madhya Pradesh,Gwalior,0,0,474722,3,146
+Rajasthan,Jaipur,0,1,504002,5,122
+Maharashtra,Pune,0,0,536532,12,117
+Tamil Nadu,Coimbatore,0,1,471939,15,16
+Madhya Pradesh,Indore,0,0,512450,12,37
+Rajasthan,Jaipur,0,1,425513,17,90
+Madhya Pradesh,Indore,1,0,621814,18,30
+Telangana,Nizamabad,0,0,682522,10,143
+Uttar Pradesh,Kanpur,1,1,633002,4,137
+West Bengal,Howrah,0,0,421394,3,172
+Uttar Pradesh,Varanasi,1,1,759759,7,148
+Rajasthan,Jodhpur,0,0,359328,2,158
+Tamil Nadu,Madurai,1,0,421351,2,20
+West Bengal,Durgapur,0,0,587198,19,161
+Madhya Pradesh,Indore,1,1,651458,12,78
+Gujarat,Vadodara,0,1,561720,15,168
+Delhi,New Delhi,0,0,465961,9,109
+Uttar Pradesh,Kanpur,1,1,605782,9,113
+Uttar Pradesh,Lucknow,1,0,424024,12,74
+Telangana,Hyderabad,1,0,484303,5,150
+Karnataka,Mysuru,1,1,449435,18,23
+Madhya Pradesh,Indore,1,1,715552,2,100
+Delhi,New Delhi,1,0,675135,8,101
+Tamil Nadu,Chennai,0,1,701439,18,36
+Karnataka,Mysuru,0,1,529826,7,135
+Gujarat,Surat,1,1,396420,16,40
+Tamil Nadu,Madurai,1,1,483947,7,111
+Maharashtra,Pune,0,1,560412,10,105
+Tamil Nadu,Coimbatore,1,0,462718,4,128
+West Bengal,Howrah,1,1,650556,16,143
+Maharashtra,Nagpur,1,0,366482,13,21
+Gujarat,Vadodara,1,0,411062,14,52
+Madhya Pradesh,Bhopal,0,0,591224,3,171
+Maharashtra,Pune,1,0,768297,19,182
+Rajasthan,Jodhpur,1,1,443259,5,183
+Tamil Nadu,Coimbatore,1,0,518725,17,82
+Maharashtra,Pune,1,0,761326,11,95
+Uttar Pradesh,Kanpur,1,1,735678,17,83
+Gujarat,Surat,0,1,636773,5,80
+Tamil Nadu,Madurai,0,0,546387,10,46
+Telangana,Nizamabad,1,0,710979,9,153
+Madhya Pradesh,Bhopal,1,1,488451,15,10
+Rajasthan,Udaipur,0,1,753639,5,23
+Telangana,Nizamabad,1,0,649696,2,162
+Delhi,New Delhi,1,0,706725,6,188
+Tamil Nadu,Coimbatore,1,0,402493,17,157
+Uttar Pradesh,Kanpur,1,0,734977,12,112
+Rajasthan,Jaipur,1,0,542559,11,71
+Madhya Pradesh,Indore,0,1,719135,18,100
+Tamil Nadu,Madurai,0,1,581398,12,11
+Rajasthan,Jaipur,0,1,525983,7,92
+Rajasthan,Jaipur,0,0,480123,5,45
+Tamil Nadu,Coimbatore,0,1,492494,2,104
+Gujarat,Surat,1,0,752466,13,128
+West Bengal,Howrah,1,0,561820,15,14
+West Bengal,Durgapur,1,1,751473,11,69
+Maharashtra,Nagpur,1,0,451029,13,152
+Uttar Pradesh,Lucknow,0,1,461373,5,77
+Telangana,Nizamabad,1,1,531218,4,44
+Madhya Pradesh,Indore,0,1,440762,8,11
+Uttar Pradesh,Lucknow,0,0,633071,5,30
+Karnataka,Bengaluru,0,1,730393,11,17
+Gujarat,Surat,1,0,685069,18,171
+Karnataka,Bengaluru,0,0,590023,13,152
+Madhya Pradesh,Bhopal,1,1,778742,11,174
+West Bengal,Durgapur,0,0,388860,3,175
+Rajasthan,Jodhpur,0,0,609711,19,34
+West Bengal,Howrah,0,1,740260,13,45
+Uttar Pradesh,Kanpur,0,1,556168,19,46
+Maharashtra,Pune,1,1,494561,6,66
+Tamil Nadu,Madurai,1,1,386614,13,32
+Rajasthan,Jaipur,1,0,685317,3,89
+Karnataka,Mysuru,0,0,654137,14,83
+Uttar Pradesh,Kanpur,1,1,377338,15,89
+Karnataka,Bengaluru,0,0,652955,18,123
+Tamil Nadu,Chennai,0,0,649296,8,182
+Rajasthan,Jodhpur,0,0,427930,16,52
+Gujarat,Ahmedabad,1,1,655844,2,116
+Gujarat,Surat,0,0,462543,16,74
+Rajasthan,Jaipur,1,0,624640,17,26
+Maharashtra,Pune,0,1,634886,4,67
+Uttar Pradesh,Kanpur,1,1,354179,11,191
+Madhya Pradesh,Gwalior,1,0,472595,4,38
+Tamil Nadu,Madurai,1,0,410915,12,110
+Rajasthan,Jodhpur,1,1,452268,10,132
+Karnataka,Mangaluru,0,1,620260,7,185
+Rajasthan,Jodhpur,1,0,458865,2,62
+Madhya Pradesh,Indore,1,1,665812,5,161
+Madhya Pradesh,Gwalior,0,0,547688,19,188
+Gujarat,Vadodara,0,0,603597,19,119
+Maharashtra,Mumbai,0,0,716985,9,46
+Madhya Pradesh,Bhopal,0,1,418146,11,46
+Maharashtra,Mumbai,0,0,597821,19,190
+Telangana,Nizamabad,0,0,472099,15,64
+Rajasthan,Udaipur,1,0,763871,7,184
+Telangana,Warangal,1,0,761951,5,110
+Karnataka,Mysuru,1,0,536833,8,87
+Delhi,New Delhi,1,1,542818,7,181
+Rajasthan,Jodhpur,0,0,574354,10,129
+West Bengal,Howrah,0,1,542626,18,104
+Madhya Pradesh,Gwalior,1,0,392015,14,140
+Karnataka,Bengaluru,1,0,712095,11,143
+Uttar Pradesh,Lucknow,0,0,425488,9,64
+Madhya Pradesh,Indore,1,1,672537,4,104
+Karnataka,Mysuru,0,1,386217,18,19
+Uttar Pradesh,Lucknow,1,1,370730,8,190
+Maharashtra,Pune,0,1,571677,9,52
+Maharashtra,Nagpur,0,1,587806,8,80
+Tamil Nadu,Madurai,0,1,403471,8,171
+Rajasthan,Jodhpur,1,0,493813,17,135
+Rajasthan,Jaipur,1,0,702478,10,136
+Tamil Nadu,Coimbatore,0,0,391544,11,103
+West Bengal,Howrah,0,1,732753,14,189
+Karnataka,Bengaluru,0,0,534645,13,194
+Rajasthan,Udaipur,1,1,747896,9,95
+West Bengal,Durgapur,1,0,641890,12,44
+West Bengal,Kolkata,0,1,769373,4,131
+Karnataka,Mangaluru,0,1,635872,9,76
+West Bengal,Howrah,0,0,642295,13,119
+Maharashtra,Mumbai,0,0,592116,12,54
+Madhya Pradesh,Gwalior,0,0,520975,16,101
+Telangana,Nizamabad,0,1,393780,2,129
+Tamil Nadu,Chennai,1,0,540846,15,182
+Karnataka,Mysuru,1,0,530502,16,178
+Uttar Pradesh,Lucknow,0,1,515863,10,19
+Madhya Pradesh,Bhopal,1,1,367407,17,139
+Madhya Pradesh,Gwalior,1,1,774699,12,36
+Karnataka,Mysuru,1,0,480698,18,47
+Telangana,Hyderabad,1,1,608808,14,28
+Delhi,New Delhi,1,0,424109,8,41
+Maharashtra,Pune,0,0,480028,18,52
+West Bengal,Durgapur,1,1,667499,17,193
+Maharashtra,Nagpur,1,0,765513,16,45
+Delhi,New Delhi,1,0,437127,14,117
+Rajasthan,Udaipur,0,1,564586,16,35
+Telangana,Warangal,0,1,654461,2,151
+Tamil Nadu,Coimbatore,0,0,611490,3,107
+Madhya Pradesh,Indore,1,1,517093,18,84
+Telangana,Nizamabad,0,0,585342,17,182
+Madhya Pradesh,Gwalior,1,0,779857,3,47
+Madhya Pradesh,Bhopal,1,1,622871,7,196
+Rajasthan,Jodhpur,1,1,408847,4,148
+Uttar Pradesh,Lucknow,1,0,723534,15,118
+Maharashtra,Pune,1,1,750395,11,62
+Rajasthan,Udaipur,1,1,641566,2,114
+Gujarat,Ahmedabad,1,1,377098,18,184
+Uttar Pradesh,Kanpur,1,1,469579,8,186
+Madhya Pradesh,Bhopal,1,0,748048,5,141
+Madhya Pradesh,Gwalior,1,1,390486,17,147
+Tamil Nadu,Chennai,0,1,540394,9,159
+Uttar Pradesh,Lucknow,1,1,738606,17,19
+Telangana,Nizamabad,1,1,461891,10,137
+Gujarat,Surat,1,0,503759,17,21
+Karnataka,Mysuru,1,1,385172,12,83
+Maharashtra,Pune,1,0,734720,8,192
+Uttar Pradesh,Kanpur,0,1,607725,14,61
+Rajasthan,Udaipur,0,0,455107,7,36
+Gujarat,Ahmedabad,0,1,665339,9,44
+Rajasthan,Udaipur,1,0,378159,12,169
+Karnataka,Bengaluru,1,1,366934,11,11
+Gujarat,Surat,0,1,548339,18,144
+Maharashtra,Pune,0,0,459860,8,125
+Gujarat,Surat,0,1,590202,7,198
+Uttar Pradesh,Kanpur,1,0,600792,19,76
+West Bengal,Kolkata,1,1,584369,8,137
+Rajasthan,Jodhpur,1,0,381364,5,170
+Gujarat,Ahmedabad,0,0,666409,9,166
+Uttar Pradesh,Kanpur,1,0,448743,2,112
+Tamil Nadu,Chennai,0,0,759107,4,95
+Uttar Pradesh,Lucknow,1,1,628149,3,162
+Madhya Pradesh,Gwalior,0,1,561041,16,154
+Gujarat,Surat,0,1,395854,7,153
+Gujarat,Ahmedabad,0,1,577808,6,68
+West Bengal,Kolkata,1,1,658398,10,18
+Karnataka,Bengaluru,1,0,489858,7,72
+Uttar Pradesh,Lucknow,0,0,658293,12,177

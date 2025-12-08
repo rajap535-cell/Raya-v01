@@ -1,0 +1,17 @@
+city,date,temperature,humidity,consumption_mw,season,hour,is_weekend,industrial_load
+Delhi,2024-01-15,12,65,3800,winter,14,false,0.7
+Delhi,2024-02-20,18,60,4000,winter,14,false,0.7
+Delhi,2024-04-15,32,55,4500,summer,14,false,0.7
+Delhi,2024-07-10,35,85,4200,monsoon,14,false,0.7
+Mumbai,2024-01-15,25,75,3200,winter,14,false,0.8
+Mumbai,2024-04-15,34,70,3800,summer,14,false,0.8
+Mumbai,2024-07-15,30,90,3500,monsoon,14,false,0.8
+Chennai,2024-01-15,28,70,2800,winter,14,false,0.6
+Chennai,2024-04-15,38,65,3300,summer,14,false,0.6
+Chennai,2024-07-15,35,80,3000,monsoon,14,false,0.6
+Kolkata,2024-01-15,20,72,3200,winter,14,false,0.5
+Kolkata,2024-04-15,35,68,3800,summer,14,false,0.5
+Kolkata,2024-07-15,32,88,3500,monsoon,14,false,0.5
+Bangalore,2024-01-15,22,62,3100,winter,14,false,0.75
+Bangalore,2024-04-15,30,58,3600,summer,14,false,0.75
+Bangalore,2024-07-15,27,78,3300,monsoon,14,false,0.75

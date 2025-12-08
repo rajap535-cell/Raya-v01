@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAYA Energy AI - Intelligent Energy Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3>Initializing RAYA Energy AI</h3>
+            <p>Loading intelligent prediction system...</p>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-top">
+                    <div class="logo">
+                        <i class="fas fa-bolt"></i>
+                        <h1>RAYA ENERGY AI</h1>
+                    </div>
+                    <div class="model-meta">
+                        <span class="model-version">v{{ model_version }}</span>
+                        <span class="model-reliability">{{ reliability_score }}% Reliable</span>
+                    </div>
+                </div>
+                <p class="subtitle">Intelligent Energy Prediction & Management System</p>
+                
+                <div class="model-info-panel">
+                    <div class="info-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <div class="info-label">Last Updated</div>
+                            <div class="info-value">{{ model_last_updated }}</div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <div class="info-label">Current Season</div>
+                            <div class="info-value">{{ season|title }}</div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-brain"></i>
+                        <div>
+                            <div class="info-label">AI Model</div>
+                            <div class="info-value">Multi-Factor Regression</div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-city"></i>
+                        <div>
+                            <div class="info-label">Cities</div>
+                            <div class="info-value">5 Major Indian Cities</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <!-- Live Cities Section -->
+            <section class="card cities-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-city"></i> Live City Status</h2>
+                    <div class="card-actions">
+                        <div class="last-updated" id="lastUpdatedTime">Updating...</div>
+                        <button class="btn-icon refresh-btn" onclick="loadCityData()" title="Refresh data">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="city-grid" id="cityGrid">
+                        <!-- Cities will be loaded here via JavaScript -->
+                        <div class="loading-cities">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <span>Loading city data...</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prediction Section -->
+            <section class="card prediction-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-crystal-ball"></i> Energy Predictor</h2>
+                    <div class="prediction-help">
+                        <i class="fas fa-info-circle"></i>
+                        Adjust parameters for accurate prediction
+                    </div>
+                </div>
+                <div class="card-content">
+                    <form id="predictionForm" onsubmit="event.preventDefault(); predictEnergy();">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="citySelect">
+                                    <i class="fas fa-map-marker-alt"></i> City
+                                </label>
+                                <select id="citySelect" required>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Bangalore">Bangalore</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tempInput">
+                                    <i class="fas fa-thermometer-half"></i> Temperature (°C)
+                                </label>
+                                <div class="input-with-slider">
+                                    <input type="number" id="tempInput" value="32" min="-10" max="50" step="0.1" required>
+                                    <input type="range" id="tempSlider" min="-10" max="50" value="32" step="0.1">
+                                </div>
+                                <div class="input-help">Optimal: 25°C • Range: -10°C to 50°C</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="humidityInput">
+                                    <i class="fas fa-tint"></i> Humidity (%)
+                                </label>
+                                <div class="input-with-slider">
+                                    <input type="number" id="humidityInput" value="70" min="0" max="100" step="1" required>
+                                    <input type="range" id="humiditySlider" min="0" max="100" value="70" step="1">
+                                </div>
+                                <div class="input-help">Optimal: 60% • Range: 0% to 100%</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="hourInput">
+                                    <i class="fas fa-clock"></i> Hour (0-23)
+                                </label>
+                                <div class="input-with-slider">
+                                    <input type="number" id="hourInput" value="14" min="0" max="23" step="1" required>
+                                    <input type="range" id="hourSlider" min="0" max="23" value="14" step="1">
+                                </div>
+                                <div class="input-help">Current: <span id="currentHour"></span>:00 • 24-hour format</div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="weekendCheck">
+                                    <i class="fas fa-calendar-weekend"></i>
+                                    <span>Weekend?</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="predict-btn">
+                            <i class="fas fa-brain"></i>
+                            <span>Predict Energy Consumption</span>
+                        </button>
+                    </form>
+                    
+                    <!-- Prediction Result -->
+                    <div id="predictionResult" class="result-card" style="display: none;">
+                        <div class="result-header">
+                            <h3><i class="fas fa-bullseye"></i> Prediction Result</h3>
+                            <div class="confidence-badge" id="confidenceBadge">
+                                <i class="fas fa-shield-alt"></i>
+                                <span id="confidenceValue">85%</span>
+                            </div>
+                        </div>
+                        <div id="resultContent"></div>
+                        <div class="result-footer">
+                            <div class="model-info-small">
+                                <i class="fas fa-code-branch"></i>
+                                <span>Model: {{ model_version }} • Updated: {{ model_last_updated }}</span>
+                            </div>
+                            <button class="btn-secondary" onclick="savePrediction()">
+                                <i class="fas fa-save"></i> Save Result
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="card chart-card full-width">
+                <div class="card-header">
+                    <h2><i class="fas fa-chart-line"></i> Energy Consumption Analysis</h2>
+                    <div class="chart-controls">
+                        <div class="control-group">
+                            <label for="chartTypeSelect">
+                                <i class="fas fa-chart-bar"></i> Chart Type:
+                            </label>
+                            <select id="chartTypeSelect">
+                                <option value="bar">Bar Chart</option>
+                                <option value="line">Line Chart</option>
+                                <option value="pie">Pie Chart</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="dataTypeSelect">
+                                <i class="fas fa-filter"></i> Data:
+                            </label>
+                            <select id="dataTypeSelect">
+                                <option value="consumption">Power Consumption</option>
+                                <option value="temperature">Temperature</option>
+                                <option value="humidity">Humidity</option>
+                            </select>
+                        </div>
+                        <button class="btn-secondary" onclick="refreshChart()">
+                            <i class="fas fa-redo"></i> Refresh
+                        </button>
+                        <button class="btn-secondary" onclick="exportChart()">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="chart-container">
+                        <canvas id="energyChart"></canvas>
+                    </div>
+                    <div class="chart-legend" id="chartLegend"></div>
+                </div>
+            </section>
+
+            <!-- System Status Section -->
+            <section class="card status-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-heartbeat"></i> System Status</h2>
+                    <div class="status-indicator">
+                        <span class="status-dot live"></span>
+                        <span class="status-text">LIVE</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="status-grid">
+                        <div class="status-item">
+                            <div class="status-icon">
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+                            <div class="status-details">
+                                <div class="status-label">Weather Service</div>
+                                <div class="status-value" id="weatherStatus">
+                                    <span class="status-checking">Checking...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="status-details">
+                                <div class="status-label">Power Data</div>
+                                <div class="status-value" id="powerStatus">
+                                    <span class="status-checking">Checking...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="status-details">
+                                <div class="status-label">AI Model</div>
+                                <div class="status-value" id="modelStatus">
+                                    <span class="status-checking">Checking...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="status-details">
+                                <div class="status-label">Data Pipeline</div>
+                                <div class="status-value" id="dataStatus">
+                                    <span class="status-checking">Checking...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div class="status-details">
+                                <div class="status-label">Last Update</div>
+                                <div class="status-value" id="lastUpdate">{{ timestamp }}</div>
+                            </div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="status-details">
+                                <div class="status-label">System Uptime</div>
+                                <div class="status-value" id="uptime">00:00:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>RAYA Energy AI</span>
+                    </div>
+                    <p class="footer-tagline">Powering Intelligent Energy Decisions</p>
+                </div>
+                <div class="footer-section">
+                    <p><i class="fas fa-code-branch"></i> Version: {{ model_version }}</p>
+                    <p><i class="fas fa-calendar-alt"></i> Season: {{ season|title }}</p>
+                    <p><i class="fas fa-clock"></i> Last Updated: {{ timestamp }}</p>
+                </div>
+                <div class="footer-section">
+                    <p class="footer-disclaimer">
+                        <i class="fas fa-info-circle"></i>
+                        © 2024 RAYA Energy Systems. All predictions are simulated for demonstration purposes.
+                        Model reliability: {{ reliability_score }}%.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    
+    <!-- Initialize on page load -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current hour
+            const now = new Date();
+            const currentHour = now.getHours();
+            document.getElementById('currentHour').textContent = currentHour;
+            document.getElementById('hourInput').value = currentHour;
+            document.getElementById('hourSlider').value = currentHour;
+            
+            // Set up slider synchronization
+            setupSliderSync();
+            
+            // Load initial data
+            setTimeout(() => {
+                loadCityData();
+                updateSystemStatus();
+            }, 1000);
+            
+            // Initialize event listeners
+            document.getElementById('chartTypeSelect').addEventListener('change', updateChartType);
+            document.getElementById('dataTypeSelect').addEventListener('change', updateChartData);
+            
+            // Hide loading overlay after 2 seconds
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').style.display = 'none';
+            }, 2000);
+        });
+        
+        function setupSliderSync() {
+            // Temperature sync
+            const tempInput = document.getElementById('tempInput');
+            const tempSlider = document.getElementById('tempSlider');
+            const humidityInput = document.getElementById('humidityInput');
+            const humiditySlider = document.getElementById('humiditySlider');
+            const hourInput = document.getElementById('hourInput');
+            const hourSlider = document.getElementById('hourSlider');
+            
+            tempInput.addEventListener('input', () => tempSlider.value = tempInput.value);
+            tempSlider.addEventListener('input', () => tempInput.value = tempSlider.value);
+            
+            humidityInput.addEventListener('input', () => humiditySlider.value = humidityInput.value);
+            humiditySlider.addEventListener('input', () => humidityInput.value = humiditySlider.value);
+            
+            hourInput.addEventListener('input', () => hourSlider.value = hourInput.value);
+            hourSlider.addEventListener('input', () => hourInput.value = hourSlider.value);
+        }
+        
+        function updateChartType() {
+            const select = document.getElementById('chartTypeSelect');
+            if (window.currentChartType !== select.value) {
+                window.currentChartType = select.value;
+                // Trigger chart update via existing data
+                if (window.lastCityData) {
+                    updateChart(window.lastCityData);
+                }
+            }
+        }
+        
+        function updateChartData() {
+            const select = document.getElementById('dataTypeSelect');
+            if (window.currentDataType !== select.value) {
+                window.currentDataType = select.value;
+                // Trigger chart update via existing data
+                if (window.lastCityData) {
+                    updateChart(window.lastCityData);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

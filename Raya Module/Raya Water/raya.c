@@ -3,6 +3,18 @@
 #include <string.h>
 #include <math.h>
 
+/* ===================== CONFIG ===================== */
+#define YEAR_MIN 1925
+#define YEAR_MAX 2125
+#define PAST_YEAR_MAX 2025
+
+#define DATA_DIR "data/"
+#define RAINFALL_ERROR_FILE DATA_DIR "rainfall_error_validation_1925_2025.csv"
+#define POPULATION_FILE     DATA_DIR "year_population_1925-2125.csv"
+#define WATER_FILE          DATA_DIR "water_demand_supply_1925_2125.csv"
+#define RAINFALL_FILE       DATA_DIR "climate_rainfall_factors _1925_2125.csv"
+/* ================================================== */
+
 
 void validate_rainfall() {
     FILE *fp = fopen("data\\rainfall_error_validation_1925_2025.csv", "r");

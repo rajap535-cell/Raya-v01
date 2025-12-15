@@ -1,0 +1,36 @@
+Enter the Year between 1925 and 2125.
+For Exit Enter any Year beyond above range!
+Enter The Year:- 2050
+
+Population for: 2050
+Population of India: 1746892111
+
+Water Crisis details for: 2050
+(1) Total Water Availability in Litre: 6713111927323.93
+(2) Water Demand for Agriculture: 1048135266600.00
+(3) Water Demand for Industry: 87344605550.00
+(4) Water Demand for Energy: 34937842220.00
+(5) WaterDemand for Domestic: 68145169442540.62
+(6) Water Demand for Other: 52406763330.00
+(7) PerCapita Water Availability: 3842.89
+(8) PerCapita Water Demand: 108.79
+(9) Crisis Status: Normal
+General Information: Average per person per day demand for domestic use is set  for Rural Area =  55 litre  According to Ministry of Urban and Housing Affairs    
+Average per person per day demand for domestic use is set for Urban Area =  135 litre  According to Ministry of Urban and Housing Affairs
+
+Rainfall and factors for 2050:
+All-India average rainfall: 1143.05 mm
+Factors:
+(1) ENSO (El Nino-Southern Oscillation): 1.31
+(2) IOD (Indian Ocean Dipole): 0.46
+(3) SST_IO (Sea Surface Temp Anomaly): 0.01
+(4) DeltaT (Avg Temp Anomaly): 1.27
+(5) AOD (Aerosol Optical Depth): 0.39
+(6) Cyclones: 1.00
+(7) LandUse index: 31.50
+(8) 5-Year Moving Avg: 1100.66
+*Crisis Condition: Normal
+We can calculate Error or difference between Actual Rainfall and Predicted Rainfall for past years only.
+For future years we could only get predicted data.
+So, If You want to get Error or difference between Actual Rainfall and Predicted Rainfall, Please, give year between 1925 to 2025.
+Thank You!

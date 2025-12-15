@@ -1,0 +1,37 @@
+Enter the Year between 1925 and 2125.
+For Exit Enter any Year beyond above range!
+Enter The Year:- 2000
+
+Population for: 2000
+Population of India: 1065093107
+
+Water Crisis details for: 2000
+(1) Total Water Availability in Litre: 4091385663247.55
+(2) Water Demand for Agriculture: 639055864200.00
+(3) Water Demand for Industry: 53254655350.00
+(4) Water Demand for Energy: 21301862140.00
+(5) WaterDemand for Domestic: 34259385469846.88
+(6) Water Demand for Other: 31952793210.00
+(7) PerCapita Water Availability: 3841.34
+(8) PerCapita Water Demand: 90.04
+(9) Crisis Status: Normal
+General Information: Average per person per day demand for domestic use is set  for Rural Area =  55 litre  According to Ministry of Urban and Housing Affairs    
+Average per person per day demand for domestic use is set for Urban Area =  135 litre  According to Ministry of Urban and Housing Affairs
+
+Rainfall and factors for 2000:
+All-India average rainfall: 1275.17 mm
+Factors:
+(1) ENSO (El Nino-Southern Oscillation): 0.49
+(2) IOD (Indian Ocean Dipole): 0.08
+(3) SST_IO (Sea Surface Temp Anomaly): 0.06
+(4) DeltaT (Avg Temp Anomaly): 0.81
+(5) AOD (Aerosol Optical Depth): 0.58
+(6) Cyclones: 1.00
+(7) LandUse index: 20.58
+(8) 5-Year Moving Avg: 1223.22
+*Crisis Condition: Normal
+Error or difference between Actual Rainfall and Predicted Rainfall for 2000:     
+Factors:
+(1) Observed or Actual Rainfall: 1275.17
+(2) Pridicted Rainfall: 1293.42
+(3) Error or difference between Actual Rainfall and Predicted Rainfall: 1.43

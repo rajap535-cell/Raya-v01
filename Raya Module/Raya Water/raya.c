@@ -77,7 +77,7 @@ void validate_rainfall() {
 }
 
 int population(int year){
-        FILE *fp = fopen("data\\year_population_1925-2125.csv", "r");
+        FILE *fp = fopen(POPULATION_FILE, "r");
         if (fp == NULL) {
             perror("Error opening file");
             exit(EXIT_FAILURE);
@@ -103,7 +103,7 @@ int population(int year){
 }
 
 int waterCrisis(int demandYear){
-        FILE *fp = fopen("data\\water_demand_supply_1925_2125.csv", "r");
+        FILE *fp = fopen(WATER_FILE, "r");
         if (fp == NULL) {
             perror("Error opening file");
             exit(EXIT_FAILURE);
@@ -140,7 +140,7 @@ int waterCrisis(int demandYear){
 }
 
 void rainfall_for_year(int year){
-    FILE *fp = fopen("data\\climate_rainfall_factors _1925_2125.csv", "r");
+    FILE *fp = fopen(RAINFALL_FILE, "r");
     if (fp == NULL) {
         perror("Error opening file");
         exit(EXIT_FAILURE);
@@ -178,8 +178,8 @@ void rainfall_for_year(int year){
 }
 
 void rainfall_error(int year){
-    if(year >= 1925 && year <= 2025){
-        FILE *fp = fopen("data\\rainfall_error_validation_1925_2025.csv", "r");
+    if(year >= YEAR_MIN && year <= PAST_YEAR_MAX){
+        FILE *fp = fopen(RAINFALL_ERROR_FILE, "r");
         if (fp == NULL) {
             perror("Error opening file");
             exit(EXIT_FAILURE);
@@ -217,21 +217,20 @@ void rainfall_error(int year){
 
 int runWaterResourceModule(){
     int year;
-    printf("\nEnter the Year between 1925 and 2125.\n");
-    printf("For Exit Enter any Year beyond above range!\n");
-    printf("Enter The Year:- ");
+    printf("\n******************************************************************************");
+    printf("\nEnter The Year(%d - %d):- ", YEAR_MIN, YEAR_MAX);
     scanf("%d", &year);
-    while(year >= 1925 && year <= 2125){
+    while(year >= YEAR_MIN && year <= YEAR_MAX){
         population(year);
         waterCrisis(year);
         rainfall_for_year(year);
         rainfall_error(year);
-        printf("\nEnter the Year between 1925 and 2125.\n");
-        printf("For Exit Enter any Year beyond above range!\n");
-        printf("Enter The Year:- ");
+        printf("For Exit Enter any Year beyond %d and %d!\n", YEAR_MIN, YEAR_MAX);
+        printf("\n******************************************************************************\n");
+        printf("\nEnter The Year(%d - %d):- ", YEAR_MIN, YEAR_MAX);
         scanf("%d", &year);
     }
-    if(!(year >= 1925 && year <= 2125)){
+    if(!(year >= YEAR_MIN && year <= YEAR_MAX)){
         printf("You have given Input beyond given range, Thank You to visit!");
         return 0;
     }

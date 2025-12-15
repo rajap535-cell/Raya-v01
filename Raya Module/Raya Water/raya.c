@@ -15,11 +15,10 @@
 #define RAINFALL_FILE       DATA_DIR "climate_rainfall_factors _1925_2125.csv"
 /* ================================================== */
 
-
 void validate_rainfall() {
-    FILE *fp = fopen("data\\rainfall_error_validation_1925_2025.csv", "r");
+    FILE *fp = fopen(RAINFALL_ERROR_FILE, "r");
     if (fp == NULL) {
-        perror("Error opening rainfall_error_validation_1925_2025.csv");
+        perror("Error opening rainfall error file");
         exit(EXIT_FAILURE);
     }
 

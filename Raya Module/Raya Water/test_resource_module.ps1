@@ -1,4 +1,11 @@
-$exePath = "D:\pragati_ws\ProjectRaya\resource-distribution\raya.exe"
+# Resolve raya.exe relative to this script location
+$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$exePath   = Join-Path $scriptDir "raya.exe"
+
+if (-not (Test-Path $exePath)) {
+    Write-Host "ERROR: raya.exe not found at $exePath" -ForegroundColor Red
+    exit 1
+}
 
 Write-Host "Running RAYA Tests..." -ForegroundColor Cyan
 
@@ -32,7 +39,7 @@ if ($LASTEXITCODE -eq 0) {
 Write-Host "`n---- TEST 3: Validation Mode ----" -ForegroundColor Yellow
 & $exePath --validation | Out-Null
 
-$validationFile = "validation_summary.csv"
+$validationFile = Join-Path $scriptDir "validation_summary.csv"
 
 if (Test-Path $validationFile) {
     Write-Host "Validation File Created: PASS" -ForegroundColor Green

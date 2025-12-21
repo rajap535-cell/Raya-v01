@@ -33,5 +33,124 @@
     "sources": {
       "qa": true
     }
+  },
+  "explain gravity in 3 lines": {
+    "source": "Cloud LLM",
+    "text": "[cloud disabled] OPENAI_API_KEY not set",
+    "confidence": 0.9,
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    },
+    "sources": {
+      "Cloud LLM": true
+    }
+  },
+  "what is a black hole": {
+    "source": "Cloud LLM",
+    "text": "[cloud disabled] OPENAI_API_KEY not set",
+    "confidence": 0.9,
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    },
+    "sources": {
+      "Cloud LLM": true
+    }
+  },
+  "define democracy": {
+    "source": "Cloud LLM",
+    "text": "[cloud disabled] OPENAI_API_KEY not set",
+    "confidence": 0.9,
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    },
+    "sources": {
+      "Cloud LLM": true
+    }
+  },
+  "who was job charnok": {
+    "source": "Cloud LLM",
+    "text": "[cloud disabled] OPENAI_API_KEY not set",
+    "confidence": 0.9,
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    },
+    "sources": {
+      "Cloud LLM": true
+    }
+  },
+  "today nifty50 price": {
+    "source": "Cloud LLM",
+    "text": "[cloud disabled] OPENAI_API_KEY not set",
+    "confidence": 0.9,
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    },
+    "sources": {
+      "Cloud LLM": true
+    }
+  },
+  "explain black hole in 3 lines": {
+    "source": "Cloud LLM",
+    "text": "[cloud disabled] OPENAI_API_KEY not set",
+    "confidence": 0.9,
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    },
+    "sources": {
+      "Cloud LLM": true
+    }
+  },
+  "latest research on human brain": {
+    "source": "Cloud LLM",
+    "text": "[cloud disabled] OPENAI_API_KEY not set",
+    "confidence": 0.9,
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    },
+    "sources": {
+      "Cloud LLM": true
+    }
   }
 }

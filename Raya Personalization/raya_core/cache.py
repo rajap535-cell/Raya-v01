@@ -2,6 +2,9 @@ import os
 import json
 from typing import Optional, Dict
 
+
+CACHE_ENABLED = False  # 🔥 Day-3 global switch
+
 # Change this to relative path from cache.py to your cache file
 CACHE_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "final_raya_cache.json")
 

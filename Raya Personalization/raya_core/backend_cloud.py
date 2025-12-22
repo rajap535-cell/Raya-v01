@@ -5,7 +5,7 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
 
-OPENAI_API_KEY = os.getenv("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")
+OPENAI_API_KEY = os.getenv( )
 CLOUD_MODEL_NAME = os.getenv("CLOUD_MODEL_NAME", "gpt-4o-mini")
 
 # Initialize client only if key exists

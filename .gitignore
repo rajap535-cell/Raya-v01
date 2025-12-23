@@ -1,8 +1,17 @@
-# Python virtual environments
+# Python
+__pycache__/
+*.pyc
 .venv/
 venv/
 env/
 
-# Python cache
-__pycache__/
-*.pyc
+# Secrets
+.env
+
+# Data / models
+*.pkl
+*.db
+
+# OS
+.DS_Store
+Thumbs.db

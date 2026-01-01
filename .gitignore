@@ -1,1 +1,16 @@
+# backups
 backup_dev_llm/
+
+# python
+__pycache__/
+*.pyc
+
+# local databases
+*.db
+
+# environments
+raya_env/
+.venv/
+
+# editor
+.vscode/

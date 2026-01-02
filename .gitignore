@@ -14,3 +14,13 @@ raya_env/
 
 # editor
 .vscode/
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+raya_env/
+venv/
+
+# Local databases
+*.db

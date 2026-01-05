@@ -1,0 +1,190 @@
+{
+  "crop_identity": {
+    "common_name": "Wheat",
+    "scientific_name": "Triticum aestivum",
+    "crop_type": "Cereal",
+    "primary_regions": ["India", "China", "United States", "Russia", "Europe"]
+  },
+
+  "growth_lifecycle": {
+    "stages": {
+      "Germination": {
+        "duration_days": "7-10",
+        "sensitivity": "High"
+      },
+      "Tillering": {
+        "duration_days": "20-30",
+        "sensitivity": "Medium"
+      },
+      "Stem_Elongation": {
+        "duration_days": "20-25",
+        "sensitivity": "Medium"
+      },
+      "Flowering": {
+        "duration_days": "7-10",
+        "sensitivity": "High"
+      },
+      "Grain_Filling": {
+        "duration_days": "25-35",
+        "sensitivity": "High"
+      },
+      "Maturity": {
+        "duration_days": "10-15",
+        "sensitivity": "Low"
+      }
+    }
+  },
+
+  "climate_interactions": {
+    "Germination": {
+      "drought": {
+        "risk_level": "High",
+        "effects": [
+          "Poor seed emergence",
+          "Uneven plant stand"
+        ]
+      }
+    },
+
+    "Tillering": {
+      "low_temperature": {
+        "risk_level": "Medium",
+        "effects": [
+          "Reduced tiller formation"
+        ]
+      }
+    },
+
+    "Flowering": {
+      "high_temperature": {
+        "risk_level": "High",
+        "effects": [
+          "Pollen sterility",
+          "Poor grain set"
+        ]
+      },
+      "excess_rainfall": {
+        "risk_level": "Medium",
+        "effects": [
+          "Increased disease pressure"
+        ]
+      }
+    },
+
+    "Grain_Filling": {
+      "high_temperature": {
+        "risk_level": "High",
+        "effects": [
+          "Forced maturity",
+          "Shriveled grains"
+        ]
+      },
+      "drought": {
+        "risk_level": "High",
+        "effects": [
+          "Reduced grain weight",
+          "Lower test weight"
+        ]
+      }
+    }
+  },
+
+  "diseases": [
+    {
+      "name": "Rust Disease",
+      "affected_stages": [
+        "Tillering",
+        "Stem_Elongation",
+        "Flowering"
+      ],
+      "severity_by_stage": {
+        "Tillering": "Medium",
+        "Stem_Elongation": "High",
+        "Flowering": "High"
+      },
+      "visible_symptoms": [
+        "Orange-brown pustules on leaves",
+        "Premature leaf drying"
+      ],
+      "prevention_logic": [
+        "Use resistant varieties",
+        "Avoid excessive nitrogen",
+        "Remove volunteer plants"
+      ]
+    },
+    {
+      "name": "Powdery Mildew",
+      "affected_stages": [
+        "Tillering",
+        "Stem_Elongation"
+      ],
+      "severity_by_stage": {
+        "Tillering": "Medium",
+        "Stem_Elongation": "High"
+      },
+      "visible_symptoms": [
+        "White powdery growth on leaves",
+        "Leaf yellowing"
+      ],
+      "prevention_logic": [
+        "Ensure proper spacing",
+        "Avoid excessive irrigation",
+        "Improve air circulation"
+      ]
+    }
+  ],
+
+  "risk_impact_map": {
+    "Flowering": {
+      "high_temperature": {
+        "primary_impacts": [
+          "Poor fertilization"
+        ],
+        "secondary_impacts": [
+          "Reduced grain number"
+        ],
+        "severity": "High"
+      }
+    },
+    "Grain_Filling": {
+      "drought": {
+        "primary_impacts": [
+          "Lightweight grains"
+        ],
+        "secondary_impacts": [
+          "Lower milling and baking quality"
+        ],
+        "severity": "High"
+      }
+    }
+  },
+
+  "harvest_logic": {
+    "ideal_window_days": "120-150",
+    "early_harvest": {
+      "risks": [
+        "Immature grains",
+        "Low test weight"
+      ],
+      "quality_impact": "High"
+    },
+    "late_harvest": {
+      "risks": [
+        "Shattering losses",
+        "Weather damage"
+      ],
+      "quality_impact": "Medium"
+    }
+  },
+
+  "market_impact": {
+    "early_harvest": "Lower market price due to immature grains and poor flour quality",
+    "late_harvest": "Quality deterioration and moisture damage reduce procurement value"
+  },
+
+  "stage_risk_summary": {
+    "Germination": "Moisture stress during germination leads to poor crop establishment and uneven growth.",
+    "Flowering": "High temperature during flowering reduces fertilization and final grain number.",
+    "Grain_Filling": "Heat or drought during grain filling causes shriveled grains and lower market quality."
+  }
+}

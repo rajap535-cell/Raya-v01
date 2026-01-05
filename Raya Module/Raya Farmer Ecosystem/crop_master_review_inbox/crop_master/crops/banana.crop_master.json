@@ -1,0 +1,189 @@
+{
+  "crop_identity": {
+    "common_name": "Banana",
+    "scientific_name": "Musa spp.",
+    "crop_type": "Fruit",
+    "primary_regions": ["India", "Philippines", "Ecuador", "Brazil", "Sri Lanka"]
+  },
+
+  "growth_lifecycle": {
+    "stages": {
+      "Planting_Establishment": {
+        "duration_days": "30-45",
+        "sensitivity": "High"
+      },
+      "Vegetative_Growth": {
+        "duration_days": "120-180",
+        "sensitivity": "Medium"
+      },
+      "Flowering": {
+        "duration_days": "15-25",
+        "sensitivity": "High"
+      },
+      "Fruit_Development": {
+        "duration_days": "90-120",
+        "sensitivity": "High"
+      },
+      "Maturity": {
+        "duration_days": "15-30",
+        "sensitivity": "Medium"
+      }
+    }
+  },
+
+  "climate_interactions": {
+    "Planting_Establishment": {
+      "excess_rainfall": {
+        "risk_level": "High",
+        "effects": [
+          "Poor root establishment",
+          "Increased risk of rhizome rot"
+        ]
+      },
+      "drought": {
+        "risk_level": "High",
+        "effects": [
+          "Delayed sprouting",
+          "Weak plant establishment"
+        ]
+      }
+    },
+
+    "Flowering": {
+      "high_temperature": {
+        "risk_level": "Medium",
+        "effects": [
+          "Flower desiccation",
+          "Reduced fruit set"
+        ]
+      },
+      "strong_winds": {
+        "risk_level": "High",
+        "effects": [
+          "Stem breakage",
+          "Bunch damage"
+        ]
+      }
+    },
+
+    "Fruit_Development": {
+      "excess_rainfall": {
+        "risk_level": "Medium",
+        "effects": [
+          "Waterlogging stress",
+          "Increased fungal disease pressure"
+        ]
+      },
+      "drought": {
+        "risk_level": "High",
+        "effects": [
+          "Small fruit size",
+          "Poor finger filling"
+        ]
+      }
+    }
+  },
+
+  "diseases": [
+    {
+      "name": "Panama Wilt",
+      "affected_stages": [
+        "Vegetative_Growth",
+        "Flowering",
+        "Fruit_Development"
+      ],
+      "severity_by_stage": {
+        "Vegetative_Growth": "High",
+        "Flowering": "High",
+        "Fruit_Development": "Medium"
+      },
+      "visible_symptoms": [
+        "Yellowing of older leaves",
+        "Vascular discoloration",
+        "Wilting and plant collapse"
+      ],
+      "prevention_logic": [
+        "Use disease-free planting material",
+        "Maintain proper field drainage",
+        "Avoid movement of contaminated soil"
+      ]
+    },
+    {
+      "name": "Sigatoka Leaf Spot",
+      "affected_stages": [
+        "Vegetative_Growth",
+        "Fruit_Development"
+      ],
+      "severity_by_stage": {
+        "Vegetative_Growth": "Medium",
+        "Fruit_Development": "High"
+      },
+      "visible_symptoms": [
+        "Brown streaks on leaves",
+        "Premature leaf drying"
+      ],
+      "prevention_logic": [
+        "Ensure good air circulation",
+        "Remove infected leaves",
+        "Avoid prolonged leaf wetness"
+      ]
+    }
+  ],
+
+  "risk_impact_map": {
+    "Flowering": {
+      "strong_winds": {
+        "primary_impacts": [
+          "Physical damage to pseudostem",
+          "Loss of inflorescence"
+        ],
+        "secondary_impacts": [
+          "Reduced bunch size",
+          "Delayed harvest"
+        ],
+        "severity": "High"
+      }
+    },
+    "Fruit_Development": {
+      "drought": {
+        "primary_impacts": [
+          "Incomplete fruit filling"
+        ],
+        "secondary_impacts": [
+          "Lower market grade",
+          "Reduced shelf life"
+        ],
+        "severity": "High"
+      }
+    }
+  },
+
+  "harvest_logic": {
+    "ideal_window_days": "300-360",
+    "early_harvest": {
+      "risks": [
+        "Immature fruit",
+        "Poor ripening quality"
+      ],
+      "quality_impact": "High"
+    },
+    "late_harvest": {
+      "risks": [
+        "Fruit cracking",
+        "Higher pest and disease damage"
+      ],
+      "quality_impact": "Medium"
+    }
+  },
+
+  "market_impact": {
+    "early_harvest": "Lower market price due to poor size, taste, and ripening inconsistency",
+    "late_harvest": "Increased rejection risk and reduced shelf life affecting trader demand"
+  },
+
+  "stage_risk_summary": {
+    "Planting_Establishment": "Excess water or drought during establishment weakens root development and affects long-term plant vigor.",
+    "Flowering": "Strong winds or heat during flowering can damage the inflorescence and reduce final bunch weight.",
+    "Fruit_Development": "Water stress during fruit development leads to small, poor-quality fruits with lower market value."
+  }
+}

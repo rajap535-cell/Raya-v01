@@ -1,0 +1,180 @@
+{
+  "crop_identity": {
+    "common_name": "Tomato",
+    "scientific_name": "Solanum lycopersicum",
+    "crop_type": "Vegetable",
+    "primary_regions": ["India", "China", "Turkey", "United States"]
+  },
+
+  "growth_lifecycle": {
+    "stages": {
+      "Seedling": {
+        "duration_days": "20-30",
+        "sensitivity": "High"
+      },
+      "Vegetative": {
+        "duration_days": "30-45",
+        "sensitivity": "Medium"
+      },
+      "Flowering": {
+        "duration_days": "15-20",
+        "sensitivity": "High"
+      },
+      "Fruit_Set": {
+        "duration_days": "15-25",
+        "sensitivity": "High"
+      },
+      "Fruit_Maturity": {
+        "duration_days": "20-30",
+        "sensitivity": "Medium"
+      }
+    }
+  },
+
+  "climate_interactions": {
+    "Seedling": {
+      "excess_rainfall": {
+        "risk_level": "High",
+        "effects": [
+          "Damping-off disease",
+          "Weak root development"
+        ]
+      },
+      "low_temperature": {
+        "risk_level": "High",
+        "effects": [
+          "Slow growth",
+          "Seedling mortality"
+        ]
+      }
+    },
+
+    "Flowering": {
+      "high_temperature": {
+        "risk_level": "High",
+        "effects": [
+          "Flower drop",
+          "Poor pollination"
+        ]
+      },
+      "high_humidity": {
+        "risk_level": "Medium",
+        "effects": [
+          "Increased fungal disease risk"
+        ]
+      }
+    },
+
+    "Fruit_Set": {
+      "drought": {
+        "risk_level": "High",
+        "effects": [
+          "Poor fruit setting",
+          "Blossom end rot"
+        ]
+      }
+    }
+  },
+
+  "diseases": [
+    {
+      "name": "Early Blight",
+      "affected_stages": [
+        "Vegetative",
+        "Flowering",
+        "Fruit_Set"
+      ],
+      "severity_by_stage": {
+        "Vegetative": "Medium",
+        "Flowering": "High",
+        "Fruit_Set": "High"
+      },
+      "visible_symptoms": [
+        "Brown concentric rings on leaves",
+        "Leaf yellowing and drop"
+      ],
+      "prevention_logic": [
+        "Crop rotation",
+        "Avoid overhead irrigation",
+        "Remove infected plant debris"
+      ]
+    },
+    {
+      "name": "Late Blight",
+      "affected_stages": [
+        "Flowering",
+        "Fruit_Set",
+        "Fruit_Maturity"
+      ],
+      "severity_by_stage": {
+        "Flowering": "High",
+        "Fruit_Set": "High",
+        "Fruit_Maturity": "Medium"
+      },
+      "visible_symptoms": [
+        "Water-soaked lesions on leaves",
+        "Dark patches on fruits"
+      ],
+      "prevention_logic": [
+        "Ensure proper spacing",
+        "Avoid prolonged leaf wetness",
+        "Use healthy seedlings"
+      ]
+    }
+  ],
+
+  "risk_impact_map": {
+    "Flowering": {
+      "high_temperature": {
+        "primary_impacts": [
+          "Flower abortion"
+        ],
+        "secondary_impacts": [
+          "Reduced fruit count"
+        ],
+        "severity": "High"
+      }
+    },
+    "Fruit_Set": {
+      "drought": {
+        "primary_impacts": [
+          "Poor fruit development"
+        ],
+        "secondary_impacts": [
+          "Uneven fruit size",
+          "Market rejection"
+        ],
+        "severity": "High"
+      }
+    }
+  },
+
+  "harvest_logic": {
+    "ideal_window_days": "90-120",
+    "early_harvest": {
+      "risks": [
+        "Immature fruits",
+        "Poor color development"
+      ],
+      "quality_impact": "High"
+    },
+    "late_harvest": {
+      "risks": [
+        "Fruit cracking",
+        "Over-ripening"
+      ],
+      "quality_impact": "Medium"
+    }
+  },
+
+  "market_impact": {
+    "early_harvest": "Lower price due to poor color, firmness, and consumer preference",
+    "late_harvest": "Short shelf life and higher spoilage reduce trader demand"
+  },
+
+  "stage_risk_summary": {
+    "Seedling": "Excess moisture or cold during seedling stage increases mortality and weakens plant establishment.",
+    "Flowering": "High temperature during flowering causes flower drop, directly reducing yield potential.",
+    "Fruit_Set": "Water stress during fruit set results in poor fruit development and lower market acceptance."
+  }
+}

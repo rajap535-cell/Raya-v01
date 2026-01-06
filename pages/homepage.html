@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAYA — The First Open Knowledge Intelligence</title>
+
+  <meta name="description"
+    content="Raya: an open, community-first knowledge intelligence. Follow the journey toward a transparent knowledge future." />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="homepage.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR / HEADER -->
+  <header class="bg-[url('assets/raya_header.jpg')] bg-cover bg-center h-64 flex justify-start items-end px-3">
+    <div class="flex items-center gap-3 mb-0">
+      <div class="logo-box">
+        <img src="assets/raya_logo.jpg" alt="Raya Logo" class="logo-img">
+      </div>
+      <div>
+        <div class="brand-title">Raya</div>
+        <div class="brand-subtitle">An Architecture for a Type-I Civilization</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="max-w-6xl mx-auto flex justify-end gap-6 py-4 px-6">
+    <a href="public/vision2.html">Vision</a>
+    <a href="public/journey.html">Journey</a>
+    <a href="public/problem.html">Challenges</a>
+    <a href="public/module.html">Module</a>
+    <a href="public/portal.html">Portal</a>
+    <a href="#follow" class="btn-rune px-4 py-2 rounded-md">Join</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-12">
+
+    <!-- HERO -->
+    <section class="space-y-4">
+      <h1 class="hero-title">
+        Raya — Open Knowledge Intelligence for Planetary Co-ordination
+      </h1>
+      <p class="hero-text">
+        Building transparent, community-governed intelligence to coordinate energy,
+        resources, and knowledge at a planetary scale.
+      </p>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section>
+      <h2 class="section-title">Foundational Principles</h2>
+      <ul class="principle-list">
+        <li>Long-term planetary stability over short-term optimization.</li>
+        <li>Scientific integrity over narrative or ideology.</li>
+        <li>Planetary limits over unchecked growth.</li>
+        <li>Humanity over intelligence without responsibility.</li>
+      </ul>
+    </section>
+
+    <!-- SYSTEMS -->
+    <section>
+      <h2 class="section-title">Planetary Systems Raya Explores</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
+        <div class="planet-card">
+          <img src="assets/raya_energy.jpg" class="planet-img" />
+          <div class="planet-title">Energy</div>
+          <div class="planet-desc">Renewable transitions and planetary energy balance.</div>
+        </div>
+
+        <div class="planet-card">
+          <img src="assets/raya_water.jpg" class="planet-img" />
+          <div class="planet-title">Water</div>
+          <div class="planet-desc">Water cycles, scarcity, and sustainability.</div>
+        </div>
+
+        <div class="planet-card">
+          <img src="assets/raya_farming.jpg" class="planet-img" />
+          <div class="planet-title">Farming</div>
+          <div class="planet-desc">Climate-aware agriculture and food security.</div>
+        </div>
+
+        <div class="planet-card">
+          <img src="assets/raya_hsi.jpg" class="planet-img" />
+          <div class="planet-title">Human Sustainability</div>
+          <div class="planet-desc">Health, education, and well-being systems.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+      <div>
+        <div class="footer-title">Raya</div>
+        <div class="footer-text">From Darkness to Light — tamso mā jyotirgamaya</div>
+      </div>
+      <div>
+        <div class="footer-title">Explore</div>
+        <a href="public/vision.html">Vision</a>
+        <a href="public/journey.html">Journey</a>
+        <a href="public/portal.html">Portal</a>
+      </div>
+      <div>
+        <div class="footer-title">Contact</div>
+        <div>hello@raya.org</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Assistant -->
+  <div id="raya-assistant-container"></div>
+  <script>
+    fetch("src/components/raya-assistant.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("raya-assistant-container").innerHTML = html;
+        document.querySelectorAll("#raya-assistant-container script").forEach(s => {
+          const n = document.createElement("script");
+          n.textContent = s.textContent;
+          document.body.appendChild(n);
+          s.remove();
+        });
+      });
+  </script>
+
+</body>
+</html>

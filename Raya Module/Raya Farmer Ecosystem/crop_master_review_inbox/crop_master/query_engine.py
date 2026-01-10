@@ -76,3 +76,72 @@ def harvest_risk(crop_name, timing):
         "quality_impact": harvest_logic.get("quality_impact"),
         "market_impact": market_impact
     }
+
+# 4️⃣ TEMPERATURE RISK (Phase-1: basic rule-based)
+
+def temperature_risk(temp_c):
+    """
+    Phase-1 temperature intelligence.
+    Simple thresholds, no crop-specific tuning yet.
+    """
+    if temp_c >= 40:
+        return {
+            "risk_level": "high",
+            "impact": "Heat stress, crop damage likely"
+        }
+    elif temp_c >= 30:
+        return {
+            "risk_level": "moderate",
+            "impact": "Reduced growth efficiency"
+        }
+    else:
+        return {
+            "risk_level": "low",
+            "impact": "Temperature within safe range"
+        }
+
+# 5️⃣ HUMIDITY RISK (Phase-1: basic rule-based)
+
+def humidity_risk(humidity_percent):
+    """
+    Phase-1 humidity intelligence.
+    Simple thresholds, crop-agnostic.
+    """
+    if humidity_percent >= 85:
+        return {
+            "risk_level": "high",
+            "impact": "High fungal and disease risk"
+        }
+    elif humidity_percent >= 65:
+        return {
+            "risk_level": "moderate",
+            "impact": "Conditions may favor disease spread"
+        }
+    else:
+        return {
+            "risk_level": "low",
+            "impact": "Humidity within safe range"
+        }
+
+# 6️⃣ WIND RISK (Phase-1: basic rule-based)
+
+def wind_risk(wind_speed_kmph):
+    """
+    Phase-1 wind intelligence.
+    Simple thresholds, crop-agnostic.
+    """
+    if wind_speed_kmph >= 40:
+        return {
+            "risk_level": "high",
+            "impact": "Crop lodging, physical damage likely"
+        }
+    elif wind_speed_kmph >= 20:
+        return {
+            "risk_level": "moderate",
+            "impact": "Potential stress and minor damage"
+        }
+    else:
+        return {
+            "risk_level": "low",
+            "impact": "Wind conditions safe"
+        }

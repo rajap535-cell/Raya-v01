@@ -47,22 +47,43 @@ def assess_weather_event(crop, stage, event_type, intensity):
     # Temperature (heat / cold)
     # -----------------------------
     if event_type == "temperature":
-        if intensity in ["high", "heat"]:
-            return temperature_risk(crop, stage, "high")
-        if intensity in ["low", "cold"]:
-            return temperature_risk(crop, stage, "low")
+        temp_map = {
+            "low": 20,
+            "cold": 18,
+            "moderate": 30,
+            "high": 40,
+            "heat": 42
+        }
+        temp_value = temp_map.get(intensity)
+        if temp_value:
+            return temperature_risk(temp_value)
 
     # -----------------------------
     # Humidity (disease amplification)
     # -----------------------------
-    if event_type == "humidity" and intensity in ["high"]:
-        return humidity_risk(crop, stage)
+    if event_type == "humidity":
+        humidity_map = {
+            "low": 50,
+            "moderate": 70,
+            "high": 90
+        }
+        humidity_value = humidity_map.get(intensity)
+        if humidity_value:
+            return humidity_risk(humidity_value)
 
     # -----------------------------
     # Wind (physical damage)
     # -----------------------------
-    if event_type == "wind" and intensity in ["strong", "high"]:
-        return wind_risk(crop, stage)
+    if event_type == "wind":
+        wind_map = {
+            "low": 10,
+            "moderate": 25,
+            "strong": 45,
+            "high": 50
+        }
+        wind_value = wind_map.get(intensity)
+        if wind_value:
+            return wind_risk(wind_value)
 
     # -----------------------------
     # Default fallback (Phase-1 safe)

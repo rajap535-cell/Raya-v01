@@ -1,0 +1,177 @@
+{
+  "crop_identity": {
+    "common_name": "Rice",
+    "scientific_name": "Oryza sativa",
+    "crop_type": "Cereal",
+    "primary_regions": ["India", "South Asia", "Southeast Asia"]
+  },
+
+  "growth_lifecycle": {
+    "stages": {
+      "Nursery": {
+        "duration_days": "20-25",
+        "sensitivity": "Medium"
+      },
+      "Vegetative": {
+        "duration_days": "30-40",
+        "sensitivity": "Medium"
+      },
+      "Flowering": {
+        "duration_days": "10-15",
+        "sensitivity": "High"
+      },
+      "Grain_Filling": {
+        "duration_days": "20-25",
+        "sensitivity": "Medium"
+      },
+      "Maturity": {
+        "duration_days": "10-15",
+        "sensitivity": "Low"
+      }
+    }
+  },
+
+  "climate_interactions": {
+    "Nursery": {
+      "excess_rainfall": {
+        "risk_level": "Medium",
+        "effects": [
+          "Seedling rot",
+          "Poor root anchoring"
+        ]
+      }
+    },
+
+    "Vegetative": {
+      "high_humidity": {
+        "risk_level": "Medium",
+        "effects": [
+          "Increased leaf disease pressure"
+        ]
+      }
+    },
+
+    "Flowering": {
+      "excess_rainfall": {
+        "risk_level": "High",
+        "effects": [
+          "Poor pollination",
+          "Spikelet sterility"
+        ]
+      },
+      "high_temperature": {
+        "risk_level": "High",
+        "effects": [
+          "Reduced pollen viability",
+          "Yield loss"
+        ]
+      }
+    },
+
+    "Grain_Filling": {
+      "drought": {
+        "risk_level": "Medium",
+        "effects": [
+          "Incomplete grain filling",
+          "Reduced grain weight"
+        ]
+      }
+    }
+  },
+
+  "diseases": [
+    {
+      "name": "Blast Disease",
+      "affected_stages": [
+        "Vegetative",
+        "Flowering"
+      ],
+      "severity_by_stage": {
+        "Vegetative": "Medium",
+        "Flowering": "High"
+      },
+      "visible_symptoms": [
+        "Diamond-shaped lesions on leaves",
+        "Neck rot at panicle base"
+      ],
+      "prevention_logic": [
+        "Balanced nitrogen application",
+        "Avoid dense planting",
+        "Ensure proper drainage"
+      ]
+    },
+    {
+      "name": "Sheath Blight",
+      "affected_stages": [
+        "Vegetative",
+        "Grain_Filling"
+      ],
+      "severity_by_stage": {
+        "Vegetative": "Medium",
+        "Grain_Filling": "High"
+      },
+      "visible_symptoms": [
+        "Oval lesions on leaf sheath",
+        "White fungal growth"
+      ],
+      "prevention_logic": [
+        "Proper plant spacing",
+        "Avoid excessive standing water"
+      ]
+    }
+  ],
+
+  "risk_impact_map": {
+    "Flowering": {
+      "excess_rainfall": {
+        "primary_impacts": [
+          "Pollination failure"
+        ],
+        "secondary_impacts": [
+          "Increased blast disease incidence"
+        ],
+        "severity": "High"
+      }
+    },
+    "Grain_Filling": {
+      "drought": {
+        "primary_impacts": [
+          "Poor grain development"
+        ],
+        "secondary_impacts": [
+          "Lower milling recovery"
+        ],
+        "severity": "Medium"
+      }
+    }
+  },
+
+  "harvest_logic": {
+    "ideal_window_days": "110-130",
+    "early_harvest": {
+      "risks": [
+        "Immature grains",
+        "Low head rice recovery"
+      ],
+      "quality_impact": "High"
+    },
+    "late_harvest": {
+      "risks": [
+        "Grain shattering",
+        "Pest infestation"
+      ],
+      "quality_impact": "Medium"
+    }
+  },
+
+  "market_impact": {
+    "early_harvest": "Lower price due to immature grains and poor milling quality",
+    "late_harvest": "Higher rejection risk due to broken and damaged grains"
+  },
+
+  "stage_risk_summary": {
+    "Nursery": "Excess moisture in nursery weakens seedlings and affects field establishment.",
+    "Flowering": "Rain or heat during flowering disrupts pollination and significantly reduces yield.",
+    "Grain_Filling": "Water stress during grain filling lowers grain weight and market quality."
+  }
+}

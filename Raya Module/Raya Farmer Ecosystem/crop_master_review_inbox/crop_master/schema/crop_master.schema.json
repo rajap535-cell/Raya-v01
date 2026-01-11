@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RAYA Crop Master Schema",
+  "type": "object",
+
+  "required": [
+    "crop_identity",
+    "growth_lifecycle",
+    "climate_interactions",
+    "diseases",
+    "risk_impact_map",
+    "harvest_logic",
+    "market_impact",
+    "stage_risk_summary"
+  ],
+
+  "properties": {
+    "crop_identity": {
+      "type": "object",
+      "required": ["common_name", "crop_type"],
+      "properties": {
+        "common_name": { "type": "string" },
+        "scientific_name": { "type": "string" },
+        "crop_type": { "type": "string" },
+        "primary_regions": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "growth_lifecycle": {
+      "type": "object",
+      "required": ["stages"],
+      "properties": {
+        "stages": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["duration_days", "sensitivity"],
+            "properties": {
+              "duration_days": { "type": "string" },
+              "sensitivity": {
+                "type": "string",
+                "enum": ["Low", "Medium", "High"]
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "climate_interactions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "required": ["risk_level", "effects"],
+          "properties": {
+            "risk_level": {
+              "type": "string",
+              "enum": ["Low", "Medium", "High"]
+            },
+            "effects": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "diseases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "affected_stages",
+          "severity_by_stage",
+          "visible_symptoms",
+          "prevention_logic"
+        ],
+        "properties": {
+          "name": { "type": "string" },
+          "affected_stages": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "severity_by_stage": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "enum": ["Low", "Medium", "High"]
+            }
+          },
+          "visible_symptoms": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "prevention_logic": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "risk_impact_map": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "required": ["primary_impacts", "severity"],
+          "properties": {
+            "primary_impacts": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "secondary_impacts": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "severity": {
+              "type": "string",
+              "enum": ["Low", "Medium", "High"]
+            }
+          }
+        }
+      }
+    },
+
+    "harvest_logic": {
+      "type": "object",
+      "required": ["ideal_window_days"],
+      "properties": {
+        "ideal_window_days": { "type": "string" },
+        "early_harvest": {
+          "type": "object",
+          "properties": {
+            "risks": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "quality_impact": {
+              "type": "string",
+              "enum": ["Low", "Medium", "High"]
+            }
+          }
+        },
+        "late_harvest": {
+          "type": "object",
+          "properties": {
+            "risks": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "quality_impact": {
+              "type": "string",
+              "enum": ["Low", "Medium", "High"]
+            }
+          }
+        }
+      }
+    },
+
+    "market_impact": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+
+    "stage_risk_summary": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}

@@ -17,13 +17,19 @@ from raya_core.backend_cloud import ask_cloud
 DEBUG = True  # Turn off in production
 
 # Load persistent cache
-_CACHE = None #load_cache()
+_CACHE = load_cache() or {}
 
 def _cache_key(q: str) -> str:
     q = q.strip().lower()
     q = re.sub(r"[^a-z0-9\s]", "", q)
     return " ".join(q.split())
 
+def _wiki_safe_query(q: str)-> str:
+    q = q.lower ()
+    q = re.sub(r"(latest|recent|current|new|research on)", "", q)
+    q = q.strip()
+    return q
+    
 def _try_wikipedia(query: str) -> Optional[str]:
     if DEBUG: print(f"[Stage: Wikipedia] 🔍 Searching for: {query}")
     try:
@@ -71,94 +77,114 @@ def _try_web_search(query: str) -> Optional[str]:
     return None
 
 def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) -> EngineResult:
-    key = _cache_key(query)
     if DEBUG:
         print(f"\n[Orchestrator] 🧠 Query: '{query}'")
 
+    # ---------- HARD INITIALIZATION (NON-NEGOTIABLE) ----------
+    key = _cache_key(query)
+    cached = None
+    final_text = None
+    metadata = {}
+    best_source = "Unknown"
 
     from raya_core.cache import CACHE_ENABLED
 
-    # 1️⃣ Check cache
-    if CACHE_ENABLED and key in _CACHE:
-        cached = _CACHE[key]
+    # ---------- CACHE ----------
+    if CACHE_ENABLED:
+        try:
+            cached = _CACHE.get(key)
+        except Exception:
+            cached = None
 
-    # 🚫 Never reuse disabled-cloud responses
-    if cached.get("text", "").startswith("[cloud disabled]"):
-        if DEBUG:
-            print("[Orchestrator] 🚫 Skipping stale cloud-disabled cache")
-    else:
-        if DEBUG:
-            print("[Orchestrator] 💾 Using cached result")
-        return EngineResult(
-            sources={cached.get("source", "cache"): True},
-            text=cached.get("text", ""),
-            confidence=cached.get("confidence", 0.8),
-            meta={**cached.get("meta", {}), "cache": True},
-        )
+    if cached:
+        if cached.get("text", "").startswith("[cloud disabled]"):
+            if DEBUG:
+                print("[Orchestrator] 🚫 Skipping stale cloud-disabled cache")
+        else:
+            if DEBUG:
+                print("[Orchestrator] 💾 Using cached result")
+            return EngineResult(
+                sources={cached.get("source", "cache"): True},
+                text=cached.get("text", ""),
+                confidence=cached.get("confidence", 0.8),
+                meta={**cached.get("meta", {}), "cache": True},
+            )
 
-    # 2️⃣ Router Decision
-    route = ask_via_router(query)
+    # ---------- ROUTER ----------
+    route_decision = ask_via_router(query)
+    route = route_decision.get("model", "local")
+
     if DEBUG:
         print(f"[Router] 🧭 Route selected: {route}")
 
-    # 3️⃣ Local LLM (Primary Brain)
+    # ---------- LOCAL LLM ----------
+    final_text = None
+    best_source= None
+    
     if route in ("local", "hybrid"):
-        try:
-            if DEBUG:
-                print("[Stage: Local LLM] 🧠 Generating with llama3.2:3b")
-            final_text = ask_local(query)
-            best_source = "Local LLM"
-        except Exception as e:
-            if DEBUG:
-                print(f"[Stage: Local LLM] ⚠️ Error: {e}")
+        if DEBUG:
+            print("[Stage: Local LLM] 🧠 Generating")
+        final_text = ask_local(query)
 
-    # 4️⃣ Pipeline as Support (if needed)
+    # ❌ Local failed → Wikipedia fallback
+    if final_text.startswith("[local error]"):
+        if DEBUG:
+            print("[Stage: Wikipedia] 🔄 Local failed, trying Wikipedia")
+        wiki_text = _try_wikipedia(query)
+        if wiki_text:
+            final_text = wiki_text
+            best_source = "Wikipedia"
+        else:
+            final_text = None
+    else:
+        best_source = "Local LLM"
+
+    # ---------- PIPELINE ----------
     if route == "hybrid" or not final_text:
         try:
             if DEBUG:
-                print("[Stage: Pipeline] ⚙️ Running pipeline support")
+                print("[Stage: Pipeline] ⚙️ Running pipeline")
             pipeline_text, metadata = run_pipeline(query, db_file, intents)
             if pipeline_text:
                 final_text = aggregate([final_text, pipeline_text])
-                best_source = "LLM + Pipeline"
+                best_source = "Pipeline"
         except Exception as e:
             if DEBUG:
                 print(f"[Stage: Pipeline] ⚠️ Error: {e}")
 
-    # 5️⃣ Cloud LLM (Fallback)
+    # ---------- CLOUD ----------
     if not final_text or route == "cloud":
         try:
             if DEBUG:
-                print("[Stage: Cloud LLM] ☁️ Escalating to cloud")
+                print("[Stage: Cloud LLM] ☁️ Escalating")
             final_text = ask_cloud(query)
             best_source = "Cloud LLM"
         except Exception as e:
             if DEBUG:
                 print(f"[Stage: Cloud LLM] ❌ Error: {e}")
 
-    # 6️⃣ Final Fallback
+    # ---------- FINAL FALLBACK ----------
     if not final_text:
-        final_text = "Sorry, I couldn't process that request."
+        final_text = "Sorry, I don't have enough verified information to answer that yet."
         best_source = "Fallback"
 
-    # 7 Cache result
     confidence = 0.9 if best_source != "Fallback" else 0.2
+
+    # ---------- SAVE CACHE ----------
     _CACHE[key] = {
         "source": best_source,
         "text": final_text,
         "confidence": confidence,
         "meta": metadata,
-        "sources": {best_source: True},  # store as dictionary
     }
     save_cache(_CACHE)
 
     if DEBUG:
         print(f"[Orchestrator] ✅ Final Source: {best_source}")
         print(f"[Orchestrator] ✅ Confidence: {confidence}")
-        print(f"[Orchestrator] ✅ Preview: {final_text[:100]}")
 
     return EngineResult(
-        sources={best_source: True},  # ✅ dictionary
+        sources={best_source: True},
         text=final_text,
         confidence=confidence,
         meta=metadata,

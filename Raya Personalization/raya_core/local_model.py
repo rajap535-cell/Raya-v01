@@ -10,7 +10,7 @@ LOCAL_MODEL_NAME = "llama3.2:3b"
 LOCAL_API_URL = f"{OLLAMA_HOST}/api/generate"
 
 
-def ask_local(prompt: str, timeout: int = 30) -> str:
+def ask_local(prompt: str, timeout: int = 60) -> str:
     """
     Sends prompt to local Ollama (llama3.2:3b).
     Non-streaming, deterministic, safe for routing.

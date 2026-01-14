@@ -1,8 +1,6 @@
 # pipeline.py - robust, unified pipeline
 import re
 from typing import List, Tuple, Optional
-from rapidfuzz import fuzz
-
 from raya_core import qa_engine
 from raya_core.cache import cache_get
 from raya_core.custom_db import query_local_db
@@ -12,6 +10,10 @@ from aggregator import aggregate
 
 Candidate = Tuple[str, str, float, Optional[dict]]
 
+try:
+    from rapidfuzz import fuzz
+except ImportError:
+    fuzz= None
 # ---------------- utilities ----------------
 def _normalize(q: str) -> str:
     if not q:
@@ -34,13 +36,17 @@ def _collect_candidates(user_text: str, db_file: str, intents: list) -> List[Can
     # 1. QA Engine (cache + wiki + online + llm)
     try:
         qa_res = qa_engine.answer_question(q)
-        if qa_res and qa_res.answer:
+        if (
+            qa_res
+            and hasattr(qa_res, "answer")
+            and qa_res.answer
+        ):
             candidates.append(
-                ("qa", qa_res.answer, qa_res.confidence, {"source_type": qa_res.source_type})
+                ("qa", qa_res.answer, qa_res.confidence or 0.5,
+                {"source_type": getattr(qa_res, "source_type", "unknown")})
             )
     except Exception:
         pass
-
     # 2. Local DB
     try:
         local = query_local_db(db_file, q)

@@ -18,8 +18,8 @@
     }
   },
   "latest research on space": {
-    "source": "qa",
-    "text": "Main Answer (Qa):\nThe Indian Space Research Organisation (ISRO ) is the national space agency of India, headquartered in Bengaluru, Karnataka. It serves as the principal research and development arm of the Department of Space (DoS), overseen by the Prime Minister of India, with the Chairman of ISRO also serving as the chief executive of the DoS. It is primarily responsible for space-based operations, space exploration, international space cooperation and the development of related technologies.",
+    "source": "Cloud LLM",
+    "text": "[cloud disabled] OPENAI_API_KEY not set",
     "confidence": 0.9,
     "meta": {
       "candidates": [
@@ -29,9 +29,6 @@
         ]
       ],
       "best_source": "qa"
-    },
-    "sources": {
-      "qa": true
     }
   },
   "explain gravity in 3 lines": {
@@ -69,21 +66,10 @@
     }
   },
   "define democracy": {
-    "source": "Cloud LLM",
-    "text": "[cloud disabled] OPENAI_API_KEY not set",
+    "source": "Local LLM",
+    "text": "Democracy is a system of government where power is held by the people, either directly or through elected representatives. In a democratic system, citizens have the right to participate in the decision-making process, and their voices are represented by elected officials who are accountable to them.\n\nKey characteristics of democracy include:\n\n1. **Free and fair elections**: Citizens have the right to vote for their representatives, and the outcome is determined by the majority.\n2. **Protection of individual rights**: Democratic systems prioritize the protection of individual rights and freedoms, such as freedom of speech, assembly, and the press.\n3. **Rule of law**: The government is bound by a set of laws that are applied equally to all citizens.\n4. **Separation of powers**: Power is divided among separate branches of government, such as the executive, legislative, and judicial, to prevent any one branch from becoming too powerful.\n5. **Transparency and accountability**: Government officials are accountable to the public and must be transparent in their decision-making processes.\n\nTypes of democracies include:\n\n1. **Direct democracy**: Citizens make decisions directly through voting or other means.\n2. **Representative democracy**: Citizens elect representatives to make decisions on their behalf.\n3. **Liberal democracy**: A system that combines elements of democracy with protection of individual rights and freedoms.\n4. **Participatory democracy**: Citizens have a direct say in decision-making processes through various mechanisms.\n\nDemocracy is often considered the most desirable form of government because it:\n\n1. **Promotes stability**: By giving citizens a stake in the government, democracy helps to prevent conflict and promote social cohesion.\n2. **Protects individual rights**: Democracy ensures that individuals' rights are protected from abuse by government officials.\n3. **Encourages participation**: Democratic systems encourage citizens to participate in the decision-making process, fostering civic engagement and social inclusion.\n\nHowever, democracy is not without its challenges and limitations. Some potential drawbacks include:\n\n1. **Inefficient decision-making**: Large numbers of people can slow down decision-making processes.\n2. **Majority tyranny**: The majority's interests may come at the expense of minority groups.\n3. **Special interests**: Wealthy or influential groups may try to manipulate the democratic process.\n\nDespite these challenges, democracy remains a vital and essential system for promoting human rights, social justice, and individual freedoms.",
     "confidence": 0.9,
-    "meta": {
-      "candidates": [
-        [
-          "qa",
-          0.8
-        ]
-      ],
-      "best_source": "qa"
-    },
-    "sources": {
-      "Cloud LLM": true
-    }
+    "meta": {}
   },
   "who was job charnok": {
     "source": "Cloud LLM",
@@ -152,5 +138,29 @@
     "sources": {
       "Cloud LLM": true
     }
+  },
+  "creposrayav01venvscriptsactivateps1": {
+    "source": "Local LLM",
+    "text": "[local error] timeout",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "who is mahatma gandhi": {
+    "source": "Local LLM",
+    "text": "[local error] timeout",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "latest space research": {
+    "source": "Local LLM",
+    "text": "[local error] timeout",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "what is black hole": {
+    "source": "Wikipedia",
+    "text": "A black hole is an astronomical body so compact that its gravity prevents anything, including light, from escaping. Albert Einstein's theory of general relativity predicts that a sufficiently compact mass will form a black hole. The boundary of no escape is called the event horizon.",
+    "confidence": 0.9,
+    "meta": {}
   }
 }

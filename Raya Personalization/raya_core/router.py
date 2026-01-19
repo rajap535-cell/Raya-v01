@@ -63,14 +63,14 @@ def ask_via_router(prompt: str, fallback_to_cloud: bool = True) -> dict:
     user_query = prompt
 
     # Force local while cloud is disabled
-    local_text = ask_local(prompt)
-    confidence = _local_confidence(local_text)
+    #local_text = ask_local(prompt)
+    #confidence = _local_confidence(local_text)
 
     # Never escalate to cloud in Day-3
     return {
-        "text": local_text,
+        #"text": local_text,
         "model": "local",
-        "confidence": confidence,
+        #"confidence": confidence,
         "reason": "router_local_locked"
     }
 

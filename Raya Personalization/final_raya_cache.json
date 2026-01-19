@@ -18,18 +18,9 @@
     }
   },
   "latest research on space": {
-    "source": "Cloud LLM",
-    "text": "[cloud disabled] OPENAI_API_KEY not set",
-    "confidence": 0.9,
-    "meta": {
-      "candidates": [
-        [
-          "qa",
-          0.8
-        ]
-      ],
-      "best_source": "qa"
-    }
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {}
   },
   "explain gravity in 3 lines": {
     "source": "Cloud LLM",
@@ -67,7 +58,7 @@
   },
   "define democracy": {
     "source": "Local LLM",
-    "text": "Democracy is a system of government where power is held by the people, either directly or through elected representatives. In a democratic system, citizens have the right to participate in the decision-making process, and their voices are represented by elected officials who are accountable to them.\n\nKey characteristics of democracy include:\n\n1. **Free and fair elections**: Citizens have the right to vote for their representatives, and the outcome is determined by the majority.\n2. **Protection of individual rights**: Democratic systems prioritize the protection of individual rights and freedoms, such as freedom of speech, assembly, and the press.\n3. **Rule of law**: The government is bound by a set of laws that are applied equally to all citizens.\n4. **Separation of powers**: Power is divided among separate branches of government, such as the executive, legislative, and judicial, to prevent any one branch from becoming too powerful.\n5. **Transparency and accountability**: Government officials are accountable to the public and must be transparent in their decision-making processes.\n\nTypes of democracies include:\n\n1. **Direct democracy**: Citizens make decisions directly through voting or other means.\n2. **Representative democracy**: Citizens elect representatives to make decisions on their behalf.\n3. **Liberal democracy**: A system that combines elements of democracy with protection of individual rights and freedoms.\n4. **Participatory democracy**: Citizens have a direct say in decision-making processes through various mechanisms.\n\nDemocracy is often considered the most desirable form of government because it:\n\n1. **Promotes stability**: By giving citizens a stake in the government, democracy helps to prevent conflict and promote social cohesion.\n2. **Protects individual rights**: Democracy ensures that individuals' rights are protected from abuse by government officials.\n3. **Encourages participation**: Democratic systems encourage citizens to participate in the decision-making process, fostering civic engagement and social inclusion.\n\nHowever, democracy is not without its challenges and limitations. Some potential drawbacks include:\n\n1. **Inefficient decision-making**: Large numbers of people can slow down decision-making processes.\n2. **Majority tyranny**: The majority's interests may come at the expense of minority groups.\n3. **Special interests**: Wealthy or influential groups may try to manipulate the democratic process.\n\nDespite these challenges, democracy remains a vital and essential system for promoting human rights, social justice, and individual freedoms.",
+    "text": "Democracy is a form of government in which power is held by the people, either directly or through elected representatives. In a democratic system, citizens have the right to participate in the decision-making process, express their opinions, and vote for leaders who will represent them.\n\nThe key characteristics of democracy include:\n\n1. Free and fair elections: Citizens have the right to vote for their preferred candidates and leaders.\n2. Protection of individual rights and freedoms: Democracy is built on the principles of equality, justice, and human dignity.\n3. Rule of law: Laws are made and enforced by elected officials, rather than by a monarch or dictator.\n4. Accountability: Elected officials are accountable to the people they represent, and can be removed from office through peaceful means such as elections or impeachment.\n5. Transparency: Government decision-making processes are transparent, and citizens have access to information about their government's actions.\n\nThere are different types of democracies, including:\n\n1. Direct democracy: In this system, citizens participate directly in decision-making by voting on laws and policies.\n2. Representative democracy: Citizens elect representatives to make decisions on their behalf.\n3. Constitutional democracy: A form of representative democracy that is guided by a constitution or set of rules that limit the power of government.\n\nThe benefits of democracy include:\n\n1. Protection of individual rights and freedoms\n2. Promotion of social justice and equality\n3. Encouragement of participation and engagement in civic life\n4. Accountability and transparency in government decision-making\n5. Peaceful transfer of power\n\nHowever, democracies can also face challenges such as:\n\n1. Corruption and abuse of power\n2. Polarization and division among citizens\n3. Inequality and social unrest\n4. External threats to democratic institutions",
     "confidence": 0.9,
     "meta": {}
   },
@@ -123,21 +114,9 @@
     }
   },
   "latest research on human brain": {
-    "source": "Cloud LLM",
-    "text": "[cloud disabled] OPENAI_API_KEY not set",
-    "confidence": 0.9,
-    "meta": {
-      "candidates": [
-        [
-          "qa",
-          0.8
-        ]
-      ],
-      "best_source": "qa"
-    },
-    "sources": {
-      "Cloud LLM": true
-    }
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {}
   },
   "creposrayav01venvscriptsactivateps1": {
     "source": "Local LLM",
@@ -161,6 +140,74 @@
     "source": "Wikipedia",
     "text": "A black hole is an astronomical body so compact that its gravity prevents anything, including light, from escaping. Albert Einstein's theory of general relativity predicts that a sufficiently compact mass will form a black hole. The boundary of no escape is called the event horizon.",
     "confidence": 0.9,
+    "meta": {}
+  },
+  "what is psychology": {
+    "source": "Local LLM",
+    "text": "Psychology is the scientific study of behavior and mental processes. It aims to understand individuals and groups by studying the underlying psychological processes and mechanisms that influence their thoughts, feelings, and behaviors.\n\nThe field of psychology encompasses a wide range of topics, including:\n\n1. **Cognitive psychology**: The study of mental processes such as perception, attention, memory, language, problem-solving, and decision-making.\n2. **Emotional psychology**: The study of emotions, motivation, and emotional regulation.\n3. **Social psychology**: The study of how people interact with others, including social influence, group dynamics, and interpersonal relationships.\n4. **Developmental psychology**: The study of human development across the lifespan, including cognitive, social, and emotional development.\n5. **Abnormal psychology**: The study of mental health disorders, such as anxiety, depression, and personality disorders.\n6. **Neuropsychology**: The study of the relationship between the brain and behavior, including the effects of brain damage or dysfunction on cognition and behavior.\n\nPsychologists use a variety of techniques to study behavior, including:\n\n1. **Surveys and questionnaires**: To collect data on people's thoughts, feelings, and behaviors.\n2. **Experiments**: To test hypotheses about behavior and mental processes.\n3. **Case studies**: To in-depth examine individual cases or groups.\n4. **Interviews**: To gather information through verbal interactions with individuals.\n\nThe goals of psychology include:\n\n1. **Understanding behavior**: To develop a deeper understanding of why people behave in certain ways.\n2. **Improving mental health**: To develop effective treatments and interventions for mental health disorders.\n3. **Promoting well-being**: To promote healthy behaviors, positive relationships, and overall well-being.\n\nPsychology has many practical applications in areas such as:\n\n1. **Mental health treatment**: Cognitive-behavioral therapy (CBT), psychodynamic therapy, and other forms of talk therapy.\n2. **Education**: Teaching methods, learning strategies, and educational psychology.\n3. **Workplace performance**: Employee motivation, training, and organizational behavior.\n4. **Relationships and family**: Marriage counseling, relationship dynamics, and family therapy.\n\nOverall, psychology is a fascinating field that seeks to understand the complexities of human behavior and mental processes, with the goal of promoting better understanding, treatment, and overall well-being.",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "latest research on cancer": {
+    "source": "Cloud LLM",
+    "text": "[cloud disabled] OPENAI_API_KEY not set",
+    "confidence": 0.9,
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "what os geothermal energy": {
+    "source": "Wikipedia",
+    "text": "Google Energy LLC is a subsidiary company of Alphabet Inc., which was created to reduce costs of energy consumption of the Google Group, and subsequently to produce and sell clean energy.  The division also allows it to take advantage of projects funded through the philanthropic Google.org.\n\n\n== Operations ==\nBy 2007 Google had invested a substantial amount of money in wind, solar, solar thermal, and geothermal projects, including a 1.6 MW solar installation pilot project at its headquarters.",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "what is dna": {
+    "source": "Unknown",
+    "text": "[local error] timeout",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "how can we increase brain power": {
+    "source": "Wikipedia",
+    "text": "The ten-percent-of-the-brain myth or ninety-percent-of-the-brain myth states that humans generally use only one-tenth (or some other small fraction) of their brains. It has been misattributed to many famous scientists and historical figures, notably Albert Einstein. By extrapolation, it is suggested that a person may 'harness' or 'unlock' this unused potential and increase their intelligence.",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "what is a dna": {
+    "source": "Safe Fallback",
+    "text": "Deoxyribonucleic acid (; DNA) is a polymer composed of two polynucleotide chains that coil around each other to form a double helix. The polymer carries genetic instructions for the development, functioning, growth and reproduction of all known organisms and many viruses. DNA and ribonucleic acid (RNA) are nucleic acids.",
+    "meta": {}
+  },
+  "in which year india got freedom": {
+    "source": "Safe Fallback",
+    "text": "India gained independence from British colonial rule on August 15, 1947.",
+    "meta": {}
+  },
+  "which year india lifted 1st world cup in cricket": {
+    "source": "Safe Fallback",
+    "text": "I think there may be some confusion. India has not won a Cricket World Cup, let alone the first-ever one.\n\nThe first ICC Cricket World Cup was held in 1975 in England, and it was won by West Indies.\n\nIndia did win its first Cricket World Cup in 1983 under the captaincy of Kapil Dev.",
+    "meta": {}
+  },
+  "what is the second india won icc cricket world cup": {
+    "source": "Safe Fallback",
+    "text": "India has not yet won two ICC Cricket World Cups. However, India did win the 1983 ICC Cricket World Cup under the captaincy of Kapil Dev.\n\nBut, if you are referring to a recent tournament, the 2011 ICC Cricket World Cup was won by India under the captaincy of MS Dhoni.",
+    "meta": {}
+  },
+  "what was the gdp of west bengal was in the year of 2011": {
+    "source": "Safe Fallback",
+    "text": "I couldn't find the exact GDP of West Bengal for the year 2011. However, I can provide some information on the GDP of West Bengal for the years around 2011.\n\nAccording to the data from the Government of India's Ministry of Statistics and Programme Implementation, the state domestic product (SDP) of West Bengal for the financial years:\n\n- 2009-10: ₹ 3,22,955 crore (approximately $45 billion USD at 2009 exchange rates)\n- 2010-11: ₹ 3,41,449 crore (approximately $48.4 billion USD at 2010 exchange rates)\n- 2011-12: ₹ 3,62,479 crore (approximately $52.2 billion USD at 2011 exchange rates)\n\nPlease note that these figures might not be the exact GDP of West Bengal for 2011, as GDP data can be calculated in different ways and may vary depending on the source. Additionally, these figures represent state domestic product (SDP) rather than gross domestic product (GDP).\n\nIf you need more information or a more specific answer, I recommend checking with official sources such as the Reserve Bank of India",
+    "meta": {}
+  },
+  "what was the gdp of west bengal was in the year of 2025": {
+    "source": "Safe Fallback",
+    "text": "I don't have information about the GDP of West Bengal for the year 2025. As my knowledge cutoff is 01 March 2023, I do not have real-time data or projections beyond that date.\n\nHowever, I can provide you with the GDP data for West Bengal for previous years:\n\n* 2020-21: ₹3.58 lakh crore (approximately $45 billion USD)\n* 2019-20: ₹3.43 lakh crore (approximately $42 billion USD)\n\nPlease note that these figures are subject to revision and may not reflect the actual GDP of West Bengal for the year 2025.\n\nIf you're looking for more up-to-date information, I recommend checking with reliable sources such as the Reserve Bank of India or the Government of West Bengal's official website.",
     "meta": {}
   }
 }

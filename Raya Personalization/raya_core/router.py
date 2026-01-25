@@ -1,4 +1,5 @@
 # raya_core/router.py
+import re
 from raya_core.local_model import ask_local
 from raya_core.backend_cloud import ask_cloud
 
@@ -25,8 +26,16 @@ def choose_model(user_query: str) -> str:
     q = (user_query or "").lower().strip()
     if not q:
         return "local"
+    
+    # Block local LLM for future factual questions
+    if re.search(r"\b20(2[4-9]|3\d)\b", q):
+        return "pipeline"
 
-    # DAY-3 OVERRIDE: cloud disabled
+    # 🔴 HARD RULE: Future years → NEVER local
+    if re.search(r"\b20(2[4-9]|3\d)\b", q):
+        return "pipeline_first"
+
+    # Cloud disabled (Day-3 lock)
     if not ENABLE_CLOUD:
         return "local"
 
@@ -60,26 +69,40 @@ def _local_confidence(text: str) -> float:
 
 
 def ask_via_router(prompt: str, fallback_to_cloud: bool = True) -> dict:
-    user_query = prompt
+    route = choose_model(prompt)
 
-    # Force local while cloud is disabled
-    #local_text = ask_local(prompt)
-    #confidence = _local_confidence(local_text)
+    # Pipeline-first (future years, statistics, projections)
+    if route == "pipeline_first":
+        return {
+            "model": "pipeline",
+            "reason": "future_year_forced"
+        }
 
-    # Never escalate to cloud in Day-3
+    # Local-only mode
+    if route == "local":
+        local_text = ask_local(prompt)
+        confidence = _local_confidence(local_text)
+
+        return {
+            "text": local_text,
+            "model": "local",
+            "confidence": confidence,
+            "reason": "router_local"
+        }
+
+    # Cloud (disabled currently)
+    if route == "cloud" and ENABLE_CLOUD:
+        cloud_text = ask_cloud(prompt)
+        return {
+            "text": cloud_text,
+            "model": "cloud",
+            "confidence": 0.9,
+            "reason": "router_cloud"
+        }
+
+    # Fallback
     return {
-        #"text": local_text,
         "model": "local",
-        #"confidence": confidence,
-        "reason": "router_local_locked"
-    }
-
-    # Cloud chosen explicitly
-    cloud_text = ask_cloud(prompt)
-    return {
-        "text": cloud_text,
-        "model": "cloud",
-        "confidence": 0.9,
-        "reason": "router_cloud"
+        "reason": "router_fallback"
     }
 print("[Router] 🔒 Local-only mode active")

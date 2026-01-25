@@ -13,6 +13,9 @@ from raya_core.base import EngineResult
 from raya_core.router import ask_via_router
 from raya_core.local_model import ask_local
 from raya_core.backend_cloud import ask_cloud
+from intent import detect_intents
+from raya_core.validator import validate_answer, is_future_query
+
 
 DEBUG = True  # turn off in production
 
@@ -58,6 +61,29 @@ def _is_news_or_research(q: str) -> bool:
     q = q.lower()
     return any(w in q for w in NEWS_WORDS)
 
+def is_future_query(q: str) -> bool:
+    return bool(re.search(r"\b20(2[4-9]|3\d)\b", q))
+
+def requires_number(q: str) -> bool:
+    q = q.lower()
+    return any(word in q for word in [
+        "how many", "distance", "gdp", "population", "year"
+    ])
+
+def has_number(text: str) -> bool:
+    return bool(re.search(r"\d", text))
+
+
+def requires_number(q: str) -> bool:
+    q = q.lower()
+    return any(word in q for word in [
+        "how many", "distance", "gdp", "population", "year"
+    ])
+
+def has_number(text: str) -> bool:
+    return bool(re.search(r"\d", text))
+
+
 def _wiki_safe_query(q: str) -> str:
     q = q.lower()
     q = re.sub(r"\bwhat is\b|\bwho is\b|\bdefine\b", "", q)
@@ -101,6 +127,7 @@ def _try_wikipedia(query: str) -> Optional[str]:
 # MAIN ENTRY
 # --------------------------------------------------
 def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) -> EngineResult:
+    intents = list(detect_intents(query))
     if DEBUG:
         print(f"\n[Orchestrator] 🧠 Query: '{query}'")
 
@@ -136,6 +163,19 @@ def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) 
         print(f"[Router] 🧭 Route: {route}")
 
     # --------------------------------------------------
+
+    if "fact" in intents:
+        route = "wiki_first"
+
+    if route == "wiki_first":
+        wiki_text = _try_wikipedia(_wiki_safe_query(query))
+        if wiki_text:
+            return EngineResult(
+                sources={"Wikipedia": True},
+                text=wiki_text,
+                confidence=0.95,
+                meta={}
+            )
     # LOCAL LLM
     # --------------------------------------------------
     if route in ("local", "hybrid"):
@@ -161,14 +201,33 @@ def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) 
     # --------------------------------------------------
     # WIKIPEDIA FALLBACK (SAFE)
     # --------------------------------------------------
+    wiki_text = _try_wikipedia(safe_query)
+
+    if wiki_text:
+        if is_future_query(query):
+            if DEBUG:
+                print("[Wikipedia] ❌ Rejected: future data")
+            wiki_text=None
+        elif requires_number(query) and not has_number(wiki_text):
+            if DEBUG:
+                print("[Wikipedia] ❌ Rejected: numeric answer required")
+            wiki_text = None
+
+        else:
+            final_text = wiki_text
+            best_source = "Wikipedia"
+
+
     if _is_failed(final_text) and _should_use_wikipedia(query):
         if DEBUG:
             print("[Stage: Wikipedia] 🔄 Trying fallback")
         safe_query = _wiki_safe_query(query)
         wiki_text = _try_wikipedia(safe_query)
-        if wiki_text:
+        if wiki_text and validate_answer(query, "wikipedia", wiki_text):
             final_text = wiki_text
             best_source = "Wikipedia"
+        else:
+            final_text = None
     # --------------------------------------------------
     # PIPELINE (NO WIKI LOOP)
     # --------------------------------------------------
@@ -199,7 +258,7 @@ def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) 
     # --------------------------------------------------
     # FINAL GUARANTEE (NEVER EMPTY)
     # --------------------------------------------------
-    if _is_failed(final_text):
+    if _is_failed(final_text) and best_source=="Unknown":
         final_text = (
             "This topic is evolving and requires up-to-date sources. "
             "Here is a reliable overview based on established knowledge."

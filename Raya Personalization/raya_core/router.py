@@ -67,9 +67,29 @@ def _local_confidence(text: str) -> float:
         return 0.3
     return 0.75
 
+import re
+
+def route_by_query(query: str) -> str:
+    q = query.lower()
+
+    if any(k in q for k in ["news", "latest", "breaking"]):
+        return "news"
+
+    if any(k in q for k in ["research", "study", "paper", "arxiv"]):
+        return "research"
+
+    if is_future := bool(re.search(r"\b20(2[4-9]|3\d)\b", q)):
+        return "pipeline"
+
+    return "fact"
 
 def ask_via_router(prompt: str, fallback_to_cloud: bool = True) -> dict:
-    route = choose_model(prompt)
+    route = route_by_query(prompt)
+    return{
+        "model": "local",
+        "route": route,
+        "reason": "intent_routed"
+    }
 
     # Pipeline-first (future years, statistics, projections)
     if route == "pipeline_first":

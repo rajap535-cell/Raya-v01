@@ -83,6 +83,10 @@ def requires_number(q: str) -> bool:
 def has_number(text: str) -> bool:
     return bool(re.search(r"\d", text))
 
+def is_definition_query(q: str) -> bool:
+    return any(k in q.lower() for k in [
+        "what is", "define", "meaning of"
+    ])
 
 def _wiki_safe_query(q: str) -> str:
     q = q.lower()

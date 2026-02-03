@@ -2,26 +2,14 @@
 RAYA Phase-2 — Track-1: Farmer Search Engine
 Deterministic, Truth-based, Non-ML, Non-UI
 
-Inputs:
-- state
-- district
-- crop
-- stage
-- optional weather event/intensity
-
-Outputs:
-- weather impact
-- stage sensitivity + risks
-- disease relevance
-- water requirement (rule-based)
-- market price (latest snapshot)
-
 This file is orchestration only.
-Domain logic lives in:
+No domain logic lives here.
+
+Dependencies:
 ✓ weather_engine.py
 ✓ query_engine.py
-✓ crop_master JSON
-✓ market layer
+✓ Crop Master JSON
+✓ Market snapshot loader
 """
 
 import json
@@ -34,9 +22,8 @@ from query_engine import (
     get_water_requirement
 )
 
-
 # ----------------------------------------------------------
-# Market loader (deterministic / snapshot)
+# Market loader (deterministic snapshot)
 # ----------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent
 MARKET_DIR = BASE_DIR / "market"
@@ -56,41 +43,61 @@ def load_market_price(state: str, district: str):
 def farmer_search(
     state: str,
     district: str,
-    crop: str,
-    stage: str,
+    crop: str | None,
+    stage: str | None,
     weather_event: str | None = None,
     weather_intensity: str | None = None
 ):
+    # ---------------- INPUT VALIDATION ----------------
+    if not crop:
+        return {
+            "status": "incomplete",
+            "message": "Please specify the crop name."
+        }
+
+    if not stage:
+        return {
+            "status": "incomplete",
+            "message": "Please specify crop growth stage."
+        }
+
     packet = {
         "location": {"state": state, "district": district},
         "crop": crop,
         "stage": stage
     }
 
-    # ---- WEATHER LAYER ----
+    # ---------------- WEATHER ----------------
     if weather_event:
         packet["weather"] = assess_weather_event(
-            crop,
-            stage,
-            weather_event,
-            weather_intensity
+            crop=crop,
+            stage=stage,
+            event=weather_event,
+            intensity=weather_intensity
         )
     else:
-        packet["weather"] = None
+        packet["weather"] = {
+            "status": "no_weather_alert",
+            "message": "No weather alerts reported for this stage."
+        }
 
-    # ---- STAGE SNAPSHOT ----
+    # ---------------- STAGE SNAPSHOT ----------------
     stage_info = get_stage_snapshot(crop, stage)
+    if isinstance(stage_info, str):
+        return {
+            "status": "invalid_stage",
+            "message": stage_info
+        }
     packet["stage_snapshot"] = stage_info
 
-    # ---- DISEASES ----
+    # ---------------- DISEASES ----------------
     diseases = diseases_at_stage(crop, stage)
-    packet["diseases"] = diseases or []
+    packet["diseases"] = diseases if isinstance(diseases, list) else []
 
-    # ---- WATER ----
-    water = get_water_requirement(crop, stage)
-    packet["water"] = water
+    # ---------------- WATER ----------------
+    packet["water"] = get_water_requirement(crop, stage)
 
-    # ---- MARKET ----
+    # ---------------- MARKET ----------------
     price_data = load_market_price(state, district)
     if price_data:
         packet["market"] = {
@@ -102,63 +109,61 @@ def farmer_search(
     else:
         packet["market"] = {
             "status": "no_price_data",
-            "state": state,
-            "district": district
+            "message": f"No market price data available for {district}, {state}."
         }
 
     return packet
 
 
 # ----------------------------------------------------------
-# Farmer-Readable Formatter (Truth-only)
+# Farmer-readable formatter (truth-only)
 # ----------------------------------------------------------
 def format_for_farmer(packet: dict) -> str:
     out = []
+
+    if packet.get("status") in {"incomplete", "invalid_stage"}:
+        return packet.get("message", "Input error")
 
     out.append(f"Crop: {packet['crop']}")
     out.append(f"Stage: {packet['stage']}")
     out.append(f"Location: {packet['location']['district']}, {packet['location']['state']}")
 
-    # WEATHER
-    if packet["weather"]:
-        w = packet["weather"]
-        if w.get("status") == "unsupported_event":
-            out.append(f"Weather: Unsupported event ({w['event']})")
-        else:
-            out.append(f"Weather Impact: {w}")
+    # Weather
+    w = packet["weather"]
+    if w:
+        out.append(f"Weather: {w.get('message', w)}")
 
-    # STAGE SNAPSHOT
+    # Stage snapshot
     s = packet["stage_snapshot"]
-    if isinstance(s, dict):
-        sens = s.get("sensitivity") or {}
-        if sens:
-            sens_keys = [k for k,v in sens.items() if v]
-            if sens_keys:
-                out.append(f"Sensitivity: {', '.join(sens_keys)}")
+    if s.get("sensitivity"):
+        out.append(f"Sensitivity: {s['sensitivity']}")
+    if s.get("risks"):
+        out.append(f"Risks: {', '.join(s['risks'])}")
 
-        risks = s.get("risks")
-        if risks:
-            out.append(f"Risks: {', '.join(risks)}")
-
-    # DISEASES
+    # Diseases
     if packet["diseases"]:
-        dis = [d['disease'] for d in packet["diseases"]]
-        out.append(f"Diseases this stage: {', '.join(dis)}")
+        out.append(
+            "Diseases this stage: " +
+            ", ".join(d["disease"] for d in packet["diseases"])
+        )
     else:
         out.append("Diseases this stage: None detected")
 
-    # WATER
+    # Water
     if packet["water"]:
-        out.append(f"Water Need: {packet['water']}")
+        out.append(f"Water Requirement: {packet['water']}")
     else:
-        out.append("Water Need: Not defined")
+        out.append("Water Requirement: Not defined")
 
-    # MARKET
+    # Market
     mp = packet["market"]
     if mp.get("status") == "no_price_data":
-        out.append("Market: No price data available")
+        out.append(mp["message"])
     else:
-        out.append(f"Market Modal: {mp['modal']} ({mp['min']} - {mp['max']}) at {mp['mandi']}")
+        out.append(
+            f"Market Price (Modal): {mp['modal']} "
+            f"({mp['min']}–{mp['max']}) at {mp['mandi']}"
+        )
 
     return "\n".join(out)
 

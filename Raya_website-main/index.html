@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAYA — The First Open Knowledge Intelligence </title>
+  <meta name="description"
+    content="Raya: an open, community-first knowledge intelligence. Follow the journey toward a transparent knowledge future." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+   <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-slate-50">
+  <!-- Loading Bar Section -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="text-2xl font-bold mb-4 tracking-widest uppercase">Loading System...</div>
+    <div class="loading-bar-container">
+      <div id="loading-bar" class="loading-bar" style="width: 0%;"></div>
+    </div>
+    <div id="loading-text" class="text-scrolly-cyan text-sm">0%</div>
+  </div>
+
+  <!-- SCROLLYTELLING HERO -->
+  <section id="scrolly-section" class="relative block h-[300vh] bg-[#0a0f1d]">
+    <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
+      <!-- BRANDING OVERLAY -->
+      <div class="absolute top-8 left-8 z-20 flex items-center gap-4 pointer-events-auto">
+        <div class="w-16 h-16 md:w-20 md:h-20 rounded-xl glow-aqua flex items-center justify-center bg-slate-900/40 backdrop-blur-md border border-white/10">
+          <img src="assets/raya_logo.jpg" alt="Raya Logo" class="w-14 h-14 md:w-16 md:h-16 object-contain rounded-lg">
+        </div>
+        <div class="text-white drop-shadow-lg">
+          <div class="font-bold text-2xl md:text-3xl tracking-tight">Raya</div>
+          <div class="text-xs md:text-sm text-cyan-200 font-medium opacity-80">Type-I Civilization Architecture</div>
+        </div>
+      </div>
+
+      <!-- PLAY BUTTON (TOP RIGHT) -->
+      <div class="absolute top-8 right-8 z-20 flex items-center gap-4">
+        <button id="play-toggle" class="px-4 py-2 bg-slate-900/40 hover:bg-cyan-500/40 border border-white/10 rounded-full text-cyan-100 text-sm font-bold flex items-center gap-2 backdrop-blur-md transition-all cursor-pointer group">
+          <span id="play-icon" class="w-2 h-2 bg-red-400 rounded-full animate-pulse transition-transform"></span>
+          <span id="play-text">PAUSE</span>
+        </button>
+      </div>
+
+      <canvas id="planetary-canvas" class="w-full h-full"></canvas>
+      
+      <div id="story-overlay" class="absolute inset-0 pointer-events-none flex items-center justify-center">
+        <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl px-4" data-start="0" data-end="15">
+          Unified Intelligence
+        </div>
+        <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl px-4" data-start="20" data-end="35">
+          <span class="text-scrolly-cyan mr-2">1.</span> Energy
+        </div>
+        <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl px-4" data-start="40" data-end="55">
+          <span class="text-scrolly-cyan mr-2">2.</span> Water
+        </div>
+        <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl px-4" data-start="60" data-end="75">
+          <span class="text-scrolly-cyan mr-2">3.</span> Farming
+        </div>
+        <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl px-4" data-start="80" data-end="95">
+          <span class="text-scrolly-cyan mr-2">4.</span> Humanity
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <div id="navbar-placeholder">
+    <!-- Shared Navbar Loaded Here -->
+  </div>
+  <main class="max-w-6xl ml-auto mr-auto px-6">
+    <section class="gap-3 items-center py-12">
+      <div class="space-y-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Raya — Open Knowledge Intelligence for Planetary Coordination</h1>
+        <p class="text-slate-800">Building transparent, community-governed intelligence to coordinate energy, resources, and knowledge at a planetary scale.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center py-4">
+          <div class="planet-card">
+            <div class="planet-title">How Raya Thinks</div>
+            <div class="planet-desc">
+              Open-source intelligence with auditable models and public development logs.
+            </div>
+          </div>
+            <div class="planet-card">
+            <div class="planet-title">Vision</div>
+            <div class="planet-desc">
+              A global, community-driven effort to design planetary-scale intelligence.
+            </div>
+          </div>
+          <div class="planet-card">
+            <div class="planet-title">Type- I Civilization</div>
+            <div class="planet-desc">
+              A gradual transition from information systems to planetary intelligence.
+            </div>
+          </div>
+        </div>
+
+        <!-- Foundational principles -->
+        <section class="mt-10 pt-4 border-t border-slate-200">
+          <div class="mb-8 max-w-4xl">
+            <h2 class="text-2xl font-semibold" style="color:var(--deep)">
+              Foundational Principles
+            </h2>
+            <p class="text-slate-800 py-2">
+              RAYA is guided by a small set of principles that remain stable even as systems evolve.
+              <ul class="list-disc list-inside space-y-3 text-gray-800">
+                <li class="marker:text---deep">Long-term planetary stability over short-term optimization.</li>
+                <li class="marker:text---deep">Scientific integrity over narrative or ideology.</li>
+                <li class="marker:text---deep">Planetary limits over unchecked growth.</li>
+                <li class="marker:text---deep">Humanity over intelligence without responsibility.</li>
+              </ul>
+              <p class="text-slate-800 py-2">These principles shape how intelligence is designed, accessed and applied.</p>
+            </p>
+          </div>
+        </section>
+
+        <!-- Planetary Systems Raya Explores  -->
+        <section class="mt-10 pt-4 border-t border-slate-200">
+          <div class="mb-8 max-w-4xl">
+            <h2 class="text-2xl font-semibold" style="color:var(--deep)">
+              Planetary Systems Raya Explores
+            </h2>
+            <p class="text-slate-800 py-2">
+              Raya approaches planetary intelligence by studying foundational systems that sustain civilization and
+              human
+              well-being.
+            </p>
+          </div>
+        </section>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-stretch py-2">
+
+          <!-- Energy -->
+          <div class="planet-card">
+            <div class="planet-icon">
+              <img src="assets/raya_energy.jpg" alt="Raya Energy" class="rounded-lg">
+            </div>
+            <div class="planet-title">Energy</div>
+            <div class="planet-desc">
+              Simulating renewable transitions, grid coordination, and long-term planetary energy balance.
+            </div>
+          </div>
+
+          <!-- Water -->
+          <div class="planet-card">
+            <div class="planet-icon">
+              <img src="assets/raya_water.jpg" alt="Raya Water" class="rounded-lg">
+            </div>
+            <div class="planet-title">Water</div>
+            <div class="planet-desc">
+              Understanding water cycles, demand, scarcity, and sustainable distribution systems.
+            </div>
+          </div>
+
+          <!-- Farming -->
+          <div class="planet-card">
+            <div class="planet-icon">
+              <img src="assets/raya_farming.jpg" alt="Raya Farming" class="rounded-lg">
+            </div>
+            <div class="planet-title">Farming</div>
+            <div class="planet-desc">
+              Supporting climate-aware agriculture, food security, and resource-efficient farming systems.
+            </div>
+          </div>
+
+          <!-- Human Sustainability -->
+          <div class="planet-card">
+            <div class="planet-icon">
+              <img src="assets/raya_hsi.jpg" alt="Raya Human Sustainability" class="rounded-lg">
+            </div>
+            <div class="planet-title">Human Sustainability</div>
+            <div class="planet-desc">
+              Measuring human well-being across health, education, environment, and economic stability.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- An evolving architecture -->
+        <section class="mt-10 pt-4 border-t border-slate-200">
+          <div class="mb-8 max-w-4xl">
+            <h2 class="text-2xl font-semibold" style="color:var(--deep)">
+              An Evolving Architecture
+            </h2>
+            <p class="text-slate-800 py-2">
+              <ul class="list-disc list-inside space-y-3 text-gray-800">
+                <li class="marker:text---deep">RAYA is not a finished product.</li>
+                <li class="marker:text---deep">It is a continuously evolving architecture for planetary intelligence.</li>
+                <li class="marker:text---deep">Its structure grows through research, iteration, public learning, and long-term systems thinking — adapting as
+              understanding deepens and conditions change.</li>
+              </ul>
+            </p>
+          </div>
+        </section>
+
+        <!-- Who RAYA is For  -->
+         <section class="mt-10 pt-4 border-t border-slate-200">
+          <div class="mb-8 max-w-4xl">
+            <h2 class="text-2xl font-semibold" style="color:var(--deep)">
+              Who RAYA Is For
+            </h2>
+            <p class="text-slate-800 py-2">
+              <ul class="list-disc list-inside space-y-3 text-gray-800">
+                <li class="marker:text---deep">RAYA is for researchers seeking system-level clarity beyond isolated domains.</li>
+                <li class="marker:text---deep">For builders designing infrastructure, policy, and intelligence with long-term consequences.</li>
+                <li class="marker:text---deep">And for citizens who believe humanity's future depends on understanding Earth as a single, shared system.</li>
+              </ul>
+            </p>
+          </div>
+        </section>
+
+        <div class="mt-6 text-sm text-slate-800">
+          <strong>Elevator:</strong> Raya is a long-term research and community initiative that curates public
+          knowledge, builds open intelligence systems, and documents every stage of its evolution.
+        </div>
+      </div>
+
+      <div>
+        <div class="hero-figure p-6 floaty">
+          <div class="faux-image">
+            <div class="text-center max-w-[320px]">
+              <div class="text-3xl font-semibold" style="color:var(--aqua)">Type I Portal</div>
+              <div class="mt-3 text-xs text-slate-300">Hero artwork placeholder — replace with art asset
+              </div>
+              <div class="mt-4 text-xs text-slate-500">Animated glyphs and soft parallax recommended for
+                final asset.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Load Raya Assistant -->
+    <div id="raya-assistant-container"></div>
+
+    <script src="public/planetary-system.js"></script>
+    <script src="src/scripts/layout-loader.js"></script>
+  </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+  
+</body>

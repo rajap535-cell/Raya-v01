@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raya Planetary System - Scrollytelling</title>
+    <link rel="stylesheet" href="planetary-system.css">
+</head>
+<body class="bg-navy font-sans text-white m-0 overflow-x-hidden">
+
+    <!-- Loading Bar Section -->
+    <div id="loading-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-navy">
+        <div class="text-2xl font-bold mb-4 tracking-widest uppercase">Loading System...</div>
+        <div class="w-64 h-2 bg-gray-800 rounded-full overflow-hidden border border-cyan-500/30">
+            <div id="loading-bar" class="h-full bg-cyan-500 transition-all duration-300" style="width: 0%;"></div>
+        </div>
+        <div id="loading-text" class="mt-2 text-cyan-400 text-sm">0%</div>
+    </div>
+
+    <!-- Scrollytelling Section -->
+    <section id="scrolly-section" class="relative block h-[250vh]">
+        
+        <!-- Sticky Canvas Container -->
+        <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
+            <canvas id="planetary-canvas" class="w-full h-full"></canvas>
+            
+            <!-- Story Overlay -->
+            <div id="story-overlay" class="absolute inset-0 pointer-events-none flex items-center justify-center">
+                <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-center px-4" data-start="0" data-end="15">
+                    Unified Intelligence
+                </div>
+                <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-center px-4" data-start="20" data-end="35">
+                    <span class="text-cyan-400 mr-2">1.</span> Energy
+                </div>
+                <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-center px-4" data-start="40" data-end="55">
+                    <span class="text-cyan-400 mr-2">2.</span> Water
+                </div>
+                <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-center px-4" data-start="60" data-end="75">
+                    <span class="text-cyan-400 mr-2">3.</span> Farming
+                </div>
+                <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-center px-4" data-start="80" data-end="95">
+                    <span class="text-cyan-400 mr-2">4.</span> Humanity
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="planetary-system.js"></script>
+</body>
+</html>

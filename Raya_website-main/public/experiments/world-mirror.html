@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>World Mirror — Raya Experiments</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: #0a0f1c; color: #e0e7ff; }
+    .feed-card {
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid #334155;
+      border-left: 6px solid #facc15;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.75rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .feed-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Content -->
+  <main class="flex-1 p-6">
+    <h1 class="text-3xl font-bold text-yellow-400 mb-2">World Mirror</h1>
+    <p class="text-gray-300 mb-6">Live feeds reflecting real-time data streams from news, research, and global events.</p>
+
+    <div id="feed" class="space-y-4"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+  <script src="../../src/scripts/layout-loader.js"></script>
+
+  <script>
+    // Sample feed data
+    const feedData = [
+      { time: "2025-09-04 12:00", title: "Solar Storm Detected", source: "NASA Live", detail: "A strong solar flare may affect Earth's magnetosphere in the next 24 hours." },
+      { time: "2025-09-04 11:15", title: "AI Breakthrough", source: "Tech Journal", detail: "Researchers create a quantum-inspired neural net model." },
+      { time: "2025-09-04 10:45", title: "Global Market Update", source: "Reuters", detail: "Asian markets show resilience amid global inflation concerns." },
+      { time: "2025-09-04 10:00", title: "Climate Alert", source: "UN Reports", detail: "New study reveals faster-than-expected ice melt in Antarctica." }
+    ];
+
+    const container = document.getElementById("feed");
+
+    feedData.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "feed-card";
+      card.innerHTML = `
+        <div class="flex justify-between items-center">
+          <span class="text-sm text-yellow-300">${item.time}</span>
+          <span class="text-xs text-gray-400">${item.source}</span>
+        </div>
+        <div class="text-lg font-semibold">${item.title}</div>
+        <div class="text-gray-400">${item.detail}</div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+  <!-- Load Raya Assistant -->
+<div id="raya-assistant-container"></div>
+</body>
+</html>

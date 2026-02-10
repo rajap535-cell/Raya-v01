@@ -214,5 +214,31 @@
     "source": "Safe Fallback",
     "text": "The economy of India is a developing mixed economy with a notable public sector in strategic sectors. It is the world's fourth-largest economy by nominal GDP and the third-largest by purchasing power parity (PPP); on a per capita income basis, India ranked 136th by nominal GDP and 119th by PPP-adjusted GDP. From independence in 1947 until 1991, successive governments followed the Soviet model and promoted protectionist economic policies, with extensive Sovietization, state intervention, demand-side economics, natural resources, bureaucrat-driven enterprises and economic regulation. This was a form of the Licence Raj.",
     "meta": {}
+  },
+  "how many planets are there in our solar system": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "how many bones are in human body": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
   }
 }

@@ -240,5 +240,136 @@
       ],
       "best_source": "qa"
     }
+  },
+  "explain me evolution btiefly": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "why charles darwin is famous": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "what is the written date of bible": {
+    "source": "Wikipedia",
+    "text": "Some of the oldest surviving Hebrew Bible manuscripts, the Dead Sea Scrolls, date to c. the 2nd century BCE. Some of these scrolls are presently stored at the Shrine of the Book in Jerusalem. The oldest text of the entire Christian Bible, including the New Testament, is the Codex Sinaiticus dating from the 4th century CE, with its Old Testament a copy of a Greek translation known as the Septuagint. The oldest extant manuscripts of the vocalized Masoretic Text date to the 9th century CE. With the exception of a few biblical sections in the Nevi'im, virtually no Old Testament biblical text is contemporaneous with the events it describes.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "who was jeffery epstein": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "how many bones we have in human body": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "is dinausaurs really exist": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "latest research on cosmology": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ],
+        [
+          "arxiv",
+          0.5
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "what is a supernova": {
+    "source": "Wikipedia",
+    "text": "A supernova (pl.: supernovae) is a powerful and luminous explosion of a star. A supernova occurs during the last evolutionary stages of a massive star, or when a white dwarf is triggered into runaway nuclear fusion. The original object, called the progenitor, either collapses to a neutron star or black hole, or is completely destroyed to form a diffuse nebula.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "explaine me evolution briefly": {
+    "source": "Local LLM",
+    "text": "Here's a brief overview of the theory of evolution:\n\n**What is Evolution?**\n\nEvolution is the scientifically supported explanation for how living organisms change and adapt over time. It proposes that all species share a common ancestor and have evolved through a process of natural selection, genetic drift, mutation, and gene flow.\n\n**Key Principles:**\n\n1. **Variation**: All individuals within a population exhibit genetic variation, resulting in differences in traits such as height, eye color, or shape.\n2. **Heritability**: These variations are passed on from one generation to the next through inheritance of genes.\n3. **Adaptation**: As environments change, natural selection favors individuals with traits that enhance their survival and reproduction.\n4. **Selection**: The best-adapted individuals reproduce more successfully, passing on their advantageous traits to future generations.\n\n**Process of Evolution:**\n\n1. **Mutation**: Genetic changes occur due to errors during DNA replication or exposure to environmental factors like radiation.\n2. **Genetic Drift**: Random events can lead to changes in the frequency of genes within a population.\n3. **Gene Flow**: Individuals with new traits migrate into a population, introducing genetic variation.\n4. **Natural Selection**: The environment selects for favorable traits, leading to an increase in their representation in the population.\n\n**Evidence Supporting Evolution:**\n\n1. **Fossil Record**: Transitional fossils and gradual changes in species over time.\n2. **Comparative Anatomy**: Similarities and homologies between different organisms suggest a common ancestor.\n3. **Molecular Biology**: DNA and protein sequences reveal evolutionary relationships between organisms.\n\nEvolution is an ongoing process that continues to shape the diversity of life on Earth. It's a fundamental concept in biology and has been extensively tested and supported by scientific evidence.",
+    "meta": {}
+  },
+  "why chrles darwin is famous": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "how many bones are there in human body": {
+    "source": "Local LLM",
+    "text": "There are 206 bones in the adult human body. However, it's worth noting that the number of bones can vary slightly from person to person, and it's not uncommon for some people to have a few extra or missing bones.\n\nWhen we're born, we have around 300 bones, but as we grow and develop, many of these bones fuse together, resulting in the adult number of 206. The process of bone fusion is called ossification, and it typically occurs during childhood and adolescence.\n\nHere's a rough breakdown of how many bones are present at different stages of human development:\n\n* Newborn: around 300 bones\n* Infancy: around 270-280 bones\n* Childhood: around 240-250 bones\n* Adolescence: around 220-230 bones\n* Adulthood: around 206 bones\n\nIt's interesting to note that some people may have extra or missing bones due to various genetic or developmental conditions. For example, some people with a condition called hyperostosis have an extra bone in their skull, while others with a condition called osteogenesis imperfecta may have fragile bones that are prone to breaking.\n\nOverall, the adult human body is made up of 206 bones, which work together to provide support, movement, and protection for our vital organs.",
+    "meta": {}
   }
 }

@@ -168,7 +168,8 @@ def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) 
         if isinstance(local_text, str) and not local_text.startswith("[local error]"):
             final_text = local_text
             best_source = "Local LLM"
-
+        if DEBUG:
+            print("[Local Output]:", repr(local_text))
     # --------------------------------------------------
     # PIPELINE
     # --------------------------------------------------

@@ -13,7 +13,9 @@ Candidate = Tuple[str, str, float, Optional[dict]]
 try:
     from rapidfuzz import fuzz
 except ImportError:
-    fuzz= None
+    fuzz = None
+
+
 # ---------------- utilities ----------------
 def _normalize(q: str) -> str:
     if not q:
@@ -23,30 +25,33 @@ def _normalize(q: str) -> str:
     q = re.sub(r"\s+", " ", q)
     return q
 
+
 def _fuzzy_match_score(a: str, b: str) -> float:
-    if not a or not b:
+    if not a or not b or not fuzz:
         return 0.0
-    return fuzz.ratio(a, b) / 100.0  # 0..1
+    return fuzz.ratio(a, b) / 100.0
+
 
 # ---------------- collect candidates ----------------
 def _collect_candidates(user_text: str, db_file: str, intents: list) -> List[Candidate]:
     candidates: List[Candidate] = []
     q = user_text
 
-    # 1. QA Engine (cache + wiki + online + llm)
+    # 1. QA Engine
     try:
         qa_res = qa_engine.answer_question(q)
-        if (
-            qa_res
-            and hasattr(qa_res, "answer")
-            and qa_res.answer
-        ):
+        if qa_res and getattr(qa_res, "answer", None):
             candidates.append(
-                ("qa", qa_res.answer, qa_res.confidence or 0.5,
-                {"source_type": getattr(qa_res, "source_type", "unknown")})
+                (
+                    "qa",
+                    qa_res.answer,
+                    qa_res.confidence or 0.5,
+                    {"source_type": getattr(qa_res, "source_type", "unknown")},
+                )
             )
     except Exception:
         pass
+
     # 2. Local DB
     try:
         local = query_local_db(db_file, q)
@@ -55,7 +60,7 @@ def _collect_candidates(user_text: str, db_file: str, intents: list) -> List[Can
     except Exception:
         pass
 
-    # 3. News (optional)
+    # 3. News
     try:
         if "news" in intents or any(k in q.lower() for k in ["latest", "breaking", "today"]):
             news_hits = search_topic_news(q)
@@ -64,7 +69,7 @@ def _collect_candidates(user_text: str, db_file: str, intents: list) -> List[Can
     except Exception:
         pass
 
-    # 4. ArXiv / research papers (optional)
+    # 4. ArXiv
     try:
         if "research" in intents or any(k in q.lower() for k in ["paper", "study", "arxiv"]):
             ax = search_arxiv(q, max_results=3)
@@ -75,6 +80,7 @@ def _collect_candidates(user_text: str, db_file: str, intents: list) -> List[Can
 
     return candidates
 
+
 # ---------------- scoring & selection ----------------
 def _score_and_select(candidates: List[Candidate]) -> Tuple[Optional[Candidate], List[Candidate]]:
     if not candidates:
@@ -82,32 +88,46 @@ def _score_and_select(candidates: List[Candidate]) -> Tuple[Optional[Candidate],
 
     scored = []
     for src, ans, conf, meta in candidates:
-        score = (conf or 0.5) * min(len(ans)/100, 3.0)
+        if not ans:
+            continue
+        score = (conf or 0.5) * min(len(ans) / 100, 3.0)
         scored.append((src, ans, conf, meta, score))
+
+    if not scored:
+        return None, []
+
     scored.sort(key=lambda t: t[4], reverse=True)
 
     best = scored[0][:4]
     extras = [t[:4] for t in scored[1:]]
     return best, extras
 
+
 # ---------------- main pipeline ----------------
 def run_pipeline(user_text: str, db_file: str, intents: list) -> Tuple[str, dict]:
-    # 1. Collect candidates from QA Engine + DB + News + ArXiv
-    candidates = _collect_candidates(user_text, db_file, intents)
 
-    # 2. Score & select best candidate
+    candidates = _collect_candidates(user_text, db_file, intents)
     best, extras = _score_and_select(candidates)
 
-    # 3. Build candidate pairs for aggregator
-    best_pair = (best[0], best[1]) if best else None
-    extras_pairs = [(src, ans) for src, ans, *_ in extras] if extras else []
+    # ✅ HARD SAFETY: never send None to aggregator
+    if not best:
+        metadata = {
+            "candidates": [],
+            "best_source": None,
+        }
+        return "", metadata
 
-    # 4. Aggregate final string
-    final = aggregate(best_pair, extras_pairs)
+    best_pair = (best[0], best[1])
+    extras_pairs = [(src, ans) for src, ans, *_ in extras]
 
-    # 5. Metadata for debug / tracking
+    try:
+        final = aggregate(best_pair, extras_pairs)
+    except Exception:
+        final = best[1]  # fallback: raw best answer
+
     metadata = {
         "candidates": [(c[0], c[2]) for c in candidates],
-        "best_source": best[0] if best else None,
+        "best_source": best[0],
     }
-    return final, metadata
+
+    return final or "", metadata

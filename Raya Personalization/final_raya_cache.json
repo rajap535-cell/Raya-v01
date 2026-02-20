@@ -294,17 +294,9 @@
     }
   },
   "how many bones we have in human body": {
-    "source": "Safe Fallback",
-    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
-    "meta": {
-      "candidates": [
-        [
-          "qa",
-          0.8
-        ]
-      ],
-      "best_source": "qa"
-    }
+    "source": "Local LLM",
+    "text": "The adult human body has a total of 206 bones. This number can vary slightly from person to person, as some individuals may have extra or missing bones due to various genetic or developmental conditions.\n\nHere's a breakdown of the 206 bones in the adult human body:\n\n* Skull: 22 bones\n* Face: 14 bones\n* Vertebral column: 33 bones (7 cervical, 12 thoracic, 5 lumbar, 5 sacral, and 4 coccygeal)\n* Ribcage: 24 bones\n* Upper limbs: 64 bones (scapulae, humeri, radii, ulnae, carpals, metacarpals, phalanges)\n* Pelvis: 4 bones\n* Lower limbs: 64 bones (femora, patellae, tibiae, fibulae, tarsals, metatarsals, phalanges)\n\nIt's worth noting that the number of bones in the human body changes throughout life. At birth, the number of bones is around 300, but as we grow and develop, some of these bones fuse together, resulting in the adult total of 206 bones.",
+    "meta": {}
   },
   "is dinausaurs really exist": {
     "source": "Safe Fallback",
@@ -370,6 +362,111 @@
   "how many bones are there in human body": {
     "source": "Local LLM",
     "text": "There are 206 bones in the adult human body. However, it's worth noting that the number of bones can vary slightly from person to person, and it's not uncommon for some people to have a few extra or missing bones.\n\nWhen we're born, we have around 300 bones, but as we grow and develop, many of these bones fuse together, resulting in the adult number of 206. The process of bone fusion is called ossification, and it typically occurs during childhood and adolescence.\n\nHere's a rough breakdown of how many bones are present at different stages of human development:\n\n* Newborn: around 300 bones\n* Infancy: around 270-280 bones\n* Childhood: around 240-250 bones\n* Adolescence: around 220-230 bones\n* Adulthood: around 206 bones\n\nIt's interesting to note that some people may have extra or missing bones due to various genetic or developmental conditions. For example, some people with a condition called hyperostosis have an extra bone in their skull, while others with a condition called osteogenesis imperfecta may have fragile bones that are prone to breaking.\n\nOverall, the adult human body is made up of 206 bones, which work together to provide support, movement, and protection for our vital organs.",
+    "meta": {}
+  },
+  "is dinausaurs really existed": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "did dinosaurs existed": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "how many wars did india fought from 1947": {
+    "source": "Local LLM",
+    "text": "India has been involved in several wars and military conflicts since its independence in 1947. Here are some of the notable wars and conflicts that India has fought:\n\n1. Indo-Pakistani War (1947-1948): This was a conflict between India and Pakistan, which had recently gained independence from British rule.\n2. Indo-Pakistani War (1965): Another conflict with Pakistan, this time over the disputed region of Kashmir.\n3. Indo-China War (1962): A border dispute with China that resulted in a brief but intense war.\n\nIndia has also been involved in several other conflicts and wars, including:\n\n* Sino-Indian War (1967) - a border dispute with China\n* Bangladesh Liberation War (1971) - India supported the independence of Bangladesh from Pakistan\n* Indo-Pakistani War (1971) - a conflict between India and Pakistan over Kashmir\n* Siachen Glacier Conflict (1984-1985) - a conflict between India and Pakistan over the disputed region of Siachen Glacier\n\nHowever, if we consider only major wars that resulted in significant human casualties or territorial gains, India has been involved in:\n\n* Indo-Pakistani War (1965): This war resulted in a ceasefire and the signing of the Tashkent Agreement.\n* Bangladesh Liberation War (1971): India played a significant role in supporting the independence of Bangladesh from Pakistan.\n* Indo-China War (1962): Although India was defeated, it marked an important period in Sino-Indian relations.\n\nOverall, India has been involved in at least 6 major wars and conflicts since its independence in 1947.",
+    "meta": {}
+  },
+  "explain me white revolution in india": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "what is quantum computing": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nA quantum computer is a (real or theoretical) computer that exploits superposed and entangled states. Quantum computers can be viewed as sampling from quantum systems that evolve in ways that may be described as operating on an enormous number of possibilities simultaneously, though still subject to strict computational constraints.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "latest ai research 2025": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nMistral AI SAS (French: [mistʁal]) is a French artificial intelligence (AI) company, headquartered in Paris. Founded in 2023, it has open-weight large language models (LLMs), with both open-source and proprietary AI models.\n\nResearch:\nMeasuring Mid-2025 LLM-Assistance on Novice Performance in Biology (2026-02-18T18:51:28Z)\nhttps://arxiv.org/abs/2602.16703v1\nBenchmarking Large Language Models on Answering and Explaining Challenging Medical Questions (2026-02-18T18:50:32Z)\nhttps://arxiv.org/abs/2402.18060v6\nAdvancing Averaged Primer Vector Theory with Bang-Bang Control and Eclipsing (2026-02-18T18:47:34Z)\nhttps://arxiv.org/abs/2505.11660v3",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ],
+        [
+          "arxiv",
+          0.5
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "explain photosynthesis": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nPhotosynthesis ( FOH-tə-SINTH-ə-sis) is a system of biological processes by which photopigment-bearing autotrophic organisms, such as most plants, algae and cyanobacteria, convert light energy — typically from sunlight — into the chemical energy necessary to fuel their metabolism. The term photosynthesis usually refers to oxygenic photosynthesis, a process that releases oxygen as a byproduct of water splitting.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "what is darwinism": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nDarwinism is a term used to describe a theory of biological evolution developed by the English naturalist Charles Darwin (1809–1882) and his contemporaries. The theory states that all species of organisms arise and develop through the natural selection of small, inherited variations that increase the individual's ability to compete, survive, and reproduce.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "if y3 is equal to 999 then y is equal to what": {
+    "source": "Local LLM",
+    "text": "Let's use the order of operations to evaluate the expression.\n\ny³ = 999\n\nTo find y, we need to take the cube root of both sides:\n\ny = ∛999\n\nUsing a calculator or estimating, we get:\n\ny ≈ 9.97\n\nSo, approximately, y is equal to 10 (rounded up from 9.97)",
     "meta": {}
   }
 }

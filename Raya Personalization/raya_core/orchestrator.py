@@ -146,17 +146,9 @@ def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) 
         print(f"[Router] 🧭 Route: {route}")
 
     # --------------------------------------------------
-    # WIKI-FIRST (VALIDATED)
-    # --------------------------------------------------
+    wiki_candidate = None
     if route == "wiki_first" and wiki_allowed(question_type):
-        wiki_text = _try_wikipedia(_wiki_safe_query(query))
-        if wiki_text and validate_answer(query, "wikipedia", wiki_text):
-            return EngineResult(
-                sources={"Wikipedia": True},
-                text=wiki_text,
-                confidence=0.95,
-                meta={}
-            )
+        wiki_candidate = _try_wikipedia(_wiki_safe_query(query))
 
     # --------------------------------------------------
     # LOCAL LLM
@@ -179,7 +171,7 @@ def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) 
                 print("[Stage: Pipeline] ⚙️ Running")
             pipe_text, metadata = run_pipeline(query, db_file, intents)
             if pipe_text:
-                final_text = aggregate([final_text, pipe_text], extras={})
+                final_text = pipe_text
                 best_source = "Pipeline"
         except Exception as e:
             if DEBUG:

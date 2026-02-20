@@ -1,9 +1,11 @@
 # raya_core/question_classifier.py
 
 from enum import Enum, auto
+import re
 
 
 class QuestionType(Enum):
+    MATH = auto()
     FACT_DEFINITION = auto()
     HISTORICAL = auto()
     EXPLANATION = auto()
@@ -12,6 +14,14 @@ class QuestionType(Enum):
     NEWS = auto()
     CONVERSATIONAL = auto()
     UNKNOWN = auto()
+
+
+# --- Math detection ---
+MATH_PATTERN = re.compile(
+    r"[0-9]+\s*[\+\-\*/\^=]|"
+    r"\bsolve\b|"
+    r"\bequal to\b"
+)
 
 
 FACT_PREFIXES = (
@@ -41,9 +51,12 @@ CONVERSATIONAL_PREFIXES = (
 )
 
 
-
 def classify_question(query: str) -> QuestionType:
     q = query.lower().strip()
+
+    # 🔥 MATH FIRST (highest priority)
+    if MATH_PATTERN.search(q):
+        return QuestionType.MATH
 
     # Conversational
     if any(q.startswith(p) for p in CONVERSATIONAL_PREFIXES):
@@ -61,7 +74,7 @@ def classify_question(query: str) -> QuestionType:
     if any(q.startswith(p) for p in FACT_PREFIXES):
         return QuestionType.FACT_DEFINITION
 
-    # Explanation (VERY IMPORTANT)
+    # Explanation
     if (
         any(q.startswith(p) for p in EXPLANATION_PREFIXES)
         or q.startswith("why")

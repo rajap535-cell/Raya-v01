@@ -1,10 +1,6 @@
 # aggregator.py
 
 from typing import List, Tuple
-def aggregate(best_pair, extras_pairs):
-    # combine results into a final answer
-    return best_pair  # + maybe extras logic
-
 
 HEADINGS = {
     "custom_db": "Local notes",

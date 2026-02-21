@@ -1,0 +1,189 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vision — Raya Mission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --aqua: #00E6FF;
+            --gold: #FFD369;
+            --deep: #041025;
+        }
+
+        body {
+            background-color: #dfe8f0;
+            color: #04396e;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        }
+
+        .rune-card {
+            background: rgba(255, 210, 105, 0.02);
+            border: 1px solid rgba(255, 210, 105, 0.05);
+            backdrop-filter: blur(6px);
+        }
+
+        .planet-card {
+            position: relative;
+            background: linear-gradient(180deg,
+                    rgba(255, 255, 255, 0.55),
+                    rgba(255, 255, 255, 0.25));
+            border: 1px solid rgba(19, 57, 123, 0.08);
+            border-radius: 14px;
+            padding: 1.2rem;
+            transition:
+                transform 0.45s ease,
+                box-shadow 0.45s ease,
+                border-color 0.45s ease;
+            backdrop-filter: blur(6px);
+        }
+
+        .diagram-container {
+            position: relative;
+            /* Establishes a positioning context for absolute children */
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            /* Centers the container on the page */
+        }
+
+        .diagram {
+            position: relative;
+            width: 460px;
+            height: 460px;
+        }
+
+        .circle {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: #add0e7;
+            /* sky-100 */
+            border: 10px solid #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #243a55;
+            font-size: 20px;
+            box-shadow: 0 0 28px rgba(0, 0, 0, 0.06);
+            z-index: 2;
+        }
+
+        .energy {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .food {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .economy {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .water {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        svg {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="border-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch py-1">
+            <div class="rune-card h-[32rem]">
+                <img src="assets/type1.jpg" alt="not_yet_type1" class="rounded-lg">
+            </div>
+            <div class="rune-card h-[32rem]">
+                <div class="rune-card h -[32rem] w-[16rem]">
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Raya — Open Knowledge Intelligence for
+                        Planetary
+                        Coordination</h1>
+                    <p class="text-slate-800">Building transparent, community-governed intelligence to coordinate
+                        energy, resources,
+                        and knowledge at a planetary scale.</p>
+                </div>
+                <div class="rune-card h-[32rem] w-[16rem] mx-0">
+                    <div class="diagram h-[22rem] w-[21rem] mx-[25rem] my-auto">
+
+                        <!-- SVG arrows (non-floating, attached) -->
+                        <svg viewBox="0 0 460 460">
+                            <defs>
+                                <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"
+                                    markerUnits="strokeWidth">
+                                    <path d="M0,0 L0,6 L6,3 z" fill="#1f3a5f" />
+                                </marker>
+                            </defs>
+
+                            <!-- ENERGY → FOOD -->
+                            <path d="M230 75 C340 75, 385 150, 385 230" fill="none" stroke="#1f3a5f" stroke-width="1.5"
+                                marker-end="url(#arrow)" />
+
+                            <!-- FOOD → ECONOMY -->
+                            <path d="M385 230 C385 340, 310 385, 230 385" fill="none" stroke="#1f3a5f"
+                                stroke-width="1.5" marker-end="url(#arrow)" />
+
+                            <!-- ECONOMY → WATER -->
+                            <path d="M230 385 C120 385, 75 310, 75 230" fill="none" stroke="#1f3a5f" stroke-width="1.5"
+                                marker-end="url(#arrow)" />
+
+                            <!-- WATER → ENERGY -->
+                            <path d="M75 230 C75 120, 150 75, 230 75" fill="none" stroke="#1f3a5f" stroke-width="1.5"
+                                marker-end="url(#arrow)" />
+                        </svg>
+
+                        <!-- Circles -->
+                        <div class="circle energy">ENERGY</div>
+                        <div class="circle food">FOOD</div>
+                        <div class="circle economy">ECONOMY</div>
+                        <div class="circle water">WATER</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="border-slate-200">
+        <div class="grid grid-cols-0">
+            <div
+                class="bg-[url('assets/planetry_system_beyond_border.jpg')] bg-cover bg-center h-[32rem] flex justify-start items-end px-3">
+            </div>
+
+        </div>
+    </section>
+    <section class="border-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch py-1">
+            <div class="planet-card">
+
+            </div>
+            <div class="planet-card h-[32rem]">
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

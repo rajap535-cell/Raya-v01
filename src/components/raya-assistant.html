@@ -1,0 +1,181 @@
+<!-- raya-assistant.html -->
+<style>
+  :root {
+    --aqua:#00E6FF; 
+    --gold:#FFD369; 
+    --deep:#041025;
+  }
+
+  /* Orb style */
+  .raya-orb {
+    position: fixed; 
+    bottom: 24px; 
+    right: 24px; 
+    width: 64px; 
+    height: 64px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--aqua), #003344);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-weight: bold; 
+    color: white; 
+    font-size: 20px;
+    box-shadow: 0 0 20px rgba(0,230,255,0.6), inset 0 0 10px rgba(0,230,255,0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .raya-orb:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0,230,255,0.8), inset 0 0 12px rgba(0,230,255,0.4);
+  }
+  .raya-orb .core { pointer-events:none; }
+
+  /* Assistant panel */
+  .assistant-panel {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    width: 320px;
+    max-height: 70vh;
+    background: rgba(2,19,34,0.96);
+    border: 1px solid rgba(0,230,255,0.2);
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0,230,255,0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+  }
+  .assistant-panel.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .assistant-header {
+    padding: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--aqua);
+    border-bottom: 1px solid rgba(0,230,255,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .assistant-messages {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+  .assistant-messages::-webkit-scrollbar { width:6px; }
+  .assistant-messages::-webkit-scrollbar-thumb { background: rgba(0,230,255,0.2); border-radius: 3px; }
+
+  .assistant-input {
+    display: flex;
+    border-top: 1px solid rgba(0,230,255,0.2);
+  }
+  .assistant-input input {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    color: #E6EEF6;
+  }
+  .assistant-input button {
+    padding: 0 16px;
+    background: var(--aqua);
+    color: #021322;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  .msg {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .msg.user { color: var(--gold); text-align: right; }
+  .msg.raya { color: #E6EEF6; text-align: left; }
+</style>
+
+<!-- Floating Orb -->
+<button id="rayaOrb" class="raya-orb" aria-label="Open Ask Raya assistant" title="Ask Raya">
+  <div class="core">R</div>
+</button>
+
+<!-- Assistant Panel -->
+<aside id="assistantPanel" class="assistant-panel">
+  <div class="assistant-header">
+    Ask Raya
+    <button id="closeAssistant" class="text-slate-400 hover:text-white">✕</button>
+  </div>
+  <div id="assistantMessages" class="assistant-messages"></div>
+  <div class="assistant-input">
+    <input id="assistantInput" type="text" placeholder="Type a message..." />
+    <button id="assistantSend">➤</button>
+  </div>
+</aside>
+
+<script>
+(function(){
+  const orb = document.getElementById('rayaOrb');
+  const panel = document.getElementById('assistantPanel');
+  const closeBtn = document.getElementById('closeAssistant');
+  const input = document.getElementById('assistantInput');
+  const sendBtn = document.getElementById('assistantSend');
+  const messages = document.getElementById('assistantMessages');
+
+  // restore history
+  let history = JSON.parse(localStorage.getItem('raya-chat')||'[]');
+  function renderHistory(){
+    messages.innerHTML = '';
+    history.forEach(m => {
+      const div = document.createElement('div');
+      div.className = 'msg '+m.role;
+      div.textContent = m.text;
+      messages.appendChild(div);
+    });
+    messages.scrollTop = messages.scrollHeight;
+  }
+  renderHistory();
+
+  function addMessage(role,text){
+    history.push({role,text});
+    if(history.length>50) history.shift();
+    localStorage.setItem('raya-chat',JSON.stringify(history));
+    renderHistory();
+  }
+
+  function fakeRayaResponse(userText){
+    const responses = [
+      "Interesting thought! I’ll note that.",
+      "Raya is still evolving — imagine this connected to real knowledge soon.",
+      "That’s a great question. For now, consider it a seed for future AI upgrades.",
+      "I hear you. The devlogs will reflect on this soon."
+    ];
+    return responses[Math.floor(Math.random()*responses.length)];
+  }
+
+  function handleSend(){
+    const text = input.value.trim();
+    if(!text) return;
+    addMessage('user', text);
+    input.value='';
+    setTimeout(()=>{ 
+      addMessage('raya', fakeRayaResponse(text)); 
+    },600);
+  }
+
+  orb.addEventListener('click', ()=> panel.classList.toggle('active'));
+  closeBtn.addEventListener('click', ()=> panel.classList.remove('active'));
+  sendBtn.addEventListener('click', handleSend);
+  input.addEventListener('keydown', e=>{ if(e.key==='Enter') handleSend(); });
+})();
+</script>

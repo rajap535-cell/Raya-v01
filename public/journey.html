@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Follow the Journey — Raya Roadmap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{ --aqua:#00E6FF; --gold:#FFD369; --deep:#041025; }
+    body{ background: linear-gradient(180deg, #021322 0%, #041025 100%); color:#E6EEF6; font-family: Inter, ui-sans-serif, system-ui; }
+    .timeline-node{ border-left:2px solid rgba(0,230,255,0.2); margin-left:1.5rem; padding-left:1.5rem; position:relative; }
+    .timeline-node::before{ content:''; position:absolute; left:-10px; top:0.4rem; width:12px; height:12px; border-radius:50%; background-color:var(--aqua); box-shadow:0 0 12px rgba(0,230,255,0.6); }
+    .rune-card{ background: rgba(255,210,105,0.02); border: 1px solid rgba(255,210,105,0.05); backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br from-slate-900/40 to-transparent border border-slate-700">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4" stroke="white" stroke-opacity="0.95" stroke-width="1.2"/><path d="M12 2v3" stroke="white" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/></svg>
+        </div>
+        <span class="font-semibold text-white">Raya</span>
+      </a>
+    </div>
+    <nav class="flex items-center gap-6">
+      <a class="text-slate-300 hover:text-white" href="vision.html">Vision</a>
+      <a class="text-slate-300 hover:text-white" href="journey.html">Journey</a>
+      <a class="text-slate-300 hover:text-white" href="portal.html">Portal</a>
+    </nav>
+  </header>  <!-- HERO -->  <section class="max-w-4xl mx-auto text-center py-12 px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Follow the Journey</h1>
+    <p class="mt-4 text-slate-300 max-w-2xl mx-auto">Raya is not hidden behind closed doors. Her evolution is visible to all — step by step, milestone by milestone. From the first spark of code to the rise of a true conversational guide, you can follow her becoming here.</p>
+  </section>  <!-- TIMELINE -->  <main class="max-w-3xl mx-auto px-6 space-y-10">
+    <div class="timeline-node">
+      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q1 2025 — The Birth of Raya Portal</h3>
+      <p class="text-slate-400 text-sm mt-2">Launch of the website, vision unveiled.</p>
+    </div>
+    <div class="timeline-node">
+      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q2 2025 — The First Circle</h3>
+      <p class="text-slate-400 text-sm mt-2">Community channels open — Discord, blogs, and updates.</p>
+    </div>
+    <div class="timeline-node">
+      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q3 2025 — Knowledge Engine v1</h3>
+      <p class="text-slate-400 text-sm mt-2">Raya learns to answer through Wiki + News + Cache.</p>
+    </div>
+    <div class="timeline-node">
+      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q1 2026 — The Interactive Portal</h3>
+      <p class="text-slate-400 text-sm mt-2">First dialogue: users can speak with Raya.</p>
+    </div>
+    <div class="timeline-node">
+      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q3 2026 — Raya v2</h3>
+      <p class="text-slate-400 text-sm mt-2">Natural language understanding and deeper reasoning.</p>
+    </div>
+    <div class="timeline-node">
+      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q4 2026 — The Threshold of Type I</h3>
+      <p class="text-slate-400 text-sm mt-2">LLM integration and global community-driven growth.</p>
+    </div>
+  </main>  <!-- CALL TO ACTION -->  <section class="max-w-4xl mx-auto py-16 text-center">
+    <div class="rune-card p-8 rounded-2xl">
+      <h2 class="text-2xl font-semibold">Be Part of the Journey</h2>
+      <p class="mt-2 text-slate-400">Subscribe to devlogs, follow milestones, and watch Raya evolve in real time.</p>
+      <form class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <input aria-label="email" placeholder="Enter your email" class="px-4 py-3 rounded-md bg-slate-800/40 border border-slate-700 text-slate-200 w-full sm:w-auto" />
+        <button class="px-5 py-3 rounded-md border border-slate-600 hover:border-slate-400 text-sm">Subscribe</button>
+      </form>
+    </div>
+  </section>  <!-- FOOTER -->  <footer class="mt-12 py-10 text-slate-400">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
+      <div>
+        <div class="font-semibold text-white">Raya</div>
+        <div class="text-sm mt-2">From Darkness to Light — tamso mā jyotirgamaya</div>
+      </div>
+      <div>
+        <div class="font-semibold">Explore</div>
+        <div class="mt-2 text-sm grid gap-2">
+          <a href="vision.html" class="text-slate-400">Vision</a>
+          <a href="journey.html" class="text-slate-400">Journey</a>
+          <a href="portal.html" class="text-slate-400">Portal</a>
+        </div>
+      </div>
+      <div>
+        <div class="font-semibold">Contact</div>
+        <div class="mt-2 text-sm">hello@raya.org</div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-8 text-center text-xs text-slate-600">© 2025 Raya — All Rights Reserved</div>
+  </footer>
+  <!-- Load Raya Assistant -->
+<div id="raya-assistant-container"></div>
+<script>
+  fetch("raya-assistant.html")
+    .then(res => res.text())
+    .then(html => {
+      // Insert HTML
+      document.getElementById("raya-assistant-container").innerHTML = html;
+
+      // Extract and run any <script> inside the loaded file
+      const container = document.getElementById("raya-assistant-container");
+      const scripts = container.querySelectorAll("script");
+      scripts.forEach(oldScript => {
+        const newScript = document.createElement("script");
+        if (oldScript.src) {
+          newScript.src = oldScript.src; // external script
+        } else {
+          newScript.textContent = oldScript.textContent; // inline script
+        }
+        document.body.appendChild(newScript);
+        oldScript.remove();
+      });
+    })
+    .catch(err => console.error("Failed to load Raya Assistant:", err));
+</script>
+</body>
+</html>

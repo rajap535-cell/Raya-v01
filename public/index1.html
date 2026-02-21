@@ -1,0 +1,253 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Raya — The First Open Knowledge Intelligence</title>
+    <meta name="description"
+        content="Raya: an open, community-first knowledge intelligence. Follow the journey toward a transparent knowledge future." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --aqua: #00E6FF;
+            --gold: #FFD369;
+            --deep: #041025;
+        }
+
+        body {
+            background: radial-gradient(ellipse at 10% 10%, rgba(4, 16, 37, 0.92), transparent 20%), linear-gradient(180deg, #021322 0%, #041025 100%);
+            color: #E6EEF6;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        }
+
+        .glow-aqua {
+            box-shadow: 0 10px 40px rgba(0, 230, 255, 0.08), 0 2px 10px rgba(0, 230, 255, 0.06);
+        }
+
+        .btn-rune {
+            background: linear-gradient(180deg, rgba(0, 230, 255, 0.08), rgba(0, 230, 255, 0.03));
+            border: 1px solid rgba(0, 230, 255, 0.16);
+        }
+
+        .rune-gold {
+            box-shadow: 0 8px 26px rgba(255, 211, 105, 0.06);
+        }
+
+        .hero-figure {
+            background: linear-gradient(180deg, rgba(0, 230, 255, 0.04), rgba(0, 230, 255, 0.01));
+            border-radius: 18px;
+            border: 1px solid rgba(0, 230, 255, 0.06);
+        }
+
+        .faux-image {
+            background: linear-gradient(180deg, rgba(0, 230, 255, 0.02), rgba(0, 230, 255, 0.01));
+            height: 460px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rune-card {
+            background: rgba(255, 210, 105, 0.02);
+            border: 1px solid rgba(255, 210, 105, 0.05);
+            backdrop-filter: blur(6px);
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        /* simple subtle animation */
+        @keyframes floaty {
+            0% {
+                transform: translateY(0px)
+            }
+
+            50% {
+                transform: translateY(-6px)
+            }
+
+            100% {
+                transform: translateY(0px)
+            }
+        }
+
+        .floaty {
+            animation: floaty 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div
+                class="w-12 h-12 rounded-lg glow-aqua flex items-center justify-center bg-gradient-to-br from-slate-900/40 to-transparent">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="4" stroke="white" stroke-opacity="0.95" stroke-width="1.2" />
+                    <path d="M12 2v3" stroke="white" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div>
+                <div class="font-semibold text-white">Raya</div>
+                <div class="text-xs text-slate-400 -mt-1">Open Knowledge Intelligence</div>
+            </div>
+        </div>
+        <nav class="flex items-center gap-6">
+            <a class="text-slate-300 hover:text-white" href="vision.html">Vision</a>
+            <a class="text-slate-300 hover:text-white" href="journey.html">Journey</a>
+            <a class="text-slate-300 hover:text-white" href="portal.html">Portal</a>
+            <a class="px-4 py-2 rounded-md border border-transparent btn-rune text-sm text-slate-100"
+                href="#follow">Follow</a>
+        </nav>
+    </header> 
+    
+    <!-- HERO -->
+    <main class="max-w-6xl mx-auto px-6">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-12">
+            <div class="space-y-6">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Raya: The First Open Knowledge
+                    Intelligence</h1>
+                <p class="text-slate-300 max-w-xl">A step toward a Type I Civilization — transparent, community-first
+                    knowledge for humanity.</p>
+                <div class="flex gap-4 items-center">
+                    <a href="journey.html" class="px-5 py-3 rounded-lg btn-rune text-sm font-medium glow-aqua">Follow
+                        the Journey</a>
+                    <a href="vision.html" class="px-4 py-2 rounded-lg rune-gold text-sm font-medium text-slate-900"
+                        style="background: linear-gradient(180deg, rgba(255,211,105,0.12), rgba(255,211,105,0.04));">Read
+                        the Vision</a>
+                    <a href="portal.html"
+                        class="ml-2 px-4 py-2 rounded-lg border border-slate-700 text-sm text-slate-300 hover:text-white">Enter
+                        the Portal</a>
+                </div>
+                <div class="mt-6 grid grid-cols-3 gap-3">
+                    <div class="rune-card p-4 rounded-md text-xs text-slate-200">
+                        <div class="font-semibold text-sm" style="color:var(--aqua)">Transparency</div>
+                        <div class="text-slate-400 text-[13px] mt-2">Open sources & auditable changelogs.</div>
+                    </div>
+                    <div class="rune-card p-4 rounded-md text-xs text-slate-200">
+                        <div class="font-semibold text-sm" style="color:var(--aqua)">Community</div>
+                        <div class="text-slate-400 text-[13px] mt-2">Collaborate, discuss, and contribute.</div>
+                    </div>
+                    <div class="rune-card p-4 rounded-md text-xs text-slate-200">
+                        <div class="font-semibold text-sm" style="color:var(--aqua)">Evolution</div>
+                        <div class="text-slate-400 text-[13px] mt-2">Incremental growth from Q/A to intelligence.</div>
+                    </div>
+                </div>
+
+                <div class="mt-6 text-sm text-slate-400">
+                    <strong>Elevator:</strong> Raya curates reliable public sources and publishes transparent devlogs so
+                    the public can follow every step of development.
+                </div>
+
+            </div>
+
+            <div>
+                <div class="hero-figure p-6 floaty">
+                    <div class="faux-image">
+                        <div class="text-center max-w-[320px]">
+                            <div class="text-3xl font-semibold" style="color:var(--aqua)">Type I Portal</div>
+                            <div class="mt-3 text-xs text-slate-300">Hero artwork placeholder — replace with art asset
+                            </div>
+                            <div class="mt-4 text-xs text-slate-500">Animated glyphs and soft parallax recommended for
+                                final asset.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHORT NAV CARDS -->
+        <section class="py-8">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="journey.html" class="p-6 rounded-2xl rune-card hover:scale-[1.01] transition-transform">
+                    <h3 class="font-semibold" style="color:var(--aqua)">Follow the Journey</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Trace Raya’s milestones, read devlogs, and see progress in
+                        real time.</p>
+                </a>
+                <a href="vision.html" class="p-6 rounded-2xl rune-card hover:scale-[1.01] transition-transform">
+                    <h3 class="font-semibold" style="color:var(--aqua)">Read the Vision</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Explore Raya’s manifesto and the principles guiding
+                        development.</p>
+                </a>
+                <a href="portal.html" class="p-6 rounded-2xl rune-card hover:scale-[1.01] transition-transform">
+                    <h3 class="font-semibold" style="color:var(--aqua)">Enter the Portal</h3>
+                    <p class="text-slate-400 mt-2 text-sm">The interactive gateway to Raya — opening soon. Watch this
+                        space.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- JOIN -->
+        <section id="follow" class="py-12 bg-gradient-to-b from-transparent to-slate-900/12 rounded-xl p-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl font-semibold">Join the Journey</h2>
+                <p class="mt-2 text-slate-400">Subscribe for devlogs, roadmap updates, and community calls. No spam —
+                    meaningful updates only.</p>
+                <form id="newsletter" class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                    <input aria-label="email" placeholder="Enter your email"
+                        class="px-4 py-3 rounded-md bg-slate-800/40 border border-slate-700 text-slate-200 w-full sm:w-auto" />
+                    <button class="px-5 py-3 rounded-md btn-rune text-sm font-medium glow-aqua">Subscribe</button>
+                </form>
+                <div class="mt-4 text-xs text-slate-500">You can unsubscribe any time. We respect your privacy.</div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="mt-12 py-10 text-slate-400">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <div class="font-semibold text-white">Raya</div>
+                    <div class="text-sm mt-2">From Darkness to Light — tamso mā jyotirgamaya</div>
+                </div>
+                <div>
+                    <div class="font-semibold">Explore</div>
+                    <div class="mt-2 text-sm grid gap-2">
+                        <a href="vision.html" class="text-slate-400">Vision</a>
+                        <a href="journey.html" class="text-slate-400">Journey</a>
+                        <a href="portal.html" class="text-slate-400">Portal</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-semibold">Contact</div>
+                    <div class="mt-2 text-sm">hello@raya.org</div>
+                </div>
+            </div>
+            <div class="max-w-6xl mx-auto mt-8 text-center text-xs text-slate-600">© 2025 Raya — All Rights Reserved
+            </div>
+        </footer>
+
+        <!-- Load Raya Assistant -->
+        <div id="raya-assistant-container"></div>
+
+        <script>
+            fetch("raya-assistant.html")
+                .then(res => res.text())
+                .then(html => {
+                    // Insert HTML
+                    document.getElementById("raya-assistant-container").innerHTML = html;
+
+                    // Extract and run any <script> inside the loaded file
+                    const container = document.getElementById("raya-assistant-container");
+                    const scripts = container.querySelectorAll("script");
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement("script");
+                        if (oldScript.src) {
+                            newScript.src = oldScript.src; // external script
+                        } else {
+                            newScript.textContent = oldScript.textContent; // inline script
+                        }
+                        document.body.appendChild(newScript);
+                        oldScript.remove();
+                    });
+                })
+                .catch(err => console.error("Failed to load Raya Assistant:", err));
+        </script>
+    </main>
+</body>
+
+</html>

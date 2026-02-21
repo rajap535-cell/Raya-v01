@@ -1,147 +1,189 @@
+"""
+RAYA — Crop Master Query Layer
+Phase-1 LOCKED → Phase-2 Track-1 Compatible
+
+Public Contract (Track-1):
+✔ get_stage_snapshot(crop, stage)
+✔ get_water_requirement(crop, stage)
+
+Internal Utilities (NOT Track-1):
+• _diseases_at_stage()
+
+Design Principles:
+- Deterministic
+- Read-only access to Crop Master
+- No ML / No inference
+- Always returns dict (no None / no strings)
+- Schema defensive: supports lifecycle OR growth_lifecycle
+"""
+
 import json
 from pathlib import Path
 
-
+# -------------------------------------------------------
+# Paths
+# -------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent
 CROPS_DIR = BASE_DIR / "crops"
 
 
-def load_crop(crop_name):
+# -------------------------------------------------------
+# Loader
+# -------------------------------------------------------
+def load_crop(crop_name: str) -> dict:
     crop_file = CROPS_DIR / f"{crop_name.lower()}.crop_master.json"
+
     if not crop_file.exists():
-        raise FileNotFoundError(f"Crop Master not found for crop: {crop_name}")
+        return {
+           "status": "error",
+            "error": "crop_not_found",
+            "message": f"Crop Master not found for '{crop_name}'"
+        }
 
     with open(crop_file, "r", encoding="utf-8") as f:
         return json.load(f)
 
+def _resolve_stage(stage_input: str, stages: dict) -> str | None:
+    """
+    Case-insensitive stage resolver.
+    Returns canonical stage name or None.
+    """
+    normalized = stage_input.lower().replace(" ", "_")
 
-# 1️⃣ WEATHER IMPACT BY STAGE
-def rain_risk(crop_name, stage):
+    for canonical in stages.keys():
+        key = canonical.lower().replace(" ", "_")
+        if key == normalized:
+            return canonical
+
+    return None
+
+
+# -------------------------------------------------------
+# Internal: lifecycle resolver
+# Supports:
+#   lifecycle
+#   growth_lifecycle
+# -------------------------------------------------------
+def _get_stages(crop: dict) -> dict:
+    lifecycle = (
+        crop.get("lifecycle")
+        or crop.get("growth_lifecycle")
+        or {}
+    )
+    return lifecycle.get("stages", {})
+
+
+# =======================================================
+# 1️⃣ Stage Snapshot (Track-1 Core API)
+# =======================================================
+def get_stage_snapshot(crop_name: str, stage: str) -> dict:
     crop = load_crop(crop_name)
 
-    stage_data = crop["growth_lifecycle"]["stages"].get(stage)
-    climate_data = crop["climate_interactions"].get(stage, {})
-    rain_data = climate_data.get("excess_rainfall")
+    if "error" in crop:
+        return crop
 
-    if not stage_data:
-        return f"Stage '{stage}' is not defined for {crop_name}."
+    stages = _get_stages(crop)
 
-    if not rain_data:
-        return f"No specific rainfall risk defined for {crop_name} during {stage}."
+    if not stages:
+        return {
+            "status": "error",
+            "error": "no_stage_data",
+            "message": "No lifecycle data found in Crop Master"
+        }
 
-    summary = crop["stage_risk_summary"].get(stage, "No summary available.")
+    resolved_stage = _resolve_stage(stage, stages)
+
+    if not resolved_stage:
+        return {
+            "status": "error",
+            "error": "invalid_stage",
+            "message": f"Invalid stage '{stage}'",
+            "valid_stages": list(stages.keys())
+        }
+
+    stage_data = stages[resolved_stage]
 
     return {
-        "stage_sensitivity": stage_data["sensitivity"],
-        "rain_risk_level": rain_data["risk_level"],
-        "effects": rain_data["effects"],
-        "explanation": summary
+        "status": "success",
+        "stage": resolved_stage,
+        "sensitivity": stage_data.get("sensitivity"),
+        "risks": stage_data.get("stage_risk_summary", []),
+        "description": stage_data.get("description"),
+        "harvest_risk": stage_data.get("harvest_risk")
     }
 
 
-# 2️⃣ DISEASE RELEVANCE BY STAGE
-def diseases_at_stage(crop_name, stage):
+# =======================================================
+# 2️⃣ Water Requirement (Track-1 Core API)
+# =======================================================
+def get_water_requirement(crop_name: str, stage: str) -> dict:
     crop = load_crop(crop_name)
+
+    if crop.get("status") == "error":
+        return crop
+    
+    stages = _get_stages(crop)
+
+    if not stages:
+        return {
+            "status": "error",
+            "error": "no_stage_data",
+            "message": "No lifecycle data found in Crop Master"
+        }
+    resolved_stage = _resolve_stage(stage, stages)
+
+    if not resolved_stage:
+        return {
+            "status": "error",
+            "error": "invalid_stage",
+            "message": f"Invalid stage '{stage}'",
+            "valid_stages": list(stages.keys())
+        }
+
+    stage_data = stages[resolved_stage]
+
+    return {
+        "status": "success",
+        "stage": resolved_stage,
+        "water_requirement": stage_data.get("water_requirement")
+    }
+
+# =======================================================
+# INTERNAL — Phase-2 Utility (NOT Track-1 Contract)
+# =======================================================
+def _diseases_at_stage(crop_name: str, stage: str):
+    """
+    Internal helper for future Phase-2 disease intelligence.
+    Do NOT use in Farmer Search Engine (Track-1).
+    """
+    crop = load_crop(crop_name)
+
+    if "error" in crop:
+        return []
+
+    diseases = crop.get("diseases", [])
     relevant = []
 
-    for disease in crop["diseases"]:
-        if stage in disease["affected_stages"]:
+    for disease in diseases:
+        if stage in disease.get("affected_stages", []):
             relevant.append({
-                "disease": disease["name"],
-                "severity": disease["severity_by_stage"].get(stage),
-                "symptoms": disease["visible_symptoms"]
+                "disease": disease.get("name"),
+                "severity": disease.get("severity_by_stage", {}).get(stage),
+                "symptoms": disease.get("visible_symptoms", [])
             })
-
-    if not relevant:
-        return f"No diseases are relevant for {crop_name} during {stage}."
 
     return relevant
 
 
-# 3️⃣ HARVEST TIMING CONSEQUENCES
-def harvest_risk(crop_name, timing):
-    crop = load_crop(crop_name)
+# -------------------------------------------------------
+# Developer Test Harness
+# -------------------------------------------------------
+if __name__ == "__main__":
+    print("\n-- Stage Snapshot --")
+    print(get_stage_snapshot("rice", "flowering"))
 
-    if timing not in ["early", "late"]:
-        return "Harvest timing must be 'early' or 'late'."
+    print("\n-- Water Requirement --")
+    print(get_water_requirement("rice", "flowering"))
 
-    harvest_logic = crop["harvest_logic"].get(f"{timing}_harvest")
-    market_impact = crop["market_impact"].get(f"{timing}_harvest")
-
-    if not harvest_logic:
-        return f"No {timing} harvest logic defined for {crop_name}."
-
-    return {
-        "risks": harvest_logic.get("risks", []),
-        "quality_impact": harvest_logic.get("quality_impact"),
-        "market_impact": market_impact
-    }
-
-# 4️⃣ TEMPERATURE RISK (Phase-1: basic rule-based)
-
-def temperature_risk(temp_c):
-    """
-    Phase-1 temperature intelligence.
-    Simple thresholds, no crop-specific tuning yet.
-    """
-    if temp_c >= 40:
-        return {
-            "risk_level": "high",
-            "impact": "Heat stress, crop damage likely"
-        }
-    elif temp_c >= 30:
-        return {
-            "risk_level": "moderate",
-            "impact": "Reduced growth efficiency"
-        }
-    else:
-        return {
-            "risk_level": "low",
-            "impact": "Temperature within safe range"
-        }
-
-# 5️⃣ HUMIDITY RISK (Phase-1: basic rule-based)
-
-def humidity_risk(humidity_percent):
-    """
-    Phase-1 humidity intelligence.
-    Simple thresholds, crop-agnostic.
-    """
-    if humidity_percent >= 85:
-        return {
-            "risk_level": "high",
-            "impact": "High fungal and disease risk"
-        }
-    elif humidity_percent >= 65:
-        return {
-            "risk_level": "moderate",
-            "impact": "Conditions may favor disease spread"
-        }
-    else:
-        return {
-            "risk_level": "low",
-            "impact": "Humidity within safe range"
-        }
-
-# 6️⃣ WIND RISK (Phase-1: basic rule-based)
-
-def wind_risk(wind_speed_kmph):
-    """
-    Phase-1 wind intelligence.
-    Simple thresholds, crop-agnostic.
-    """
-    if wind_speed_kmph >= 40:
-        return {
-            "risk_level": "high",
-            "impact": "Crop lodging, physical damage likely"
-        }
-    elif wind_speed_kmph >= 20:
-        return {
-            "risk_level": "moderate",
-            "impact": "Potential stress and minor damage"
-        }
-    else:
-        return {
-            "risk_level": "low",
-            "impact": "Wind conditions safe"
-        }
+    print("\n-- Internal Disease Helper (Phase-2 only) --")
+    print(_diseases_at_stage("rice", "flowering"))

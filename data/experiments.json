@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Knowledge Web",
+    "description": "Explore how Raya connects ideas across multiple sources with an interactive graph.",
+    "icon": "brain-circuit",
+    "link": "knowledge-web.html"
+  },
+  {
+    "title": "Memory Explorer",
+    "description": "Visualize how Raya stores, recalls, and strengthens memory links.",
+    "icon": "database",
+    "link": "memory-explorer.html"
+  },
+  {
+    "title": "World Mirror",
+    "description": "See real-time data flows from news, research, and live feeds.",
+    "icon": "globe",
+    "link": "world-mirror.html"
+  }
+]

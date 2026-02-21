@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Knowledge Web — Raya Experiments</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body { background: #0a0f1c; color: #e0e7ff; }
+    .link { stroke: #64748b; stroke-opacity: 0.6; }
+    .node { cursor: grab; }
+    .node circle { stroke: #fff; stroke-width: 1.5px; }
+    .node text { font-size: 0.75rem; fill: #e0e7ff; pointer-events: none; }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 text-white p-4 flex justify-between items-center">
+    <div class="text-xl font-bold text-cyan-400">Raya</div>
+    <div class="space-x-6">
+      <a href="vision.html" class="hover:text-cyan-300">Vision</a>
+      <a href="journey.html" class="hover:text-cyan-300">Journey</a>
+      <a href="portal.html" class="hover:text-cyan-300">Portal</a>
+      <a href="experiments.html" class="hover:text-cyan-300">Experiments</a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="flex-1 p-6">
+    <h1 class="text-3xl font-bold text-cyan-400 mb-2">Knowledge Web</h1>
+    <p class="text-gray-300 mb-6">An interactive graph showing how Raya links ideas across multiple sources of information.</p>
+    
+    <div id="graph" class="w-full h-[500px] bg-gray-800 rounded-lg shadow-lg"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 p-4 text-center">
+    © 2025 Raya — Knowledge Web Experiment
+  </footer>
+
+  <script>
+    // Example data
+    const nodes = [
+      { id: "AI" },
+      { id: "Neural Nets" },
+      { id: "Machine Learning" },
+      { id: "Knowledge Graphs" },
+      { id: "Natural Language" }
+    ];
+
+    const links = [
+      { source: "AI", target: "Neural Nets" },
+      { source: "AI", target: "Machine Learning" },
+      { source: "Machine Learning", target: "Knowledge Graphs" },
+      { source: "Knowledge Graphs", target: "Natural Language" },
+      { source: "Neural Nets", target: "Natural Language" }
+    ];
+
+    const width = document.getElementById("graph").clientWidth;
+    const height = document.getElementById("graph").clientHeight;
+
+    const svg = d3.select("#graph")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    const simulation = d3.forceSimulation(nodes)
+      .force("link", d3.forceLink(links).id(d => d.id).distance(150))
+      .force("charge", d3.forceManyBody().strength(-400))
+      .force("center", d3.forceCenter(width / 2, height / 2));
+
+    const link = svg.append("g")
+      .selectAll("line")
+      .data(links)
+      .join("line")
+      .attr("class", "link");
+
+    const node = svg.append("g")
+      .selectAll("g")
+      .data(nodes)
+      .join("g")
+      .attr("class", "node")
+      .call(drag(simulation));
+
+    node.append("circle")
+      .attr("r", 20)
+      .attr("fill", "#38bdf8");
+
+    node.append("text")
+      .text(d => d.id)
+      .attr("x", -20)
+      .attr("y", 5);
+
+    simulation.on("tick", () => {
+      link
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+
+      node.attr("transform", d => `translate(${d.x},${d.y})`);
+    });
+
+    function drag(simulation) {
+      function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      }
+      function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+      }
+      function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+      }
+      return d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended);
+    }
+  </script>
+  <!-- Load Raya Assistant -->
+<div id="raya-assistant-container"></div>
+<script>
+  fetch("raya-assistant.html")
+    .then(res => res.text())
+    .then(html => {
+      // Insert HTML
+      document.getElementById("raya-assistant-container").innerHTML = html;
+
+      // Extract and run any <script> inside the loaded file
+      const container = document.getElementById("raya-assistant-container");
+      const scripts = container.querySelectorAll("script");
+      scripts.forEach(oldScript => {
+        const newScript = document.createElement("script");
+        if (oldScript.src) {
+          newScript.src = oldScript.src; // external script
+        } else {
+          newScript.textContent = oldScript.textContent; // inline script
+        }
+        document.body.appendChild(newScript);
+        oldScript.remove();
+      });
+    })
+    .catch(err => console.error("Failed to load Raya Assistant:", err));
+</script>
+</body>
+</html>

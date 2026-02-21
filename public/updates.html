@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raya Updates</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="updates.js"></script>
+</head>
+<body class="bg-gradient-to-b from-slate-950 to-slate-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-8 py-4 bg-slate-950/70 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-800">
+    <a href="index.html" class="text-2xl font-bold text-cyan-400">Raya</a>
+    <div class="space-x-6">
+      <a href="journey.html" class="hover:text-cyan-300">Journey</a>
+      <a href="vision.html" class="hover:text-cyan-300">Vision</a>
+      <a href="portal.html" class="hover:text-cyan-300">Portal</a>
+      <a href="updates.html" class="text-cyan-300 font-semibold">Updates</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="text-center py-16">
+    <h1 class="text-5xl font-bold text-cyan-400 mb-4">🚀 Latest from Raya</h1>
+    <p class="text-slate-300 text-lg">Stay in sync with every milestone, breakthrough, and upgrade.</p>
+  </header>
+
+  <!-- Updates Container -->
+  <section class="px-6 md:px-12 py-10">
+    <div id="updates-container" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"></div>
+  </section>
+
+  <!-- Coming Soon Callout -->
+  <section class="px-6 md:px-12 pb-16">
+    <div class="p-6 rounded-xl border border-yellow-400 shadow-lg shadow-yellow-400/40 text-center">
+      <h2 class="text-2xl font-semibold text-yellow-300 mb-2">✨ Coming Soon</h2>
+      <p class="text-slate-300">
+        Multi-source search, live experiments, and open contributions will be arriving soon.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-slate-400 py-6 border-t border-slate-800">
+    © 2025 Raya Project · Designed for the Type I Civilization Journey
+  </footer>
+<!-- Load Raya Assistant -->
+<div id="raya-assistant-container"></div>
+<script>
+  fetch("raya-assistant.html")
+    .then(res => res.text())
+    .then(html => {
+      // Insert HTML
+      document.getElementById("raya-assistant-container").innerHTML = html;
+
+      // Extract and run any <script> inside the loaded file
+      const container = document.getElementById("raya-assistant-container");
+      const scripts = container.querySelectorAll("script");
+      scripts.forEach(oldScript => {
+        const newScript = document.createElement("script");
+        if (oldScript.src) {
+          newScript.src = oldScript.src; // external script
+        } else {
+          newScript.textContent = oldScript.textContent; // inline script
+        }
+        document.body.appendChild(newScript);
+        oldScript.remove();
+      });
+    })
+    .catch(err => console.error("Failed to load Raya Assistant:", err));
+</script>
+</body>
+</html>

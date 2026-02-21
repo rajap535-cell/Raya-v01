@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raya Experiments</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="p-6 text-center">
+    <h1 class="text-4xl font-extrabold text-indigo-400 flex items-center justify-center gap-3">
+      🔬 Raya Experiments
+    </h1>
+    <p class="mt-3 text-gray-300">Browse through a collection of demo experiments powered by Raya.</p>
+  </header>
+
+  <!-- Container -->
+  <main class="max-w-5xl mx-auto px-4 py-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="experiments-container">
+    <!-- Cards injected via JS -->
+  </main>
+
+  <script src="experiments.js"></script>
+<!-- Load Raya Assistant -->
+<div id="raya-assistant-container"></div>
+<script>
+  fetch("raya-assistant.html")
+    .then(res => res.text())
+    .then(html => {
+      // Insert HTML
+      document.getElementById("raya-assistant-container").innerHTML = html;
+
+      // Extract and run any <script> inside the loaded file
+      const container = document.getElementById("raya-assistant-container");
+      const scripts = container.querySelectorAll("script");
+      scripts.forEach(oldScript => {
+        const newScript = document.createElement("script");
+        if (oldScript.src) {
+          newScript.src = oldScript.src; // external script
+        } else {
+          newScript.textContent = oldScript.textContent; // inline script
+        }
+        document.body.appendChild(newScript);
+        oldScript.remove();
+      });
+    })
+    .catch(err => console.error("Failed to load Raya Assistant:", err));
+</script>
+</body>
+</html>

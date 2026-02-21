@@ -1,0 +1,109 @@
+/* Background canvas */
+#cosmic-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #0d0d0d;
+}
+
+/* Keep content on top */
+.content {
+  position: relative;
+  z-index: 2;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #0d0d0d;
+  color: #eee;
+  line-height: 1.6;
+}
+
+section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+/* Vision Intro */
+.vision-intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+}
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 30px;
+}
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: #ff00cc;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #ff00cc;
+}
+.timeline-content {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+/* Impact Cards */
+.impact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+.impact-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+.impact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px #3333ff;
+}
+
+/* Call to Action */
+.call-to-action {
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.cta-btn:hover {
+  box-shadow: 0 0 20px #ff00cc;
+}

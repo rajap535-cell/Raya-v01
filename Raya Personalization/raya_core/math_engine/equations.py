@@ -1,3 +1,6 @@
+import re
+
+
 from sympy.parsing.sympy_parser import (
     parse_expr,
     standard_transformations,

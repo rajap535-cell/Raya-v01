@@ -15,6 +15,7 @@ from raya_core.backend_cloud import ask_cloud
 from intent import detect_intents
 from raya_core.validator import validate_answer, is_future_query
 from raya_core.question_classifier import classify_question, QuestionType
+from raya_core.math_engine import solve_math
 
 DEBUG = True  # turn off in production
 
@@ -24,7 +25,7 @@ DEBUG = True  # turn off in production
 _CACHE = load_cache() or {}
 
 # --------------------------------------------------
-# Helpers
+# Helpers 
 # --------------------------------------------------
 COMMON_TYPOS = {
     " os ": " is ",
@@ -151,25 +152,47 @@ def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) 
         wiki_candidate = _try_wikipedia(_wiki_safe_query(query))
 
     # --------------------------------------------------
+    # --------------------------------------------------
+    # MATH ENGINE (priority over LLM)
+    # --------------------------------------------------
+    if question_type == QuestionType.MATH:
+        if DEBUG:
+            print("[Stage: Math Engine] 🧮 Attempting structured solve")
+
+        math_answer = solve_math(query)
+
+        if math_answer:
+            if DEBUG:
+                print("[Stage: Math Engine] ✅ Solved")
+            final_text = math_answer
+            best_source = "Math Engine"
+        else:
+            if DEBUG:
+                print("[Math Engine] ⚠️ Could not solve, falling back")
+ 
     # LOCAL LLM
     # --------------------------------------------------
-    if route in ("local", "hybrid"):
+    if not final_text and route in ("local", "hybrid"):
         if DEBUG:
             print("[Stage: Local LLM] 🧠 Generating")
+
         local_text = ask_local(query)
+
         if isinstance(local_text, str) and not local_text.startswith("[local error]"):
             final_text = local_text
             best_source = "Local LLM"
+
         if DEBUG:
             print("[Local Output]:", repr(local_text))
     # --------------------------------------------------
-    # PIPELINE
+    # PIPELINE 
     # --------------------------------------------------
     if (route == "hybrid" or _is_failed(final_text)) and best_source != "Wikipedia":
         try:
             if DEBUG:
                 print("[Stage: Pipeline] ⚙️ Running")
-            pipe_text, metadata = run_pipeline(query, db_file, intents)
+            intents_dict = {"question_type": question_type}
+            pipe_text, metadata = run_pipeline(query, db_file, intents_dict)
             if pipe_text:
                 final_text = pipe_text
                 best_source = "Pipeline"

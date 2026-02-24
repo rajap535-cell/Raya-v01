@@ -7,6 +7,7 @@ from raya_core.custom_db import query_local_db
 from raya_core.source_news_topic import search_topic_news
 from raya_core.source_arxiv import search_arxiv
 from aggregator import aggregate
+from raya_core.question_classifier import QuestionType
 
 Candidate = Tuple[str, str, float, Optional[dict]]
 
@@ -37,22 +38,25 @@ def _collect_candidates(user_text: str, db_file: str, intents: list) -> List[Can
     candidates: List[Candidate] = []
     q = user_text
 
-    # 1. QA Engine
+    # 1. QA Engine (skip for math)
     try:
-        qa_res = qa_engine.answer_question(q)
-        if qa_res and getattr(qa_res, "answer", None):
-            candidates.append(
-                (
-                    "qa",
-                    qa_res.answer,
-                    qa_res.confidence or 0.5,
-                    {"source_type": getattr(qa_res, "source_type", "unknown")},
+        question_type = intents.get("question_type")
+
+        if question_type != QuestionType.MATH:
+            qa_res = qa_engine.answer_question(q)
+            if qa_res and hasattr(qa_res, "answer") and qa_res.answer:
+                candidates.append(
+                    ("qa", qa_res.answer, qa_res.confidence or 0.5,
+                    {"source_type": getattr(qa_res, "source_type", "unknown")})
                 )
-            )
+        else:
+            if DEBUG:
+                print("[Pipeline] 🚫 Skipping QA for math query")
+
     except Exception:
         pass
 
-    # 2. Local DB
+    # 2. Local DB 
     try:
         local = query_local_db(db_file, q)
         if local:
@@ -104,7 +108,7 @@ def _score_and_select(candidates: List[Candidate]) -> Tuple[Optional[Candidate],
 
 
 # ---------------- main pipeline ----------------
-def run_pipeline(user_text: str, db_file: str, intents: list) -> Tuple[str, dict]:
+def run_pipeline(user_text: str, db_file: str, intents: dict) -> Tuple[str, dict]:
 
     candidates = _collect_candidates(user_text, db_file, intents)
     best, extras = _score_and_select(candidates)

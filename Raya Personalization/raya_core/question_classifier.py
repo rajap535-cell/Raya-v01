@@ -18,11 +18,21 @@ class QuestionType(Enum):
 
 # --- Math detection ---
 MATH_PATTERN = re.compile(
-    r"[0-9]+\s*[\+\-\*/\^=]|"
-    r"\bsolve\b|"
-    r"\bequal to\b"
+    r"""
+    \d+[\d,]*\s*[\+\-\*/\^=]     |  # operators
+    \bequal to\b                 |
+    \bpercentage\b               |
+    \bpercent\b                  |
+    \bgrowth\b                   |
+    \brate\b                     |
+    \bcalculate\b                |
+    \bhow much\b                 |
+    \bsolve\b
+    \bsquare root\b
+    \broot of\b
+    """,
+    re.VERBOSE,
 )
-
 
 FACT_PREFIXES = (
     "what is", "what are", "define", "meaning of"

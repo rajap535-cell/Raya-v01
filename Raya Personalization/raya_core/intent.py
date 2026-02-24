@@ -68,6 +68,10 @@ def detect_intents(text: str) -> Set[str]:
     # special-case UI command
     if q == "news":
         return {"news_section"}
+    
+    # --- Mark Numeric/Economic queries
+    if any(k in q for k in ["gdp","economy", "revenue", "budget"]):
+        intents.add("data")
 
     # --- Research ---
     if any(h in q for h in RESEARCH_HINTS):

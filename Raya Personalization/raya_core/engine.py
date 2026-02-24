@@ -24,10 +24,10 @@ def search_local_knowledge(query):
     return None
 
 def search_wikipedia(query):
-    try:
-        return wikipedia.summary(query, sentences=3, auto_suggest=False)
-    except Exception:
-        return None
+    #try:
+        #return wikipedia.summary(query, sentences=3, auto_suggest=False)
+    #except Exception:
+    return None
 
 def search_online(query):
     try:

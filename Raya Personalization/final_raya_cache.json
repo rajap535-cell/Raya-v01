@@ -18,21 +18,9 @@
     }
   },
   "latest research on space": {
-    "source": "qa",
-    "text": "Main Answer (Qa):\nThe Indian Space Research Organisation (ISRO ) is the national space agency of India, headquartered in Bengaluru, Karnataka. It serves as the principal research and development arm of the Department of Space (DoS), overseen by the Prime Minister of India, with the Chairman of ISRO also serving as the chief executive of the DoS. It is primarily responsible for space-based operations, space exploration, international space cooperation and the development of related technologies.",
-    "confidence": 0.9,
-    "meta": {
-      "candidates": [
-        [
-          "qa",
-          0.8
-        ]
-      ],
-      "best_source": "qa"
-    },
-    "sources": {
-      "qa": true
-    }
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {}
   },
   "explain gravity in 3 lines": {
     "source": "Cloud LLM",
@@ -69,21 +57,10 @@
     }
   },
   "define democracy": {
-    "source": "Cloud LLM",
-    "text": "[cloud disabled] OPENAI_API_KEY not set",
+    "source": "Local LLM",
+    "text": "Democracy is a form of government in which power is held by the people, either directly or through elected representatives. In a democratic system, citizens have the right to participate in the decision-making process, express their opinions, and vote for leaders who will represent them.\n\nThe key characteristics of democracy include:\n\n1. Free and fair elections: Citizens have the right to vote for their preferred candidates and leaders.\n2. Protection of individual rights and freedoms: Democracy is built on the principles of equality, justice, and human dignity.\n3. Rule of law: Laws are made and enforced by elected officials, rather than by a monarch or dictator.\n4. Accountability: Elected officials are accountable to the people they represent, and can be removed from office through peaceful means such as elections or impeachment.\n5. Transparency: Government decision-making processes are transparent, and citizens have access to information about their government's actions.\n\nThere are different types of democracies, including:\n\n1. Direct democracy: In this system, citizens participate directly in decision-making by voting on laws and policies.\n2. Representative democracy: Citizens elect representatives to make decisions on their behalf.\n3. Constitutional democracy: A form of representative democracy that is guided by a constitution or set of rules that limit the power of government.\n\nThe benefits of democracy include:\n\n1. Protection of individual rights and freedoms\n2. Promotion of social justice and equality\n3. Encouragement of participation and engagement in civic life\n4. Accountability and transparency in government decision-making\n5. Peaceful transfer of power\n\nHowever, democracies can also face challenges such as:\n\n1. Corruption and abuse of power\n2. Polarization and division among citizens\n3. Inequality and social unrest\n4. External threats to democratic institutions",
     "confidence": 0.9,
-    "meta": {
-      "candidates": [
-        [
-          "qa",
-          0.8
-        ]
-      ],
-      "best_source": "qa"
-    },
-    "sources": {
-      "Cloud LLM": true
-    }
+    "meta": {}
   },
   "who was job charnok": {
     "source": "Cloud LLM",
@@ -137,6 +114,40 @@
     }
   },
   "latest research on human brain": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {}
+  },
+  "creposrayav01venvscriptsactivateps1": {
+    "source": "Local LLM",
+    "text": "The output you're seeing is a PowerShell activation script. Here's what it means:\n\n* `C:\\Repos\\Raya-v01\\venv`: This is the path to the virtual environment (venv) that you've created for your project, Raya-v01.\n* `\\Scripts`: Within this venv directory, there is a subdirectory called \"Scripts\".\n* `Activate.ps1`: This is a PowerShell script file (with a `.ps1` extension) located in the \"Scripts\" directory.\n\nWhen you run this command, PowerShell will execute the commands in the `Activate.ps1` script. The purpose of this script is likely to activate the virtual environment, making it available for use by your project.\n\nActivating a venv typically sets up the Python interpreter and other necessary modules, so that you can start coding and running your project without having to worry about installing them separately.\n\nHere's an example of what the `Activate.ps1` script might contain:\n\n```powershell\n# Set the path to the virtual environment\n$venvPath = \"C:\\Repos\\Raya-v01\\venv\"\n\n# Activate the venv\n& $venvPath\\Scripts\\activate.ps1\n```\n\nIn summary, running `& C:\\Repos\\Raya-v01\\venv\\Scripts\\Activate.ps1` activates the virtual environment for your project Raya-v01 in PowerShell.",
+    "meta": {}
+  },
+  "who is mahatma gandhi": {
+    "source": "Local LLM",
+    "text": "[local error] timeout",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "latest space research": {
+    "source": "Local LLM",
+    "text": "[local error] timeout",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "what is black hole": {
+    "source": "Wikipedia",
+    "text": "A black hole is an astronomical body so compact that its gravity prevents anything, including light, from escaping. Albert Einstein's theory of general relativity predicts that a sufficiently compact mass will form a black hole. The boundary of no escape is called the event horizon.",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "what is psychology": {
+    "source": "Local LLM",
+    "text": "Psychology is the scientific study of behavior and mental processes. It aims to understand individuals and groups by studying the underlying psychological processes and mechanisms that influence their thoughts, feelings, and behaviors.\n\nThe field of psychology encompasses a wide range of topics, including:\n\n1. **Cognitive psychology**: The study of mental processes such as perception, attention, memory, language, problem-solving, and decision-making.\n2. **Emotional psychology**: The study of emotions, motivation, and emotional regulation.\n3. **Social psychology**: The study of how people interact with others, including social influence, group dynamics, and interpersonal relationships.\n4. **Developmental psychology**: The study of human development across the lifespan, including cognitive, social, and emotional development.\n5. **Abnormal psychology**: The study of mental health disorders, such as anxiety, depression, and personality disorders.\n6. **Neuropsychology**: The study of the relationship between the brain and behavior, including the effects of brain damage or dysfunction on cognition and behavior.\n\nPsychologists use a variety of techniques to study behavior, including:\n\n1. **Surveys and questionnaires**: To collect data on people's thoughts, feelings, and behaviors.\n2. **Experiments**: To test hypotheses about behavior and mental processes.\n3. **Case studies**: To in-depth examine individual cases or groups.\n4. **Interviews**: To gather information through verbal interactions with individuals.\n\nThe goals of psychology include:\n\n1. **Understanding behavior**: To develop a deeper understanding of why people behave in certain ways.\n2. **Improving mental health**: To develop effective treatments and interventions for mental health disorders.\n3. **Promoting well-being**: To promote healthy behaviors, positive relationships, and overall well-being.\n\nPsychology has many practical applications in areas such as:\n\n1. **Mental health treatment**: Cognitive-behavioral therapy (CBT), psychodynamic therapy, and other forms of talk therapy.\n2. **Education**: Teaching methods, learning strategies, and educational psychology.\n3. **Workplace performance**: Employee motivation, training, and organizational behavior.\n4. **Relationships and family**: Marriage counseling, relationship dynamics, and family therapy.\n\nOverall, psychology is a fascinating field that seeks to understand the complexities of human behavior and mental processes, with the goal of promoting better understanding, treatment, and overall well-being.",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "latest research on cancer": {
     "source": "Cloud LLM",
     "text": "[cloud disabled] OPENAI_API_KEY not set",
     "confidence": 0.9,
@@ -148,9 +159,401 @@
         ]
       ],
       "best_source": "qa"
-    },
-    "sources": {
-      "Cloud LLM": true
     }
+  },
+  "what os geothermal energy": {
+    "source": "Wikipedia",
+    "text": "Google Energy LLC is a subsidiary company of Alphabet Inc., which was created to reduce costs of energy consumption of the Google Group, and subsequently to produce and sell clean energy.  The division also allows it to take advantage of projects funded through the philanthropic Google.org.\n\n\n== Operations ==\nBy 2007 Google had invested a substantial amount of money in wind, solar, solar thermal, and geothermal projects, including a 1.6 MW solar installation pilot project at its headquarters.",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "what is dna": {
+    "source": "Unknown",
+    "text": "[local error] timeout",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "how can we increase brain power": {
+    "source": "Wikipedia",
+    "text": "The ten-percent-of-the-brain myth or ninety-percent-of-the-brain myth states that humans generally use only one-tenth (or some other small fraction) of their brains. It has been misattributed to many famous scientists and historical figures, notably Albert Einstein. By extrapolation, it is suggested that a person may 'harness' or 'unlock' this unused potential and increase their intelligence.",
+    "confidence": 0.9,
+    "meta": {}
+  },
+  "what is a dna": {
+    "source": "Safe Fallback",
+    "text": "Deoxyribonucleic acid (; DNA) is a polymer composed of two polynucleotide chains that coil around each other to form a double helix. The polymer carries genetic instructions for the development, functioning, growth and reproduction of all known organisms and many viruses. DNA and ribonucleic acid (RNA) are nucleic acids.",
+    "meta": {}
+  },
+  "in which year india got freedom": {
+    "source": "Safe Fallback",
+    "text": "India gained independence from British colonial rule on August 15, 1947.",
+    "meta": {}
+  },
+  "which year india lifted 1st world cup in cricket": {
+    "source": "Safe Fallback",
+    "text": "I think there may be some confusion. India has not won a Cricket World Cup, let alone the first-ever one.\n\nThe first ICC Cricket World Cup was held in 1975 in England, and it was won by West Indies.\n\nIndia did win its first Cricket World Cup in 1983 under the captaincy of Kapil Dev.",
+    "meta": {}
+  },
+  "what is the second india won icc cricket world cup": {
+    "source": "Safe Fallback",
+    "text": "India has not yet won two ICC Cricket World Cups. However, India did win the 1983 ICC Cricket World Cup under the captaincy of Kapil Dev.\n\nBut, if you are referring to a recent tournament, the 2011 ICC Cricket World Cup was won by India under the captaincy of MS Dhoni.",
+    "meta": {}
+  },
+  "what was the gdp of west bengal was in the year of 2011": {
+    "source": "Safe Fallback",
+    "text": "I couldn't find the exact GDP of West Bengal for the year 2011. However, I can provide some information on the GDP of West Bengal for the years around 2011.\n\nAccording to the data from the Government of India's Ministry of Statistics and Programme Implementation, the state domestic product (SDP) of West Bengal for the financial years:\n\n- 2009-10: ₹ 3,22,955 crore (approximately $45 billion USD at 2009 exchange rates)\n- 2010-11: ₹ 3,41,449 crore (approximately $48.4 billion USD at 2010 exchange rates)\n- 2011-12: ₹ 3,62,479 crore (approximately $52.2 billion USD at 2011 exchange rates)\n\nPlease note that these figures might not be the exact GDP of West Bengal for 2011, as GDP data can be calculated in different ways and may vary depending on the source. Additionally, these figures represent state domestic product (SDP) rather than gross domestic product (GDP).\n\nIf you need more information or a more specific answer, I recommend checking with official sources such as the Reserve Bank of India",
+    "meta": {}
+  },
+  "what was the gdp of west bengal was in the year of 2025": {
+    "source": "Safe Fallback",
+    "text": "I don't have information about the GDP of West Bengal for the year 2025. As my knowledge cutoff is 01 March 2023, I do not have real-time data or projections beyond that date.\n\nHowever, I can provide you with the GDP data for West Bengal for previous years:\n\n* 2020-21: ₹3.58 lakh crore (approximately $45 billion USD)\n* 2019-20: ₹3.43 lakh crore (approximately $42 billion USD)\n\nPlease note that these figures are subject to revision and may not reflect the actual GDP of West Bengal for the year 2025.\n\nIf you're looking for more up-to-date information, I recommend checking with reliable sources such as the Reserve Bank of India or the Government of West Bengal's official website.",
+    "meta": {}
+  },
+  "gdp of india": {
+    "source": "Safe Fallback",
+    "text": "The economy of India is a developing mixed economy with a notable public sector in strategic sectors. It is the world's fourth-largest economy by nominal GDP and the third-largest by purchasing power parity (PPP); on a per capita income basis, India ranked 136th by nominal GDP and 119th by PPP-adjusted GDP. From independence in 1947 until 1991, successive governments followed the Soviet model and promoted protectionist economic policies, with extensive Sovietization, state intervention, demand-side economics, natural resources, bureaucrat-driven enterprises and economic regulation. This was a form of the Licence Raj.",
+    "meta": {}
+  },
+  "how many planets are there in our solar system": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "how many bones are in human body": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "explain me evolution btiefly": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "why charles darwin is famous": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "what is the written date of bible": {
+    "source": "Wikipedia",
+    "text": "Some of the oldest surviving Hebrew Bible manuscripts, the Dead Sea Scrolls, date to c. the 2nd century BCE. Some of these scrolls are presently stored at the Shrine of the Book in Jerusalem. The oldest text of the entire Christian Bible, including the New Testament, is the Codex Sinaiticus dating from the 4th century CE, with its Old Testament a copy of a Greek translation known as the Septuagint. The oldest extant manuscripts of the vocalized Masoretic Text date to the 9th century CE. With the exception of a few biblical sections in the Nevi'im, virtually no Old Testament biblical text is contemporaneous with the events it describes.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "who was jeffery epstein": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "how many bones we have in human body": {
+    "source": "Local LLM",
+    "text": "The adult human body has a total of 206 bones. This number can vary slightly from person to person, as some individuals may have extra or missing bones due to various genetic or developmental conditions.\n\nHere's a breakdown of the 206 bones in the adult human body:\n\n* Skull: 22 bones\n* Face: 14 bones\n* Vertebral column: 33 bones (7 cervical, 12 thoracic, 5 lumbar, 5 sacral, and 4 coccygeal)\n* Ribcage: 24 bones\n* Upper limbs: 64 bones (scapulae, humeri, radii, ulnae, carpals, metacarpals, phalanges)\n* Pelvis: 4 bones\n* Lower limbs: 64 bones (femora, patellae, tibiae, fibulae, tarsals, metatarsals, phalanges)\n\nIt's worth noting that the number of bones in the human body changes throughout life. At birth, the number of bones is around 300, but as we grow and develop, some of these bones fuse together, resulting in the adult total of 206 bones.",
+    "meta": {}
+  },
+  "is dinausaurs really exist": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "latest research on cosmology": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ],
+        [
+          "arxiv",
+          0.5
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "what is a supernova": {
+    "source": "Wikipedia",
+    "text": "A supernova (pl.: supernovae) is a powerful and luminous explosion of a star. A supernova occurs during the last evolutionary stages of a massive star, or when a white dwarf is triggered into runaway nuclear fusion. The original object, called the progenitor, either collapses to a neutron star or black hole, or is completely destroyed to form a diffuse nebula.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "explaine me evolution briefly": {
+    "source": "Local LLM",
+    "text": "Here's a brief overview of the theory of evolution:\n\n**What is Evolution?**\n\nEvolution is the scientifically supported explanation for how living organisms change and adapt over time. It proposes that all species share a common ancestor and have evolved through a process of natural selection, genetic drift, mutation, and gene flow.\n\n**Key Principles:**\n\n1. **Variation**: All individuals within a population exhibit genetic variation, resulting in differences in traits such as height, eye color, or shape.\n2. **Heritability**: These variations are passed on from one generation to the next through inheritance of genes.\n3. **Adaptation**: As environments change, natural selection favors individuals with traits that enhance their survival and reproduction.\n4. **Selection**: The best-adapted individuals reproduce more successfully, passing on their advantageous traits to future generations.\n\n**Process of Evolution:**\n\n1. **Mutation**: Genetic changes occur due to errors during DNA replication or exposure to environmental factors like radiation.\n2. **Genetic Drift**: Random events can lead to changes in the frequency of genes within a population.\n3. **Gene Flow**: Individuals with new traits migrate into a population, introducing genetic variation.\n4. **Natural Selection**: The environment selects for favorable traits, leading to an increase in their representation in the population.\n\n**Evidence Supporting Evolution:**\n\n1. **Fossil Record**: Transitional fossils and gradual changes in species over time.\n2. **Comparative Anatomy**: Similarities and homologies between different organisms suggest a common ancestor.\n3. **Molecular Biology**: DNA and protein sequences reveal evolutionary relationships between organisms.\n\nEvolution is an ongoing process that continues to shape the diversity of life on Earth. It's a fundamental concept in biology and has been extensively tested and supported by scientific evidence.",
+    "meta": {}
+  },
+  "why chrles darwin is famous": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "how many bones are there in human body": {
+    "source": "Local LLM",
+    "text": "There are 206 bones in the adult human body. However, it's worth noting that the number of bones can vary slightly from person to person, and it's not uncommon for some people to have a few extra or missing bones.\n\nWhen we're born, we have around 300 bones, but as we grow and develop, many of these bones fuse together, resulting in the adult number of 206. The process of bone fusion is called ossification, and it typically occurs during childhood and adolescence.\n\nHere's a rough breakdown of how many bones are present at different stages of human development:\n\n* Newborn: around 300 bones\n* Infancy: around 270-280 bones\n* Childhood: around 240-250 bones\n* Adolescence: around 220-230 bones\n* Adulthood: around 206 bones\n\nIt's interesting to note that some people may have extra or missing bones due to various genetic or developmental conditions. For example, some people with a condition called hyperostosis have an extra bone in their skull, while others with a condition called osteogenesis imperfecta may have fragile bones that are prone to breaking.\n\nOverall, the adult human body is made up of 206 bones, which work together to provide support, movement, and protection for our vital organs.",
+    "meta": {}
+  },
+  "is dinausaurs really existed": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "did dinosaurs existed": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "how many wars did india fought from 1947": {
+    "source": "Local LLM",
+    "text": "India has been involved in several wars and military conflicts since its independence in 1947. Here are some of the notable wars and conflicts that India has fought:\n\n1. Indo-Pakistani War (1947-1948): This was a conflict between India and Pakistan, which had recently gained independence from British rule.\n2. Indo-Pakistani War (1965): Another conflict with Pakistan, this time over the disputed region of Kashmir.\n3. Indo-China War (1962): A border dispute with China that resulted in a brief but intense war.\n\nIndia has also been involved in several other conflicts and wars, including:\n\n* Sino-Indian War (1967) - a border dispute with China\n* Bangladesh Liberation War (1971) - India supported the independence of Bangladesh from Pakistan\n* Indo-Pakistani War (1971) - a conflict between India and Pakistan over Kashmir\n* Siachen Glacier Conflict (1984-1985) - a conflict between India and Pakistan over the disputed region of Siachen Glacier\n\nHowever, if we consider only major wars that resulted in significant human casualties or territorial gains, India has been involved in:\n\n* Indo-Pakistani War (1965): This war resulted in a ceasefire and the signing of the Tashkent Agreement.\n* Bangladesh Liberation War (1971): India played a significant role in supporting the independence of Bangladesh from Pakistan.\n* Indo-China War (1962): Although India was defeated, it marked an important period in Sino-Indian relations.\n\nOverall, India has been involved in at least 6 major wars and conflicts since its independence in 1947.",
+    "meta": {}
+  },
+  "explain me white revolution in india": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "what is quantum computing": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nA quantum computer is a (real or theoretical) computer that exploits superposed and entangled states. Quantum computers can be viewed as sampling from quantum systems that evolve in ways that may be described as operating on an enormous number of possibilities simultaneously, though still subject to strict computational constraints.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "latest ai research 2025": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nMistral AI SAS (French: [mistʁal]) is a French artificial intelligence (AI) company, headquartered in Paris. Founded in 2023, it has open-weight large language models (LLMs), with both open-source and proprietary AI models.\n\nResearch:\nMeasuring Mid-2025 LLM-Assistance on Novice Performance in Biology (2026-02-18T18:51:28Z)\nhttps://arxiv.org/abs/2602.16703v1\nBenchmarking Large Language Models on Answering and Explaining Challenging Medical Questions (2026-02-18T18:50:32Z)\nhttps://arxiv.org/abs/2402.18060v6\nAdvancing Averaged Primer Vector Theory with Bang-Bang Control and Eclipsing (2026-02-18T18:47:34Z)\nhttps://arxiv.org/abs/2505.11660v3",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ],
+        [
+          "arxiv",
+          0.5
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "explain photosynthesis": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nPhotosynthesis ( FOH-tə-SINTH-ə-sis) is a system of biological processes by which photopigment-bearing autotrophic organisms, such as most plants, algae and cyanobacteria, convert light energy — typically from sunlight — into the chemical energy necessary to fuel their metabolism. The term photosynthesis usually refers to oxygenic photosynthesis, a process that releases oxygen as a byproduct of water splitting.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "what is darwinism": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nDarwinism is a term used to describe a theory of biological evolution developed by the English naturalist Charles Darwin (1809–1882) and his contemporaries. The theory states that all species of organisms arise and develop through the natural selection of small, inherited variations that increase the individual's ability to compete, survive, and reproduce.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "if y3 is equal to 999 then y is equal to what": {
+    "source": "Local LLM",
+    "text": "To find the value of 'y', we need to isolate it on one side of the equation.\n\nGiven: y3 = 999\n\nTake the cube root of both sides:\n\ny = ∛(999)\n\nUsing a calculator, we get:\n\ny ≈ 9.97 (approximately)",
+    "meta": {}
+  },
+  "if 10000 becomes 156000 then what percentage growth it has": {
+    "source": "Math Engine",
+    "text": "Initial value: 10,000\nFinal value: 156,000\nPercentage growth: 1460.00%",
+    "meta": {}
+  },
+  "what is 3 times 3456": {
+    "source": "Local LLM",
+    "text": "3 x 3456 = 10368",
+    "meta": {}
+  },
+  "what is the square root of 144": {
+    "source": "Local LLM",
+    "text": "The square root of 144 is 12.",
+    "meta": {}
+  },
+  "who invented the telephone": {
+    "source": "Local LLM",
+    "text": "The invention of the telephone is a bit complex, as it involved several individuals contributing to its development over time. While Alexander Graham Bell is often credited with inventing the first practical telephone, there were other researchers and inventors who worked on similar concepts before him.\n\nSome key players in the development of the telephone include:\n\n1. Antonio Meucci (1808-1889): An Italian inventor who developed a \"talking telegraph\" that allowed for real-time voice communication over wires in the 1840s.\n2. Elisha Gray (1835-1901): An American inventor who patented an electrical device for transmitting sound over wires on February 14, 1876, just hours after Alexander Graham Bell filed his patent application.\n3. Johann Philipp Reis (1834-1874): A German inventor who developed a device that could transmit sound over wires in the 1860s.\n\nHowever, it was Alexander Graham Bell who is often credited with inventing the first practical telephone. He patented his design on March 7, 1876, and demonstrated the device publicly for the first time on March 10, 1876. Bell's design used a diaphragm, a coil of wire, and a magnetic field to transmit sound waves over wires.\n\nDespite the controversy surrounding Bell's patent, he is still widely credited with inventing the telephone, and his legacy has endured as one of the most influential figures in the history of telecommunications.\n\nIt's worth noting that there is ongoing debate among historians about the true origins of the telephone, with some arguing that Meucci or Gray may have invented the device first. However, Bell's contributions to the development of the telephone are widely recognized, and he remains a celebrated figure in the history of science and technology.",
+    "meta": {}
+  },
+  "253": {
+    "source": "Math Engine",
+    "text": "Result: 17",
+    "meta": {}
+  },
+  "23": {
+    "source": "Math Engine",
+    "text": "Result: 8",
+    "meta": {}
+  },
+  "2x 4 10": {
+    "source": "Math Engine",
+    "text": "Solution for x: [3]",
+    "meta": {}
+  },
+  "2x410": {
+    "source": "Local LLM",
+    "text": "To solve for x, subtract 4 from both sides of the equation:\n\n2x + 4 - 4 = 10 - 4\n2x = 6\n\nNext, divide both sides by 2:\n\n2x / 2 = 6 / 2\nx = 3",
+    "meta": {}
+  },
+  "y3 999": {
+    "source": "Math Engine",
+    "text": "Solution for y: [3*37**(1/3), -3*37**(1/3)/2 - 3*sqrt(3)*37**(1/3)*I/2, -3*37**(1/3)/2 + 3*sqrt(3)*37**(1/3)*I/2]",
+    "meta": {}
+  },
+  "y3": {
+    "source": "Local LLM",
+    "text": "The formula for y^3 is:\n\ny³ = (y²) × y",
+    "meta": {}
+  },
+  "2x 4": {
+    "source": "Local LLM",
+    "text": "It looks like you want me to evaluate the expression \"2x + 4\". Unfortunately, I don't have enough information to do so.\n\nCould you please provide more context or specify what value of x you'd like to substitute into the expression?",
+    "meta": {}
+  },
+  "2x4": {
+    "source": "Local LLM",
+    "text": "It looks like you've given me an expression!\n\nTo simplify or solve for x, I'd need more information. Can you please provide the equation or tell me what operation you'd like to perform on this expression?",
+    "meta": {}
+  },
+  "if i put 10000 rupees in bitcoin by 2012 how much it would value now at 2026": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nSorry, I couldn't find an answer.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "2 5 3": {
+    "source": "Math Engine",
+    "text": "Result: 17",
+    "meta": {}
+  },
+  "multiply it": {
+    "source": "Local LLM",
+    "text": "I don't have any numbers to multiply. Can you please provide a number or two for me to multiply?",
+    "meta": {}
+  },
+  "2 and 6": {
+    "source": "Local LLM",
+    "text": "The numbers 2 and 6 have several interesting properties.\n\nOne possible interpretation is that you might be thinking of the number 8, which is the sum of 2 + 6. However, if you're looking for a different connection between 2 and 6, could you provide more context or information about what you're trying to understand or calculate?",
+    "meta": {}
   }
 }

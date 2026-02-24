@@ -111,29 +111,47 @@ def llm_fallback(query: str) -> QAResult:
 
 # ---------------- main ----------------
 def answer_question(question: str) -> QAResult:
+    candidates = []
+
     # 1. Cache
     cache_ans = search_cache(question)
     if cache_ans and cache_ans.answer:
-        if DEBUG: print("[QA] Using cache")
-        return cache_ans
+        if DEBUG: print("[QA] Candidate: cache")
+        candidates.append(cache_ans)
 
     # 2. Wikipedia
     wiki_ans = wiki_best_summary(question)
     if wiki_ans and wiki_ans.answer:
-        if DEBUG: print("[QA] Using Wikipedia")
-        return wiki_ans
+        if DEBUG: print("[QA] Candidate: wikipedia")
+        candidates.append(wiki_ans)
 
-    # 3. Online search
+    # 3. Online
     online_ans = search_online(question)
     if online_ans and online_ans.answer:
-        if DEBUG: print("[QA] Using Online Search")
-        return online_ans
+        if DEBUG: print("[QA] Candidate: online")
+        candidates.append(online_ans)
 
-    # 4. LLM fallback
+    # 4. LLM
     llm_ans = llm_fallback(question)
     if llm_ans and llm_ans.answer:
-        if DEBUG: print("[QA] Using LLM Fallback")
-        return llm_ans
+        if DEBUG: print("[QA] Candidate: llm")
+        candidates.append(llm_ans)
 
-    # 5. Absolute fallback
-    return QAResult("Sorry, I couldn't find an answer.", "fallback", confidence=0.1)
+    if not candidates:
+        return QAResult(
+            "Sorry, I couldn't find an answer.",
+            "fallback",
+            confidence=0.1
+        )
+
+    # 🔥 scoring logic
+    def score(c: QAResult) -> float:
+        length_bonus = min(len(c.answer) / 200, 1.5)
+        return c.confidence * (1 + length_bonus)
+
+    best = max(candidates, key=score)
+
+    if DEBUG:
+        print(f"[QA] Selected: {best.source_type}")
+
+    return best

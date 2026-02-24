@@ -1,9 +1,5 @@
 # raya_core/backend_cloud.py
-import os
-from openai import OpenAI
-from dotenv import load_dotenv, find_dotenv
-load_dotenv(find_dotenv())
-
+# DAY-3 HARD STUB — cloud fully disabled
 
 OPENAI_API_KEY = os.getenv( )
 CLOUD_MODEL_NAME = os.getenv("CLOUD_MODEL_NAME", "gpt-4o-mini")
@@ -37,4 +33,4 @@ def ask_cloud(prompt, max_tokens=800, temperature=0.2):
         return response.choices[0].message.content.strip()
 
     except Exception as e:
-        return f"[cloud error] {e}"
+        return f"[cloud error] {e}" 

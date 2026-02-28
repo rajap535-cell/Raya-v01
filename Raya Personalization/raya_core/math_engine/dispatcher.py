@@ -9,12 +9,20 @@ from .units import solve_units
 def solve_math(query: str):
     q = query.lower().strip()
 
-    # 1️⃣ Percentage Growth
-    percent_result = solve_percentage_growth(query)
-    if percent_result:
-        print("[Stage: Math Engine] 📊 Percentage calculation")
-        return percent_result
-    
+    # ----------------------------------------
+    # 1️⃣ Explicit percentage patterns
+    # ----------------------------------------
+    if "%" in q or "percent" in q or " to " in q:
+        percent_result = solve_percentage_growth(query)
+        if percent_result:
+            print("[Stage: Math Engine] 📊 Percentage calculation")
+            return percent_result
+
+    # ----------------------------------------
+    # Detect if expression contains variables
+    # ----------------------------------------
+    contains_variable = bool(re.search(r"[a-zA-Z]", q))
+
     # --- Unit conversion ---
     if detect_unit_conversion(q):
         return solve_units(query)

@@ -1,7 +1,8 @@
 # raya_core/backend_cloud.py
 # DAY-3 HARD STUB — cloud fully disabled
+import os
 
-OPENAI_API_KEY = os.getenv( )
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY" )
 CLOUD_MODEL_NAME = os.getenv("CLOUD_MODEL_NAME", "gpt-4o-mini")
 
 # Initialize client only if key exists

@@ -16,6 +16,7 @@ class QuestionType(Enum):
     UNKNOWN = auto()
 
 
+
 # --- Math detection ---
 MATH_PATTERN = re.compile(
     r"""
@@ -95,5 +96,16 @@ def classify_question(query: str) -> QuestionType:
     # Opinion
     if any(q.startswith(p) for p in OPINION_PREFIXES):
         return QuestionType.OPINION
+
+    symbolic_pattern = r"[0-9]*[a-zA-Z]+\s*[\+\-\*/\^]|\d+[a-zA-Z]"
+
+    if re.search(symbolic_pattern, query.replace(" ", "")):
+        return QuestionType.MATH
+    
+    if "%" in query or "percent" in query.lower():
+        return QuestionType.MATH
+
+    if re.search(r"\d+\s+to\s+\d+", query.lower()):
+        return QuestionType.MATH
 
     return QuestionType.UNKNOWN

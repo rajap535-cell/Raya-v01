@@ -495,7 +495,7 @@
   },
   "23": {
     "source": "Math Engine",
-    "text": "Result: 8",
+    "text": "Initial value: 2\nFinal value: 3\nPercentage growth: 50.00%",
     "meta": {}
   },
   "2x 4 10": {
@@ -524,8 +524,8 @@
     "meta": {}
   },
   "2x4": {
-    "source": "Local LLM",
-    "text": "It looks like you've given me an expression!\n\nTo simplify or solve for x, I'd need more information. Can you please provide the equation or tell me what operation you'd like to perform on this expression?",
+    "source": "Math Engine",
+    "text": "Result: 8*x",
     "meta": {}
   },
   "if i put 10000 rupees in bitcoin by 2012 how much it would value now at 2026": {
@@ -554,6 +554,49 @@
   "2 and 6": {
     "source": "Local LLM",
     "text": "The numbers 2 and 6 have several interesting properties.\n\nOne possible interpretation is that you might be thinking of the number 8, which is the sum of 2 + 6. However, if you're looking for a different connection between 2 and 6, could you provide more context or information about what you're trying to understand or calculate?",
+    "meta": {}
+  },
+  "248": {
+    "source": "Math Engine",
+    "text": "Result: 34",
+    "meta": {}
+  },
+  "divide it": {
+    "source": "Local LLM",
+    "text": "I don't see anything to divide. Please provide the text or number you'd like me to divide, and I'll be happy to assist!",
+    "meta": {}
+  },
+  "who was mahatma gabndhi": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nSorry, I couldn't find an answer.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "who was the first prime minister of india": {
+    "source": "Local LLM",
+    "text": "The first Prime Minister of India was Jawaharlal Nehru. He served as the Prime Minister from August 15, 1947, to May 27, 1964. Prior to becoming Prime Minister, Nehru served as the country's first Deputy Prime Minister under Mahatma Gandhi and later became the leader of the Indian National Congress.\n\nHowever, it is worth noting that V.P. Singh held the office of Prime Minister for a brief period from June 2, 1989, to November 10, 1990, but his term was not recognized as valid by the Indian government due to a parliamentary deadlock.\n\nIn India's constitutional history, the title \"Prime Minister\" is not explicitly defined, and it was initially used informally. The title of Prime Minister was officially adopted in 1953 with the promulgation of the Indian Constitution (First Amendment), which stated that the President would appoint the leader of the majority party or coalition as the Prime Minister.\n\nJawaharlal Nehru played a significant role in India's early years, and his leadership during the country's transition to independence is still remembered fondly by many Indians.",
+    "meta": {}
+  },
+  "when did he died": {
+    "source": "Local LLM",
+    "text": "I don't have any information about a specific person who has passed away. Could you please provide more context or specify which person you are referring to? I'll do my best to help.",
+    "meta": {}
+  },
+  "100 to 120": {
+    "source": "Math Engine",
+    "text": "Initial value: 100\nFinal value: 120\nPercentage growth: 20.00%",
+    "meta": {}
+  },
+  "20 of 50": {
+    "source": "Math Engine",
+    "text": "Initial value: 20\nFinal value: 50\nPercentage growth: 150.00%",
     "meta": {}
   }
 }

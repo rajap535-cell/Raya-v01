@@ -25,6 +25,12 @@ DEBUG = True  # turn off in production
 _CACHE = load_cache() or {}
 
 # --------------------------------------------------
+# --------------------------------------------------
+# Short-Term Math Memory
+# --------------------------------------------------
+_LAST_MATH_EXPRESSION = None
+_LAST_MATH_RESULT = None
+
 # Helpers 
 # --------------------------------------------------
 COMMON_TYPOS = {
@@ -105,6 +111,30 @@ def _is_failed(text: Optional[str]) -> bool:
 # --------------------------------------------------
 
 def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) -> EngineResult:
+    global _LAST_MATH_EXPRESSION, _LAST_MATH_RESULT
+
+    lower_q = query.lower().strip()
+
+    #Follow-up operations
+    if _LAST_MATH_EXPRESSION:
+        if "multiply it" in lower_q:
+            return EngineResult(
+                sources={"Math Memory": True},
+                text=solve_math(f"({_LAST_MATH_EXPRESSION})*({_LAST_MATH_EXPRESSION})"),           
+            )
+
+        if "square it" in lower_q:
+            return EngineResult(
+            sources={"Math Memory": True},
+            text=solve_math(f"({_LAST_MATH_EXPRESSION})^2"),
+        )
+
+    if "simplify it" in lower_q:
+        return EngineResult(
+            sources={"Math Memory": True},
+            text=solve_math(_LAST_MATH_EXPRESSION),
+        )
+        
     intents = list(detect_intents(query))
     if DEBUG:
         print(f"\n[Orchestrator] 🧠 Query: '{query}'")
@@ -164,6 +194,9 @@ def ask_raya(query: str, db_file: str = "custom_db.sqlite", intents: list = []) 
         if math_answer:
             if DEBUG:
                 print("[Stage: Math Engine] ✅ Solved")
+            _LAST_MATH_EXPRESSION = query
+            _LAST_MATH_RESULT = query
+
             final_text = math_answer
             best_source = "Math Engine"
         else:

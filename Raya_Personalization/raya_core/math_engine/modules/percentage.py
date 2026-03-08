@@ -1,4 +1,6 @@
 import re
+from .base_module import BaseMathModule
+from .results import MathResult
 
 def solve_percentage_growth(query: str):
     try:
@@ -27,3 +29,22 @@ def solve_percentage_growth(query: str):
 
     except Exception:
         return None
+    
+# 🔥 NEW WRAPPER CLASS
+class PercentageModule(BaseMathModule):
+
+    def supports(self, query: str) -> bool:
+        keywords = ["percent", "%", "increase", "decrease", "growth"]
+        return any(k in query.lower() for k in keywords)
+
+    def solve(self, query: str) -> MathResult:
+        result = solve_percentage_growth(query)
+
+        if result is None:
+            return None
+
+        return MathResult(
+            value=None,
+            explanation=result,
+            metadata={"type": "percentage"}
+        )

@@ -19,7 +19,7 @@ from heapq import nlargest
 from bs4 import BeautifulSoup
 from colorama import init, Fore
 import PyPDF2
-import sys, os
+import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), 'raya_core'))
 from raya_core.orchestrator import ask_raya
 

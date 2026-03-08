@@ -598,5 +598,181 @@
     "source": "Math Engine",
     "text": "Initial value: 20\nFinal value: 50\nPercentage growth: 150.00%",
     "meta": {}
+  },
+  "what is 20 of 150": {
+    "source": "Local LLM",
+    "text": "To find 20% of 150, you can multiply 150 by 0.20 (which is the decimal equivalent of 20%).\n\n150 x 0.20 = 30\n\nSo, 20% of 150 is 30.",
+    "meta": {}
+  },
+  "22": {
+    "source": "Math Engine",
+    "text": "4",
+    "meta": {}
+  },
+  "105": {
+    "source": "Local LLM",
+    "text": "It looks like you're giving me a code.\n\n\"10-5\" is a common code phrase that means \"all clear\" or \"mission accomplished.\" It's often used in military and law enforcement contexts to indicate that a situation has been resolved or a task has been completed.\n\nIs there anything else I can help you with?",
+    "meta": {}
+  },
+  "73": {
+    "source": "Math Engine",
+    "text": "{'result': 21}",
+    "meta": {}
+  },
+  "204": {
+    "source": "Math Engine",
+    "text": "{'result': 5.0}",
+    "meta": {}
+  },
+  "2569": {
+    "source": "Math Engine",
+    "text": "{'result': 9.4}",
+    "meta": {}
+  },
+  "17": {
+    "source": "Math Engine",
+    "text": "{'result': 7}",
+    "meta": {}
+  },
+  "157": {
+    "source": "Math Engine",
+    "text": "{'result': 105}",
+    "meta": {}
+  },
+  "divide 20 with 200": {
+    "source": "Local LLM",
+    "text": "20 ÷ 200 = 0.1",
+    "meta": {}
+  },
+  "what is the 76 of 100": {
+    "source": "Local LLM",
+    "text": "To find 7.6% of 100, you can multiply 100 by 0.076 (since 7.6% = 7.6/100 = 0.076).\n\n100 x 0.076 = 7.6",
+    "meta": {}
+  },
+  "76 of 100": {
+    "source": "Local LLM",
+    "text": "To convert 7.6 to a percentage, you can multiply it by 100.\n\n7.6 x 100 = 760%\n\nSo, 7.6 is equal to 7.6%.",
+    "meta": {}
+  },
+  "what is a shadow": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nThe Shadow of What Was Lost is a 2014 high fantasy novel, the debut novel by Australian author James Islington. It is the first book in The Licanius Trilogy, followed by An Echo of Things to Come and The Light of All That Falls.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "where pyramids are located": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nThe Egyptian pyramids are ancient masonry structures located in Egypt. Most were built as tombs for the pharaohs and their consorts during the Old and Middle Kingdom periods.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "35": {
+    "source": "Math Engine",
+    "text": "{'result': 15.0}",
+    "meta": {}
+  },
+  "965958": {
+    "source": "Math Engine",
+    "text": "{'result': 924470.0}",
+    "meta": {}
+  },
+  "235": {
+    "source": "Math Engine",
+    "text": "{'result': 11.0}",
+    "meta": {}
+  },
+  "2 9": {
+    "source": "Math Engine",
+    "text": "{'result': 11.0}",
+    "meta": {}
+  },
+  "234": {
+    "source": "Local LLM",
+    "text": "To evaluate this expression, we need to follow the order of operations (PEMDAS):\n\n1. Evaluate the expression inside the parentheses: 2+3 = 5\n2. Multiply the result by 4: 5 * 4 = 20\n\nSo the final answer is: 20",
+    "meta": {}
+  },
+  "232": {
+    "source": "Math Engine",
+    "text": "{'result': 25.0}",
+    "meta": {}
+  },
+  "sqrt16": {
+    "source": "Math Engine",
+    "text": "4",
+    "meta": {}
+  },
+  "357": {
+    "source": "Math Engine",
+    "text": "38",
+    "meta": {}
+  },
+  "297": {
+    "source": "Math Engine",
+    "text": "11",
+    "meta": {}
+  },
+  "298": {
+    "source": "Math Engine",
+    "text": "1",
+    "meta": {}
+  },
+  "278": {
+    "source": "Math Engine",
+    "text": "3",
+    "meta": {}
+  },
+  "288": {
+    "source": "Math Engine",
+    "text": "2",
+    "meta": {}
+  },
+  "sin45": {
+    "source": "Math Engine",
+    "text": "0.8509035245341184",
+    "meta": {}
+  },
+  "solve x2 5x 6": {
+    "source": "Local LLM",
+    "text": "To solve the quadratic equation x^2 + 5x + 6, we can use factoring, completing the square, or the quadratic formula.\n\nUsing factoring, we can rewrite the equation as:\n\nx^2 + 5x + 6 = (x + 2)(x + 3) = 0\n\nThis tells us that either (x + 2) = 0 or (x + 3) = 0.\n\nSolving for x, we get:\n\nx + 2 = 0 --> x = -2\n\nx + 3 = 0 --> x = -3\n\nTherefore, the solutions to the equation are x = -2 and x = -3.",
+    "meta": {}
+  },
+  "sin 45": {
+    "source": "Math Engine",
+    "text": "0.8509035245341184",
+    "meta": {}
+  },
+  "integrate x2": {
+    "source": "Local LLM",
+    "text": "To integrate x^2, we can use the power rule of integration, which states that:\n\n∫x^n dx = (x^(n+1))/(n+1) + C\n\nIn this case, n = 2, so:\n\n∫x^2 dx = (x^3)/3 + C\n\nWhere C is the constant of integration.",
+    "meta": {}
+  },
+  "x33": {
+    "source": "Local LLM",
+    "text": "x^3/3 can be solved using the power rule of differentiation.",
+    "meta": {}
+  },
+  "limit sinxx": {
+    "source": "Local LLM",
+    "text": "The limit of sin(x)/x as x approaches 0 is a well-known limit in calculus.\n\nThe limit can be evaluated as follows:\n\nlim (x→0) sin(x)/x\n\nUsing the definition of the derivative, we can write:\n\nlim (x→0) (sin(x) - sin(0))/x\n\nSince sin(0) = 0, we have:\n\nlim (x→0) sin(x)/x = lim (x→0) (sin(x))/x\n\nUsing L'Hopital's rule, which states that the limit of a ratio of functions is equal to the limit of the ratio of their derivatives, we can evaluate the limit as follows:\n\nlim (x→0) (sin(x))/x = lim (x→0) (cos(x))\n\nSince cos(0) = 1, we have:\n\nlim (x→0) sin(x)/x = 1\n\nTherefore, the limit of sin(x)/x as x approaches 0 is 1.",
+    "meta": {}
+  },
+  "3987": {
+    "source": "Math Engine",
+    "text": "28",
+    "meta": {}
   }
 }

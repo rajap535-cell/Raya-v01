@@ -711,8 +711,8 @@
     "meta": {}
   },
   "sqrt16": {
-    "source": "Math Engine",
-    "text": "4",
+    "source": "Local LLM",
+    "text": "The square root of 16 is 4.",
     "meta": {}
   },
   "357": {
@@ -756,8 +756,8 @@
     "meta": {}
   },
   "integrate x2": {
-    "source": "Local LLM",
-    "text": "To integrate x^2, we can use the power rule of integration, which states that:\n\n∫x^n dx = (x^(n+1))/(n+1) + C\n\nIn this case, n = 2, so:\n\n∫x^2 dx = (x^3)/3 + C\n\nWhere C is the constant of integration.",
+    "source": "Math Engine",
+    "text": "x**3/3",
     "meta": {}
   },
   "x33": {
@@ -773,6 +773,91 @@
   "3987": {
     "source": "Math Engine",
     "text": "28",
+    "meta": {}
+  },
+  "differentiate x3": {
+    "source": "Math Engine",
+    "text": "3*x**2",
+    "meta": {}
+  },
+  "3x2": {
+    "source": "Math Engine",
+    "text": "3*x**2",
+    "meta": {}
+  },
+  "38": {
+    "source": "Math Engine",
+    "text": "24",
+    "meta": {}
+  },
+  "398": {
+    "source": "Math Engine",
+    "text": "-69",
+    "meta": {}
+  },
+  "50 of 20": {
+    "source": "Math Engine",
+    "text": "Initial value: 50\nFinal value: 20\nPercentage growth: -60.00%",
+    "meta": {}
+  },
+  "what is 20 of 50": {
+    "source": "Local LLM",
+    "text": "20% of 50 is:\n\n50 x 0.20 = 10\n\nSo, 20% of 50 is 10.",
+    "meta": {}
+  },
+  "2x": {
+    "source": "Math Engine",
+    "text": "2*x",
+    "meta": {}
+  },
+  "sqrt 16": {
+    "source": "Math Engine",
+    "text": "4",
+    "meta": {}
+  },
+  "sinx": {
+    "source": "Local LLM",
+    "text": "The sine function!\n\nThe sine function, denoted as sin(x), is a fundamental trigonometric function that describes the ratio of the length of the side opposite a given angle to the length of the hypotenuse in a right-angled triangle.\n\nMathematically, the sine function is defined as:\n\nsin(x) = opposite side / hypotenuse\n\nThe sine function is periodic with a period of 2π, and its range is -1 to 1.\n\nHere are some key properties of the sine function:\n\n1. **Symmetry**: The sine function is symmetric about the origin, meaning sin(-x) = -sin(x).\n2. **Periodicity**: The sine function has a period of 2π, meaning sin(x) = sin(x + 2π) for all x.\n3. **Range**: The sine function has a range of -1 to 1, meaning -1 ≤ sin(x) ≤ 1 for all x.\n4. **Inverse**: The inverse of the sine function is the cosine function, denoted as cos(x).\n\nSome common values of the sine function include:\n\n* sin(0) = 0\n* sin(π/2) = 1\n* sin(π) = 0\n* sin(3π/2) = -1\n\nThe sine function has numerous applications in various fields, including:\n\n* Trigonometry and geometry\n* Physics and engineering (e.g., circular motion, waves, and oscillations)\n* Navigation and surveying\n* Computer graphics and game development\n* Signal processing and audio analysis\n\nDo you have any specific questions about the sine function or its applications?",
+    "meta": {}
+  },
+  "2x1": {
+    "source": "Math Engine",
+    "text": "2*x + 2",
+    "meta": {}
+  },
+  "solve 2x4 10": {
+    "source": "Local LLM",
+    "text": "To solve the equation 2x + 4 = 10, we need to isolate the variable x.\n\nFirst, subtract 4 from both sides of the equation:\n\n2x + 4 - 4 = 10 - 4\n2x = 6\n\nNext, divide both sides of the equation by 2:\n\n2x / 2 = 6 / 2\nx = 3\n\nSo, the value of x is 3.",
+    "meta": {}
+  },
+  "factor x2 2x1": {
+    "source": "Local LLM",
+    "text": "To factor the expression x^2 + 2x + 1, we can use the factoring method for quadratic expressions.\n\nThe expression x^2 + 2x + 1 can be factored as:\n\nx^2 + 2x + 1 = (x + 1)(x + 1)\n\n= (x + 1)^2\n\nSo, the factored form of the expression x^2 + 2x + 1 is (x + 1)^2.",
+    "meta": {}
+  },
+  "expand x12": {
+    "source": "Local LLM",
+    "text": "To expand (x+1)^2, we can use the formula for the square of a binomial:\n\n(a+b)^2 = a^2 + 2ab + b^2\n\nIn this case, a = x and b = 1.\n\nSo, (x+1)^2 = x^2 + 2(x)(1) + 1^2\n\n= x^2 + 2x + 1\n\nTherefore, the expanded form of (x+1)^2 is x^2 + 2x + 1.",
+    "meta": {}
+  },
+  "52x": {
+    "source": "Math Engine",
+    "text": "52*x",
+    "meta": {}
+  },
+  "x12": {
+    "source": "Math Engine",
+    "text": "(x + 1)**2",
+    "meta": {}
+  },
+  "solve 2x410": {
+    "source": "Local LLM",
+    "text": "To solve for x, we need to isolate x on one side of the equation.\n\n2x + 4 = 10\n\nFirst, subtract 4 from both sides:\n\n2x = 10 - 4\n2x = 6\n\nNext, divide both sides by 2:\n\nx = 6 ÷ 2\nx = 3\n\nTherefore, the value of x is 3.",
+    "meta": {}
+  },
+  "factor x22x1": {
+    "source": "Local LLM",
+    "text": "To factor the quadratic equation x^2 = 2x + 1, we need to move the x term to the left side and then factor it:\n\nx^2 - 2x - 1 = 0\n\nWe can factor this expression by finding two numbers whose product is -1 and whose sum is -2. These numbers are -1 and 1.\n\nx^2 - 2x - 1 = (x - 1)(x + 1) = 0\n\nThis tells us that either (x - 1) = 0 or (x + 1) = 0.\n\nSolving for x, we get:\n\nx - 1 = 0 --> x = 1\n\nx + 1 = 0 --> x = -1\n\nTherefore, the factored form of the equation is:\n\n(x - 1)(x + 1) = 0",
     "meta": {}
   }
 }

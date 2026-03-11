@@ -1,6 +1,7 @@
 # modules/arithmetic.py
 
 import re
+from ..utils.normalizer import normalize_math_input
 from sympy.parsing.sympy_parser import (
     parse_expr,
     standard_transformations,
@@ -19,7 +20,7 @@ class ArithmeticModule(BaseMathModule):
     name = "arithmetic"
 
     def supports(self, query: str) -> bool:
-        pattern = r"^[0-9a-z\.\+\-\*/\^\(\)\s]+$"
+        pattern = r"^[0-9\.\+\-\*/\^\(\)\s]+$"
         return bool(re.match(pattern, query))
     
     def solve(self, query: str):
@@ -36,7 +37,7 @@ class ArithmeticModule(BaseMathModule):
 def solve_arithmetic(query: str):
 
     try:
-        expression = normalize_expression(query)
+        expression = normalize_math_input(query)
 
         result = parse_expr(
             expression,

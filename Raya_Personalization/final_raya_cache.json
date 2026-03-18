@@ -504,8 +504,8 @@
     "meta": {}
   },
   "2x410": {
-    "source": "Local LLM",
-    "text": "To solve for x, subtract 4 from both sides of the equation:\n\n2x + 4 - 4 = 10 - 4\n2x = 6\n\nNext, divide both sides by 2:\n\n2x / 2 = 6 / 2\nx = 3",
+    "source": "Math Engine",
+    "text": "3",
     "meta": {}
   },
   "y3 999": {
@@ -711,8 +711,8 @@
     "meta": {}
   },
   "sqrt16": {
-    "source": "Local LLM",
-    "text": "The square root of 16 is 4.",
+    "source": "Math Engine",
+    "text": "4.00000000000000",
     "meta": {}
   },
   "357": {
@@ -727,7 +727,7 @@
   },
   "298": {
     "source": "Math Engine",
-    "text": "1",
+    "text": "26",
     "meta": {}
   },
   "278": {
@@ -742,7 +742,7 @@
   },
   "sin45": {
     "source": "Math Engine",
-    "text": "0.8509035245341184",
+    "text": "0.850903524534118",
     "meta": {}
   },
   "solve x2 5x 6": {
@@ -766,8 +766,8 @@
     "meta": {}
   },
   "limit sinxx": {
-    "source": "Local LLM",
-    "text": "The limit of sin(x)/x as x approaches 0 is a well-known limit in calculus.\n\nThe limit can be evaluated as follows:\n\nlim (x→0) sin(x)/x\n\nUsing the definition of the derivative, we can write:\n\nlim (x→0) (sin(x) - sin(0))/x\n\nSince sin(0) = 0, we have:\n\nlim (x→0) sin(x)/x = lim (x→0) (sin(x))/x\n\nUsing L'Hopital's rule, which states that the limit of a ratio of functions is equal to the limit of the ratio of their derivatives, we can evaluate the limit as follows:\n\nlim (x→0) (sin(x))/x = lim (x→0) (cos(x))\n\nSince cos(0) = 1, we have:\n\nlim (x→0) sin(x)/x = 1\n\nTherefore, the limit of sin(x)/x as x approaches 0 is 1.",
+    "source": "Math Engine",
+    "text": "1",
     "meta": {}
   },
   "3987": {
@@ -807,17 +807,17 @@
   },
   "2x": {
     "source": "Math Engine",
-    "text": "2*x",
+    "text": "Invalid mathematical expresssion",
     "meta": {}
   },
   "sqrt 16": {
     "source": "Math Engine",
-    "text": "4",
+    "text": "4.00000000000000",
     "meta": {}
   },
   "sinx": {
-    "source": "Local LLM",
-    "text": "The sine function!\n\nThe sine function, denoted as sin(x), is a fundamental trigonometric function that describes the ratio of the length of the side opposite a given angle to the length of the hypotenuse in a right-angled triangle.\n\nMathematically, the sine function is defined as:\n\nsin(x) = opposite side / hypotenuse\n\nThe sine function is periodic with a period of 2π, and its range is -1 to 1.\n\nHere are some key properties of the sine function:\n\n1. **Symmetry**: The sine function is symmetric about the origin, meaning sin(-x) = -sin(x).\n2. **Periodicity**: The sine function has a period of 2π, meaning sin(x) = sin(x + 2π) for all x.\n3. **Range**: The sine function has a range of -1 to 1, meaning -1 ≤ sin(x) ≤ 1 for all x.\n4. **Inverse**: The inverse of the sine function is the cosine function, denoted as cos(x).\n\nSome common values of the sine function include:\n\n* sin(0) = 0\n* sin(π/2) = 1\n* sin(π) = 0\n* sin(3π/2) = -1\n\nThe sine function has numerous applications in various fields, including:\n\n* Trigonometry and geometry\n* Physics and engineering (e.g., circular motion, waves, and oscillations)\n* Navigation and surveying\n* Computer graphics and game development\n* Signal processing and audio analysis\n\nDo you have any specific questions about the sine function or its applications?",
+    "source": "Math Engine",
+    "text": "sin(x)",
     "meta": {}
   },
   "2x1": {
@@ -827,7 +827,7 @@
   },
   "solve 2x4 10": {
     "source": "Local LLM",
-    "text": "To solve the equation 2x + 4 = 10, we need to isolate the variable x.\n\nFirst, subtract 4 from both sides of the equation:\n\n2x + 4 - 4 = 10 - 4\n2x = 6\n\nNext, divide both sides of the equation by 2:\n\n2x / 2 = 6 / 2\nx = 3\n\nSo, the value of x is 3.",
+    "text": "To solve for x, we need to isolate the variable x.\n\n2x + 4 = 10\n\nSubtract 4 from both sides:\n\n2x = 10 - 4\n2x = 6\n\nDivide both sides by 2:\n\nx = 6 / 2\nx = 3\n\nTherefore, the value of x is 3.",
     "meta": {}
   },
   "factor x2 2x1": {
@@ -851,13 +851,147 @@
     "meta": {}
   },
   "solve 2x410": {
-    "source": "Local LLM",
-    "text": "To solve for x, we need to isolate x on one side of the equation.\n\n2x + 4 = 10\n\nFirst, subtract 4 from both sides:\n\n2x = 10 - 4\n2x = 6\n\nNext, divide both sides by 2:\n\nx = 6 ÷ 2\nx = 3\n\nTherefore, the value of x is 3.",
+    "source": "Math Engine",
+    "text": "3",
     "meta": {}
   },
   "factor x22x1": {
+    "source": "Math Engine",
+    "text": "Invalid mathematical expresssion",
+    "meta": {}
+  },
+  "cosx": {
+    "source": "Math Engine",
+    "text": "cos(x)",
+    "meta": {}
+  },
+  "tan5": {
+    "source": "Math Engine",
+    "text": "-3.38051500624659",
+    "meta": {}
+  },
+  "sqrtx": {
+    "source": "Math Engine",
+    "text": "sqrt(x)",
+    "meta": {}
+  },
+  "sqrt64": {
+    "source": "Math Engine",
+    "text": "8",
+    "meta": {}
+  },
+  "x2": {
+    "source": "Math Engine",
+    "text": "x**2",
+    "meta": {}
+  },
+  "20 percent of 100": {
+    "source": "Math Engine",
+    "text": "Initial value: 20\nFinal value: 100\nPercentage growth: 400.00%",
+    "meta": {}
+  },
+  "15 of 100 what percentage": {
     "source": "Local LLM",
-    "text": "To factor the quadratic equation x^2 = 2x + 1, we need to move the x term to the left side and then factor it:\n\nx^2 - 2x - 1 = 0\n\nWe can factor this expression by finding two numbers whose product is -1 and whose sum is -2. These numbers are -1 and 1.\n\nx^2 - 2x - 1 = (x - 1)(x + 1) = 0\n\nThis tells us that either (x - 1) = 0 or (x + 1) = 0.\n\nSolving for x, we get:\n\nx - 1 = 0 --> x = 1\n\nx + 1 = 0 --> x = -1\n\nTherefore, the factored form of the equation is:\n\n(x - 1)(x + 1) = 0",
+    "text": "To find the percentage, divide 15 by 100 and multiply by 100.\n\n15 ÷ 100 = 0.15\n0.15 × 100 = 15%\n\nSo, 15 out of 100 is 15%.",
+    "meta": {}
+  },
+  "05": {
+    "source": "Math Engine",
+    "text": "5",
+    "meta": {}
+  },
+  "9875": {
+    "source": "Math Engine",
+    "text": "20.2",
+    "meta": {}
+  },
+  "sin90": {
+    "source": "Math Engine",
+    "text": "0.893996663600558",
+    "meta": {}
+  },
+  "solver 3x515": {
+    "source": "Safe Fallback",
+    "text": "This topic is evolving and requires up-to-date sources. Here is a reliable overview based on established knowledge.",
+    "meta": {
+      "candidates": [],
+      "best_source": null
+    }
+  },
+  "solve 3x2515": {
+    "source": "Math Engine",
+    "text": "[5/3]",
+    "meta": {}
+  },
+  "20 of 100": {
+    "source": "Math Engine",
+    "text": "Initial value: 20\nFinal value: 100\nPercentage growth: 400.00%",
+    "meta": {}
+  },
+  "85 of 290": {
+    "source": "Local LLM",
+    "text": "To find 85% of 290, you can multiply 290 by 0.85 (since 85% is the same as 0.85).\n\n290 x 0.85 = 247.5\n\nSo, 85% of 290 is 247.5.",
+    "meta": {}
+  },
+  "cos45": {
+    "source": "Math Engine",
+    "text": "0.525321988817730",
+    "meta": {}
+  },
+  "best youtube channels in india": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nYouTube, formerly named YouTube Spotlight, is the official YouTube channel for the American video-sharing platform of the same name, spotlighting videos and events on the platform. Events shown on the channel include YouTube Comedy Week and the YouTube Music Awards.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "latest research on renewable energy": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nRenewable energy in Australia is based mainly on biomass, solar, wind, and hydro generation technologies. Over a third of all electricity generated in Australia is now from renewable sources, a proportion that is increasing in line with global trends .",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.8
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "expand x14": {
+    "source": "Math Engine",
+    "text": "x**4 + 4*x**3 + 6*x**2 + 4*x + 1",
+    "meta": {}
+  },
+  "simplify sinx2 cosx2": {
+    "source": "Math Engine",
+    "text": "1",
+    "meta": {}
+  },
+  "solve x25x60": {
+    "source": "Math Engine",
+    "text": "[2, 3]",
+    "meta": {}
+  },
+  "28": {
+    "source": "Math Engine",
+    "text": "10",
+    "meta": {}
+  },
+  "simplify sinx2cosx2": {
+    "source": "Math Engine",
+    "text": "1",
+    "meta": {}
+  },
+  "x25x60": {
+    "source": "Math Engine",
+    "text": "[2, 3]",
     "meta": {}
   }
 }

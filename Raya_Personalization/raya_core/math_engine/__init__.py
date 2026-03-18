@@ -10,8 +10,8 @@ from .modules.algebra import AlgebraModule
 
 _kernel = ComputationKernel()
 
-_kernel.register_module(SymbolicMathModule())
 _kernel.register_module(PercentageModule())
+_kernel.register_module(SymbolicMathModule())
 _kernel.register_module(ArithmeticModule())
 _kernel.register_module(AlgebraModule())
 

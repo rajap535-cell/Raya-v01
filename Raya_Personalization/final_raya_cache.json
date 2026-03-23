@@ -505,7 +505,7 @@
   },
   "2x410": {
     "source": "Math Engine",
-    "text": "3",
+    "text": "[3]",
     "meta": {}
   },
   "y3 999": {
@@ -857,7 +857,7 @@
   },
   "factor x22x1": {
     "source": "Math Engine",
-    "text": "Invalid mathematical expresssion",
+    "text": "(x + 1)**2",
     "meta": {}
   },
   "cosx": {

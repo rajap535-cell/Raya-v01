@@ -15,17 +15,20 @@ from sympy import (
     tan,
     log,
     sqrt,
+    pi
 )
 from sympy.parsing.sympy_parser import parse_expr
 from .base_module import BaseMathModule
 from ..utils.normalizer import normalize_math_input
 
 
-x = symbols("x")
+x, y, z = symbols("x y z")
 
 # Allowed math symbols for parser
 allowed_symbols = {
     "x": x,
+    "y": y,
+    "z": z,
     "sin": sin,
     "cos": cos,
     "tan": tan,

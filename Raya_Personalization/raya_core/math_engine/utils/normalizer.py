@@ -34,4 +34,19 @@ def normalize_math_input(text: str) -> str:
     # remove spaces inside function calls
     q = re.sub(r"(sin|cos|tan|sqrt|log|ln)\s+\(", r"\1(", q)
 
+    
+    # convert degree-based trig to radians
+    def convert_degrees(match):
+        func = match.group(1)
+        value = match.group(2)
+
+    # skip if already contains pi or variable
+        if "pi" in value or re.search(r"[a-z]", value):
+            return f"{func}({value})"
+
+        return f"{func}(({value})*pi/180)"
+
+
+    q = re.sub(r"\b(sin|cos|tan)\(([^)]+)\)", convert_degrees, q)
+
     return q

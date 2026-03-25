@@ -742,7 +742,7 @@
   },
   "sin45": {
     "source": "Math Engine",
-    "text": "0.850903524534118",
+    "text": "0.707106781186548",
     "meta": {}
   },
   "solve x2 5x 6": {
@@ -992,6 +992,61 @@
   "x25x60": {
     "source": "Math Engine",
     "text": "[2, 3]",
+    "meta": {}
+  },
+  "cos60": {
+    "source": "Math Engine",
+    "text": "0.500000000000000",
+    "meta": {}
+  },
+  "tan45": {
+    "source": "Math Engine",
+    "text": "1.00000000000000",
+    "meta": {}
+  },
+  "sinpi2": {
+    "source": "Math Engine",
+    "text": "1.00000000000000",
+    "meta": {}
+  },
+  "cospi": {
+    "source": "Math Engine",
+    "text": "-1.00000000000000",
+    "meta": {}
+  },
+  "sinx2 cosx2": {
+    "source": "Math Engine",
+    "text": "1.00000000000000",
+    "meta": {}
+  },
+  "xy": {
+    "source": "Math Engine",
+    "text": "x + y",
+    "meta": {}
+  },
+  "x2 y3": {
+    "source": "Math Engine",
+    "text": "x**2 + y**3",
+    "meta": {}
+  },
+  "2x 3y": {
+    "source": "Math Engine",
+    "text": "2*x + 3*y",
+    "meta": {}
+  },
+  "solve 2y 4 10": {
+    "source": "Local LLM",
+    "text": "To solve for y, we need to isolate the variable.\n\nFirst, subtract 4 from both sides of the equation:\n\n2y + 4 - 4 = 10 - 4\n2y = 6\n\nNext, divide both sides by 2:\n\n(2y) / 2 = 6 / 2\ny = 3",
+    "meta": {}
+  },
+  "expand xy2": {
+    "source": "Math Engine",
+    "text": "x**2 + 2*x*y + y**2",
+    "meta": {}
+  },
+  "factor x2 2xy y2": {
+    "source": "Math Engine",
+    "text": "(x + y)**2",
     "meta": {}
   }
 }

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RAYA — Roadmap & Responsibility</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #050607;
+  color: #e8ecf1;
+  overflow-x: hidden;
+}
+
+/* Animated Background Grid */
+body::before {
+  content: '';
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: moveGrid 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveGrid {
+  from { transform: translate(0,0); }
+  to { transform: translate(-60px,-60px); }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 92%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 100px 0;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  background: linear-gradient(90deg, #fff, #4da3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #7a8594;
+  margin-bottom: 80px;
+}
+
+.section { margin-bottom: 120px; }
+
+.section-title {
+  font-size: 26px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 6px;
+  width: 4px;
+  height: 20px;
+  background: #4da3ff;
+}
+
+/* CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(77,163,255,0.4);
+}
+
+.card h3 { color: #4da3ff; }
+.card p { color: #aab4c0; }
+
+/* LAYER + CONSOLE */
+.layer-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+
+.layer-stack {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 16px;
+}
+
+.layer {
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #0c0f14, #07090c);
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.layer:hover {
+  transform: translateX(12px);
+  border-color: #4da3ff;
+}
+
+.layer.active {
+  border-color: #4da3ff;
+  box-shadow: 0 0 25px rgba(77,163,255,0.2);
+}
+
+.layer small {
+  display:block;
+  font-size:11px;
+  color:#7f8b99;
+}
+
+.panel {
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  min-height: 320px;
+}
+
+.panel h3 { color:#4da3ff }
+
+.module {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #0b0e12;
+  border: 1px solid rgba(255,255,255,0.05);
+  display:flex;
+  justify-content:space-between;
+}
+
+.status { font-size:12px }
+.active-status{color:#4da3ff}
+.build-status{color:#ffaa33}
+.future-status{color:#888}
+
+/* NEVER */
+.never {
+  padding: 50px;
+  border-radius: 24px;
+  background: radial-gradient(circle at center, #140909, #080404);
+  border: 1px solid rgba(255,80,80,0.3);
+}
+
+.never h2 { color:#ff5c5c }
+.never li { color:#ffb3b3 }
+
+.quote {
+  margin-top: 40px;
+  text-align:center;
+  font-size:22px;
+}
+
+footer {
+  text-align:center;
+  margin-top:120px;
+  color:#6b7480;
+}
+
+@media(max-width:900px){
+  .layer-layout{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Roadmap & Responsibility</h1>
+<p class="subtitle">Not a product timeline — an evolving intelligence architecture.</p>
+
+<!-- NOW -->
+<div class="section">
+<h2 class="section-title">What RAYA Does Now</h2>
+<div class="card-grid">
+<div class="card"><h3>Data Structuring</h3><p>Transforming fragmented systems into structured intelligence.</p></div>
+<div class="card"><h3>Signal Intelligence</h3><p>Extracting patterns from system-level behavior.</p></div>
+<div class="card"><h3>Advisory Layer</h3><p>Delivering early-stage infrastructure insights.</p></div>
+</div>
+</div>
+
+<!-- FUTURE + CONSOLE -->
+<div class="section">
+<h2 class="section-title">What Comes Later</h2>
+<p class="subtitle" style="margin-bottom:40px">Understanding is static. Systems are dynamic.</p>
+
+<div class="layer-layout">
+
+<div class="layer-stack">
+<div class="layer" data-layer="data">Layer 1 — Data Foundation<small>LAYER_01</small></div>
+<div class="layer" data-layer="intelligence">Layer 2 — Intelligence<small>LAYER_02</small></div>
+<div class="layer" data-layer="diagnostics">Layer 3 — Diagnostics<small>LAYER_03</small></div>
+<div class="layer" data-layer="decision">Layer 4 — Decision<small>LAYER_04</small></div>
+<div class="layer" data-layer="autonomy">Layer 5 — Autonomy<small>LAYER_05</small></div>
+</div>
+
+<div class="panel" id="panel">
+<h3>System Overview</h3>
+<p>Select a layer to inspect modules.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- NEVER -->
+<div class="section never">
+<h2>What RAYA Will Never Do</h2>
+<ul>
+<li>Opaque systems</li>
+<li>Data exploitation</li>
+<li>Uncontrolled autonomy</li>
+<li>Short-term optimization bias</li>
+<li>Unstable scaling</li>
+</ul>
+<p class="quote">If a system cannot be trusted, it will not be built.</p>
+</div>
+
+<footer>
+RAYA is being constructed — layer by layer — toward Type 1 Civilization.
+</footer>
+
+</div>
+
+<script>
+const panel = document.getElementById('panel');
+const layers = document.querySelectorAll('.layer');
+
+const data = {
+  data:{title:"Data Foundation",modules:[["Data Ingestion","ACTIVE"],["Normalization Engine","ACTIVE"],["Integrity Check","BUILD"]]},
+  intelligence:{title:"Intelligence Layer",modules:[["Advisory Engine","ACTIVE"],["Pattern Recognition","BUILD"]]},
+  diagnostics:{title:"Diagnostics Layer",modules:[["Disease Detection","ACTIVE"],["Failure Prediction","BUILD"]]},
+  decision:{title:"Decision Layer",modules:[["Optimization Engine","BUILD"],["Simulation","FUTURE"]]},
+  autonomy:{title:"Autonomy Layer",modules:[["Self-Healing","FUTURE"],["Adaptive Control","FUTURE"]]}
+};
+
+function statusClass(s){return s==='ACTIVE'?'active-status':s==='BUILD'?'build-status':'future-status'}
+
+layers.forEach(layer=>{
+  layer.onclick=()=>{
+    layers.forEach(l=>l.classList.remove('active'));
+    layer.classList.add('active');
+
+    const d=data[layer.dataset.layer];
+    let html=`<h3>${d.title}</h3>`;
+
+    d.modules.forEach(m=>{
+      html+=`<div class='module'>${m[0]} <span class='status ${statusClass(m[1])}'>${m[1]}</span></div>`;
+    });
+
+    panel.innerHTML=html;
+  }
+});
+
+/* Default select first layer */
+layers[0].click();
+</script>
+
+</body>
+</html>

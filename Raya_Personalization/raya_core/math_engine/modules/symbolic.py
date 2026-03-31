@@ -22,9 +22,11 @@ from .base_module import BaseMathModule
 from ..utils.normalizer import normalize_math_input
 
 
+# =========================
+# VARIABLES
+# =========================
 x, y, z = symbols("x y z")
 
-# Allowed math symbols for parser
 allowed_symbols = {
     "x": x,
     "y": y,
@@ -34,6 +36,7 @@ allowed_symbols = {
     "tan": tan,
     "log": log,
     "sqrt": sqrt,
+    "pi": pi,
 }
 
 
@@ -42,28 +45,45 @@ class SymbolicMathModule(BaseMathModule):
     name = "symbolic_math"
 
     def supports(self, query: str) -> bool:
-
-        pattern = r"[a-zA-Z]|\^|\(|\)|sin|cos|tan|sqrt|=|integrate|differentiate|solve|factor|expand|limit|simplify"
-
+        pattern = r"[a-zA-Z]|\^|\(|\)|=|sin|cos|tan|sqrt|log|integrate|differentiate|solve|factor|expand|limit|simplify"
         return bool(re.search(pattern, query))
 
     def solve(self, query: str):
 
         try:
-
+            # =========================
+            # STEP 0: NORMALIZATION
+            # =========================
             query = normalize_math_input(query)
 
-            # DIFFERENTIATION
+            # =========================
+            # STEP 1: DEGREE HANDLING
+            # =========================
+            def convert_degrees(q):
+                # sin(90) OR sin(90°)
+                def repl(match):
+                    func = match.group(1)
+                    val = match.group(2)
+                    return f"{func}(({val})*pi/180)"
+                return re.sub(r"(sin|cos|tan)\((\d+)(°?)\)", repl, q)
+
+            query = convert_degrees(query)
+
+            # =========================
+            # STEP 2: OPERATIONS
+            # =========================
+
+            # DIFFERENTIATE
             if query.startswith("differentiate"):
                 expr = query.replace("differentiate", "").strip()
                 expr = parse_expr(expr, local_dict=allowed_symbols)
-                return diff(expr, x)
+                return simplify(diff(expr))
 
-            # INTEGRATION
+            # INTEGRATE
             if query.startswith("integrate"):
                 expr = query.replace("integrate", "").strip()
                 expr = parse_expr(expr, local_dict=allowed_symbols)
-                return integrate(expr, x)
+                return simplify(integrate(expr))
 
             # EXPAND
             if query.startswith("expand"):
@@ -89,10 +109,15 @@ class SymbolicMathModule(BaseMathModule):
                 expr = parse_expr(expr, local_dict=allowed_symbols)
                 return simplify(expr)
 
-            # EQUATION SOLVING
+            # =========================
+            # STEP 3: EQUATIONS (ROBUST)
+            # =========================
             if query.startswith("solve") or "=" in query:
 
                 equation = query.replace("solve", "").strip()
+
+                if "=" not in equation:
+                    return "Invalid equation"
 
                 left, right = equation.split("=")
 
@@ -101,23 +126,29 @@ class SymbolicMathModule(BaseMathModule):
 
                 eq = left_expr - right_expr
 
-                solution = solve(eq, x)
+                variables = list(eq.free_symbols)
+
+                if not variables:
+                    return "No variable found"
+
+                var = variables[0]
+
+                solution = solve(eq, var)
 
                 return solution if solution else None
 
-            # DEFAULT: simplify expression
+            # =========================
+            # STEP 4: DEFAULT EXPRESSION
+            # =========================
             expr = parse_expr(query, local_dict=allowed_symbols)
 
             result = simplify(expr)
 
-            # evaluate numeric expressions
             if result.is_number:
                 return result.evalf()
 
             return result
 
         except Exception as e:
-
             print("[Symbolic Solver Error]", e)
-
             return "Invalid mathematical expression"

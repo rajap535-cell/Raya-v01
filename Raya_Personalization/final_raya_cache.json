@@ -752,7 +752,7 @@
   },
   "sin 45": {
     "source": "Math Engine",
-    "text": "0.8509035245341184",
+    "text": "0.707106781186548",
     "meta": {}
   },
   "integrate x2": {
@@ -852,7 +852,7 @@
   },
   "solve 2x410": {
     "source": "Math Engine",
-    "text": "3",
+    "text": "[3]",
     "meta": {}
   },
   "factor x22x1": {
@@ -907,7 +907,7 @@
   },
   "sin90": {
     "source": "Math Engine",
-    "text": "0.893996663600558",
+    "text": "Invalid mathematical expression",
     "meta": {}
   },
   "solver 3x515": {
@@ -1036,7 +1036,7 @@
   },
   "solve 2y 4 10": {
     "source": "Local LLM",
-    "text": "To solve for y, we need to isolate the variable.\n\nFirst, subtract 4 from both sides of the equation:\n\n2y + 4 - 4 = 10 - 4\n2y = 6\n\nNext, divide both sides by 2:\n\n(2y) / 2 = 6 / 2\ny = 3",
+    "text": "To solve for y, we need to isolate the variable y.\n\nFirst, subtract 4 from both sides of the equation:\n\n2y + 4 - 4 = 10 - 4\n2y = 6\n\nNext, divide both sides by 2:\n\n(2y) / 2 = 6 / 2\ny = 3\n\nTherefore, the solution is y = 3.",
     "meta": {}
   },
   "expand xy2": {
@@ -1047,6 +1047,79 @@
   "factor x2 2xy y2": {
     "source": "Math Engine",
     "text": "(x + y)**2",
+    "meta": {}
+  },
+  "what is the update of israel iran war": {
+    "source": "Pipeline",
+    "text": "Main Answer (Qa):\nSorry, I couldn't find an answer.",
+    "meta": {
+      "candidates": [
+        [
+          "qa",
+          0.1
+        ]
+      ],
+      "best_source": "qa"
+    }
+  },
+  "who is the founder of microsoft": {
+    "source": "Local LLM",
+    "text": "The founders of Microsoft are:\n\n1. Bill Gates\n2. Paul Allen\n\nThey co-founded Microsoft on April 4, 1975.",
+    "meta": {}
+  },
+  "what is 22": {
+    "source": "Local LLM",
+    "text": "2 + 2 = 4",
+    "meta": {}
+  },
+  "29898": {
+    "source": "Math Engine",
+    "text": "82",
+    "meta": {}
+  },
+  "sqrt 32": {
+    "source": "Math Engine",
+    "text": "5.65685424949238",
+    "meta": {}
+  },
+  "x y": {
+    "source": "Math Engine",
+    "text": "x + y",
+    "meta": {}
+  },
+  "x2 y2": {
+    "source": "Math Engine",
+    "text": "x**2 + y**2",
+    "meta": {}
+  },
+  "diifferentiate xy": {
+    "source": "Math Engine",
+    "text": "Invalid mathematical expression",
+    "meta": {}
+  },
+  "differentiate xy": {
+    "source": "Math Engine",
+    "text": "Invalid mathematical expression",
+    "meta": {}
+  },
+  "2x515": {
+    "source": "Math Engine",
+    "text": "[5]",
+    "meta": {}
+  },
+  "3y24": {
+    "source": "Math Engine",
+    "text": "[2]",
+    "meta": {}
+  },
+  "x25x6 0": {
+    "source": "Math Engine",
+    "text": "[2, 3]",
+    "meta": {}
+  },
+  "x2y2": {
+    "source": "Math Engine",
+    "text": "x**2 + y**2",
     "meta": {}
   }
 }

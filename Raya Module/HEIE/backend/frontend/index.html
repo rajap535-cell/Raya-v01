@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAYA Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+        }
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 200px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>RAYA Energy Dashboard</h1>
+
+    <!-- Analytics -->
+    <div class="card">
+        <h3>Avg Sleep</h3>
+        <p id="avgSleep">--</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Steps</h3>
+        <p id="totalSteps">--</p>
+    </div>
+
+    <div class="card">
+        <h3>Screen Time</h3>
+        <p id="avgScreen">--</p>
+    </div>
+
+    <!-- Logs Table -->
+    <h2>Daily Logs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Steps</th>
+                <th>Sleep</th>
+                <th>Work</th>
+                <th>Screen</th>
+            </tr>
+        </thead>
+        <tbody id="logTable"></tbody>
+    </table>
+
+<script>
+
+async function loadAnalytics() {
+    const res = await fetch("http://127.0.0.1:8000/analytics/1");
+    const data = await res.json();
+
+    document.getElementById("avgSleep").innerText = data.avg_sleep ?? "N/A";
+    document.getElementById("totalSteps").innerText = data.total_steps ?? "N/A";
+    document.getElementById("avgScreen").innerText = data.avg_screen_time ?? "N/A";
+}
+
+async function loadLogs() {
+    const res = await fetch("http://127.0.0.1:8000/logs/1");
+    const logs = await res.json();
+
+    const table = document.getElementById("logTable");
+
+    logs.forEach(log => {
+        const row = `
+            <tr>
+                <td>${log.date}</td>
+                <td>${log.steps}</td>
+                <td>${log.sleep_hours}</td>
+                <td>${log.work_hours}</td>
+                <td>${log.screen_time}</td>
+            </tr>
+        `;
+        table.innerHTML += row;
+    });
+}
+
+loadAnalytics();
+loadLogs();
+
+</script>
+
+</body>
+</html>

@@ -31,7 +31,7 @@
 
 <body>
 
-    <h1>RAYA Energy Dashboard</h1>
+    <h1>RAYA Human Energy Dashboard</h1>
 
     <!-- Analytics -->
     <div class="card">
@@ -48,6 +48,9 @@
         <h3>Screen Time</h3>
         <p id="avgScreen">--</p>
     </div>
+    
+    <h2>RAYA Insights</h2>
+    <ul id="coach"></ul>
 
     <!-- Logs Table -->
     <h2>Daily Logs</h2>
@@ -70,9 +73,17 @@ async function loadAnalytics() {
     const res = await fetch("http://127.0.0.1:8000/analytics/1");
     const data = await res.json();
 
-    document.getElementById("avgSleep").innerText = data.avg_sleep ?? "N/A";
-    document.getElementById("totalSteps").innerText = data.total_steps ?? "N/A";
-    document.getElementById("avgScreen").innerText = data.avg_screen_time ?? "N/A";
+    document.getElementById("avgSleep").innerText = data.reality.sleep;
+    document.getElementById("totalSteps").innerText = data.reality.steps;
+    document.getElementById("avgScreen").innerText = data.reality.screen;
+
+    const coachList = document.getElementById("coach");
+    coachList.innerHTML = "";
+
+    data.coach.forEach(msg => {
+        const li = `<li>${msg}</li>`;
+        coachList.innerHTML += li;
+    });
 }
 
 async function loadLogs() {

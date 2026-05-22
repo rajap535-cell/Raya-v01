@@ -1,5 +1,8 @@
-.vscode/
-# Large presentation files
-*.pptx
-*.ppt
-*.zip
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+node_modules/
+dist/
+build/

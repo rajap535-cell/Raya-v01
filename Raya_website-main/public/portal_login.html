@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Access | RAYA Energy</title>
+  <link rel="stylesheet" href="portal_login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Inline adjustment for any specific mobile tweaks or overlays */
+    @media (max-width: 1024px) {
+      .login-form-area {
+        background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <!-- LEFT SIDE: SYSTEM IDENTITY -->
+    <aside class="system-identity">
+      <div class="top-content">
+        <div class="tag-container">
+            <span class="system-tag">RAYA // ENERGY MODULE</span>
+            <span class="tag-line">SECURE ACCESS ENVIRONMENT</span>
+        </div>
+        
+        <header class="identity-header">
+          <h1>Energy Intelligence System<br>Access Gateway</h1>
+          <p class="identity-description">
+            This environment provides controlled access to live energy optimization systems. 
+            All interactions are logged and governed under operational protocols.
+          </p>
+        </header>
+
+        <div class="system-info">
+          <div class="info-item">
+            <span class="info-label">Status:</span>
+            <span class="info-value">Operational</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Environment:</span>
+            <span class="info-value">Production</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Access Mode:</span>
+            <span class="info-value">Restricted</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-content">
+        <span class="bottom-note">Authorized personnel only</span>
+      </div>
+    </aside>
+
+    <!-- RIGHT SIDE: LOGIN FORM -->
+    <main class="login-form-area">
+      <div class="top-system-context">
+        <span>RAYA // ENERGY MODULE</span>
+        <span>SECURE ACCESS ENVIRONMENT</span>
+      </div>
+      <div class="login-card">
+        <div class="auth-header">
+          <span class="auth-tag">AUTHENTICATION REQUIRED</span>
+          <h2 class="auth-title">Energy Intelligence Access Gateway</h2>
+        </div>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label for="user-id" class="form-label">Work Email or User ID</label>
+            <input type="text" id="user-id" class="form-input" placeholder="e.g. name@raya.energy" required autocomplete="username">
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-input" placeholder="••••••••" required autocomplete="current-password">
+          </div>
+
+          <div class="form-group">
+            <label for="access-key" class="form-label">Access Key (Optional)</label>
+            <input type="text" id="access-key" class="form-input" placeholder="X-000-000">
+          </div>
+
+          <button type="submit" id="auth-button" class="btn-authenticate">
+            <span class="lock-icon">🔒</span>
+            <span class="btn-text">Authenticate & Enter</span>
+            <div class="loader"></div>
+            <span id="loading-text" style="display:none; font-weight: 500;">Authenticating...</span>
+          </button>
+        </form>
+
+        <div class="form-footer">
+          <a href="#" class="footer-link">Forgot credentials?</a>
+          <a href="#" class="footer-link">Request access</a>
+        </div>
+
+        <div class="security-note">
+          This system is monitored. All access attempts are logged and audited.
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const form = document.getElementById('login-form');
+    const authButton = document.getElementById('auth-button');
+    const btnText = authButton.querySelector('.btn-text');
+    const lockIcon = authButton.querySelector('.lock-icon');
+    const loadingText = document.getElementById('loading-text');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Visual feedback
+      authButton.classList.add('authenticating');
+      authButton.disabled = true;
+      btnText.style.display = 'none';
+      lockIcon.style.display = 'none';
+      loadingText.style.display = 'inline';
+      
+      // Simulate authentication process
+      setTimeout(() => {
+        // Set authentication flag
+        localStorage.setItem('raya_auth', 'true');
+        
+        // Redirecting to dashboard.html as requested
+        window.location.href = 'dashboard.html';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

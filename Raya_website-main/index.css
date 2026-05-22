@@ -1,0 +1,254 @@
+:root {
+      --aqua: #00E6FF;
+      --gold: #FFD369;
+      --deep: #13397b;
+    }
+
+    body {
+      background: radial-gradient(ellipse at 10% 10%, rgba(222, 235, 237, 0.92), transparent 20%), linear-gradient(180deg, #e7e9ed 0%, #f2edf1 100%);
+      color: #04396e;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      /* padding-top removed for sticky behavior */
+    }
+
+    .glow-aqua {
+      box-shadow: 0 6px 24px rgba(0, 230, 255, 0.06);
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .bg-red-400 { background-color: #f87171; }
+
+    .btn-rune {
+      background: linear-gradient(180deg, rgba(0, 230, 255, 0.08), rgba(0, 230, 255, 0.03));
+      border: 1px solid rgba(0, 230, 255, 0.16);
+    }
+
+    .rune-gold {
+      box-shadow: 0 8px 26px rgba(255, 211, 105, 0.06);
+    }
+
+    .hero-figure {
+      background: linear-gradient(180deg, rgba(0, 230, 255, 0.04), rgba(0, 230, 255, 0.01));
+      border-radius: 18px;
+      border: 1px solid rgba(0, 230, 255, 0.06);
+    }
+
+    .faux-image {
+      background: linear-gradient(180deg, rgba(0, 230, 255, 0.02), rgba(0, 230, 255, 0.01));
+      height: 460px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rune-card {
+      background: rgba(255, 210, 105, 0.02);
+      border: 1px solid rgba(255, 210, 105, 0.05);
+      backdrop-filter: blur(6px);
+    }
+
+    a {
+      text-decoration: none
+    }
+
+    @keyframes floaty {
+      0% {
+        transform: translateY(0px)
+      }
+
+      50% {
+        transform: translateY(-6px)
+      }
+
+      100% {
+        transform: translateY(0px)
+      }
+    }
+
+    .floaty {
+      animation: floaty 6s ease-in-out infinite;
+    }
+
+    /* Planetary System Cards */
+    .planet-card {
+      position: relative;
+      background: linear-gradient(180deg,
+          rgba(255, 255, 255, 0.55),
+          rgba(255, 255, 255, 0.25));
+      border: 1px solid rgba(19, 57, 123, 0.08);
+      border-radius: 14px;
+      padding: 1.2rem;
+      transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .planet-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: linear-gradient(120deg,
+          rgba(0, 230, 255, 0.08),
+          transparent 60%);
+      opacity: 0;
+      transition: opacity 0.45s ease;
+      pointer-events: none;
+    }
+
+    .planet-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+      border-color: rgba(0, 230, 255, 0.35);
+    }
+
+    .planet-card:hover::before {
+      opacity: 1;
+    }
+
+    .planet-icon {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .planet-icon img {
+      max-height: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .planet-card:hover .planet-icon img {
+      transform: scale(1.04);
+    }
+
+    .planet-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--deep);
+      margin-top: 0.4rem;
+    }
+
+    .planet-desc {
+      font-size: 0.82rem;
+      color: #334155;
+      margin-top: 0.35rem;
+      line-height: 1.45;
+    }
+    /* RAYA Planetary System Scrollytelling Styles */
+    :root {
+      --scrolly-navy: #0a0f1d;
+      --scrolly-cyan: #00f2ff;
+    }
+
+    .bg-scrolly-navy { background-color: var(--scrolly-navy); }
+    .text-scrolly-cyan { color: var(--scrolly-cyan); }
+
+    .story-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+      letter-spacing: -0.05em;
+      width: 100%;
+      text-align: center;
+      z-index: 10;
+      color: white;
+      font-weight: 800;
+    }
+
+    #planetary-canvas {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--scrolly-navy);
+      color: white;
+    }
+
+    .loading-bar-container {
+      width: 16rem;
+      height: 0.5rem;
+      background-color: #1f2937;
+      border-radius: 9999px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 242, 255, 0.3);
+      margin-bottom: 1rem;
+    }
+
+    /* Custom Styles */
+    .h-\[300vh\] { height: 300vh; }
+
+    .loading-bar {
+      height: 100%;
+      background-color: var(--scrolly-cyan);
+      transition: width 0.3s ease;
+    }
+
+    /* Size Utilities for Scrollytelling */
+    .text-6xl { font-size: 3.75rem; }
+    .text-8xl { font-size: 6rem; }
+    .text-9xl { font-size: 8rem; }
+
+    @media (min-width: 768px) {
+        .md\:text-8xl { font-size: 6rem; }
+    }
+
+    @media (min-width: 1024px) {
+        .lg\:text-9xl { font-size: 10vw; }
+    }
+
+
+    /* Game Component Styles */
+    #raya-game-container canvas {
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-crisp-edges;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    #start-game {
+      text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+    }
+
+    #start-game:hover {
+      box-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
+    }
+
+    .game-node {
+      filter: drop-shadow(0 0 8px currentColor);
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      animation: marquee 30s linear infinite;
+    }
+
+    .hero-figure {
+      background: #020617;
+      border-radius: 18px;
+      border: 1px solid rgba(0, 230, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }

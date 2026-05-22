@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memory Explorer — Raya Experiments</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: #0a0f1c; color: #e0e7ff; }
+    .memory-card {
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid #334155;
+      border-left: 6px solid #38bdf8;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.75rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .memory-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Content -->
+  <main class="flex-1 p-6">
+    <h1 class="text-3xl font-bold text-cyan-400 mb-2">Memory Explorer</h1>
+    <p class="text-gray-300 mb-6">See how Raya might store, recall, and strengthen connections between memories.</p>
+
+    <div id="memory-timeline" class="space-y-4"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+  <script src="../../src/scripts/layout-loader.js"></script>
+
+  <script>
+    // Sample memory data
+    const memories = [
+      { time: "2025-01-12", title: "First User Query", detail: "Raya answered its very first user question about the solar system." },
+      { time: "2025-02-03", title: "Knowledge Link Formed", detail: "Connected data between AI and Neural Networks." },
+      { time: "2025-03-22", title: "Memory Reinforced", detail: "Recalled information multiple times, strengthening associations." },
+      { time: "2025-04-15", title: "Expanded Context", detail: "Added geopolitical data sources for richer responses." }
+    ];
+
+    const container = document.getElementById("memory-timeline");
+
+    memories.forEach(mem => {
+      const card = document.createElement("div");
+      card.className = "memory-card";
+      card.innerHTML = `
+        <div class="text-sm text-cyan-300">${mem.time}</div>
+        <div class="text-lg font-semibold">${mem.title}</div>
+        <div class="text-gray-400">${mem.detail}</div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+  <!-- Load Raya Assistant -->
+<div id="raya-assistant-container"></div>
+</body>
+</html>

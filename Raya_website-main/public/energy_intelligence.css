@@ -1,0 +1,382 @@
+/* ================================================
+   RAYA Energy Intelligence — Infrastructure Grade
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* --- Root Variables --- */
+:root {
+  --dark-bg: #0d0f11;
+  --dark-bg-alt: #131518;
+  --light-bg: #f2f4f6;
+  --light-bg-alt: #e9ecef;
+  
+  --accent: #37475a;  /* Muted industrial steel */
+  --accent-hover: #2c3338;
+  
+  --text-white: #e8eaed;
+  --text-muted: #80868b;
+  --text-dark: #121314;
+  --text-dark-muted: #5f6368;
+  
+  --border-light: rgba(255, 255, 255, 0.05);
+  --border-dark: rgba(0, 0, 0, 0.08);
+
+  /* Spacing Rhythm */
+  --pad-expansive: 140px 0;
+  --pad-standard: 100px 0;
+  --pad-compressed: 60px 0;
+}
+
+/* --- Base Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-white);
+  line-height: 1.8; /* Increased for readability/serious feel */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Global Depth Overlay (Subtle Pattern) --- */
+.depth-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.03;
+  background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px);
+  background-size: 30px 30px;
+}
+
+/* --- Section Bases --- */
+.dark-section {
+  background-color: var(--dark-bg);
+  color: var(--text-white);
+  padding: var(--pad-standard);
+  position: relative;
+}
+
+.dark-section-alt {
+  background-color: var(--dark-bg-alt);
+  padding: var(--pad-expansive); /* More breathing space */
+}
+
+.light-section {
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  padding: var(--pad-standard);
+}
+
+.light-section-alt {
+  background-color: var(--light-bg-alt);
+  color: var(--text-dark);
+  padding: var(--pad-compressed); /* Varied rhythm */
+}
+
+/* --- Container --- */
+.section-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  background-image: url('../assets/raya_energy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: #080a0c;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 15, 17, 0.9) 0%,
+    rgba(13, 15, 17, 0.7) 50%,
+    rgba(13, 15, 17, 0.95) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-headline {
+  font-size: 3.5rem;
+  font-weight: 800; /* Increased weight */
+  line-height: 1.1;
+  letter-spacing: -0.02em; /* Tighter letter spacing */
+  color: var(--text-white);
+  max-width: 800px;
+  margin-bottom: 32px;
+}
+
+.hero-sub {
+  font-size: 1.25rem;
+  font-weight: 300; /* Lighter weight for contrast */
+  color: var(--text-muted);
+  max-width: 680px;
+  margin-bottom: 16px;
+}
+
+.hero-tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 48px;
+}
+
+/* --- CTA Buttons (Sharpened) --- */
+.cta-btn {
+  display: inline-block;
+  padding: 12px 30px; /* More compact */
+  background-color: var(--accent);
+  color: #fff;
+  font-size: 0.88rem; /* Smaller text */
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 2px; /* Sharper radius */
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.cta-btn:hover {
+  background-color: var(--accent-hover);
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-1px);
+}
+
+.cta-trust {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 18px;
+  opacity: 0.6;
+}
+
+/* --- Section Headlines --- */
+.section-headline {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+.section-headline-center {
+  text-align: center;
+}
+
+.section-subtext {
+  font-size: 1.1rem;
+  font-weight: 300; /* Lighter weight */
+  line-height: 1.85;
+}
+
+.section-subtext.muted-dark {
+  color: var(--text-dark-muted);
+}
+
+/* --- Two Column Layout --- */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Asymmetric balance */
+  gap: 80px;
+  align-items: start;
+}
+
+/* --- Bullet Lists --- */
+.styled-list {
+  list-style: none;
+}
+
+.styled-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.styled-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 12px;
+  height: 1px;
+  background-color: var(--accent);
+}
+
+/* --- 2x2 Card Grid --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card-grid .card {
+  border: 1px solid var(--border-dark);
+  background-color: rgba(0,0,0,0.01);
+  border-radius: 2px;
+  padding: 30px 24px;
+}
+
+.card .card-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card .card-desc {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--text-dark-muted);
+}
+
+/* --- Architecture Layers --- */
+.arch-layer {
+  padding: 50px 0;
+  border-top: 1px solid var(--border-dark);
+}
+
+.arch-layer h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+/* --- Governance Cards (Refined & Asymmetric) --- */
+.governance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 instead of 4 row */
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.governance-card {
+  border: 1px solid var(--border-light);
+  background-color: rgba(255,255,255,0.01);
+  padding: 40px;
+  transition: background 0.2s ease;
+}
+
+.governance-card:hover {
+  background-color: rgba(255,255,255,0.02);
+}
+
+.governance-card .gov-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.governance-card .gov-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 12px;
+}
+
+.governance-card .gov-desc {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+/* --- Deployment Environment Grid --- */
+.env-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background-color: var(--border-dark); /* Creates thin borders */
+}
+
+.env-grid .env-item {
+  background-color: var(--light-bg);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 20px;
+  text-align: center;
+}
+
+/* --- Stat Blocks --- */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.stat-block .stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+}
+
+.stat-block .stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-dark-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --- Closing Text --- */
+.closing-text {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+}
+
+/* --- Utility Typography --- */
+.tech-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .split-layout { grid-template-columns: 1fr; gap: 40px; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .governance-grid { grid-template-columns: 1fr; }
+  .hero-headline { font-size: 2.8rem; }
+}

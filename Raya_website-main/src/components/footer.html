@@ -1,5 +1,8 @@
-<footer class="mt-16 bg-slate-950/90 backdrop-blur-xl border-t border-slate-800/60 pb-8 pt-12">
-  <div class="max-w-6xl mx-auto px-6">
+<footer class="relative mt-16 bg-slate-950/90 backdrop-blur-xl border-t border-slate-800/60 pb-8 pt-12 overflow-hidden">
+  <!-- Subtle Grid Background -->
+  <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px); background-size: 32px 32px; opacity: 0.5;"></div>
+  
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
       
       <!-- Brand & Mission -->
@@ -9,6 +12,10 @@
              <span class="text-cyan-400 font-bold text-xs">R</span>
           </div>
           <span class="text-xl font-bold text-white tracking-tight">Raya</span>
+        </div>
+        <div class="text-[0.65rem] font-mono text-cyan-500/60 uppercase tracking-widest mt-1 mb-2 leading-relaxed">
+          Planetary Coordination Architecture<br>
+          Operational Intelligence Framework
         </div>
         <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
           An architecture for a Type-I Civilization. Building open intelligence systems for planetary coordination.

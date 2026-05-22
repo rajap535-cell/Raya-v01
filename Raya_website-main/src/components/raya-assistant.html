@@ -1,125 +1,262 @@
 <!-- raya-assistant.html -->
 <style>
   :root {
-    --aqua:#00E6FF; 
-    --gold:#FFD369; 
-    --deep:#041025;
+    --aqua: #00E6FF;
+    --gold: #FFD369;
+    --deep: #020b1a;
+    --panel-bg: rgba(2, 11, 26, 0.94);
+    --bubble-raya: rgba(0, 230, 255, 0.08);
+    --bubble-user: rgba(255, 211, 105, 0.08);
   }
 
-  /* Orb style */
+  /* Energy Core Orb */
   .raya-orb {
-    position: fixed; 
-    bottom: 24px; 
-    right: 24px; 
-    width: 64px; 
-    height: 64px;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 68px;
+    height: 68px;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, var(--aqua), #003344);
-    display: flex; 
-    align-items: center; 
+    background: transparent;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    font-weight: bold; 
-    color: white; 
-    font-size: 20px;
-    box-shadow: 0 0 20px rgba(0,230,255,0.6), inset 0 0 10px rgba(0,230,255,0.3);
     cursor: pointer;
     z-index: 1000;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
   .raya-orb:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 25px rgba(0,230,255,0.8), inset 0 0 12px rgba(0,230,255,0.4);
+    transform: scale(1.1) rotate(5deg);
   }
-  .raya-orb .core { pointer-events:none; }
 
-  /* Assistant panel */
+  .orb-rings {
+    position: absolute;
+    inset: -4px;
+    border: 1px solid rgba(0, 230, 255, 0.2);
+    border-radius: 50%;
+    animation: rotate 8s linear infinite;
+  }
+  .orb-rings::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    width: 4px;
+    height: 4px;
+    background: var(--aqua);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--aqua);
+  }
+
+  .orb-core {
+    width: 52px;
+    height: 52px;
+    background: radial-gradient(circle at 35% 35%, var(--aqua), #003344);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(0,230,255,0.4), inset 0 0 12px rgba(0,230,255,0.5);
+    animation: breathe 3s ease-in-out infinite;
+    z-index: 2;
+  }
+
+  @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(0,230,255,0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(0,230,255,0.6); }
+  }
+
+  /* Assistant panel Upgrade */
   .assistant-panel {
     position: fixed;
-    bottom: 100px;
+    bottom: 105px;
     right: 24px;
-    width: 320px;
-    max-height: 70vh;
-    background: rgba(2,19,34,0.96);
-    border: 1px solid rgba(0,230,255,0.2);
-    border-radius: 16px;
-    box-shadow: 0 0 25px rgba(0,230,255,0.2);
+    width: 340px;
+    max-height: 600px; /* Increased from 500px */
+    background: var(--panel-bg);
+    border: 1px solid rgba(0, 230, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 230, 255, 0.1);
     display: flex;
     flex-direction: column;
     z-index: 999;
     overflow: hidden;
-    backdrop-filter: blur(10px);
-    transform: translateY(20px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transform: translateY(30px) scale(0.95);
     opacity: 0;
     pointer-events: none;
-    transition: all 0.25s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .assistant-panel.active {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     opacity: 1;
     pointer-events: auto;
   }
+
   .assistant-header {
-    padding: 12px;
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--aqua);
-    border-bottom: 1px solid rgba(0,230,255,0.2);
+    padding: 16px 20px;
+    background: rgba(0, 230, 255, 0.03);
+    border-bottom: 1px solid rgba(0, 230, 255, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  .header-info { display: flex; align-items: center; gap: 10px; }
+  .status-dot { width: 8px; height: 8px; background: var(--aqua); border-radius: 50%; box-shadow: 0 0 8px var(--aqua); }
+  .header-title { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--aqua); }
+
   .assistant-messages {
     flex: 1;
-    padding: 12px;
+    padding: 20px;
     overflow-y: auto;
-    font-size: 14px;
-  }
-  .assistant-messages::-webkit-scrollbar { width:6px; }
-  .assistant-messages::-webkit-scrollbar-thumb { background: rgba(0,230,255,0.2); border-radius: 3px; }
-
-  .assistant-input {
     display: flex;
-    border-top: 1px solid rgba(0,230,255,0.2);
+    flex-direction: column;
+    gap: 16px;
+    scroll-behavior: smooth;
   }
-  .assistant-input input {
-    flex: 1;
-    padding: 10px;
+  .assistant-messages::-webkit-scrollbar { width: 4px; }
+  .assistant-messages::-webkit-scrollbar-thumb { background: rgba(0, 230, 255, 0.1); border-radius: 10px; }
+
+  /* Message Bubbles */
+  .msg-wrapper { display: flex; flex-direction: column; max-width: 85%; animation: slideIn 0.3s ease-out; }
+  .msg-wrapper.user { align-self: flex-end; }
+  .msg-wrapper.raya { align-self: flex-start; }
+
+  .msg-bubble {
+    padding: 12px 16px;
+    border-radius: 16px;
     font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+  }
+  .user .msg-bubble { background: var(--bubble-user); color: var(--gold); border: 1px solid rgba(255, 211, 105, 0.1); border-bottom-right-radius: 4px; }
+  .raya .msg-bubble { background: var(--bubble-raya); color: #E6EEF6; border: 1px solid rgba(0, 230, 255, 0.1); border-bottom-left-radius: 4px; }
+
+  .msg-time { font-size: 10px; color: rgba(255, 255, 255, 0.3); margin-top: 4px; }
+  .user .msg-time { text-align: right; }
+
+  /* Typing Indicator */
+  .typing { display: flex; gap: 4px; padding: 12px 16px; background: var(--bubble-raya); border-radius: 16px; border-bottom-left-radius: 4px; width: fit-content; border: 1px solid rgba(0, 230, 255, 0.05); }
+  .dot { width: 6px; height: 6px; background: var(--aqua); border-radius: 50%; opacity: 0.4; animation: bounce 1.4s infinite; }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes bounce { 0%, 100% { transform: translateY(0); opacity: 0.4; } 50% { transform: translateY(-4px); opacity: 1; } }
+  @keyframes slideIn { from { transform: translateY(10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+  .assistant-input-container {
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 230, 255, 0.1);
+  }
+  .input-wrapper {
+    display: flex;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 4px 4px 4px 12px;
+    transition: border-color 0.3s;
+  }
+  .input-wrapper:focus-within { border-color: rgba(0, 230, 255, 0.3); }
+
+  .assistant-input-container input {
+    flex: 1;
     background: transparent;
     border: none;
-    color: #E6EEF6;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    padding: 8px 0;
   }
-  .assistant-input button {
-    padding: 0 16px;
+  .send-btn {
+    width: 36px;
+    height: 36px;
     background: var(--aqua);
-    color: #021322;
-    font-weight: bold;
+    color: var(--deep);
     border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
   }
-  .msg {
-    margin-bottom: 10px;
-    line-height: 1.4;
+  .send-btn:hover { transform: scale(1.05); background: #33f0ff; }
+  .close-btn { background: transparent; border: none; color: rgba(255, 255, 255, 0.5); cursor: pointer; font-size: 18px; transition: color 0.2s; }
+  .close-btn:hover { color: white; }
+
+  /* Quick Queries */
+  .quick-queries {
+    padding: 0 20px 16px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; 
+    min-height: 85px; /* Added protection for 2 lines */
+    max-height: 120px;
+    flex-shrink: 0; /* Prevents squeezing */
+    overflow-y: auto;
+    animation: fadeIn 0.5s ease-out both;
   }
-  .msg.user { color: var(--gold); text-align: right; }
-  .msg.raya { color: #E6EEF6; text-align: left; }
+  .quick-queries::-webkit-scrollbar { width: 4px; }
+  .quick-queries::-webkit-scrollbar-thumb { background: rgba(0, 230, 255, 0.2); border-radius: 4px; }
+  
+  .query-pill {
+    padding: 8px 16px;
+    background: rgba(0, 230, 255, 0.05);
+    border: 1px solid rgba(0, 230, 255, 0.2);
+    border-radius: 30px;
+    color: var(--aqua);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .query-pill:hover {
+    background: rgba(0, 230, 255, 0.1);
+    border-color: rgba(0, 230, 255, 0.4);
+    transform: translateY(-2px);
+  }
+  .query-pill:active { transform: translateY(0); }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 
 <!-- Floating Orb -->
-<button id="rayaOrb" class="raya-orb" aria-label="Open Ask Raya assistant" title="Ask Raya">
-  <div class="core">R</div>
+<button id="rayaOrb" class="raya-orb" aria-label="Open Ask Raya assistant">
+  <div class="orb-rings"></div>
+  <div class="orb-core">R</div>
 </button>
 
 <!-- Assistant Panel -->
 <aside id="assistantPanel" class="assistant-panel">
   <div class="assistant-header">
-    Ask Raya
-    <button id="closeAssistant" class="text-slate-400 hover:text-white">✕</button>
+    <div class="header-info">
+      <div class="status-dot"></div>
+      <span class="header-title">Ask Raya</span>
+    </div>
+    <button id="closeAssistant" class="close-btn" title="Close Panel">✕</button>
   </div>
-  <div id="assistantMessages" class="assistant-messages"></div>
-  <div class="assistant-input">
-    <input id="assistantInput" type="text" placeholder="Type a message..." />
-    <button id="assistantSend">➤</button>
+  <div id="assistantMessages" class="assistant-messages">
+    <!-- Messages injected here -->
+  </div>
+  <div id="quickQueries" class="quick-queries">
+    <!-- Quick query pills injected here -->
+  </div>
+  <div class="assistant-input-container">
+    <div class="input-wrapper">
+      <input id="assistantInput" type="text" placeholder="Type message..." autocomplete="off" />
+      <button id="assistantSend" class="send-btn" title="Send (Enter)">➤</button>
+    </div>
   </div>
 </aside>
 
@@ -131,51 +268,173 @@
   const input = document.getElementById('assistantInput');
   const sendBtn = document.getElementById('assistantSend');
   const messages = document.getElementById('assistantMessages');
+  const queriesContainer = document.getElementById('quickQueries');  let history = JSON.parse(localStorage.getItem('raya-chat')||'[]');
+  let knowledgeBase = null;
 
-  // restore history
-  let history = JSON.parse(localStorage.getItem('raya-chat')||'[]');
-  function renderHistory(){
-    messages.innerHTML = '';
-    history.forEach(m => {
-      const div = document.createElement('div');
-      div.className = 'msg '+m.role;
-      div.textContent = m.text;
-      messages.appendChild(div);
-    });
+  async function loadKnowledge() {
+    try {
+      const pathParts = window.location.pathname.split("/");
+      const cleanParts = pathParts.filter((p) => p.length > 0);
+      const publicIndex = cleanParts.indexOf("public");
+      let prefix = "";
+      if (publicIndex !== -1) {
+        const depth = cleanParts.length - 1 - publicIndex;
+        prefix = "../".repeat(depth);
+      }
+      
+      const response = await fetch(prefix + 'data/raya_knowledge.json');
+      if (!response.ok) throw new Error('Knowledge sync failed');
+      knowledgeBase = await response.json();
+      
+      if (panel.classList.contains('active') && history.length === 0) {
+        renderSuggestions();
+      }
+    } catch (err) {
+      console.error('Raya Intelligence Sync Error:', err);
+      // Minimal fallback
+      knowledgeBase = {
+        intents: [],
+        suggestions: ["What is Raya?", "How to contribute?"],
+        fallbacks: ["Neural link synchronizing... Please stand by for the next intelligence upgrade."]
+      };
+    }
+  }
+
+  function getTime() {
+    const d = new Date();
+    return d.getHours().toString().padStart(2,'0') + ':' + d.getMinutes().toString().padStart(2,'0');
+  }
+
+  function renderMessage(m) {
+    const wrapper = document.createElement('div');
+    wrapper.className = `msg-wrapper ${m.role}`;
+    wrapper.innerHTML = `
+      <div class="msg-bubble">${m.text}</div>
+      <div class="msg-time">${m.time || getTime()}</div>
+    `;
+    messages.appendChild(wrapper);
     messages.scrollTop = messages.scrollHeight;
   }
-  renderHistory();
 
-  function addMessage(role,text){
-    history.push({role,text});
-    if(history.length>50) history.shift();
-    localStorage.setItem('raya-chat',JSON.stringify(history));
-    renderHistory();
+  function renderHistory() {
+    messages.innerHTML = '';
+    if (history.length === 0) {
+      setTimeout(() => {
+        addMessage('raya', "Operational status: Optimal. I am Raya Intelligence. How can I assist you with the first Open Knowledge network?");
+        renderSuggestions();
+      }, 500);
+    } else {
+      history.forEach(m => renderMessage(m));
+      queriesContainer.style.display = 'none';
+    }
   }
 
-  function fakeRayaResponse(userText){
-    const responses = [
-      "Interesting thought! I’ll note that.",
-      "Raya is still evolving — imagine this connected to real knowledge soon.",
-      "That’s a great question. For now, consider it a seed for future AI upgrades.",
-      "I hear you. The devlogs will reflect on this soon."
-    ];
-    return responses[Math.floor(Math.random()*responses.length)];
+  function renderSuggestions() {
+    if (!knowledgeBase || !knowledgeBase.suggestions) return;
+    queriesContainer.innerHTML = '';
+    queriesContainer.style.display = 'flex';
+    knowledgeBase.suggestions.forEach(q => {
+      const pill = document.createElement('div');
+      pill.className = 'query-pill';
+      pill.textContent = q;
+      pill.onclick = () => handleSend(q);
+      queriesContainer.appendChild(pill);
+    });
   }
 
-  function handleSend(){
-    const text = input.value.trim();
+  function addMessage(role, text) {
+    const time = getTime();
+    const msg = { role, text, time };
+    history.push(msg);
+    if(history.length > 30) history.shift();
+    localStorage.setItem('raya-chat', JSON.stringify(history));
+    renderMessage(msg);
+  }
+
+  function showTyping() {
+    const div = document.createElement('div');
+    div.id = 'typingIndicator';
+    div.className = 'msg-wrapper raya';
+    div.innerHTML = `<div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function hideTyping() {
+    const el = document.getElementById('typingIndicator');
+    if(el) el.remove();
+  }
+
+  function getRayaResponse(userText) {
+    if (!knowledgeBase) return "Initializing analysis... Neural link synchronization in progress.";
+    
+    const text = userText.toLowerCase().trim();
+    let bestIntent = null;
+    let maxMatches = 0;
+
+    knowledgeBase.intents.forEach(intent => {
+      let matches = 0;
+      intent.triggers.forEach(trigger => {
+        if (text.includes(trigger)) matches++;
+      });
+      if (matches > maxMatches) {
+        maxMatches = matches;
+        bestIntent = intent;
+      }
+    });
+
+    if (bestIntent && maxMatches > 0) {
+      const pool = bestIntent.responses;
+      return pool[Math.floor(Math.random() * pool.length)];
+    }
+
+    const fallbacks = knowledgeBase.fallbacks || ["Interesting query. I have logged this for our research team."];
+    return fallbacks[Math.floor(Math.random() * fallbacks.length)];
+  }
+
+  function handleSend(overrideText) {
+    const text = (typeof overrideText === 'string' ? overrideText : input.value).trim();
     if(!text) return;
+
     addMessage('user', text);
-    input.value='';
-    setTimeout(()=>{ 
-      addMessage('raya', fakeRayaResponse(text)); 
-    },600);
+    input.value = '';
+    queriesContainer.style.display = 'none';
+
+    setTimeout(() => {
+      showTyping();
+      setTimeout(() => {
+        hideTyping();
+        addMessage('raya', getRayaResponse(text));
+        setTimeout(renderSuggestions, 400); 
+      }, 1500 + Math.random() * 1000);
+    }, 400);
   }
 
-  orb.addEventListener('click', ()=> panel.classList.toggle('active'));
-  closeBtn.addEventListener('click', ()=> panel.classList.remove('active'));
+  panel.addEventListener('transitionend', (e) => {
+    if (panel.classList.contains('active') && history.length === 0) {
+      renderHistory();
+    }
+  });
+
+  orb.addEventListener('click', () => {
+    panel.classList.toggle('active');
+    if (panel.classList.contains('active')) {
+      renderHistory();
+      input.focus();
+    }
+  });
+
+  closeBtn.addEventListener('click', () => panel.classList.remove('active'));
   sendBtn.addEventListener('click', handleSend);
-  input.addEventListener('keydown', e=>{ if(e.key==='Enter') handleSend(); });
+  input.addEventListener('keydown', e => { if(e.key === 'Enter') handleSend(); });
+
+  setTimeout(() => {
+    if (!panel.classList.contains('active') && history.length === 0) {
+      orb.style.boxShadow = '0 0 40px rgba(0, 230, 255, 1)';
+      setTimeout(() => orb.style.boxShadow = '', 2000);
+    }
+  }, 10000);
+
+  loadKnowledge();
 })();
 </script>

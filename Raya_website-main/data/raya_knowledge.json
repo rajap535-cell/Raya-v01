@@ -1,0 +1,170 @@
+{
+  "intents": [
+    {
+      "id": "mission",
+      "triggers": ["raya", "mission", "goal", "objective", "vision", "what are you", "who are you", "purpose", "type-i", "type 1"],
+      "responses": [
+        "Raya is a digital interface for the Planetary Coordination Architecture, aiming to transition humanity toward a Type-I Civilization.",
+        "Our mission is to build the first Open Knowledge Intelligence — a community-driven, decentralized 'world brain' for planetary coordination.",
+        "We are designing an indigenous AI ecosystem for India and the world, focused on transparent, auditable intelligence for planetary systems."
+      ]
+    },
+    {
+      "id": "energy",
+      "triggers": ["energy", "electricity", "grid", "power", "deterministic", "optimization", "efficiency"],
+      "responses": [
+        "Raya Energy Intelligence is a deterministic optimization layer that improves efficiency by 8–18% without autonomous policy mutation.",
+        "Our energy module focuses on grid synchronization and load modeling. It operates under 4 strict rules: Deterministic, Immutable, No Mutation, and Human Override.",
+        "Unlike speculative AI, Raya Energy is engineering infrastructure. It performs structured telemetry ingestion and real-time consumption modeling."
+      ]
+    },
+    {
+      "id": "governance",
+      "triggers": ["rules", "governance", "control", "ethics", "who is in charge", "safety", "override"],
+      "responses": [
+        "Our Governance is based on 4 Rules: 1. Deterministic Output, 2. Immutable Logging, 3. No Autonomous Policy Mutation, and 4. Human Override Architecture.",
+        "Every Raya output is reproducible and traceable. We prioritize human supervisory control over autonomous policy rewrites.",
+        "Ethics at Raya means scientific integrity over ideology. Our architecture is adaptive, not autonomous, keeping final authority external."
+      ]
+    },
+    {
+      "id": "principles",
+      "triggers": ["philosophy", "integrity", "limits", "values", "principles", "ethics"],
+      "responses": [
+        "Raya follows 4 foundational principles: Long-term stability, scientific integrity, planetary limits, and humanity over checking-less growth.",
+        "We prioritize long-term planetary stability over short-term optimization. Our models are scientific and auditable.",
+        "In our architecture, human sustainability is the primary metric. Scientific integrity and humanity's shared future are non-negotiable."
+      ]
+    },
+    {
+      "id": "tech",
+      "triggers": ["architecture", "technology", "stack", "tailwind", "how was this built", "code", "built with", "modular"],
+      "responses": [
+        "Raya's web portal is a Modular Static Site built with HTML5, Tailwind CSS 4.0, and Vanilla JavaScript for maximum performance and auditability.",
+        "We use a custom layout-loader.js to inject modular components like me! This ensures seamless path normalization and rapid loading.",
+        "Our design system is built on 'Planetary Intelligence' aesthetics: Glassmorphism, dynamic motion, and a clean industrial hierarchy."
+      ]
+    },
+    {
+      "id": "join",
+      "triggers": ["join", "help", "contribute", "developer", "research", "involved", "participate"],
+      "responses": [
+        "Raya is a community-first initiative. You can follow our journey through the devlogs or contribute to our open-source research modules.",
+        "We are seeking researchers, builders, and citizens who believe in Earth as a single, shared system. Check our 'Journey' page for milestones.",
+        "The first Open Knowledge network is built by many. Stay tuned for our upcoming developer platform and research grants."
+      ]
+    },
+    {
+      "id": "greeting",
+      "triggers": ["hello", "hi", "greetings", "hey", "anybody"],
+      "responses": [
+        "Neural link active. Welcome to the Raya Intelligence interface. How may I coordinate with you today?",
+        "Greetings, Researcher. I am monitoring the planetary synchronization status. What is your query?",
+        "Welcome back to the Open Knowledge hub. I am ready to parse your request."
+      ]
+    },
+    {
+      "id": "water",
+      "triggers": ["water", "scarcity", "cycles", "sustainable distribution", "drought", "oceans", "aquifers"],
+      "responses": [
+        "Raya's Water module focuses on understanding water cycles, managing demand scarcity, and designing sustainable distribution systems.",
+        "We approach water as a finite planetary resource. Our models analyze global distribution to prevent local scarcity failures.",
+        "Sustainable water distribution is one of our 4 Planetary Pillars. We coordinate data to ensure efficient usage of global water resources."
+      ]
+    },
+    {
+      "id": "farming",
+      "triggers": ["farming", "agriculture", "food security", "crops", "soil", "harvest", "fertilizer"],
+      "responses": [
+        "Raya supports climate-aware agriculture and food security through resource-efficient farming simulations and policy suggestions.",
+        "Our Farming pillar aims to align agricultural output with planetary limits, ensuring long-term food security for a growing population.",
+        "We model the impact of climate shifts on global farming systems to help builders design more resilient agriculture infrastructure."
+      ]
+    },
+    {
+      "id": "sustainability",
+      "triggers": ["health", "education", "well-being", "economic", "sustainability", "hsi", "human stability"],
+      "responses": [
+        "The Human Sustainability Index (HSI) measures planetary well-being across health, education, and economic stability metrics.",
+        "In Raya's architecture, human sustainability is the primary metric for success. We prioritize humanity's shared future over short-term optimization.",
+        "Our Human Sustainability module integrates global health and education data to provide a unified 'well-being' telemetry layer."
+      ]
+    },
+    {
+      "id": "game",
+      "triggers": ["game", "experiment", "synchronize", "play", "interactive", "grid synchronization", "stabilize"],
+      "responses": [
+        "Experience the complexity of planetary coordination in our 'Grid Synchronization Experiment' on the homepage. Can you maintain 100% stability?",
+        "The Grid Experiment is a real-time simulation of energy node synchronization. It demonstrates why deterministic control is vital for infrastructure.",
+        "Try stabilizing the system yourself! Our interactive grid protocol allows you to synchronize fluctuating energy nodes to maintain global balance."
+      ]
+    },
+    {
+      "id": "audience",
+      "triggers": ["who is it for", "target", "researchers", "builders", "citizens", "policy makers"],
+      "responses": [
+        "RAYA is for researchers seeking system-level clarity and builders designing infrastructure with long-term consequences.",
+        "We serve citizens, policy makers, and infrastructure builders who believe in Earth as a single, shared, and finite system.",
+        "Raya is built for anyone focused on transitioning humanity toward a Type-I Civilization through transparent, auditable intelligence."
+      ]
+    },
+    {
+      "id": "future",
+      "triggers": ["finished", "complete", "complete product", "status", "roadmap", "evolving"],
+      "responses": [
+        "RAYA is not a finished product; it is a continuously evolving architecture for planetary intelligence that grows through research and iteration.",
+        "Our structure adapts as understanding deepens. We prioritize public learning and long-term systems thinking over quick, static releases.",
+        "Every phase of Raya is a seed for the next. We are continuously integrating new planetary telemetry into our core architecture."
+      ]
+    },
+    {
+      "id": "design",
+      "triggers": ["industrial", "control system", "professional", "serious", "restraint", "minimal"],
+      "responses": [
+        "Raya follows an 'Industrial Control System' aesthetic. We value enterprise restraint, clean hierarchy, and wide spacing over flashy marketing.",
+        "Our visual identity is calm and structured. We use a minimal color palette to communicate authority, discipline, and secure access.",
+        "Atmospheric clarity and engineering discipline are our design pillars. We avoid 'AI startup' hype in favor of industrial-grade transparency."
+      ]
+    },
+    {
+      "id": "telemetry",
+      "triggers": ["telemetry", "sensors", "meters", "plc", "data ingestion", "source-validated", "integrity"],
+      "responses": [
+        "Raya integrates with smart meters, grid sensors, and industrial PLC systems. All data is source-validated and integrity-checked.",
+        "Our telemetry layer ingests structured data from renewable telemetry and battery storage units to build real-time consumption models.",
+        "Structured telemetry ingestion is the foundation of our modeling engine. We ensure every data point is timestamped and auditable."
+      ]
+    },
+    {
+      "id": "performance",
+      "triggers": ["statistics", "performance", "numbers", "efficiency", "improvement", "measured", "impact"],
+      "responses": [
+        "In structured deployments, Raya has shown 8–18% efficiency improvements and significant peak penalty reductions.",
+        "Our Measured Operational Impact includes faster anomaly detection, reduced operational waste, and improved equipment lifecycles.",
+        "While performance depends on integration depth, our deterministic layering aims for verifiable efficiency gains across industrial environments."
+      ]
+    },
+    {
+      "id": "coordination",
+      "triggers": ["coordintation", "fluctuate", "nodes", "balancing", "alignment"],
+      "responses": [
+        "Global coordination means aligning demand volatility with buffering logic across diverse energy environments.",
+        "Raya balances fluctuating energy nodes through deterministic optimization to maintain planetary grid stability.",
+        "Energy is not scarce; it is simply misaligned. Raya coordinates response timing to bridge the gap between supply and demand."
+      ]
+    }
+  ],
+  "suggestions": [
+    "What is Raya?",
+    "How does Energy Intelligence work?",
+    "What are the 4 rules of governance?",
+    "What is the Grid Experiment?",
+    "How to contribute?"
+  ],
+  "fallbacks": [
+    "Analyzing query parameters... This specific domain is currently being mapped by our research team.",
+    "Interesting observation. I have logged this for the core development logs. This helps improve the planetary intelligence model.",
+    "Operational parameters are evolving. While I don't have a direct data point for that yet, it aligns with our goal of planetary clarity.",
+    "Raya is still in seed phase. Your input contributes to our next intelligence upgrade. Stay tuned to the journey."
+  ]
+}

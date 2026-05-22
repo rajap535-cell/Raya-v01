@@ -131,6 +131,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-stretch py-2">
 
           <!-- Energy -->
+          <a href="public/energy_intelligence.html" class="no-underline text-inherit">
           <div class="planet-card">
             <div class="planet-icon">
               <img src="assets/raya_energy.jpg" alt="Raya Energy" class="rounded-lg">
@@ -140,6 +141,7 @@
               Simulating renewable transitions, grid coordination, and long-term planetary energy balance.
             </div>
           </div>
+          </a>
 
           <!-- Water -->
           <div class="planet-card">
@@ -164,6 +166,7 @@
           </div>
 
           <!-- Human Sustainability -->
+          <a href="public/hsi_module.html" class="no-underline text-inherit">
           <div class="planet-card">
             <div class="planet-icon">
               <img src="assets/raya_hsi.jpg" alt="Raya Human Sustainability" class="rounded-lg">
@@ -173,8 +176,52 @@
               Measuring human well-being across health, education, environment, and economic stability.
             </div>
           </div>
+          </a>
 
         </div>
+
+        <!-- Grid Experiment (Game) -->
+        <section class="mt-10 pt-4 border-t border-slate-200">
+           <div class="mb-8 max-w-4xl">
+            <h2 class="text-2xl font-semibold" style="color:var(--deep)">
+              Grid Synchronization Experiment
+            </h2>
+            <p class="text-slate-800 py-2">
+              Experience the complexity of planetary coordination. Synchronize fluctuating energy nodes to maintain global stability.
+            </p>
+            
+            <div id="raya-game-container" class="mt-6 p-6 rounded-2xl bg-[#0a0f1d] border border-cyan-500/30 relative overflow-hidden ring-1 ring-cyan-500/10 shadow-[0_0_30px_rgba(6,182,212,0.1)]">
+                <div id="game-overlay" class="absolute inset-0 flex flex-col items-center justify-center bg-[#0a0f1d]/90 z-10 transition-opacity duration-500">
+                    <div class="text-cyan-400 font-mono text-xs mb-4 tracking-[0.2em]">RAYA INTERACTIVE PROTOCOL</div>
+                    <button id="start-game" class="px-8 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-sm transition-all transform hover:scale-105 active:scale-95 tracking-widest text-sm">
+                        STABILIZE SYSTEM
+                    </button>
+                </div>
+                
+                <div class="flex justify-between items-center mb-6 px-2">
+                    <div class="flex flex-col">
+                        <span class="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Grid Status</span>
+                        <span id="game-status" class="text-cyan-400 font-mono text-sm font-bold">STABLE // STANDBY</span>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <span class="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Global Stability</span>
+                        <span class="text-cyan-400 font-mono text-sm font-bold"><span id="game-score">100</span>%</span>
+                    </div>
+                </div>
+
+                <div class="relative w-full aspect-video max-h-[400px] border border-white/5 rounded-lg bg-black/20 overflow-hidden">
+                    <canvas id="game-canvas" class="w-full h-full cursor-crosshair"></canvas>
+                </div>
+
+                <div class="mt-6 flex justify-between items-center px-2">
+                    <div class="text-[9px] text-slate-500 uppercase tracking-widest max-w-[200px] leading-relaxed">
+                        Interaction: Click unstable nodes (red) to synchronize them with the planetary grid.
+                    </div>
+                    <div id="game-timer" class="text-cyan-500/40 font-mono text-xs tracking-tighter">00:00:00</div>
+                </div>
+            </div>
+          </div>
+        </section>
 
         <!-- An evolving architecture -->
         <section class="mt-10 pt-4 border-t border-slate-200">
@@ -216,17 +263,49 @@
       </div>
 
       <div>
-        <div class="hero-figure p-6 floaty">
-          <div class="faux-image">
-            <div class="text-center max-w-[320px]">
-              <div class="text-3xl font-semibold" style="color:var(--aqua)">Type I Portal</div>
-              <div class="mt-3 text-xs text-slate-300">Hero artwork placeholder — replace with art asset
-              </div>
-              <div class="mt-4 text-xs text-slate-500">Animated glyphs and soft parallax recommended for
-                final asset.</div>
+      <div class="hero-figure relative transition-all duration-700 hover:shadow-[0_0_50px_rgba(34,211,238,0.15)] overflow-hidden">
+        <div id="portal-core" class="relative w-full h-[500px] flex items-center justify-center bg-slate-950/20 backdrop-blur-sm">
+          <!-- The Generative Eye -->
+          <canvas id="portal-canvas" class="absolute inset-0 w-full h-full"></canvas>
+          
+          <!-- UI Overlays -->
+          <div class="relative z-10 text-center pointer-events-none mt-40">
+            <div class="text-[10px] tracking-[0.4em] text-cyan-500/60 font-mono mb-2 uppercase">Core Intelligence Link</div>
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-1">TYPE I PORTAL</h2>
+            <div class="flex items-center justify-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span class="text-[9px] text-slate-400 font-mono uppercase tracking-widest">Neural Link: Active</span>
             </div>
           </div>
+
+          <!-- Decorative Corner Borders -->
+          <div class="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-cyan-500/20"></div>
+          <div class="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-cyan-500/20"></div>
+          <div class="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-cyan-500/20"></div>
+          <div class="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-cyan-500/20"></div>
         </div>
+
+        <!-- System Ticker -->
+        <div class="bg-slate-950/40 border-t border-white/5 p-3 flex items-center gap-6 overflow-hidden">
+          <div class="flex-shrink-0 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            <span class="text-[10px] font-mono text-slate-500 uppercase">Live Stats</span>
+          </div>
+          <div class="flex gap-8 animate-scroll whitespace-nowrap">
+            <span class="text-[10px] font-mono text-cyan-400/70 uppercase">Global Energy: 84.2% Stability</span>
+            <span class="text-[10px] font-mono text-cyan-400/70 uppercase">Water Scarcity Alert: Sub-Sahara [Critical]</span>
+            <span class="text-[10px] font-mono text-cyan-400/70 uppercase">Farming Yield: +14.2% via AI Link</span>
+            <span class="text-[10px] font-mono text-cyan-400/70 uppercase">Neural Connections: 1,842,941</span>
+            <span class="text-[10px] font-mono text-cyan-400/70 uppercase">Atmospheric CO2: 421.4 ppm [Monitoring]</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="text-[10px] font-mono text-cyan-400/70 uppercase">Global Energy: 84.2% Stability</span>
+            <span class="text-[10px] font-mono text-cyan-400/70 uppercase">Water Scarcity Alert: Sub-Sahara [Critical]</span>
+            <span class="text-[10px] font-mono text-cyan-400/70 uppercase">Farming Yield: +14.2% via AI Link</span>
+            <span class="text-[10px] font-mono text-cyan-400/70 uppercase">Neural Connections: 1,842,941</span>
+            <span class="text-[10px] font-mono text-cyan-400/70 uppercase">Atmospheric CO2: 421.4 ppm [Monitoring]</span>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -235,7 +314,9 @@
     <!-- Load Raya Assistant -->
     <div id="raya-assistant-container"></div>
 
-    <script src="public/planetary-system.js"></script>
+    <script src="src/scripts/planetary-system.js"></script>
+    <script src="src/scripts/raya-game.js"></script>
+    <script src="src/scripts/portal-animation.js"></script>
     <script src="src/scripts/layout-loader.js"></script>
   </main>
 

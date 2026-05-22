@@ -1,63 +1,209 @@
 <!doctype html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Follow the Journey — Raya Roadmap</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root{ --aqua:#00E6FF; --gold:#FFD369; --deep:#041025; }
-    body{ background: linear-gradient(180deg, #021322 0%, #041025 100%); color:#E6EEF6; font-family: Inter, ui-sans-serif, system-ui; }
-    .timeline-node{ border-left:2px solid rgba(0,230,255,0.2); margin-left:1.5rem; padding-left:1.5rem; position:relative; }
-    .timeline-node::before{ content:''; position:absolute; left:-10px; top:0.4rem; width:12px; height:12px; border-radius:50%; background-color:var(--aqua); box-shadow:0 0 12px rgba(0,230,255,0.6); }
-    .rune-card{ background: rgba(255,210,105,0.02); border: 1px solid rgba(255,210,105,0.05); backdrop-filter: blur(6px); }
-  </style>
-</head>
-<body>
-  <!-- NAVBAR -->
-  <div id="navbar-placeholder"></div>
-  <!-- HERO -->  <section class="max-w-4xl mx-auto text-center py-12 px-6">
-    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Follow the Journey</h1>
-    <p class="mt-4 text-slate-300 max-w-2xl mx-auto">Raya is not hidden behind closed doors. Her evolution is visible to all — step by step, milestone by milestone. From the first spark of code to the rise of a true conversational guide, you can follow her becoming here.</p>
-  </section>  <!-- TIMELINE -->  <main class="max-w-3xl mx-auto px-6 space-y-10">
-    <div class="timeline-node">
-      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q1 2025 — The Birth of Raya Portal</h3>
-      <p class="text-slate-400 text-sm mt-2">Launch of the website, vision unveiled.</p>
-    </div>
-    <div class="timeline-node">
-      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q2 2025 — The First Circle</h3>
-      <p class="text-slate-400 text-sm mt-2">Community channels open — Discord, blogs, and updates.</p>
-    </div>
-    <div class="timeline-node">
-      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q3 2025 — Knowledge Engine v1</h3>
-      <p class="text-slate-400 text-sm mt-2">Raya learns to answer through Wiki + News + Cache.</p>
-    </div>
-    <div class="timeline-node">
-      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q1 2026 — The Interactive Portal</h3>
-      <p class="text-slate-400 text-sm mt-2">First dialogue: users can speak with Raya.</p>
-    </div>
-    <div class="timeline-node">
-      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q3 2026 — Raya v2</h3>
-      <p class="text-slate-400 text-sm mt-2">Natural language understanding and deeper reasoning.</p>
-    </div>
-    <div class="timeline-node">
-      <h3 class="text-xl font-semibold" style="color:var(--aqua)">Q4 2026 — The Threshold of Type I</h3>
-      <p class="text-slate-400 text-sm mt-2">LLM integration and global community-driven growth.</p>
-    </div>
-  </main>  <!-- CALL TO ACTION -->  <section class="max-w-4xl mx-auto py-16 text-center">
-    <div class="rune-card p-8 rounded-2xl">
-      <h2 class="text-2xl font-semibold">Be Part of the Journey</h2>
-      <p class="mt-2 text-slate-400">Subscribe to devlogs, follow milestones, and watch Raya evolve in real time.</p>
-      <form class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-        <input aria-label="email" placeholder="Enter your email" class="px-4 py-3 rounded-md bg-slate-800/40 border border-slate-700 text-slate-200 w-full sm:w-auto" />
-        <button class="px-5 py-3 rounded-md border border-slate-600 hover:border-slate-400 text-sm">Subscribe</button>
-      </form>
-    </div>
-  </section>  <!-- FOOTER -->
-  <div id="footer-placeholder"></div>
-  <script src="../src/scripts/layout-loader.js"></script>
-  <!-- Load Raya Assistant -->
-<div id="raya-assistant-container"></div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Follow the Journey — Raya Roadmap</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../index.css" />
+    <style>
+      .timeline-container {
+        position: relative;
+        padding-left: 2rem;
+      }
+      .timeline-line {
+        position: absolute;
+        left: 0.75rem;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(
+          to bottom,
+          var(--aqua) 0%,
+          rgba(0, 230, 255, 0.1) 100%
+        );
+        box-shadow: 0 0 8px rgba(0, 230, 255, 0.3);
+      }
+      .timeline-dot {
+        position: absolute;
+        left: 0.375rem;
+        top: 1.5rem;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--aqua);
+        box-shadow: 0 0 12px var(--aqua);
+        z-index: 10;
+      }
+    </style>
+  </head>
+
+  <body class="bg-slate-50">
+    <!-- NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- HERO -->
+    <section class="max-w-4xl mx-auto text-center py-16 px-6">
+      <h1
+        class="text-4xl md:text-5xl font-extrabold leading-tight text-blue-900"
+      >
+        Follow the Journey
+      </h1>
+      <p class="mt-4 text-slate-600 max-w-2xl mx-auto text-lg">
+        Raya is not hidden behind closed doors. Her evolution is visible to all
+        — step by step, milestone by milestone. From the first spark of code to
+        the rise of a true conversational guide, you can follow her becoming
+        here.
+      </p>
+    </section>
+
+    <!-- TIMELINE -->
+    <main class="max-w-3xl mx-auto px-6 mb-20">
+      <div class="timeline-container space-y-8">
+        <div class="timeline-line"></div>
+
+        <!-- Q1 2025 -->
+        <div class="relative pl-8 group">
+          <div
+            class="timeline-dot group-hover:scale-125 transition-transform"
+          ></div>
+          <div class="planet-card">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold text-blue-900">
+                Q1 2025 — The Birth of Raya Portal
+              </h3>
+              <span
+                class="text-xs font-bold text-cyan-600 uppercase tracking-widest bg-cyan-50 px-2 py-1 rounded"
+                >Completed</span
+              >
+            </div>
+            <p class="text-slate-600">
+              Launch of the website, vision unveiled. The first digital anchor
+              for planetary intelligence.
+            </p>
+          </div>
+        </div>
+
+        <!-- Q2 2025 -->
+        <div class="relative pl-8 group">
+          <div
+            class="timeline-dot group-hover:scale-125 transition-transform"
+          ></div>
+          <div class="planet-card">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold text-blue-900">
+                Q2 2025 — The First Circle
+              </h3>
+              <span
+                class="text-xs font-bold text-cyan-600 uppercase tracking-widest bg-cyan-50 px-2 py-1 rounded"
+                >In Progress</span
+              >
+            </div>
+            <p class="text-slate-600">
+              Community channels open — Discord, blogs, and updates. Building
+              the human network behind the intelligence.
+            </p>
+          </div>
+        </div>
+
+        <!-- Q3 2025 -->
+        <div class="relative pl-8 group">
+          <div
+            class="timeline-dot group-hover:scale-125 transition-transform opacity-50"
+          ></div>
+          <div class="planet-card opacity-90">
+            <h3 class="text-xl font-bold text-blue-900 mb-2">
+              Q3 2025 — Knowledge Engine v1
+            </h3>
+            <p class="text-slate-600">
+              Raya learns to answer through Wiki + News + Cache. Integrating
+              structured data with real-time events.
+            </p>
+          </div>
+        </div>
+
+        <!-- Q1 2026 -->
+        <div class="relative pl-8 group">
+          <div
+            class="timeline-dot group-hover:scale-125 transition-transform opacity-50"
+          ></div>
+          <div class="planet-card opacity-90">
+            <h3 class="text-xl font-bold text-blue-900 mb-2">
+              Q1 2026 — The Interactive Portal
+            </h3>
+            <p class="text-slate-600">
+              First dialogue: users can speak with Raya. Natural language
+              processing meets planetary knowledge.
+            </p>
+          </div>
+        </div>
+
+        <!-- Q3 2026 -->
+        <div class="relative pl-8 group">
+          <div
+            class="timeline-dot group-hover:scale-125 transition-transform opacity-50"
+          ></div>
+          <div class="planet-card opacity-90">
+            <h3 class="text-xl font-bold text-blue-900 mb-2">
+              Q3 2026 — Raya v2
+            </h3>
+            <p class="text-slate-600">
+              Natural language understanding and deeper reasoning. Moving from
+              retrieval to actual synthesis.
+            </p>
+          </div>
+        </div>
+
+        <!-- Q4 2026 -->
+        <div class="relative pl-8 group">
+          <div
+            class="timeline-dot group-hover:scale-125 transition-transform opacity-50"
+          ></div>
+          <div class="planet-card opacity-90">
+            <h3 class="text-xl font-bold text-blue-900 mb-2">
+              Q4 2026 — The Threshold of Type I
+            </h3>
+            <p class="text-slate-600">
+              LLM integration and global community-driven growth. The transition
+              toward a unified civilization architecture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- CALL TO ACTION -->
+    <section class="max-w-4xl mx-auto py-16 px-6 text-center">
+      <div class="planet-card p-10">
+        <h2 class="text-3xl font-bold text-blue-900">Be Part of the Journey</h2>
+        <p class="mt-4 text-slate-600 max-w-xl mx-auto">
+          Subscribe to devlogs, follow milestones, and watch Raya evolve in real
+          time. Help us shape the future of intelligence.
+        </p>
+        <form
+          class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <input
+            aria-label="email"
+            placeholder="Enter your email"
+            class="px-6 py-3 rounded-xl bg-white border border-slate-200 text-slate-800 w-full sm:w-80 shadow-sm focus:ring-2 focus:ring-cyan-400 outline-none transition-all"
+          />
+          <button
+            class="px-8 py-3 rounded-xl bg-blue-900 text-white font-bold hover:bg-blue-800 transition-all shadow-lg shadow-blue-900/10"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../src/scripts/layout-loader.js"></script>
+
+    <!-- Raya Assistant -->
+    <div id="raya-assistant-container"></div>
+  </body>
 </html>

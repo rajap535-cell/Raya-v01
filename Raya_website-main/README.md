@@ -55,8 +55,19 @@ Since the website uses the `Fetch API` to load modular components (like the Raya
 - **Vision:** [public/vision_main.html](public/vision_main.html) — The "Why" behind Raya.
 - **Journey:** [public/journey.html](public/journey.html) — Roadmap and milestones for 2025–2026.
 - **Experiments:** [public/old/experiments.html](public/old/experiments.html) — Interactive demos and prototypes.
-- **Portal:** [public/portal.html](public/portal.html) — Gateway to the intelligence interface.
+- **Portal Login:** [public/portal_login.html](public/portal_login.html) — Secure gateway to the technical system.
+- **Energy Dashboard:** [public/dashboard.html](public/dashboard.html) — (Auth Required) Live energy optimization and predictive modeling interface.
 - **Challenges:** [public/raya_problem.html](public/raya_problem.html) — Global coordination failures Raya aims to solve.
+
+---
+
+## ⚡ Operational Modules
+
+### Energy Intelligence (RJ-204)
+A deterministic optimization layer for industrial and distributed energy systems. 
+- **Live Monitoring:** Real-time telemetry indexing of regional demand vs. temperature trends.
+- **Prediction Engine:** Random Forest (v0.1) based simulation for multi-variate load forecasting.
+- **Deterministic Logic:** Ensuring auditable, policy-bound system actions.
 
 ---
 

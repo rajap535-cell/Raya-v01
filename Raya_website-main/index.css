@@ -216,85 +216,39 @@
         .lg\:text-9xl { font-size: 10vw; }
     }
 
-    /* Navbar & Mobile Menu Styles */
-    #navbar-placeholder {
-      position: sticky;
-      top: 0;
-      z-index: 50;
+
+    /* Game Component Styles */
+    #raya-game-container canvas {
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-crisp-edges;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
     }
 
-    .nav-container {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(19, 57, 123, 0.05);
-      transition: all 0.3s ease;
+    #start-game {
+      text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
     }
 
-    .nav-container.scrolled {
-      background: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    #start-game:hover {
+      box-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
     }
 
-    .mobile-menu {
-      position: fixed;
-      top: 4.5rem;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(19, 57, 123, 0.1);
-      display: none;
-      flex-direction: column;
-      padding: 1.5rem;
-      gap: 1.5rem;
-      z-index: 40;
-      transform: translateY(-10px);
-      opacity: 0;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+    .game-node {
+      filter: drop-shadow(0 0 8px currentColor);
     }
 
-    .mobile-menu.active {
-      display: flex;
-      transform: translateY(0);
-      opacity: 1;
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      animation: marquee 30s linear infinite;
     }
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 5px;
-      z-index: 60;
-    }
-
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background-color: var(--deep);
-      transition: all 0.3s ease;
-    }
-
-    .hamburger.active span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-      .desktop-nav {
-        display: none;
-      }
+    .hero-figure {
+      background: #020617;
+      border-radius: 18px;
+      border: 1px solid rgba(0, 230, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }

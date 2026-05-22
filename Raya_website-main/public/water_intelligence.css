@@ -1,0 +1,55 @@
+.header {
+  background-color: rgb(1, 1, 28);
+}
+
+.header1 {
+  background-color: rgb(3, 3, 46);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; /* space between rectangles */
+}
+
+.single_rectangle {
+  width: 600px;
+  height: 50px;
+  background: linear-gradient(180deg, #8b7ab6, #7e69b2);
+  margin: 0;
+  color: rgb(218, 214, 227);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.rectangle {
+  width: 142px;
+  height: 28px;
+  background: transparent;
+  border: 1px solid rgba(191, 205, 215, 0.4);
+  margin: 0;
+  color: rgba(218, 214, 227, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 2px;
+  line-height: 2; /* removes extra top/bottom space */
+  margin: 0; /* remove spacing */
+}

@@ -1,5 +1,92 @@
-<div class="nav-container">
-  <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+<style>
+    /* Navbar & Mobile Menu Styles */
+    #navbar-placeholder {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-container {
+      width: 100%;
+      background: rgba(2, 6, 23, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(30, 41, 59, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .nav-container.scrolled {
+      background: rgba(2, 6, 23, 0.95);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 4.5rem;
+      left: 0;
+      right: 0;
+      background: rgba(2, 6, 23, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(30, 41, 59, 0.6);
+      display: none;
+      flex-direction: column;
+      padding: 1.5rem;
+      gap: 1.5rem;
+      z-index: 40;
+      transform: translateY(-10px);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 5px;
+      z-index: 60;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: #f8fafc;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      .desktop-nav {
+        display: none;
+      }
+    }
+</style>
+<div class="nav-container relative overflow-hidden">
+  <!-- Subtle Grid Background -->
+  <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px); background-size: 32px 32px; opacity: 0.5;"></div>
+
+  <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center relative z-10">
     <!-- Brand Logo -->
     <a href="index.html" class="flex items-center gap-3 group">
       <div
@@ -11,39 +98,44 @@
           class="w-full h-full object-cover"
         />
       </div>
-      <span class="font-bold text-xl text-blue-900 tracking-tight">Raya</span>
+      <span class="font-bold text-xl text-white tracking-tight">Raya</span>
     </a>
 
     <!-- Desktop Navigation -->
     <nav class="desktop-nav hidden md:flex items-center gap-8">
       <a
-        class="text-slate-600 hover:text-cyan-600 font-medium transition-colors"
+        class="text-slate-300 hover:text-cyan-400 font-medium transition-colors"
         href="index.html"
         >Home</a
       >
       <a
-        class="text-slate-600 hover:text-cyan-600 font-medium transition-colors"
+        class="text-slate-300 hover:text-cyan-400 font-medium transition-colors"
         href="public/vision_main.html"
         >Vision</a
       >
       <a
-        class="text-slate-600 hover:text-cyan-600 font-medium transition-colors"
+        class="text-slate-300 hover:text-cyan-400 font-medium transition-colors"
         href="public/journey.html"
         >Journey</a
       >
       <a
-        class="text-slate-600 hover:text-cyan-600 font-medium transition-colors"
+        class="text-slate-300 hover:text-cyan-400 font-medium transition-colors"
         href="public/experiments.html"
         >Experiments</a
       >
       <a
-        class="text-slate-600 hover:text-cyan-600 font-medium transition-colors"
+        class="text-slate-300 hover:text-cyan-400 font-medium transition-colors"
         href="public/raya_problem.html"
         >Challenges</a
       >
       <a
-        class="px-5 py-2 rounded-full btn-rune text-sm font-bold text-blue-900 hover:bg-cyan-500/10 transition-all border border-cyan-500/20"
-        href="#follow"
+        class="text-slate-300 hover:text-cyan-400 font-medium transition-colors"
+        href="public/water_intelligence.html"
+        >Module</a
+      >
+      <a
+        class="px-5 py-2 rounded-full btn-rune text-sm font-bold text-white hover:bg-cyan-500/20 transition-all border border-cyan-500/30"
+        href="public/portal_login.html"
       >
         Join
       </a>
@@ -66,33 +158,38 @@
 <!-- Mobile Menu Overlay -->
 <div id="mobile-menu" class="mobile-menu md:hidden">
   <a
-    class="text-slate-600 hover:text-cyan-600 font-medium py-2 border-b border-slate-100"
+    class="text-slate-300 hover:text-cyan-400 font-medium py-2 border-b border-slate-800"
     href="index.html"
     >Home</a
   >
   <a
-    class="text-slate-600 hover:text-cyan-600 font-medium py-2 border-b border-slate-100"
+    class="text-slate-300 hover:text-cyan-400 font-medium py-2 border-b border-slate-800"
     href="public/vision_main.html"
     >Vision</a
   >
   <a
-    class="text-slate-600 hover:text-cyan-600 font-medium py-2 border-b border-slate-100"
+    class="text-slate-300 hover:text-cyan-400 font-medium py-2 border-b border-slate-800"
     href="public/journey.html"
     >Journey</a
   >
   <a
-    class="text-slate-600 hover:text-cyan-600 font-medium py-2 border-b border-slate-100"
+    class="text-slate-300 hover:text-cyan-400 font-medium py-2 border-b border-slate-800"
     href="public/experiments.html"
     >Experiments</a
   >
   <a
-    class="text-slate-600 hover:text-cyan-600 font-medium py-2 border-b border-slate-100"
+    class="text-slate-300 hover:text-cyan-400 font-medium py-2 border-b border-slate-800"
     href="public/raya_problem.html"
     >Challenges</a
   >
   <a
-    class="px-5 py-3 rounded-xl btn-rune text-center font-bold text-blue-900 bg-cyan-500/5 mt-2"
-    href="#follow"
+    class="text-slate-300 hover:text-cyan-400 font-medium py-2 border-b border-slate-800"
+    href="public/water_intelligence.html"
+    >Module</a
+  >
+  <a
+    class="px-5 py-3 rounded-xl btn-rune text-center font-bold text-white bg-cyan-500/20 border border-cyan-500/30 mt-2"
+    href="public/portal_login.html"
   >
     Join the Mission
   </a>

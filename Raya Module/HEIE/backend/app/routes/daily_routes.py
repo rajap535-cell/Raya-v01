@@ -35,6 +35,12 @@ def log_daily(
     activity_level: str = None,
     calories_intake: int = None,
     energy_feeling: str = None,
+    exercise_minutes: int = None,
+    learning_hours: float = None,
+    water_intake: float = None,
+    stress_level: str = None,
+    mood: str = None,
+
     db: Session = Depends(get_db)
 ):
 
@@ -50,7 +56,12 @@ def log_daily(
         weight_kg=weight_kg,
         activity_level=activity_level,
         calories_intake=calories_intake,
-        energy_feeling=energy_feeling
+        energy_feeling=energy_feeling,
+        exercise_minutes=exercise_minutes,
+        learning_hours=learning_hours,
+        water_intake=water_intake,
+        stress_level=stress_level,
+        mood=mood
     )
 
     db.add(log)
@@ -88,7 +99,7 @@ def get_analytics(user_id: int, db: Session = Depends(get_db)):
     avg_sleep = db.query(func.avg(DailyLog.sleep_hours))\
         .filter(DailyLog.user_id == user_id).scalar()
 
-    total_steps = db.query(func.sum(DailyLog.steps))\
+    avg_steps = db.query(func.avg(DailyLog.steps))\
         .filter(DailyLog.user_id == user_id).scalar()
 
     avg_screen = db.query(func.avg(DailyLog.screen_time))\
@@ -97,12 +108,29 @@ def get_analytics(user_id: int, db: Session = Depends(get_db)):
     avg_work = db.query(func.avg(DailyLog.work_hours))\
         .filter(DailyLog.user_id == user_id).scalar()
 
+    avg_learning = db.query(func.avg(DailyLog.learning_hours))\
+    .filter(DailyLog.user_id == user_id).scalar()
+
+    avg_exercise = db.query(func.avg(DailyLog.exercise_minutes))\
+        .filter(DailyLog.user_id == user_id).scalar()
+
+    avg_water = db.query(func.avg(DailyLog.water_intake))\
+        .filter(DailyLog.user_id == user_id).scalar()
+
+    avg_calories = db.query(func.avg(DailyLog.calories_intake))\
+        .filter(DailyLog.user_id == user_id).scalar()
+
     # 🔹 STEP 3: STRUCTURE ANALYTICS
     analytics_data = {
         "avg_sleep": avg_sleep,
-        "total_steps": total_steps,
+        "avg_steps": avg_steps, 
         "avg_screen_time": avg_screen,
-        "avg_work_hours": avg_work
+        "avg_work_hours": avg_work,
+        "avg_learning": avg_learning,
+        "avg_exercise": avg_exercise,
+        "avg_water": avg_water,
+        "avg_calories": avg_calories
+
     }
 
     # 🔹 STEP 4: COMPARISON ENGINE (CORE INTELLIGENCE)

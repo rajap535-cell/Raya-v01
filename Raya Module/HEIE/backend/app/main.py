@@ -1,3 +1,5 @@
+from app.database import engine, Base
+from app.models.user import User
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -8,7 +10,7 @@ from app.routes import user_routes
 from app.routes import daily_routes
 
 app = FastAPI()
-
+Base.metadata.create_all(bind=engine)
 # -------------------------------
 # PATH SETUP
 # -------------------------------

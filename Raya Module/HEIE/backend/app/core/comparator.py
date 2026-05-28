@@ -1,59 +1,50 @@
-from app.core.base_model import get_base_model
+def compare_user(user, data):
 
-def compare_user(user, analytics):
+    insights = []
 
-    base = get_base_model(user.age, user.gender)
+    # Sleep
+    if data["avg_sleep"] is not None:
+        if data["avg_sleep"] < 6:
+            insights.append("⚠️ Sleep is critically low.")
+        elif data["avg_sleep"] < 7:
+            insights.append("😴 Sleep can be improved.")
+        else:
+            insights.append("✅ Sleep looks healthy.")
 
-    results = {}
+    # Steps
+    if data["avg_steps"] is not None:
+        if data["avg_steps"] < 5000:
+            insights.append("🚶 Activity level is low.")
+        elif data["avg_steps"] < 8000:
+            insights.append("🙂 Moderate activity detected.")
+        else:
+            insights.append("🔥 Excellent movement levels.")
 
-    # ---- SLEEP ----
-    sleep = analytics["avg_sleep"]
-    ideal_min, ideal_max = base["sleep"]
+    # Screen Time
+    if data["avg_screen_time"] is not None:
+        if data["avg_screen_time"] > 8:
+            insights.append("📱 Excessive screen time.")
+        else:
+            insights.append("✅ Screen balance looks fine.")
 
-    if sleep is None:
-        results["sleep"] = "No data yet"
-    elif sleep < ideal_min:
-        diff = round(ideal_min - sleep, 1)
-        results["sleep"] = f"Below optimal by {diff} hrs"
-    elif sleep > ideal_max:
-        results["sleep"] = "Above optimal (check oversleep)"
-    else:
-        results["sleep"] = "On track"
+    # Work Hours
+    if data["avg_work_hours"] is not None:
+        if data["avg_work_hours"] > 10:
+            insights.append("💼 High workload may cause burnout.")
 
-    # ---- STEPS ----
-    steps = analytics["total_steps"]
-    ideal_min, ideal_max = base["steps"]
+    # Exercise
+    if data["avg_exercise"] is not None:
+        if data["avg_exercise"] < 20:
+            insights.append("🏃 Increase exercise levels.")
 
-    if steps is None:
-        results["steps"] = "No data yet"
-    elif steps < ideal_min:
-        results["steps"] = "Low activity"
-    elif steps > ideal_max:
-        results["steps"] = "High activity"
-    else:
-        results["steps"] = "On track"
+    # Water
+    if data["avg_water"] is not None:
+        if data["avg_water"] < 2:
+            insights.append("💧 Hydration is low.")
 
-    # ---- SCREEN ----
-    screen = analytics["avg_screen_time"]
-    ideal_min, ideal_max = base["screen"]
+    # Learning
+    if data["avg_learning"] is not None:
+        if data["avg_learning"] > 2:
+            insights.append("🧠 Strong learning consistency.")
 
-    if screen is None:
-        results["screen"] = "No data yet"
-    elif screen > ideal_max:
-        results["screen"] = "Too high"
-    else:
-        results["screen"] = "Balanced"
-
-    # ---- DEEP WORK ----
-    # using work_hours as proxy for now
-    work = analytics.get("avg_work_hours", None)
-    ideal_min, ideal_max = base["deep_work"]
-
-    if work is None:
-        results["deep_work"] = "No data yet"
-    elif work < ideal_min:
-        results["deep_work"] = "Needs improvement"
-    else:
-        results["deep_work"] = "On track"
-
-    return results
+    return insights

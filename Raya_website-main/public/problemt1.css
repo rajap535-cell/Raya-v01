@@ -1,438 +1,340 @@
+/* ===========================================
+   RAYA | THE PROBLEM
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+
+    --bg:#07111f;
+    --surface:#0d1828;
+    --border:rgba(255,255,255,.08);
+
+    --text:#f4f7fb;
+    --muted:#94a3b8;
+
+    --cyan:#22d3ee;
+    --blue:#2563eb;
+
+    --max-width:1200px;
+    --radius:18px;
+
+}
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-font-family:"Inter",sans-serif;
-
-background:#f7f9fc;
-
-color:#111827;
-
-overflow-x:hidden;
-
-}
-
-.container{
-
-width:min(1200px,92%);
-
-margin:auto;
-
-}
-
-section{
-
-padding:110px 0;
-
-position:relative;
-
-}
-
-.section-tag{
-
-display:inline-block;
-
-padding:8px 18px;
-
-border-radius:40px;
-
-background:#eef8ff;
-
-color:#138fd8;
-
-font-weight:600;
-
-font-size:.8rem;
-
-letter-spacing:1px;
-
-text-transform:uppercase;
-
-margin-bottom:22px;
-
-}
-
-.section-title{
-
-font-size:3rem;
-
-font-weight:800;
-
-line-height:1.15;
-
-margin-bottom:22px;
-
-color:#09111f;
-
-}
-
-.section-description{
-
-max-width:760px;
-
-font-size:1.12rem;
-
-line-height:1.9;
-
-color:#64748b;
-
-}
-
-.problem-hero{
-
-background:
-
-linear-gradient(
-
-180deg,
-
-#07111f,
-
-#102033
-
-);
-
-color:white;
-
-text-align:center;
-
-padding-top:160px;
-
-padding-bottom:140px;
-
-}
-
-.problem-hero .section-title{
-
-color:white;
-
-}
-
-.problem-hero .section-description{
-
-color:#b7c7d8;
-
-margin:auto;
-
-}
-
-.comparison{
-
-background:white;
-
-}
-
-.comparison-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:60px;
-
-margin-top:70px;
-
-align-items:center;
-
-}
-
-.card{
-
-background:white;
-
-border-radius:26px;
-
-padding:28px;
-
-box-shadow:
-
-0 20px 60px rgba(15,23,42,.08);
-
-border:1px solid rgba(0,0,0,.05);
-
-transition:.35s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:
-
-0 30px 80px rgba(0,0,0,.12);
-
-}
-
-.card img{
-
-width:100%;
-
-display:block;
-
-border-radius:18px;
-
-margin-bottom:22px;
-
-}
-
-.card h3{
-
-font-size:1.6rem;
-
-margin-bottom:16px;
-
-font-weight:700;
-
-color:#0f172a;
-
-}
-
-.card p{
-
-color:#64748b;
-
-line-height:1.8;
-
-}
-
-.divider{
-
-height:1px;
-
-background:
-
-linear-gradient(
-
-90deg,
-
-transparent,
-
-#d7e2ef,
-
-transparent
-
-);
-
-margin:90px 0;
-
-}
-
-.domain-grid{
-
-display:grid;
-
-grid-template-columns:
-
-repeat(2,1fr);
-
-gap:28px;
-
-margin-top:70px;
-
-}
-
-.domain{
-
-background:white;
-
-border-radius:24px;
-
-padding:26px;
-
-border:1px solid #e5edf6;
-
-transition:.35s;
-
-}
-
-.domain:hover{
-
-transform:translateY(-8px);
-
-box-shadow:
-
-0 20px 55px rgba(0,0,0,.08);
-
-}
-.domain-icon{
-
-font-size:2rem;
-
-margin-bottom:18px;
-
-}
-.domain h3{
-
-margin-bottom:12px;
-
-font-size:1.35rem;
-
-}
-.domain p{
-
-line-height:1.8;
-
-color:#64748b;
-
-}
-.cta{
-
-background:
-
-linear-gradient(
-
-180deg,
-
-#08111f,
-
-#0f2239
-
-);
-
-color:white;
-
-text-align:center;
-
-}
-.cta-button{
-
-display:inline-block;
-
-margin-top:45px;
-
-padding:
-
-18px
-
-38px;
-
-background:#14dfff;
-
-color:#04131f;
-
-text-decoration:none;
-
-border-radius:50px;
-
-font-weight:700;
-
-transition:.35s;
-
-}
-
-.cta-button:hover{
-
-transform:translateY(-5px);
-
-box-shadow:
-
-0 12px 30px rgba(20,223,255,.35);
-
-}
-@media(max-width:900px){
-
-.section-title{
-
-font-size:2.3rem;
-
-}
-
-.comparison-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.domain-grid{
-
-grid-template-columns:1fr;
-
-}
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
     scroll-behavior:smooth;
 }
 
-/* =========================
-SECTION REVEAL
-========================= */
+body{
 
-.reveal{
-
-    opacity:0;
-
-    transform:translateY(60px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
+    font-family:"Inter",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
 
 }
 
-.reveal.show{
+img{
 
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-.problem-card{
-
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
+    display:block;
+    width:5%;
+    height:10%;
+    object-fit:cover;
+    border-radius:var(--radius);
 
 }
 
-.problem-card:hover{
+a{
 
-    transform:translateY(-10px);
+    text-decoration:none;
 
-    border-color:#29dfff;
+}
+
+main{
+
+    width:min(var(--max-width),92%);
+    margin:auto;
+
+}
+
+/* ===========================================
+   COMMON
+=========================================== */
+
+section{
+
+    padding:120px 0;
+
+}
+
+h1{
+
+    font-size:clamp(3rem,6vw,5rem);
+    line-height:1.1;
+    font-weight:800;
+
+}
+
+h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+    margin-bottom:20px;
+
+}
+
+p{
+
+    color:var(--muted);
+    font-size:1.05rem;
+
+}
+
+.eyebrow{
+
+    color:var(--cyan);
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+    font-size:.9rem;
+
+}
+
+/* ===========================================
+   HERO
+=========================================== */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}
+
+.hero-content{
+
+    max-width:850px;
+
+}
+
+.hero p:last-child{
+
+    max-width:700px;
+    margin:35px auto 0;
+
+}
+
+/* ===========================================
+   PLANET
+=========================================== */
+
+.planet-section{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.image{
+
+    overflow:hidden;
+    border-radius:var(--radius);
+    border:1px solid var(--border);
 
     box-shadow:
-
-        0 18px 45px rgba(0,0,0,.18);
-
-}
-
-.solution-card{
-
-    transition:.35s;
+    0 20px 60px rgba(0,0,0,.45);
 
 }
 
-.solution-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:
-
-        0 18px 40px rgba(0,0,0,.15);
-
-}
-
-.timeline-item{
+.image img{
 
     transition:.4s;
 
 }
 
-.timeline-item:hover{
+.image:hover img{
 
-    transform:scale(1.05);
+    transform:scale(1.04);
+
+}
+
+/* ===========================================
+   FRAGMENT
+=========================================== */
+
+.fragment-section{
+
+    text-align:center;
+
+}
+
+.fragment-diagram{
+
+    margin-top:50px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:18px;
+
+    font-size:1.15rem;
+    font-weight:600;
+
+}
+
+.fragment-diagram{
+
+    color:var(--cyan);
+
+}
+
+/* ===========================================
+   FEATURES
+=========================================== */
+
+.feature{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.feature.reverse{
+
+    direction:rtl;
+
+}
+
+.feature.reverse>*{
+
+    direction:ltr;
+
+}
+
+/* ===========================================
+   PATTERN
+=========================================== */
+
+.pattern{
+
+    text-align:center;
+
+}
+
+.pattern-diagram{
+
+    margin:45px auto;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+
+}
+
+.pattern-diagram{
+
+    color:var(--cyan);
+    font-weight:600;
+    font-size:1.1rem;
+
+}
+
+/* ===========================================
+   SOLUTION
+=========================================== */
+
+.solution{
+
+    text-align:center;
+
+}
+
+.solution p{
+
+    max-width:700px;
+    margin:25px auto;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#2563eb,#22d3ee);
+
+    color:white;
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 40px rgba(34,211,238,.25);
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:900px){
+
+    section{
+
+        padding:80px 0;
+
+    }
+
+    .planet-section,
+    .feature{
+
+        grid-template-columns:1fr;
+        gap:40px;
+
+    }
+
+    .feature.reverse{
+
+        direction:ltr;
+
+    }
+
+    .fragment-diagram{
+
+        flex-direction:column;
+
+    }
+
+    .pattern-diagram{
+
+        flex-direction:column;
+
+    }
 
 }

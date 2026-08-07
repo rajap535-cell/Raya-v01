@@ -1,0 +1,46 @@
+[
+  {
+    "crop": "rice",
+
+    "location": {
+      "state": "Karnataka",
+      "district": "Mandya",
+      "market": "Mandya APMC"
+    },
+
+    "pricing": {
+      "modal_price": 2200,
+      "min_price": 2000,
+      "max_price": 2400,
+      "unit": "quintal",
+      "currency": "INR"
+    },
+
+    "arrival": {
+      "arrival_qty": 120,
+      "unit": "quintal"
+    },
+
+    "trend": {
+      "trend_direction": "increasing",
+      "weekly_change_percent": 5.2
+    },
+
+    "forecast": {
+      "forecast": "increase",
+      "forecast_confidence": 0.7
+    },
+
+    "signals": {
+      "sell": true,
+      "hold": false,
+      "confidence": "medium",
+      "reason": "Steady upward trend in last 7 days"
+    },
+
+    "meta": {
+      "recorded_at": "2026-04-21T10:00:00",
+      "source": "agmarknet"
+    }
+  }
+]

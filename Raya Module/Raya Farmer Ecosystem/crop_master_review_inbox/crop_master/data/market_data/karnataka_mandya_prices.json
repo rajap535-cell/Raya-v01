@@ -1,0 +1,19 @@
+{
+  "rice": {
+    "mandi": "Mandya APMC",
+    "min_price": 2000,
+    "max_price": 2400,
+    "modal_price": 2200,
+
+    "arrival_qty": 120,
+
+    "trend_direction": "increasing",
+    "trend_change_percent": 5.2,
+
+    "forecast": "increase",
+    "forecast_confidence": 0.7,
+
+    "source": "mock",
+    "last_updated": "2026-04-21T10:00:00"
+  }
+}

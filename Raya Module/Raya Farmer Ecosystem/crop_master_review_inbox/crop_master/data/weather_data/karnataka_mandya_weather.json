@@ -1,0 +1,24 @@
+{
+  "temperature_min": 25,
+  "temperature_max": 34,
+  "temperature_avg": 30,
+
+  "humidity_percent": 70,
+  "rainfall_mm": 12,
+  "wind_speed_kmh": 10,
+  "condition": "rain",
+
+  "forecast_event": "rain",
+  "forecast_type": "excess_rainfall",
+  "forecast_probability": 0.7,
+
+  "risk_level": "Medium",
+  "risk_type": "rain",
+  "risk_impact": [
+    "fungal growth",
+    "waterlogging"
+  ],
+
+  "source": "mock",
+  "last_updated": "2026-04-21T10:00:00"
+}

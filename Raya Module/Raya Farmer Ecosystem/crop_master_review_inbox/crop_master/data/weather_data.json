@@ -1,0 +1,50 @@
+[
+  {
+    "location": {
+      "state": "Karnataka",
+      "district": "Mandya"
+    },
+
+    "temperature_min": 25,
+    "temperature_max": 34,
+    "temperature_avg": 30,
+
+    "humidity_percent": 70,
+
+    "rainfall_mm": 5,
+
+    "wind_speed_kmh": 10,
+
+    "condition": "Partly Cloudy",
+
+    "forecast_event": "rain",
+
+    "forecast_type": "light_rainfall",
+
+    "forecast_probability": 0.7,
+
+    "forecast_summary": "Light rainfall expected",
+
+    "temperature_trend": "stable",
+
+    "risk_level": "Medium",
+
+    "risk_type": "rain",
+
+    "risk_impact": [
+      "wet field conditions",
+      "possible spraying delay"
+    ],
+
+    "signals": {
+      "irrigation_needed": false,
+      "spraying_safe": false,
+      "harvest_risk": "medium",
+      "reason": "Rain expected in next 48 hours"
+    },
+
+    "source": "weather_api",
+
+    "last_updated": "2026-04-21T09:00:00Z"
+  }
+]

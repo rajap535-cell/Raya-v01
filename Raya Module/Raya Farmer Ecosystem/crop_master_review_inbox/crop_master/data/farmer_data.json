@@ -1,0 +1,92 @@
+[
+    {
+        "farmer_id": "F001",
+        "identity": {
+            "name": "Ramesh",
+            "phone": "9876543210"
+        },
+        "location": {
+            "state": "Karnataka",
+            "district": "Mandya",
+            "village": "KRS"
+        },
+        "land": {
+            "total_area_acres": 2.5,
+            "soil_type": "loamy"
+        },
+        "crop_profile": {
+            "current_crop": "rice",
+            "crop_stage": "Flowering"
+        },
+        "additional": {
+            "irrigation_type": "canal",
+            "past_crop_history": [
+                "ragi",
+                "maize"
+            ]
+        },
+        "meta": {
+            "created_at": "2026-04-20T10:00:00",
+            "updated_at": "2026-04-20T10:00:00"
+        }
+    },
+    {
+        "farmer_id": "F002",
+        "identity": {
+            "name": "Sita",
+            "phone": null
+        },
+        "location": {
+            "state": "Uttar Pradesh",
+            "district": "Varanasi",
+            "village": null
+        },
+        "land": {
+            "total_area_acres": 1.2,
+            "soil_type": null
+        },
+        "crop_profile": {
+            "current_crop": "wheat",
+            "crop_stage": "Tillering"
+        },
+        "additional": {
+            "irrigation_type": null,
+            "past_crop_history": []
+        },
+        "meta": {
+            "created_at": "2026-04-20T10:00:00",
+            "updated_at": "2026-04-20T10:00:00"
+        }
+    },
+    {
+        "farmer_id": "F003",
+        "identity": {
+            "name": "Mahesh",
+            "phone": "9123456780"
+        },
+        "location": {
+            "state": "Maharashtra",
+            "district": "Pune",
+            "village": "Baramati"
+        },
+        "land": {
+            "total_area_acres": 5,
+            "soil_type": "black"
+        },
+        "crop_profile": {
+            "current_crop": "tomato",
+            "crop_stage": "Fruiting"
+        },
+        "additional": {
+            "irrigation_type": "drip",
+            "past_crop_history": [
+                "onion",
+                "sugarcane"
+            ]
+        },
+        "meta": {
+            "created_at": "2026-04-20T10:00:00",
+            "updated_at": "2026-04-20T10:00:00"
+        }
+    }
+]

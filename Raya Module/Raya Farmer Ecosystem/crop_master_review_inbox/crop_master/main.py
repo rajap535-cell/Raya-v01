@@ -1,3 +1,5 @@
+import json
+
 from farmer_search_engine import farmer_search
 from advisory_engine import build_advisory
 from disease_detection_engine import detect_disease
@@ -49,7 +51,7 @@ def run_system():
     advisory = build_advisory(snapshot)
 
     print("\n--- FINAL UNIFIED OUTPUT ---")
-    print(advisory)
+    print(json.dumps(advisory, indent=4))
 
 
 if __name__ == "__main__":

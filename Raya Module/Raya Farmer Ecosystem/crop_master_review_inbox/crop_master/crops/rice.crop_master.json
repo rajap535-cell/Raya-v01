@@ -1,151 +1,1807 @@
 {
+  "$schema": "schema/crop_master.blueprint.schema.json",
   "crop_identity": {
     "common_name": "Rice",
     "scientific_name": "Oryza sativa",
+    "family": "Poaceae (Gramineae)",
     "crop_type": "Cereal",
-    "primary_regions": ["India", "South Asia", "Southeast Asia"]
+    "primary_regions": [
+      "India",
+      "South Asia",
+      "Southeast Asia",
+      "East Asia",
+      "West Africa"
+    ]
   },
-
+  "general_information": {
+    "crop_description": "Rice is a tropical and subtropical cereal grain and the staple food for more than half of the world's population. It is cultivated in flooded (paddy) conditions, though it also grows in well-managed upland systems. It is highly responsive to water, temperature, and nutrient management.",
+    "crop_duration": "110-145 days depending on variety (short, medium, and long duration)",
+    "economic_importance": "Rice is the primary food grain of India and a major export commodity. It supports the livelihood of millions of smallholder farmers and is central to national food security and market economies.",
+    "major_uses": [
+      "Staple food grain (consumed as whole grain)",
+      "Milling to produce rice, bran, and husk",
+      "Straw used as animal fodder and bedding",
+      "Broken rice used for brewing and food processing",
+      "Rice bran oil extraction",
+      "Feed and industrial starch production"
+    ]
+  },
+  "varieties": {
+    "popular_varieties": [
+      "IR-64",
+      "Sona Masoori",
+      "Basmati 370",
+      "CR Dhan 201",
+      "MTU 1001 (Vijetha)"
+    ],
+    "hybrid_varieties": [
+      "KRH-2",
+      "DRRH-3",
+      "PHB-71",
+      "Arize 6444 Gold"
+    ],
+    "high_yielding_varieties": [
+      "IR-8",
+      "Jaya",
+      "Swarna (MTU 7029)",
+      "BPT 5204",
+      "Pusa 1121"
+    ],
+    "region_specific_varieties": {
+      "Karnataka": [
+        "MTU 1001",
+        "Jaya",
+        "BPT 5204",
+        "Mysore Mallige"
+      ],
+      "Uttar Pradesh": [
+        "Basmati 370",
+        "Pusa Basmati 1121",
+        "PR 114"
+      ],
+      "Punjab": [
+        "PR 114",
+        "PR 121",
+        "Pusa Basmati 1509"
+      ],
+      "Andhra Pradesh": [
+        "BPT 5204",
+        "Swarna",
+        "RGL 2537"
+      ]
+    },
+    "disease_resistant_varieties": [
+      "Improved Samba Mahsuri (Bacterial Blight resistant)",
+      "Rasi (blast tolerant)",
+      "Vijetha (blast tolerant)",
+      "BPT 5204 (sheath blight tolerant)"
+    ],
+    "climate_resilient_varieties": [
+      "Swarna Sub-1 (flood tolerant)",
+      "Sahbhagi Dhan (drought tolerant)",
+      "Vajram (tolerant to heat and drought)",
+      "DRR Dhan 42 (heat tolerant)"
+    ]
+  },
+  "region_suitability": {
+    "suitable_countries": [
+      "India",
+      "China",
+      "Indonesia",
+      "Bangladesh",
+      "Vietnam",
+      "Thailand",
+      "Philippines",
+      "Myanmar",
+      "Pakistan",
+      "Brazil"
+    ],
+    "suitable_states": [
+      "West Bengal",
+      "Uttar Pradesh",
+      "Punjab",
+      "Haryana",
+      "Andhra Pradesh",
+      "Telangana",
+      "Tamil Nadu",
+      "Karnataka",
+      "Odisha",
+      "Bihar",
+      "Assam",
+      "Chhattisgarh"
+    ],
+    "suitable_districts": [
+      "Mandya (Karnataka)",
+      "Shimoga (Karnataka)",
+      "Raipur (Chhattisgarh)",
+      "Krishna (Andhra Pradesh)",
+      "Thanjavur (Tamil Nadu)",
+      "Bardhaman (West Bengal)",
+      "Ludhiana (Punjab)"
+    ],
+    "agro_climatic_zones": [
+      "Hot sub-humid plains",
+      "Hot humid plains of eastern India",
+      "Coastal lowlands",
+      "Deltaic river basins",
+      "Irrigated northwest plains"
+    ],
+    "altitude_range": "Sea level to 2000 m (most productive below 1000 m)"
+  },
+  "soil_intelligence": {
+    "suitable_soil_types": [
+      "Clayey soils",
+      "Clay loam",
+      "Silty clay loam",
+      "Alluvial soils",
+      "Laterite and lateritic soils"
+    ],
+    "soil_texture": "Heavy clay to clay loam with high water-holding capacity",
+    "soil_ph_range": "5.0 to 8.0 (optimum 6.0-7.0)",
+    "organic_matter_requirement": "Moderate to high organic matter (1.5-2.5% preferred)",
+    "drainage_suitability": "Poorly drained soils good for paddy; requires controlled drainage for aerobic stages",
+    "land_preparation_guidelines": "Puddle the field to a depth of 10-15 cm for transplanted rice, ensure leveling for uniform water distribution, and incorporate 5-10 tons/ha of well-decomposed FYM or compost before final puddling."
+  },
+  "climate_intelligence": {
+    "ideal_temperature_range": "20-35°C (optimum 25-30°C)",
+    "germination_temperature": "20-35°C (optimum 30°C)",
+    "vegetative_temperature": "25-31°C",
+    "flowering_temperature": "25-33°C (avoid >35°C for pollen viability)",
+    "grain_filling_temperature": "20-30°C (night temps below 20°C reduce filling)",
+    "harvest_weather": "Dry, sunny weather with low humidity; avoid rain during harvest",
+    "rainfall_requirement": "1000-1500 mm per season (or 1200-1500 mm for rainfed lowland)",
+    "humidity_range": "60-90% relative humidity (high humidity favours disease)",
+    "sunshine_requirement": "6-8 hours bright sunshine daily during vegetative and grain filling",
+    "wind_sensitivity": "Moderate; strong winds at flowering cause sterility and lodging",
+    "heat_tolerance": "Moderate; flowering is most sensitive to heat stress above 35°C",
+    "cold_frost_tolerance": "Low; rice is frost sensitive and cold intolerant (especially at flowering)",
+    "drought_tolerance": "Low to moderate; drought at critical stages severely reduces yield",
+    "flood_tolerance": "Moderate; tolerant of shallow submergence but growth stops with deep flooding"
+  },
+  "water_intelligence": {
+    "total_water_requirement": "1200-1800 mm per crop cycle (including effective rainfall)",
+    "critical_irrigation_stages": [
+      "Tillering",
+      "Panicle Initiation",
+      "Flowering",
+      "Early Grain Filling"
+    ],
+    "irrigation_methods": [
+      "Continuous shallow flooding (5-7 cm)",
+      "Alternate wetting and drying (AWD)",
+      "System of Rice Intensification (SRI) — intermittent irrigation",
+      "Drip irrigation (for aerobic/upland rice)"
+    ],
+    "irrigation_schedule": "Maintain 2-5 cm standing water during tillering, increase to 5-7 cm at panicle initiation, keep moist during flowering, and stop irrigation 10-15 days before harvest.",
+    "waterlogging_tolerance": "Moderate; rice tolerates shallow water but not prolonged deep submergence",
+    "drainage_requirements": "Controlled drainage needed for weeding, mid-season drying, and harvest; avoid waterlogging in vegetative and grain filling stages",
+    "water_conservation_practices": [
+      "Alternate wetting and drying (AWD)",
+      "Land leveling (laser leveling) for uniform water distribution",
+      "System of Rice Intensification (SRI)",
+      "Mulching in aerobic rice",
+      "Real-time irrigation scheduling based on soil moisture"
+    ]
+  },
+  "fertilizer_intelligence": {
+    "macronutrient_requirements": {
+      "Nitrogen (N)": "100-120 kg/ha depending on variety and soil",
+      "Phosphorus (P2O5)": "40-60 kg/ha",
+      "Potassium (K2O)": "40-60 kg/ha",
+      "Zinc (Zn)": "25 kg/ha soil or 0.5% foliar spray"
+    },
+    "micronutrient_requirements": {
+      "Zinc": "Critical in submerged (puddled) soils; deficiency causes leaf bronzing",
+      "Boron": "Aids pollen viability and grain set",
+      "Iron": "Needed in calcareous soils",
+      "Manganese": "Required in upland sandy soils"
+    },
+    "stage_wise_fertilizer_schedule": {
+      "Nursery": "Basal nitrogen (20-30 kg/ha) and light phosphorus for seedling vigor",
+      "Tillering": "Split nitrogen top dressing (first at 20-25 DAT, second at 40-45 DAT)",
+      "Panicle Initiation": "Potassium at 45-50 DAT; nitrogen if needed for panicle development",
+      "Flowering": "Limited nitrogen; foliar potassium (2% KNO3) if deficiency",
+      "Grain Filling": "Potassium and micronutrients (Zn, B); avoid late nitrogen"
+    },
+    "organic_alternatives": [
+      "Green manure (dhaincha, sunn hemp) incorporated before transplanting",
+      "Well-decomposed FYM at 10-15 tons/ha",
+      "Vermicompost and compost tea",
+      "Rice straw recycling with nitrogen supplementation"
+    ],
+    "deficiency_symptoms": "Yellowing of lower leaves (N), purple tinge on older leaves (P), leaf bronzing (Zn), chlorosis of leaf tips (K)",
+    "toxicity_symptoms": "Dark green foliage with excessive vegetative growth (N), iron toxicity (bronzing in acidic soils), salt toxicity (leaf tip burning)",
+    "soil_test_recommendations": "Test soil before planting; apply nutrients based on soil test values and use Leaf Color Chart (LCC) for real-time nitrogen management."
+  },
+  "disease_intelligence": {
+    "major_diseases": [
+      "Blast Disease",
+      "Bacterial Leaf Blight",
+      "Sheath Blight",
+      "Brown Spot",
+      "Tungro Virus"
+    ],
+    "symptoms": "Blast: diamond-shaped lesions on leaves and neck rot; Bacterial Blight: yellow to white lesions with wavy margins; Sheath Blight: oval lesions on leaf sheath with white fungal growth; Brown Spot: brown circular spots on grains and leaves.",
+    "causes": "Fungal (blast, sheath blight, brown spot), bacterial (bacterial leaf blight), and viral (tungro) pathogens favoured by high humidity, excess nitrogen, dense planting, and water stress.",
+    "disease_progression": "Initially appears as leaf lesions that spread to sheaths, panicles, and grains; severe infection under cool, humid, overcast conditions reduces photosynthesis and grain yield.",
+    "prevention": "Use resistant varieties, balanced nitrogen, proper spacing, field drainage, and clean seed. Avoid dense planting and excess nitrogen.",
+    "treatment": "Apply fungicides (tricyclazole for blast, hexaconazole for sheath blight) at early symptom appearance; remove and destroy infected debris; follow label recommendations.",
+    "weather_relationships": "High humidity and rainfall favour blast and sheath blight; water stress and cold nights favour brown spot; high temperature and humidity favour bacterial blight."
+  },
+  "pest_intelligence": {
+    "major_pests": [
+      "Brown Plant Hopper (BPH)",
+      "Stem Borer",
+      "Leaf Folder",
+      "Earhead Bug (Grain Sucking Bug)",
+      "Hispa (Rice Leaf Beetle)"
+    ],
+    "symptoms": "BPH: hopper burn (yellowing and drying of plants); Stem Borer: dead hearts and whiteheads; Leaf Folder: folded leaves with whitish streaks; Earhead Bug: chaffy grains; Hispa: white streaky feeding lines on leaves.",
+    "damage": "BPH causes rapid plant death in patches; stem borer reduces panicle emergence; leaf folder reduces leaf area; earhead bug damages developing grains reducing yield and quality.",
+    "prevention": "Field hygiene, balanced nitrogen (avoid excess), light traps, resistant varieties, and maintaining natural enemies (spiders, ladybirds).",
+    "treatment": "Apply recommended insecticides (pymetrozine for BPH, chlorantraniliprole for stem borer) at threshold levels; avoid broad-spectrum sprays to protect natural enemies.",
+    "weather_relationships": "Warm, humid conditions and continuous cropping favour BPH outbreaks; dry spells favour stem borer; prolonged leaf wetness increases leaf folder and hispa activity."
+  },
+  "market_intelligence": {
+    "major_producing_regions": [
+      "West Bengal",
+      "Uttar Pradesh",
+      "Punjab",
+      "Haryana",
+      "Andhra Pradesh",
+      "Telangana",
+      "Karnataka",
+      "Chhattisgarh"
+    ],
+    "major_consuming_regions": [
+      "All of India (staple food)",
+      "Middle East (high-quality basmati import)",
+      "South Asia",
+      "Europe and North America (specialty rice)"
+    ],
+    "market_seasonality": "Kharif (June-November) is the main rice season; rabi/summer rice is limited. Prices peak during lean months (March-May) before the new kharif harvest.",
+    "msp": "MSP is declared annually by the Government of India for common grade paddy (refer to the latest MSP notification).",
+    "price_influencing_factors": [
+      "Government procurement and MSP",
+      "Production and domestic supply",
+      "Export demand and global prices",
+      "Monsoon performance and water availability",
+      "Crop quality and milling recovery",
+      "Post-harvest storage and market arrivals"
+    ],
+    "storage_potential": "Good if dried to 12-14% moisture and stored in clean, dry, pest-proof facilities; can store for 6-12 months with proper management.",
+    "transportation_considerations": "Grain is bulky and heavy; transport costs are significant. Drying to safe moisture before transport reduces breakage and spoilage. Use clean, dry gunny bags or bulk carriers."
+  },
+  "harvest_intelligence": {
+    "harvest_indicators": [
+      "90-95% of grains turn golden yellow",
+      "Grain moisture at 20-25% for mechanical harvest",
+      "18-20% moisture for manual harvest",
+      "Panicles bend over with mature grains",
+      "Grain hardens and does not dent with fingernail"
+    ],
+    "harvest_timing": "110-130 days after sowing (depending on variety); harvest during dry weather to avoid grain damage",
+    "harvest_precautions": [
+      "Do not delay harvest beyond physiological maturity to avoid shattering",
+      "Harvest in dry, sunny weather",
+      "Avoid harvesting during rain or high humidity",
+      "Complete threshing and drying promptly"
+    ],
+    "harvest_methods": [
+      "Manual harvesting with sickle",
+      "Mechanical combine harvester",
+      "Manual or mechanical threshing",
+      "Winnowing and cleaning"
+    ],
+    "expected_yield": "4-6 tons/ha (paddy) for improved varieties; up to 8 tons/ha for hybrid high-management systems"
+  },
+  "post_harvest_intelligence": {
+    "drying": "Dry paddy to 12-14% moisture content immediately after harvest; sun dry on clean mats or use mechanical dryers; avoid over-heating that causes cracks.",
+    "cleaning": "Winnow and clean to remove chaff, stones, weed seeds, and immature grains before storage or milling.",
+    "grading": "Grade paddy by size, colour, and moisture; separate damaged, broken, and immature grains to improve milling quality and market price.",
+    "storage": "Store in clean, dry, well-ventilated, pest-proof bins or gunny bags; use fumigation and moisture control; keep off the floor on pallets.",
+    "transportation": "Transport dried, cleaned grain in clean, dry bags or bulk carriers; protect from rain and moisture during transit.",
+    "shelf_life": "6-12 months under proper storage conditions (moisture <14%, low humidity, pest controlled)",
+    "quality_maintenance": "Maintain low moisture, avoid insect infestation, and prevent fungal growth; store in cool, dry conditions with periodic inspection."
+  },
+  "best_practices": {
+    "good_agricultural_practices": [
+      "Use certified, disease-free seeds and proper seed treatment",
+      "Maintain optimum plant population and spacing",
+      "Follow integrated nutrient management (INM)",
+      "Adopt integrated pest management (IPM)",
+      "Practice timely weed control and field hygiene"
+    ],
+    "climate_smart_practices": [
+      "Use flood-tolerant varieties (Swarna Sub-1) in flood-prone areas",
+      "Adopt alternate wetting and drying to save water and reduce methane",
+      "Use drought-tolerant varieties in rainfed areas",
+      "Adjust sowing dates to match monsoon onset"
+    ],
+    "sustainability_practices": [
+      "Recycle rice straw into the field to maintain soil organic matter",
+      "Reduce chemical inputs with need-based LCC-based nitrogen",
+      "Conserve water through AWD and SRI",
+      "Protect natural enemies and biodiversity"
+    ],
+    "cost_optimisation": [
+      "Use soil testing and LCC to reduce fertilizer costs",
+      "Adopt direct seeding where suitable to save labour",
+      "Use machinery (transplanters, harvesters) for efficiency",
+      "Procure inputs through cooperatives for better prices"
+    ],
+    "yield_optimisation": [
+      "Use high-yielding and hybrid varieties",
+      "Maintain timely and balanced nutrition",
+      "Ensure water at critical stages (tillering, panicle initiation, flowering)",
+      "Control weeds and pests early",
+      "Harvest at correct maturity for maximum recovery"
+    ]
+  },
   "growth_lifecycle": {
     "stages": {
-      "Nursery": {
-        "duration_days": "20-25",
-        "sensitivity": "Medium"
+      "Germination": {
+        "duration_days": "3-7",
+        "sensitivity": "Medium",
+        "yield_risk_level": "Medium",
+        "objectives": "Achieve uniform, healthy seed germination and early root and shoot emergence.",
+        "growth_characteristics": "Seed absorbs water, radical and plumule emerge, and the first leaves (coleoptile) break through the soil. Germination is fastest at 25-30°C.",
+        "water_principles": "Maintain light, consistent moisture without waterlogging. Seed must be moist but not saturated to allow oxygen for germination.",
+        "sowing_guidance": "Use certified, disease-free seeds. Treat seeds with a contact fungicide (e.g. carbendazim) before sowing. Presoak seeds for 12-24 hours and incubate for 24-48 hours to encourage uniform sprouting before sowing.",
+        "fertilizer_principles": "Nutrient demand is minimal at germination. A light basal application supports early root establishment but avoid excess which can cause seedling burn.",
+        "nutrient_principles": "Minimal nitrogen; seeds carry their own reserve. Phosphorus supports early root initiation.",
+        "timing_guidance": "No fertilizer application needed at germination; ensure beds are prepared with basal compost if nursery raising.",
+        "fertilizer_logic": {
+          "primary_nutrients": [
+            "Phosphorus"
+          ],
+          "application_stage": "Germination",
+          "application_method": "Basal in nursery bed",
+          "risk_if_skipped": "Slower root establishment and weak early seedlings"
+        },
+        "fertilizer_weather_precautions": "Avoid fertilizer application during heavy rain or waterlogged conditions that can wash nutrients away or cause seed rot.",
+        "fertilizer_focus": "Minimal input; focus on moisture and temperature for successful germination",
+        "fertilizer_timing": "Not required at germination stage",
+        "fertilizer_notes": "Excess nitrogen at germination can cause 'damping-off' and seed rotting. Keep beds moist but well-drained.",
+        "soil_type_adjustment": "Use well-drained, fine-tilth nursery beds. For sandy soils, maintain frequent light irrigation; for clay, avoid over-saturation.",
+        "deficiency_symptoms": "Poor and uneven germination, seed rot, weak coleoptile, pale seedlings",
+        "fertilizer_avoidance": "Avoid direct fertilizer contact with germinating seeds (seed burn)",
+        "organic_fertilizer_options": "Well-decomposed compost or FYM in the nursery bed at 5-10 tons/ha improves soil structure and moisture retention.",
+        "cost_efficiency_guidance": "Use seed priming and proper seed rate to ensure uniform stand and reduce seed wastage.",
+        "water_management": {
+          "requirement": "Low",
+          "irrigation_frequency": "Light moisture maintenance; irrigate as needed to keep soil damp",
+          "drainage_required": true,
+          "critical_condition": "Avoid waterlogging and standing water during germination to prevent seed rot",
+          "soil_moisture": "Moist but not saturated",
+          "ideal_soil_moisture": "50-60% field capacity",
+          "water_stress_symptoms": "Poor germination, drying and shrivelling of seeds, uneven emergence",
+          "recovery_guidance": "Restore light moisture immediately; if germination is poor, re-sow with fresh treated seed"
+        },
+        "irrigation_frequency": "Light, frequent irrigation to keep bed damp",
+        "fertilizer_guidance": "Minimal; basal compost only",
+        "nutrient_focus": "Phosphorus for root initiation",
+        "common_diseases": [
+          "Seedling blight",
+          "Damping-off"
+        ],
+        "common_pests": [
+          "Seedling maggot",
+          "Earwig",
+          "Ants"
+        ],
+        "weather_risks": {
+          "temperature_range": "20-35°C (optimum 30°C)",
+          "humidity_range": "High humidity (80-90%) for germination",
+          "rainfall_effects": "Excess rain causes seed rot and waterlogging",
+          "wind_effects": "Low impact; dry winds can dry the seedbed"
+        },
+        "temperature_range": "20-35°C",
+        "humidity_range": "80-90%",
+        "rainfall_effects": "Heavy rain causes seed rot and poor emergence",
+        "wind_effects": "Dry, hot winds can desiccate the seedbed",
+        "yield_risks": "Poor germination reduces plant population and final yield",
+        "preventive_actions": [
+          "Ensure proper drainage to prevent damping-off",
+          "Use certified, treated seeds for uniform stand",
+          "Maintain optimum spacing and seed depth (2-3 cm)",
+          "Keep seedbed moist but not waterlogged"
+        ],
+        "avoid_actions": [
+          "Avoid excess irrigation during germination",
+          "Avoid deep sowing beyond 2-3 cm",
+          "Avoid using old or untreated seeds",
+          "Avoid waterlogging of the seedbed"
+        ],
+        "recovery_guidance": "If germination is uneven, replant with fresh treated seed; resume moisture management to support surviving seedlings.",
+        "operational_checklist": [
+          "Seed treatment and priming",
+          "Bed preparation with good drainage",
+          "Uniform light irrigation",
+          "Monitor emergence and fill gaps"
+        ],
+        "decision_priority": "High — uniform germination determines plant population and yield base",
+        "expected_outcome": "Uniform, healthy seedling emergence with full stand establishment",
+        "critical_operations": [
+          "Seed treatment and priming",
+          "Seedbed preparation with proper drainage",
+          "Uniform light irrigation scheduling",
+          "Monitoring for damping-off and seed rot"
+        ]
       },
-      "Vegetative": {
+      "Seedling": {
+        "duration_days": "18-25",
+        "sensitivity": "Medium",
+        "yield_risk_level": "Medium",
+        "objectives": "Develop a vigorous, healthy seedling with strong roots for successful transplanting.",
+        "growth_characteristics": "Seedling develops 2-4 leaves, tillers begin, and a strong root system forms. Rapid growth responds to nitrogen and moisture.",
+        "water_principles": "Maintain light moisture without waterlogging. Frequent light irrigation every 2-3 days keeps nursery beds moist.",
+        "sowing_guidance": "Raise seedlings in well-prepared nursery beds; maintain 20-25 day old seedlings for transplanting at 2-3 seedlings per hill.",
+        "fertilizer_principles": "Apply nitrogen-rich basal fertilizer to support seedling vigor and early root development.",
+        "nutrient_principles": "Focus on Nitrogen for vigorous seedling growth and root development; light Phosphorus for root initiation.",
+        "timing_guidance": "Apply basal nitrogen before sowing or within 5-7 days after germination.",
+        "fertilizer_logic": {
+          "primary_nutrients": [
+            "Nitrogen",
+            "Phosphorus"
+          ],
+          "application_stage": "Seedling",
+          "application_method": "Basal application",
+          "risk_if_skipped": "Weak seedling growth and poor establishment"
+        },
+        "fertilizer_weather_precautions": "Avoid fertilizer application during heavy rain or waterlogged conditions. Apply on moist soil for better nutrient uptake.",
+        "fertilizer_focus": "Nitrogen-based nutrition for seedling vigor and root establishment",
+        "fertilizer_timing": "Apply basal dose before sowing or within 5-7 days after germination",
+        "fertilizer_notes": "Seedlings respond well to light but frequent nitrogen. Avoid excess that causes lush growth prone to disease.",
+        "soil_type_adjustment": "For sandy soils, split nitrogen into small frequent doses; for clay, a single basal application at sowing is sufficient.",
+        "deficiency_symptoms": "Pale yellow leaves, stunted seedling growth, poor root development, purple tint on leaf margins",
+        "fertilizer_avoidance": "Avoid excess nitrogen that leads to soft, succulent growth vulnerable to damping-off",
+        "organic_fertilizer_options": "Well-decomposed FYM at 5-10 tons/ha or vermicompost improves seedling vigor.",
+        "cost_efficiency_guidance": "Use neem-coated urea to improve nitrogen use efficiency by 10-15% and reduce application frequency.",
+        "water_management": {
+          "requirement": "Medium",
+          "irrigation_frequency": "Light irrigation every 2-3 days",
+          "drainage_required": true,
+          "critical_condition": "Avoid standing water during early seedling establishment",
+          "soil_moisture": "Keep soil moist but not saturated",
+          "ideal_soil_moisture": "60-70% field capacity",
+          "water_stress_symptoms": "Wilting, leaf rolling, yellowing of seedlings",
+          "recovery_guidance": "Restore moisture gradually; avoid overwatering; transplant only healthy, vigorous seedlings"
+        },
+        "irrigation_frequency": "Light irrigation every 2-3 days",
+        "fertilizer_guidance": "Basal nitrogen and phosphorus",
+        "nutrient_focus": "Nitrogen and Phosphorus for root and shoot growth",
+        "common_diseases": [
+          "Damping-off",
+          "Seedling blight"
+        ],
+        "common_pests": [
+          "Seedling maggot",
+          "Rice hispa"
+        ],
+        "weather_risks": {
+          "temperature_range": "25-31°C",
+          "humidity_range": "70-85%",
+          "rainfall_effects": "Excess rain causes waterlogging and disease",
+          "wind_effects": "Strong wind can dry seedlings and cause physical damage"
+        },
+        "temperature_range": "25-31°C",
+        "humidity_range": "70-85%",
+        "rainfall_effects": "Heavy rain causes waterlogging and seedling disease",
+        "wind_effects": "Dry, strong winds can desiccate seedlings",
+        "yield_risks": "Weak seedlings reduce transplanting success and final yield",
+        "preventive_actions": [
+          "Monitor for damping-off and seedling blight",
+          "Use quality certified seeds for uniform stand",
+          "Maintain optimum spacing to avoid overcrowding",
+          "Apply light irrigation uniformly across the nursery bed"
+        ],
+        "avoid_actions": [
+          "Avoid excess irrigation during early seedling establishment",
+          "Avoid deep sowing beyond 2-3 cm depth",
+          "Avoid using old or stored untreated seeds",
+          "Avoid excessive seed rate that leads to overcrowding"
+        ],
+        "recovery_guidance": "Thin overcrowded seedlings, restore moisture, and apply a light nitrogen boost to recover weak seedlings before transplanting.",
+        "operational_checklist": [
+          "Monitor seedling health and vigor",
+          "Thin seedlings to avoid overcrowding",
+          "Maintain uniform moisture",
+          "Prepare field for transplanting"
+        ],
+        "decision_priority": "High — healthy seedlings are essential for successful transplanting and crop establishment",
+        "expected_outcome": "Vigorous, healthy 20-25 day old seedlings ready for transplanting",
+        "critical_operations": [
+          "Seedbed preparation with proper drainage",
+          "Seed treatment with fungicide",
+          "Uniform light irrigation scheduling",
+          "Monitoring for damping-off disease"
+        ]
+      },
+      "Tillering": {
         "duration_days": "30-40",
-        "sensitivity": "Medium"
+        "sensitivity": "Medium",
+        "yield_risk_level": "Medium",
+        "objectives": "Maximize productive tiller production and canopy development for high yield potential.",
+        "growth_characteristics": "Plant develops productive tillers, increases leaf area, and builds a strong canopy. Nitrogen and water are critical for maximum tillering.",
+        "water_principles": "Maintain shallow standing water (2-5 cm) to promote tillering. Avoid prolonged dry periods.",
+        "sowing_guidance": "Transplant healthy 20-25 day old seedlings at proper spacing (20x15 cm). Maintain 2-3 seedlings per hill for optimum tillering.",
+        "fertilizer_principles": "Apply nitrogen and phosphorus for tillering and canopy development. Split nitrogen application for better efficiency.",
+        "nutrient_principles": "Focus on Nitrogen for maximum tiller production and Phosphorus for strong root and shoot development. Zinc is critical in submerged conditions.",
+        "timing_guidance": "Apply first top dressing of nitrogen at active tillering stage (20-25 days after transplanting). Second dose at 40-45 DAT if needed.",
+        "fertilizer_logic": {
+          "primary_nutrients": [
+            "Nitrogen",
+            "Phosphorus"
+          ],
+          "application_stage": "Tillering",
+          "application_method": "Top dressing in split doses",
+          "risk_if_skipped": "Reduced tillering, weak canopy, and poor yield potential"
+        },
+        "fertilizer_weather_precautions": "Apply fertilizer when soil is moist and no heavy rain is expected. Avoid application during continuous overcast or waterlogged conditions.",
+        "fertilizer_focus": "Nitrogen and phosphorus support for maximum tiller production and canopy development",
+        "fertilizer_timing": "Apply first top dressing at 20-25 DAT, second at 40-45 DAT if required",
+        "fertilizer_notes": "Zinc deficiency is common in submerged rice. Apply zinc sulfate at 25 kg/ha or 0.5% foliar spray if deficiency observed.",
+        "soil_type_adjustment": "For light-textured sandy soils, split nitrogen into 3-4 doses; for heavy clay soils, 2-3 splits are adequate.",
+        "deficiency_symptoms": "Yellowing of lower leaves (N), reduced tillering, stunted height, purple tinge on older leaves (P), leaf bronzing (Zn)",
+        "fertilizer_avoidance": "Avoid applying all nitrogen as basal. Excessive vegetative growth from over-fertilization increases lodging and disease risk.",
+        "organic_fertilizer_options": "Green manuring with dhaincha or sunn hemp incorporated before transplanting. Apply well-decomposed compost at 10-15 tons/ha.",
+        "cost_efficiency_guidance": "Use leaf color chart (LCC) for need-based nitrogen application to reduce costs by 20-25% while maintaining yield.",
+        "water_management": {
+          "requirement": "High",
+          "irrigation_frequency": "Maintain shallow standing water (2-5 cm)",
+          "drainage_required": false,
+          "critical_condition": "Avoid prolonged dry periods that reduce tillering",
+          "soil_moisture": "Keep soil saturated with 2-5 cm standing water",
+          "ideal_soil_moisture": "Saturated with 2-5 cm standing water",
+          "water_stress_symptoms": "Reduced tillering, leaf rolling, premature drying of leaves",
+          "recovery_guidance": "Restore standing water promptly; if stress prolonged, apply light nitrogen to recover tiller production"
+        },
+        "irrigation_frequency": "Maintain shallow standing water (2-5 cm)",
+        "fertilizer_guidance": "Split nitrogen top dressing",
+        "nutrient_focus": "Nitrogen and Phosphorus; Zinc for submerged conditions",
+        "common_diseases": [
+          "Blast",
+          "Sheath Blight",
+          "Brown Spot"
+        ],
+        "common_pests": [
+          "Stem borer",
+          "Leaf folder",
+          "Rice hispa"
+        ],
+        "weather_risks": {
+          "temperature_range": "25-31°C",
+          "humidity_range": "70-90%",
+          "rainfall_effects": "High humidity increases leaf disease pressure",
+          "wind_effects": "Strong wind can cause physical damage and lodging"
+        },
+        "temperature_range": "25-31°C",
+        "humidity_range": "70-90%",
+        "rainfall_effects": "High humidity increases leaf disease pressure",
+        "wind_effects": "Strong wind can damage leaves and young tillers",
+        "yield_risks": "Reduced tillering lowers panicle number and yield potential",
+        "preventive_actions": [
+          "Monitor for weed infestation and control within first 3 weeks",
+          "Apply recommended herbicides or conduct manual weeding",
+          "Maintain shallow water depth for maximum tillering",
+          "Monitor for early signs of blast disease and stem borer",
+          "Apply zinc sulfate if deficiency symptoms appear"
+        ],
+        "avoid_actions": [
+          "Avoid deep water (>5 cm) during early tillering stage",
+          "Avoid excess nitrogen that promotes lodging and disease",
+          "Avoid herbicide application during stress conditions",
+          "Avoid skipping weed control beyond 4 weeks after transplanting"
+        ],
+        "recovery_guidance": "If tillering is poor, apply a corrective nitrogen dose and restore water; control weeds early to reduce competition.",
+        "operational_checklist": [
+          "Weed management within first 3 weeks",
+          "Tillering monitoring and count assessment at 30 DAT",
+          "Split nutrient application as per growth stage",
+          "Zinc deficiency scouting and corrective application",
+          "Water level management at 2-5 cm"
+        ],
+        "decision_priority": "High — tiller number directly determines panicle number and yield",
+        "expected_outcome": "Maximum productive tiller population with a healthy, dense canopy",
+        "critical_operations": [
+          "Weed management within first 3 weeks after transplanting",
+          "Tillering monitoring and count assessment at 30 DAT",
+          "Split nutrient application as per growth stage",
+          "Zinc deficiency scouting and corrective application",
+          "Water level management at 2-5 cm"
+        ]
+      },
+      "Panicle_Initiation": {
+        "duration_days": "7-10",
+        "sensitivity": "High",
+        "yield_risk_level": "High",
+        "objectives": "Trigger panicle development and set the foundation for grain number and yield.",
+        "growth_characteristics": "Panicle primordia begin to form at the base of the plant and move upward. The crop transitions from vegetative to reproductive growth; nutrient and water needs shift.",
+        "water_principles": "Maintain continuous moisture with 2-5 cm standing water. Avoid any water stress as it severely limits panicle production.",
+        "sowing_guidance": "Ensure a uniform, healthy crop stand; maintain plant population from earlier stages. Minimize stress during this transition.",
+        "fertilizer_principles": "Apply potassium for panicle development and strong stems. Limit nitrogen to avoid excessive vegetative growth.",
+        "nutrient_principles": "Potassium is critical for panicle development and stem strength. Limited nitrogen for panicle formation. Zinc and Boron support panicle and grain set.",
+        "timing_guidance": "Apply potassium at panicle initiation (45-50 DAT). Apply nitrogen only if the crop is nitrogen-deficient.",
+        "fertilizer_logic": {
+          "primary_nutrients": [
+            "Potassium",
+            "Nitrogen"
+          ],
+          "application_stage": "Panicle Initiation",
+          "application_method": "Soil application with adequate moisture",
+          "risk_if_skipped": "Reduced panicle number, poor grain set, and yield loss"
+        },
+        "fertilizer_weather_precautions": "Do not apply fertilizer if heavy rain or storm is forecast. Avoid foliar application during high temperature (>35°C) or windy conditions.",
+        "fertilizer_focus": "Potassium for panicle development, stem strength, and stress resilience",
+        "fertilizer_timing": "Apply potassium at panicle initiation (45-50 DAT). Add nitrogen only if deficiency is visible.",
+        "fertilizer_notes": "This is a critical transition stage. Potassium strengthens stems and supports panicle assertion. Zinc and boron support grain set.",
+        "soil_type_adjustment": "On sandy/light soils, split potassium into 2 doses; on clay soils, a single dose at panicle initiation is adequate.",
+        "deficiency_symptoms": "Yellowing and drying of older leaf tips (K), weak stems, poor panicle emergence, increased chaffy grains",
+        "fertilizer_avoidance": "Avoid excess nitrogen during panicle initiation as it increases blast severity and lodging risk.",
+        "organic_fertilizer_options": "Apply potassium-rich organic sources like wood ash (10-15 kg/ha) or banana pseudostem compost.",
+        "cost_efficiency_guidance": "Apply potassium based on soil test results to avoid over-application. Muriate of potash (MOP) is cost-effective.",
+        "water_management": {
+          "requirement": "High",
+          "irrigation_frequency": "Maintain continuous moisture (2-5 cm standing water)",
+          "drainage_required": true,
+          "critical_condition": "Avoid water stress during panicle initiation; it severely limits panicle production",
+          "soil_moisture": "Maintain 2-5 cm standing water consistently",
+          "ideal_soil_moisture": "Saturated with 2-5 cm standing water",
+          "water_stress_symptoms": "Reduced panicle number, leaf rolling, delayed panicle emergence",
+          "recovery_guidance": "Restore standing water immediately; avoid stress for the rest of the reproductive phase"
+        },
+        "irrigation_frequency": "Maintain continuous moisture (2-5 cm standing water)",
+        "fertilizer_guidance": "Potassium for panicle development; limited nitrogen",
+        "nutrient_focus": "Potassium; Zinc and Boron for grain set",
+        "common_diseases": [
+          "Blast",
+          "Sheath Blight",
+          "Bacterial Leaf Blight"
+        ],
+        "common_pests": [
+          "Stem borer",
+          "Leaf folder"
+        ],
+        "weather_risks": {
+          "temperature_range": "25-33°C",
+          "humidity_range": "70-90%",
+          "rainfall_effects": "High humidity and rain increase disease pressure",
+          "wind_effects": "Strong wind can damage developing panicles"
+        },
+        "temperature_range": "25-33°C",
+        "humidity_range": "70-90%",
+        "rainfall_effects": "High humidity and rainfall increase blast and sheath blight pressure",
+        "wind_effects": "Strong wind can damage young panicles",
+        "yield_risks": "Water or nutrient stress at panicle initiation reduces panicle number and grain set",
+        "preventive_actions": [
+          "Monitor intensively for blast and sheath blight",
+          "Maintain stable water levels to avoid moisture stress",
+          "Ensure proper drainage channels for excess rainfall",
+          "Scout for stem borer and leaf folder",
+          "Maintain field hygiene to reduce disease pressure"
+        ],
+        "avoid_actions": [
+          "Avoid water stress or complete drying of field",
+          "Avoid excess nitrogen application",
+          "Avoid pesticide spraying during peak heat hours",
+          "Avoid mechanical operations that damage the crop"
+        ],
+        "recovery_guidance": "If panicle initiation is delayed by stress, restore water and nutrients promptly; minimize further stress to protect grain set.",
+        "operational_checklist": [
+          "Disease scouting every 2-3 days",
+          "Drainage management during excess rainfall",
+          "Water level maintenance at 2-5 cm",
+          "Potassium application at panicle initiation",
+          "Pest surveillance"
+        ],
+        "decision_priority": "Critical — this transition stage determines the number of grains and final yield",
+        "expected_outcome": "Healthy panicle initiation with high grain-number potential",
+        "critical_operations": [
+          "Disease scouting every 2-3 days for blast and sheath blight",
+          "Drainage management during excess rainfall",
+          "Water level maintenance at 2-5 cm",
+          "Potassium application at panicle initiation",
+          "Pest surveillance for stem borer and leaf folder"
+        ]
       },
       "Flowering": {
         "duration_days": "10-15",
-        "sensitivity": "High"
+        "sensitivity": "High",
+        "yield_risk_level": "High",
+        "objectives": "Ensure successful pollination and grain set for maximum filled grains.",
+        "growth_characteristics": "Panicles emerge and flowering (anthesis) occurs. Pollination is highly sensitive to temperature, water, and humidity. Spikelet sterility occurs under stress.",
+        "water_principles": "Maintain continuous moisture with 2-5 cm standing water. Never allow the field to dry during flowering to prevent spikelet sterility.",
+        "sowing_guidance": "Ensure a uniform crop stand entering flowering with adequate plant population. Maintain stable field conditions without stress.",
+        "fertilizer_principles": "Apply potassium and limited nitrogen for grain formation and pollination support. Avoid excess nitrogen during this stage.",
+        "nutrient_principles": "Focus on Potassium for grain filling and stress tolerance. Limited Nitrogen for panicle development. Boron and Zinc for pollen viability.",
+        "timing_guidance": "Apply potassium at panicle initiation stage (45-50 DAT) and a maintenance dose during early flowering if needed.",
+        "fertilizer_logic": {
+          "primary_nutrients": [
+            "Potassium",
+            "Nitrogen"
+          ],
+          "application_stage": "Flowering",
+          "application_method": "Split application with adequate soil moisture",
+          "risk_if_skipped": "Poor pollination, reduced grain setting, and significant yield loss"
+        },
+        "fertilizer_weather_precautions": "Do not apply fertilizer if heavy rain or storm is forecast. Avoid foliar application during high temperature (>35°C) or windy conditions.",
+        "fertilizer_focus": "Potassium nutrition for grain development, stress resilience, and improved grain quality",
+        "fertilizer_timing": "Apply potassium at panicle initiation (45-50 DAT). Additional maintenance dose at early flowering if potassium deficiency is observed.",
+        "fertilizer_notes": "Potassium deficiency during flowering severely impacts grain filling and quality. Foliar potassium (2% KNO3) can be applied if deficiency symptoms appear.",
+        "soil_type_adjustment": "On sandy/light soils, split potassium into 2 doses; on clay soils, a single dose at panicle initiation is sufficient.",
+        "deficiency_symptoms": "Yellowing and drying of older leaf tips and margins (K), weak stems, poor panicle emergence, increased chaffy grains, lodging susceptibility",
+        "fertilizer_avoidance": "Avoid excess nitrogen during flowering as it increases blast disease severity and lodging risk. Avoid foliar sprays during peak heat hours.",
+        "organic_fertilizer_options": "Apply potassium-rich organic sources like wood ash (10-15 kg/ha) or banana pseudostem compost. Foliar spray of vermiwash or seaweed extract for micronutrients.",
+        "cost_efficiency_guidance": "Apply potassium based on soil test results to avoid over-application. Muriate of potash (MOP) is cost-effective and readily available.",
+        "water_management": {
+          "requirement": "High",
+          "irrigation_frequency": "Continuous moisture maintenance",
+          "drainage_required": true,
+          "critical_condition": "Avoid water stress and excess standing water. Both extremes cause spikelet sterility.",
+          "soil_moisture": "Maintain 2-5 cm standing water consistently",
+          "ideal_soil_moisture": "Saturated with 2-5 cm standing water",
+          "water_stress_symptoms": "Spikelet sterility, poor pollination, reduced grain set",
+          "recovery_guidance": "Restore moisture immediately; if sterility occurs, minimize further stress and protect remaining grains"
+        },
+        "irrigation_frequency": "Continuous moisture maintenance",
+        "fertilizer_guidance": "Potassium for grain formation; limited nitrogen",
+        "nutrient_focus": "Potassium; Boron and Zinc for pollen viability",
+        "common_diseases": [
+          "Blast",
+          "Sheath Blight",
+          "Bacterial Leaf Blight"
+        ],
+        "common_pests": [
+          "Panicle mite",
+          "Stem borer",
+          "Earhead bug"
+        ],
+        "weather_risks": {
+          "temperature_range": "25-33°C (avoid >35°C)",
+          "humidity_range": "70-90%",
+          "rainfall_effects": "Excess rain during flowering causes poor pollination and sterility",
+          "wind_effects": "Strong wind and rain can cause sterility and lodging"
+        },
+        "temperature_range": "25-33°C",
+        "humidity_range": "70-90%",
+        "rainfall_effects": "Excess rain during flowering causes poor pollination and spikelet sterility",
+        "wind_effects": "Strong wind can cause sterility and lodging during flowering",
+        "yield_risks": "Water or heat stress at flowering causes spikelet sterility and up to 30% yield loss",
+        "preventive_actions": [
+          "Monitor intensively for blast disease and sheath blight symptoms",
+          "Maintain stable water levels to avoid moisture stress",
+          "Ensure proper drainage channels for excess rainfall",
+          "Scout for panicle mite and stem borer during heading",
+          "Maintain field hygiene to reduce disease pressure"
+        ],
+        "avoid_actions": [
+          "Avoid water stress or complete drying of field during flowering",
+          "Avoid nitrogen application during active flowering stage",
+          "Avoid pesticide spraying during peak flowering hours (9 AM - 12 PM)",
+          "Avoid mechanical operations that cause physical damage to panicles",
+          "Avoid excessive standing water that submerges panicles"
+        ],
+        "recovery_guidance": "If heat or water stress occurs, restore moisture immediately and protect remaining flower grains; avoid any further stress to salvage yield.",
+        "operational_checklist": [
+          "Disease scouting every 2-3 days for blast and sheath blight",
+          "Drainage management during excess rainfall",
+          "Water level maintenance at 2-5 cm",
+          "Pollination monitoring during peak flowering",
+          "Pest surveillance for panicle pests"
+        ],
+        "decision_priority": "Critical — pollination success determines the number of filled grains and final yield",
+        "expected_outcome": "Successful pollination and high grain set with minimal sterility",
+        "critical_operations": [
+          "Disease scouting every 2-3 days for blast and sheath blight",
+          "Drainage management during excess rainfall",
+          "Water level maintenance at 2-5 cm",
+          "Pollination monitoring during peak flowering",
+          "Pest surveillance for panicle pests"
+        ]
       },
-      "Grain_Filling": {
+      "Grain Filling": {
         "duration_days": "20-25",
-        "sensitivity": "Medium"
+        "sensitivity": "Medium",
+        "yield_risk_level": "Medium",
+        "objectives": "Fill grains to maximum weight and quality for high yield and milling recovery.",
+        "growth_characteristics": "Grains fill and gain weight as starch accumulates. Grain moisture declines. The crop is sensitive to water and nutrient stress, and lodging risk is present.",
+        "water_principles": "Controlled irrigation every 4-5 days. Maintain moist soil but avoid prolonged standing water to prevent lodging.",
+        "sowing_guidance": "Maintain optimal plant population from earlier stages for uniform grain development. Protect against lodging during this critical stage.",
+        "fertilizer_principles": "Focus on potassium support for grain weight development. Minimize nitrogen to avoid lush growth that delays maturity.",
+        "nutrient_principles": "Potassium is critical for grain filling and weight development. Minimal nitrogen needed. Micronutrients like zinc and boron aid grain quality.",
+        "timing_guidance": "Apply potassium at early grain filling stage if needed. Foliar micronutrients (Zn, B) can boost grain quality and weight.",
+        "fertilizer_logic": {
+          "primary_nutrients": [
+            "Potassium"
+          ],
+          "application_stage": "Grain Filling",
+          "application_method": "Foliar support if deficiency observed. Soil application during early grain filling.",
+          "risk_if_skipped": "Poor grain weight, reduced grain quality, and increased chaffy grains"
+        },
+        "fertilizer_weather_precautions": "Avoid fertilizer application if heavy rainfall or strong winds are forecast due to increased lodging risk.",
+        "fertilizer_focus": "Potassium and micronutrient support for optimal grain filling, weight development, and milling quality",
+        "fertilizer_timing": "Apply potassium at early grain filling (55-65 DAT). Foliar spray of 2% DAP or KNO3 if nutrient deficiency is visible.",
+        "fertilizer_notes": "Grain filling is highly sensitive to both nutrient and water stress. Nitrogen at this stage delays maturity by 5-7 days. Monitor potassium levels closely.",
+        "soil_type_adjustment": "Light/sandy soils may need split potassium application. Heavy clay soils typically retain adequate potassium from earlier applications.",
+        "deficiency_symptoms": "Chlorosis and premature drying of older leaves (K), weak stems, poor grain filling, lightweight and chaffy grains, increased lodging",
+        "fertilizer_avoidance": "Avoid late nitrogen application that delays maturity by 5-7 days and increases pest and disease attraction to tender new growth.",
+        "organic_fertilizer_options": "Foliar spray of compost tea or fermented plant extracts. Apply potassium-rich organic manure if soil test indicates deficiency.",
+        "cost_efficiency_guidance": "Tissue testing at early grain filling can identify specific nutrient deficiencies and avoid unnecessary fertilizer costs.",
+        "water_management": {
+          "requirement": "Medium",
+          "irrigation_frequency": "Controlled irrigation every 4-5 days",
+          "drainage_required": true,
+          "critical_condition": "Avoid drought stress during grain development. Drain excess water to prevent lodging.",
+          "soil_moisture": "Alternate wetting and drying. Keep soil moist but not continuously saturated.",
+          "ideal_soil_moisture": "70-80% field capacity with alternate wetting and drying",
+          "water_stress_symptoms": "Incomplete grain filling, lightweight grains, premature drying of leaves",
+          "recovery_guidance": "Restore moisture if stress occurs; avoid waterlogging; do not add late nitrogen"
+        },
+        "irrigation_frequency": "Controlled irrigation every 4-5 days",
+        "fertilizer_guidance": "Potassium and micronutrients; minimal nitrogen",
+        "nutrient_focus": "Potassium; Zinc and Boron for grain quality",
+        "common_diseases": [
+          "Sheath Blight",
+          "Brown Spot",
+          "Grain discoloration"
+        ],
+        "common_pests": [
+          "Stem borer",
+          "Grain sucking bugs",
+          "Hispa"
+        ],
+        "weather_risks": {
+          "temperature_range": "20-30°C",
+          "humidity_range": "60-85%",
+          "rainfall_effects": "Excess rain causes lodging and grain deterioration",
+          "wind_effects": "Strong wind and rain cause lodging"
+        },
+        "temperature_range": "20-30°C",
+        "humidity_range": "60-85%",
+        "rainfall_effects": "Excess rain causes lodging and grain deterioration",
+        "wind_effects": "Strong wind causes lodging and grain shedding",
+        "yield_risks": "Water or nutrient stress reduces grain weight and milling quality",
+        "preventive_actions": [
+          "Monitor for pest infestation (stem borer, grain sucking bugs, hispa)",
+          "Maintain controlled irrigation schedule alternating wetting and drying",
+          "Watch for lodging in case of strong winds or heavy rain",
+          "Monitor grain development for uniform ripening",
+          "Prepare for bird scaring measures during ripening"
+        ],
+        "avoid_actions": [
+          "Avoid drought stress that leads to incomplete grain filling",
+          "Avoid excessive nitrogen that delays maturity and increases pest attraction",
+          "Avoid deep standing water that causes root lodging",
+          "Avoid pesticide application within 2 weeks of harvest",
+          "Avoid mechanical damage to grain-bearing tillers"
+        ],
+        "recovery_guidance": "If grain filling is incomplete from stress, restore moisture and avoid late nitrogen; harvest at correct maturity to protect the largest possible grain weight.",
+        "operational_checklist": [
+          "Moisture monitoring with alternate wetting and drying",
+          "Pest management for stem borer and grain sucking pests",
+          "Grain development observation for uniform ripening",
+          "Lodging prevention through water management",
+          "Bird protection measures during ripening"
+        ],
+        "decision_priority": "High — grain weight directly determines final yield and market quality",
+        "expected_outcome": "Fully filled, heavy grains with high milling recovery and quality",
+        "critical_operations": [
+          "Moisture monitoring with alternate wetting and drying",
+          "Pest management for stem borer and grain sucking pests",
+          "Grain development observation for uniform ripening",
+          "Lodging prevention through water management",
+          "Bird protection measures during ripening"
+        ]
       },
-      "Maturity": {
+      "Harvest": {
         "duration_days": "10-15",
-        "sensitivity": "Low"
+        "sensitivity": "Low",
+        "yield_risk_level": "Low",
+        "objectives": "Harvest at optimal maturity to maximize grain yield, quality, and milling recovery.",
+        "growth_characteristics": "Grain reaches physiological maturity and moisture declines. Leaves and stems senesce. The crop is ready for harvest when grains harden and turn golden.",
+        "water_principles": "Stop irrigation 10-15 days before harvest. Allow field to dry completely for easy harvesting and threshing operations.",
+        "sowing_guidance": "Plan harvest timing based on grain moisture content: 20-25% for mechanical harvest, 18-20% for manual harvest. Avoid delaying beyond optimal window.",
+        "fertilizer_principles": "No major fertilizer application required during harvest. Focus on harvest preparation and post-harvest soil management.",
+        "nutrient_principles": "Nutrient demand is minimal. Allow natural senescence for grain ripening. Focus on post-harvest nutrient replenishment for next cycle.",
+        "timing_guidance": "No routine fertilizer application during harvest. Stop all fertilization 2-3 weeks before harvest to allow natural ripening.",
+        "fertilizer_logic": {
+          "primary_nutrients": [],
+          "application_stage": "No major fertilizer application",
+          "application_method": "Not required",
+          "risk_if_skipped": "Minimal impact on current crop. Focus on post-harvest soil replenishment."
+        },
+        "fertilizer_weather_precautions": "No fertilizer needed during this stage. Ensure dry weather window for harvest operations. Protect harvested grain from rain.",
+        "fertilizer_focus": "No fertilizer focus needed. Prioritize timely harvest and proper grain drying and storage.",
+        "fertilizer_timing": "No fertilizer application required during harvest stage. Resume fertilization for next crop cycle after harvest.",
+        "fertilizer_notes": "Stop all irrigation and fertilization 2-3 weeks before harvest to allow uniform ripening. Harvest at 20-25% grain moisture for optimal quality.",
+        "soil_type_adjustment": "All soil types: Focus on field drying rather than fertilizer management. After harvest, incorporate crop residue based on soil type.",
+        "deficiency_symptoms": "Premature leaf senescence and lodging in case of severe potassium exhaustion during grain filling. Otherwise, natural yellowing expected.",
+        "fertilizer_avoidance": "Avoid all fertilizer application during this stage to prevent delayed maturity and uneven ripening.",
+        "organic_fertilizer_options": "Apply compost, farmyard manure, or green manure after harvest to replenish soil organic matter and nutrients for the next crop cycle.",
+        "cost_efficiency_guidance": "Focus investment on efficient harvest timing and proper post-harvest handling to minimize grain losses rather than additional input costs.",
+        "water_management": {
+          "requirement": "Low",
+          "irrigation_frequency": "Stop irrigation before harvest",
+          "drainage_required": true,
+          "critical_condition": "Ensure field drying completely before harvesting to allow machinery access and prevent grain deterioration",
+          "soil_moisture": "Allow field to dry naturally. Soil should be firm enough for harvest operations.",
+          "ideal_soil_moisture": "Field dry; grain at 20-25% moisture",
+          "water_stress_symptoms": "None expected; natural senescence and drying are normal",
+          "recovery_guidance": "Not applicable for harvest; ensure grain is dried and handled promptly after harvest"
+        },
+        "irrigation_frequency": "Stop irrigation before harvest",
+        "fertilizer_guidance": "No fertilizer application",
+        "nutrient_focus": "Minimal; focus on post-harvest replenishment",
+        "common_diseases": [
+          "Grain discoloration",
+          "Storage molds"
+        ],
+        "common_pests": [
+          "Bird damage",
+          "Field rats",
+          "Grain bugs"
+        ],
+        "weather_risks": {
+          "temperature_range": "20-30°C",
+          "humidity_range": "Low humidity preferred for drying",
+          "rainfall_effects": "Rain during harvest causes grain damage and mold",
+          "wind_effects": "Strong wind can cause shattering and grain loss"
+        },
+        "temperature_range": "20-30°C",
+        "humidity_range": "Low humidity (dry conditions) preferred",
+        "rainfall_effects": "Rain during harvest causes grain damage, mold, and quality loss",
+        "wind_effects": "Strong wind can cause grain shattering and lodging",
+        "yield_risks": "Delayed harvest causes shattering, pest damage, and quality loss",
+        "preventive_actions": [
+          "Prepare harvest equipment and post-harvest storage facilities",
+          "Monitor bird damage in ripening fields and use deterrents",
+          "Drain field completely 10-15 days before harvest",
+          "Plan harvest logistics to avoid rain damage",
+          "Prepare threshing floor and drying area in advance"
+        ],
+        "avoid_actions": [
+          "Avoid irrigation during this stage to prevent delayed maturity",
+          "Avoid late nitrogen or any fertilizer application",
+          "Avoid delaying harvest beyond physiological maturity",
+          "Avoid harvesting during rainy or high humidity conditions",
+          "Avoid piling freshly harvested grain without proper drying"
+        ],
+        "recovery_guidance": "If harvest is delayed and shattering occurs, harvest promptly and dry grain immediately to salvage quality.",
+        "operational_checklist": [
+          "Harvest planning and logistics coordination",
+          "Field drying through proper drainage",
+          "Storage preparation and pest-proofing",
+          "Post-harvest grain drying to 14% moisture",
+          "Soil sampling for next crop planning"
+        ],
+        "decision_priority": "High — harvest timing determines grain yield, quality, and market price",
+        "expected_outcome": "Timely harvest at optimal maturity with maximum grain yield and milling recovery",
+        "critical_operations": [
+          "Harvest planning and logistics coordination",
+          "Field drying through proper drainage",
+          "Storage preparation and pest-proofing",
+          "Post-harvest grain drying to 14% moisture",
+          "Soil sampling for next crop planning"
+        ]
       }
     }
   },
-
   "climate_interactions": {
-    "Nursery": {
+    "Germination": {
       "excess_rainfall": {
         "risk_level": "Medium",
         "effects": [
-          "Seedling rot",
-          "Poor root anchoring"
-        ]
+          "Seed rot",
+          "Poor germination",
+          "Waterlogging"
+        ],
+        "recommended_actions": [
+          "Ensure seedbed drainage",
+          "Avoid over-irrigation"
+        ],
+        "why": "Waterlogged seedbeds reduce oxygen and cause seed rot and damping-off.",
+        "what_if_ignored": "Uneven germination and poor stand establishment reduce final yield.",
+        "check_next": "Check seedbed drainage and emergence uniformity."
       }
     },
-
-    "Vegetative": {
+    "Seedling": {
+      "high_humidity": {
+        "risk_level": "Medium",
+        "effects": [
+          "Increased leaf disease pressure",
+          "Damping-off"
+        ],
+        "recommended_actions": [
+          "Monitor fungal symptoms",
+          "Maintain proper spacing"
+        ],
+        "why": "High humidity and moisture favour damping-off and seedling blight.",
+        "what_if_ignored": "Seedling mortality reduces transplanting success.",
+        "check_next": "Inspect nursery beds for damping-off symptoms."
+      }
+    },
+    "Tillering": {
       "high_humidity": {
         "risk_level": "Medium",
         "effects": [
           "Increased leaf disease pressure"
-        ]
+        ],
+        "recommended_actions": [
+          "Monitor fungal symptoms",
+          "Maintain proper plant spacing"
+        ],
+        "why": "High humidity and dense canopy favour blast and sheath blight.",
+        "what_if_ignored": "Leaf disease reduces photosynthesis and tiller vigor.",
+        "check_next": "Scout for leaf lesions and maintain controlled nitrogen."
+      },
+      "low_temperature": {
+        "risk_level": "Medium",
+        "effects": [
+          "Reduced tillering and growth",
+          "Slow leaf development"
+        ],
+        "recommended_actions": [
+          "Maintain standing water to buffer temperature",
+          "Avoid nitrogen stress",
+          "Monitor recovery of new tillers"
+        ],
+        "why": "Cold temperatures below 20C slow rice metabolism and reduce tiller production.",
+        "what_if_ignored": "Reduced tiller number lowers yield potential.",
+        "check_next": "Monitor tiller count and growth recovery."
       }
     },
-
+    "Panicle_Initiation": {
+      "high_humidity": {
+        "risk_level": "Medium",
+        "effects": [
+          "Increased blast and sheath blight pressure"
+        ],
+        "recommended_actions": [
+          "Increase field monitoring",
+          "Avoid excess nitrogen"
+        ],
+        "why": "Humid conditions during panicle initiation favour panicle blast.",
+        "what_if_ignored": "Panicle blast can reduce grain set and yield significantly.",
+        "check_next": "Monitor panicle base for neck rot symptoms."
+      },
+      "excess_rainfall": {
+        "risk_level": "High",
+        "effects": [
+          "Poor panicle development",
+          "Disease spread"
+        ],
+        "recommended_actions": [
+          "Ensure proper drainage",
+          "Monitor disease"
+        ],
+        "why": "Excess rain waterlogs the field and spreads disease.",
+        "what_if_ignored": "Reduced panicle number and grain set.",
+        "check_next": "Check drainage and panicle emergence."
+      }
+    },
     "Flowering": {
       "excess_rainfall": {
         "risk_level": "High",
         "effects": [
           "Poor pollination",
           "Spikelet sterility"
-        ]
+        ],
+        "recommended_actions": [
+          "Ensure proper drainage",
+          "Avoid spraying before rainfall"
+        ],
+        "why": "Rain during flowering disrupts pollination and washes pollen.",
+        "what_if_ignored": "Spikelet sterility causes significant yield loss up to 30%.",
+        "check_next": "Assess pollination success and grain set."
       },
       "high_temperature": {
         "risk_level": "High",
         "effects": [
           "Reduced pollen viability",
           "Yield loss"
-        ]
+        ],
+        "recommended_actions": [
+          "Maintain irrigation moisture",
+          "Monitor heat stress symptoms"
+        ],
+        "why": "Temperatures above 35°C reduce pollen viability and cause sterility.",
+        "what_if_ignored": "Heat stress causes spikelet sterility and yield loss.",
+        "check_next": "Monitor flowering time and grain set."
+      },
+      "high_humidity": {
+        "risk_level": "Medium",
+        "effects": [
+          "Blast disease spread",
+          "Sheath blight pressure"
+        ],
+        "recommended_actions": [
+          "Increase field monitoring",
+          "Avoid excess nitrogen application"
+        ],
+        "why": "High humidity favours blast and sheath blight during flowering.",
+        "what_if_ignored": "Disease reduces grain set and quality.",
+        "check_next": "Scout for panicle blast and neck rot."
+      },
+      "high_wind": {
+        "risk_level": "Medium",
+        "effects": [
+          "Sterility and lodging risk",
+          "Physical damage to panicles"
+        ],
+        "recommended_actions": [
+          "Avoid late nitrogen to reduce lodging",
+          "Maintain stable water",
+          "Delay spraying until wind subsides"
+        ],
+        "why": "Strong wind during flowering can cause sterility and lodging.",
+        "what_if_ignored": "Lodging and sterility reduce grain set and yield.",
+        "check_next": "Check plant stability and panicle damage."
       }
     },
-
-    "Grain_Filling": {
+    "Grain Filling": {
       "drought": {
         "risk_level": "Medium",
         "effects": [
           "Incomplete grain filling",
           "Reduced grain weight"
-        ]
+        ],
+        "recommended_actions": [
+          "Maintain irrigation schedule",
+          "Reduce moisture stress"
+        ],
+        "why": "Water stress during grain filling reduces grain weight and quality.",
+        "what_if_ignored": "Lightweight, chaffy grains reduce milling recovery and yield.",
+        "check_next": "Monitor grain filling and moisture."
+      },
+      "flood_risk": {
+        "risk_level": "Medium",
+        "effects": [
+          "Root oxygen deficiency",
+          "Lodging risk"
+        ],
+        "recommended_actions": [
+          "Drain excess water",
+          "Monitor plant stability"
+        ],
+        "why": "Waterlogging starves roots of oxygen and raises lodging risk.",
+        "what_if_ignored": "Lodging causes grain loss and reduced quality.",
+        "check_next": "Check field drainage and plant stability."
+      }
+    },
+    "Harvest": {
+      "excess_rainfall": {
+        "risk_level": "High",
+        "effects": [
+          "Grain damage",
+          "Mold growth",
+          "Harvest delay"
+        ],
+        "recommended_actions": [
+          "Harvest in dry weather",
+          "Dry grain promptly"
+        ],
+        "why": "Rain during harvest damages grain and encourages mold.",
+        "what_if_ignored": "Quality loss, mold, and reduced market price.",
+        "check_next": "Monitor weather forecast and harvest timing."
       }
     }
   },
-
+  "stage_relationships": {
+    "Germination": {
+      "temperature": "20-35°C needed for germination",
+      "water": "Light moisture, no waterlogging",
+      "oxygen": "Adequate oxygen critical for seed respiration"
+    },
+    "Seedling": {
+      "temperature": "25-31°C",
+      "water": "Light frequent irrigation",
+      "nutrients": "Nitrogen and phosphorus for vigor"
+    },
+    "Tillering": {
+      "temperature": "25-31°C",
+      "water": "2-5 cm standing water",
+      "nutrients": "Nitrogen and phosphorus for tillering"
+    },
+    "Panicle_Initiation": {
+      "temperature": "25-33°C",
+      "water": "Continuous moisture 2-5 cm",
+      "nutrients": "Potassium for panicle development"
+    },
+    "Flowering": {
+      "temperature": "25-33°C (avoid >35°C)",
+      "water": "Continuous moisture 2-5 cm",
+      "nutrients": "Potassium, boron, zinc"
+    },
+    "Grain Filling": {
+      "temperature": "20-30°C",
+      "water": "Alternate wetting and drying",
+      "nutrients": "Potassium and micronutrients"
+    },
+    "Harvest": {
+      "temperature": "20-30°C",
+      "water": "Field dry",
+      "moisture": "Grain at 20-25% moisture"
+    }
+  },
+  "intelligence_relationships": {
+    "weather_to_stage": {
+      "excess_rainfall": [
+        "Germination: seed rot and waterlogging risk",
+        "Flowering: poor pollination and spikelet sterility",
+        "Harvest: grain damage and mold"
+      ],
+      "high_temperature": [
+        "Flowering: reduced pollen viability and sterility",
+        "Grain Filling: reduced grain weight"
+      ],
+      "high_humidity": [
+        "Tillering: increased leaf disease pressure",
+        "Flowering: blast and sheath blight spread"
+      ],
+      "drought": [
+        "Panicle_Initiation: reduced panicle number",
+        "Grain Filling: incomplete grain filling"
+      ]
+    },
+    "weather_to_disease": {
+      "high_humidity": [
+        "Blast disease risk increases",
+        "Sheath blight risk increases",
+        "Brown spot risk increases"
+      ],
+      "excess_rainfall": [
+        "Bacterial leaf blight spread increases",
+        "Grain discoloration risk increases"
+      ],
+      "high_temperature": [
+        "Heat stress weakens crop immunity to blast"
+      ]
+    },
+    "weather_to_pest": {
+      "warm_humid": [
+        "Brown plant hopper outbreak risk",
+        "Leaf folder activity increases"
+      ],
+      "dry_warm": [
+        "Stem borer pressure increases"
+      ],
+      "excess_rainfall": [
+        "Hispa and snail activity increases"
+      ]
+    },
+    "weather_to_water": {
+      "excess_rainfall": [
+        "Reduce irrigation to avoid waterlogging",
+        "Ensure drainage channels open"
+      ],
+      "drought": [
+        "Increase irrigation frequency",
+        "Conserve soil moisture with mulching"
+      ],
+      "high_temperature": [
+        "Maintain continuous standing water during flowering"
+      ]
+    },
+    "stage_to_fertilizer": {
+      "Germination": "Minimal; basal phosphorus only",
+      "Seedling": "Nitrogen and phosphorus for vigor",
+      "Tillering": "Split nitrogen for tiller production",
+      "Panicle_Initiation": "Potassium for panicle development",
+      "Flowering": "Potassium and boron; limited nitrogen",
+      "Grain Filling": "Potassium and micronutrients",
+      "Harvest": "No fertilizer application"
+    },
+    "stage_to_irrigation": {
+      "Germination": "Light moisture, avoid waterlogging",
+      "Seedling": "Light frequent irrigation",
+      "Tillering": "2-5 cm standing water",
+      "Panicle_Initiation": "Continuous moisture 2-5 cm",
+      "Flowering": "Continuous moisture 2-5 cm",
+      "Grain Filling": "Alternate wetting and drying",
+      "Harvest": "Stop irrigation, dry field"
+    },
+    "stage_to_disease": {
+      "Tillering": "Blast, sheath blight, brown spot",
+      "Panicle_Initiation": "Blast, sheath blight, bacterial blight",
+      "Flowering": "Blast, sheath blight, bacterial blight",
+      "Grain Filling": "Sheath blight, brown spot, grain discoloration"
+    },
+    "stage_to_pest": {
+      "Seedling": "Seedling maggot, hispa",
+      "Tillering": "Stem borer, leaf folder, hispa",
+      "Panicle_Initiation": "Stem borer, leaf folder",
+      "Flowering": "Panicle mite, stem borer, earhead bug",
+      "Grain Filling": "Stem borer, grain sucking bugs, hispa",
+      "Harvest": "Birds, field rats, grain bugs"
+    },
+    "soil_to_nutrient": {
+      "clay": "Higher nutrient retention; lower nitrogen frequency",
+      "sandy": "Lower nutrient retention; split nitrogen into frequent doses",
+      "acidic": "Iron and aluminium toxicity risk; apply lime",
+      "calcareous": "Zinc and iron deficiency risk; apply zinc"
+    },
+    "soil_to_crop_suitability": {
+      "clay_loam": "Optimal for paddy rice",
+      "alluvial": "Highly suitable for rice",
+      "sandy": "Poor water retention; needs frequent irrigation",
+      "laterite": "Suitable with organic matter and nutrient management"
+    },
+    "soil_to_water_retention": {
+      "clay": "High water retention; good for paddy",
+      "sandy": "Low water retention; high irrigation need",
+      "loam": "Moderate water retention; balanced",
+      "silty": "Good water holding; may waterlog"
+    },
+    "climate_to_yield": {
+      "optimal_weather": "Temperatures 25-30°C and adequate water maximize yield",
+      "heat_stress": "High temperature at flowering reduces yield up to 30%",
+      "drought": "Water stress at critical stages reduces yield significantly",
+      "flood": "Deep flooding reduces yield and delays maturity"
+    },
+    "disease_to_treatment": {
+      "Blast": "Apply tricyclazole; use resistant varieties",
+      "Sheath Blight": "Apply hexaconazole; reduce nitrogen",
+      "Bacterial Leaf Blight": "Apply antibiotics (streptocycline); use resistant varieties",
+      "Brown Spot": "Apply mancozeb; improve drainage"
+    },
+    "pest_to_treatment": {
+      "Brown Plant Hopper": "Apply pymetrozine; drain field",
+      "Stem Borer": "Apply chlorantraniliprole; use light traps",
+      "Leaf Folder": "Apply chlorantraniliprole",
+      "Earhead Bug": "Apply recommended insecticide at heading",
+      "Hispa": "Apply recommended insecticide; remove damaged leaves"
+    },
+    "weather_to_market": {
+      "excess_rainfall": "Rain can delay harvest and reduce market arrivals, affecting price",
+      "drought": "Water scarcity reduces supply and may raise prices",
+      "good_monsoon": "A good monsoon boosts supply and may lower prices",
+      "flood": "Flood damage reduces supply and raises prices"
+    },
+    "market_to_harvest_timing": {
+      "rising_price": "Consider delaying harvest if storage is available",
+      "falling_price": "Harvest and sell promptly to avoid price decline",
+      "high_demand": "Harvest to capture premium market prices"
+    },
+    "climate_risk_to_decision": {
+      "high_risk": "Escalate advisory priority; protect critical stages",
+      "medium_risk": "Increase monitoring and preventive measures",
+      "low_risk": "Maintain routine management"
+    },
+    "yield_risk_to_recommendation": {
+      "high": "Urgent intervention: water, nutrient, and pest control",
+      "medium": "Preventive measures and monitoring",
+      "low": "Routine management and best practices"
+    },
+    "water_stress_to_yield": {
+      "tillering": "Water stress reduces tiller number and yield",
+      "panicle_initiation": "Water stress reduces panicle number",
+      "flowering": "Water stress causes spikelet sterility",
+      "grain_filling": "Water stress reduces grain weight"
+    },
+    "fertilizer_to_yield": {
+      "over_fertilization": "Lush growth increases lodging and disease, reducing yield",
+      "under_fertilization": "Nutrient deficiency reduces tillering and grain filling",
+      "balanced": "Balanced fertilization maximizes yield and quality"
+    }
+  },
   "diseases": [
     {
       "name": "Blast Disease",
       "affected_stages": [
-        "Vegetative",
+        "Tillering",
+        "Panicle_Initiation",
         "Flowering"
       ],
       "severity_by_stage": {
-        "Vegetative": "Medium",
+        "Tillering": "Medium",
+        "Panicle_Initiation": "High",
         "Flowering": "High"
+      },
+      "favorable_conditions": {
+        "humidity": "High",
+        "temperature_range": "20-30C"
       },
       "visible_symptoms": [
         "Diamond-shaped lesions on leaves",
-        "Neck rot at panicle base"
+        "Neck rot at panicle base",
+        "Panicle blast on nodes"
       ],
+      "causes": "Fungal pathogen (Magnaporthe oryzae) favoured by high humidity, excess nitrogen, and dense planting.",
+      "disease_progression": "Leaf lesions appear first, spreading to sheaths and panicle neck; severe infection causes panicle blast and grain loss.",
       "prevention_logic": [
         "Balanced nitrogen application",
         "Avoid dense planting",
-        "Ensure proper drainage"
-      ]
+        "Ensure proper drainage",
+        "Use resistant varieties"
+      ],
+      "treatment": "Apply tricyclazole or carbendazim at early symptom appearance; remove infected debris; follow label recommendations.",
+      "weather_relationships": "High humidity, rainfall, and cool nights (20-30°C) favour blast development."
     },
     {
       "name": "Sheath Blight",
       "affected_stages": [
-        "Vegetative",
-        "Grain_Filling"
+        "Tillering",
+        "Panicle_Initiation",
+        "Grain Filling"
       ],
       "severity_by_stage": {
-        "Vegetative": "Medium",
-        "Grain_Filling": "High"
+        "Tillering": "Medium",
+        "Panicle_Initiation": "High",
+        "Grain Filling": "High"
+      },
+      "favorable_conditions": {
+        "humidity": "High",
+        "temperature_range": "25-32C"
       },
       "visible_symptoms": [
         "Oval lesions on leaf sheath",
-        "White fungal growth"
+        "White fungal growth",
+        "Grain discoloration in severe cases"
       ],
+      "causes": "Fungal pathogen (Rhizoctonia solani) favoured by high humidity, dense canopy, and excess nitrogen.",
+      "disease_progression": "Lesions on leaf sheaths spread upward to flag leaf and panicle; severe infection reduces grain filling and causes lodging.",
       "prevention_logic": [
         "Proper plant spacing",
-        "Avoid excessive standing water"
-      ]
+        "Avoid excessive standing water",
+        "Balanced nitrogen",
+        "Field hygiene"
+      ],
+      "treatment": "Apply hexaconazole or validamycin at early symptoms; reduce nitrogen and improve drainage.",
+      "weather_relationships": "High humidity, dense canopy, and warm temperatures (25-32°C) favour sheath blight."
+    },
+    {
+      "name": "Bacterial Leaf Blight",
+      "affected_stages": [
+        "Panicle_Initiation",
+        "Flowering",
+        "Grain Filling"
+      ],
+      "severity_by_stage": {
+        "Panicle_Initiation": "Medium",
+        "Flowering": "High",
+        "Grain Filling": "High"
+      },
+      "favorable_conditions": {
+        "humidity": "High",
+        "temperature_range": "25-34C"
+      },
+      "visible_symptoms": [
+        "Yellow to white lesions with wavy margins",
+        "Wilting and drying of leaves",
+        "Milky bacterial ooze on cut leaves"
+      ],
+      "causes": "Bacterial pathogen (Xanthomonas oryzae pv. oryzae) spread by wind, rain, and infected seed.",
+      "disease_progression": "Lesions begin at leaf tips and margins, spreading downward; severe infection causes leaf wilting and yield loss.",
+      "prevention_logic": [
+        "Use resistant varieties",
+        "Avoid excess nitrogen",
+        "Use clean, certified seed",
+        "Avoid field flooding that spreads bacteria"
+      ],
+      "treatment": "Apply streptocycline + copper oxychloride at early symptoms; use resistant varieties; avoid excessive nitrogen.",
+      "weather_relationships": "High humidity, rainfall, and wind-driven spread favour bacterial leaf blight."
+    },
+    {
+      "name": "Brown Spot",
+      "affected_stages": [
+        "Tillering",
+        "Grain Filling"
+      ],
+      "severity_by_stage": {
+        "Tillering": "Medium",
+        "Grain Filling": "Medium"
+      },
+      "favorable_conditions": {
+        "humidity": "High",
+        "temperature_range": "20-30C"
+      },
+      "visible_symptoms": [
+        "Brown circular spots on grains",
+        "Brown lesions on leaves",
+        "Reduced grain quality"
+      ],
+      "causes": "Fungal pathogen (Bipolaris oryzae) favoured by nutrient deficiency, water stress, and humid conditions.",
+      "disease_progression": "Brown spots appear on leaves and grains; severe infection reduces photosynthesis and grain quality.",
+      "prevention_logic": [
+        "Balanced fertilization",
+        "Proper drainage",
+        "Use resistant varieties",
+        "Field hygiene"
+      ],
+      "treatment": "Apply mancozeb or propiconazole; improve nutrition and drainage.",
+      "weather_relationships": "High humidity, water stress, and nutrient deficiency favour brown spot."
     }
   ],
-
+  "pests": [
+    {
+      "name": "Brown Plant Hopper (BPH)",
+      "affected_stages": [
+        "Tillering",
+        "Panicle_Initiation",
+        "Flowering"
+      ],
+      "severity_by_stage": {
+        "Tillering": "Medium",
+        "Panicle_Initiation": "High",
+        "Flowering": "High"
+      },
+      "favorable_conditions": {
+        "humidity": "High",
+        "temperature_range": "25-30C"
+      },
+      "visible_symptoms": [
+        "Hopper burn (yellowing and drying of plants)",
+        "Rapid plant death in patches",
+        "Sooty mold on honeydew"
+      ],
+      "damage": "BPH sucks sap from plant bases, causing hopper burn and rapid plant death in patches.",
+      "prevention_logic": [
+        "Field hygiene",
+        "Balanced nitrogen (avoid excess)",
+        "Maintain natural enemies",
+        "Use resistant varieties"
+      ],
+      "treatment": "Apply pymetrozine or buprofezin at threshold levels; drain field to reduce humidity; protect natural enemies.",
+      "weather_relationships": "Warm, humid conditions and continuous cropping favour BPH outbreaks."
+    },
+    {
+      "name": "Stem Borer",
+      "affected_stages": [
+        "Tillering",
+        "Panicle_Initiation",
+        "Flowering",
+        "Grain Filling"
+      ],
+      "severity_by_stage": {
+        "Tillering": "Medium",
+        "Panicle_Initiation": "High",
+        "Flowering": "High",
+        "Grain Filling": "Medium"
+      },
+      "favorable_conditions": {
+        "humidity": "Moderate-High",
+        "temperature_range": "20-30C"
+      },
+      "visible_symptoms": [
+        "Dead hearts (whitish dried central tillers)",
+        "Whiteheads (dried panicles)",
+        "Bore holes in stems"
+      ],
+      "damage": "Stem borer larvae tunnel into stems, causing dead hearts and whiteheads that reduce yield.",
+      "prevention_logic": [
+        "Use light traps",
+        "Field hygiene and clean stubble",
+        "Balanced nitrogen",
+        "Early planting"
+      ],
+      "treatment": "Apply chlorantraniliprole or cartap hydrochloride at threshold levels; remove and destroy egg masses.",
+      "weather_relationships": "Dry spells and warm conditions favour stem borer activity."
+    },
+    {
+      "name": "Leaf Folder",
+      "affected_stages": [
+        "Tillering",
+        "Panicle_Initiation"
+      ],
+      "severity_by_stage": {
+        "Tillering": "Medium",
+        "Panicle_Initiation": "Medium"
+      },
+      "favorable_conditions": {
+        "humidity": "High",
+        "temperature_range": "25-30C"
+      },
+      "visible_symptoms": [
+        "Folded leaves with whitish streaks",
+        "Leaf blades folded and tied with silk",
+        "Reduced leaf area"
+      ],
+      "damage": "Leaf folder larvae fold and feed on leaves, reducing photosynthetic area and yield.",
+      "prevention_logic": [
+        "Field hygiene",
+        "Balanced nitrogen",
+        "Maintain natural enemies",
+        "Light traps"
+      ],
+      "treatment": "Apply chlorantraniliprole or flubendiamide at threshold levels; avoid broad-spectrum sprays.",
+      "weather_relationships": "High humidity and lush vegetative growth favour leaf folder activity."
+    },
+    {
+      "name": "Earhead Bug (Grain Sucking Bug)",
+      "affected_stages": [
+        "Flowering",
+        "Grain Filling"
+      ],
+      "severity_by_stage": {
+        "Flowering": "Medium",
+        "Grain Filling": "High"
+      },
+      "favorable_conditions": {
+        "humidity": "Moderate-High",
+        "temperature_range": "25-32C"
+      },
+      "visible_symptoms": [
+        "Chaffy, empty grains",
+        "Discoloured grains",
+        "Feeding marks on panicles"
+      ],
+      "damage": "Earhead bugs suck sap from developing grains, causing chaffy, empty grains and reduced quality.",
+      "prevention_logic": [
+        "Field hygiene",
+        "Timely harvest",
+        "Avoid excessive nitrogen",
+        "Monitor during heading"
+      ],
+      "treatment": "Apply recommended insecticide at heading and grain filling; time applications to protect natural enemies.",
+      "weather_relationships": "Warm, humid conditions favour earhead bug multiplication."
+    },
+    {
+      "name": "Rice Hispa",
+      "affected_stages": [
+        "Seedling",
+        "Tillering"
+      ],
+      "severity_by_stage": {
+        "Seedling": "Medium",
+        "Tillering": "Medium"
+      },
+      "favorable_conditions": {
+        "humidity": "High",
+        "temperature_range": "25-30C"
+      },
+      "visible_symptoms": [
+        "White streaky feeding lines on leaves",
+        "White patches on leaf surface",
+        "Reduced leaf area"
+      ],
+      "damage": "Hispa larvae and adults feed on leaf tissue, reducing photosynthetic area and plant vigor.",
+      "prevention_logic": [
+        "Remove damaged leaves",
+        "Field hygiene",
+        "Balanced nitrogen",
+        "Maintain natural enemies"
+      ],
+      "treatment": "Apply recommended insecticide (e.g. chlorantraniliprole) at early infestation; remove infected leaves.",
+      "weather_relationships": "High humidity and wet conditions favour hispa activity."
+    }
+  ],
   "risk_impact_map": {
+    "Germination": {
+      "excess_rainfall": {
+        "primary_impacts": [
+          "Seed rot",
+          "Poor germination"
+        ],
+        "secondary_impacts": [
+          "Uneven stand",
+          "Reduced plant population"
+        ],
+        "severity": "Medium",
+        "why": "Waterlogging reduces oxygen and causes seed rot.",
+        "what_if_ignored": "Uneven germination reduces final yield.",
+        "check_next": "Check seedbed drainage and replant gaps."
+      }
+    },
+    "Seedling": {
+      "high_humidity": {
+        "primary_impacts": [
+          "Damping-off",
+          "Seedling blight"
+        ],
+        "secondary_impacts": [
+          "Seedling mortality",
+          "Weak transplanting"
+        ],
+        "severity": "Medium",
+        "why": "High humidity favours damping-off fungi.",
+        "what_if_ignored": "Seedling loss reduces transplanting success.",
+        "check_next": "Inspect nursery for damping-off symptoms."
+      }
+    },
+    "Tillering": {
+      "high_humidity": {
+        "primary_impacts": [
+          "Foliar disease development"
+        ],
+        "secondary_impacts": [
+          "Reduced photosynthetic efficiency",
+          "Delayed tillering"
+        ],
+        "severity": "Medium",
+        "why": "Humid canopy favours blast and sheath blight.",
+        "what_if_ignored": "Disease reduces tiller vigor and yield.",
+        "check_next": "Scout for leaf lesions and control nitrogen."
+      }
+    },
+    "Panicle_Initiation": {
+      "excess_rainfall": {
+        "primary_impacts": [
+          "Poor panicle development"
+        ],
+        "secondary_impacts": [
+          "Reduced grain set",
+          "Disease spread"
+        ],
+        "severity": "High",
+        "why": "Waterlogging and humidity stress panicle development.",
+        "what_if_ignored": "Reduced panicle number and grain set.",
+        "check_next": "Check drainage and panicle emergence."
+      }
+    },
     "Flowering": {
       "excess_rainfall": {
         "primary_impacts": [
           "Pollination failure"
         ],
         "secondary_impacts": [
-          "Increased blast disease incidence"
+          "Increased blast disease incidence",
+          "Spikelet sterility"
         ],
-        "severity": "High"
+        "severity": "High",
+        "why": "Rain disrupts pollination and washes pollen.",
+        "what_if_ignored": "Spikelet sterility causes up to 30% yield loss.",
+        "check_next": "Assess pollination success and grain set."
+      },
+      "high_temperature": {
+        "primary_impacts": [
+          "Pollen viability reduction"
+        ],
+        "secondary_impacts": [
+          "Spikelet sterility",
+          "Yield loss up to 30%"
+        ],
+        "severity": "High",
+        "why": "Temperatures above 35°C reduce pollen viability.",
+        "what_if_ignored": "Heat stress causes spikelet sterility and yield loss.",
+        "check_next": "Monitor flowering time and grain set."
       }
     },
-    "Grain_Filling": {
+    "Grain Filling": {
       "drought": {
         "primary_impacts": [
           "Poor grain development"
         ],
         "secondary_impacts": [
-          "Lower milling recovery"
+          "Lower milling recovery",
+          "Reduced grain weight"
         ],
-        "severity": "Medium"
+        "severity": "Medium",
+        "why": "Water stress reduces grain filling and weight.",
+        "what_if_ignored": "Lightweight, chaffy grains reduce quality and yield.",
+        "check_next": "Monitor grain filling and moisture."
+      },
+      "flood_risk": {
+        "primary_impacts": [
+          "Root oxygen deficiency"
+        ],
+        "secondary_impacts": [
+          "Lodging risk",
+          "Grain deterioration"
+        ],
+        "severity": "Medium",
+        "why": "Waterlogging starves roots of oxygen and raises lodging risk.",
+        "what_if_ignored": "Lodging causes grain loss and quality decline.",
+        "check_next": "Check field drainage and plant stability."
+      }
+    },
+    "Harvest": {
+      "excess_rainfall": {
+        "primary_impacts": [
+          "Grain damage",
+          "Mold growth"
+        ],
+        "secondary_impacts": [
+          "Quality loss",
+          "Reduced market price"
+        ],
+        "severity": "High",
+        "why": "Rain during harvest damages grain and encourages mold.",
+        "what_if_ignored": "Harvest losses and reduced market price.",
+        "check_next": "Monitor weather and harvest timing."
       }
     }
   },
-
   "harvest_logic": {
     "ideal_window_days": "110-130",
     "early_harvest": {
@@ -153,25 +1809,57 @@
         "Immature grains",
         "Low head rice recovery"
       ],
-      "quality_impact": "High"
+      "quality_impact": "High",
+      "why": "Early harvest leaves grains immature with low milling recovery.",
+      "what_if_ignored": "Harvesting too early produces poor quality, low-yield grain."
     },
     "late_harvest": {
       "risks": [
         "Grain shattering",
         "Pest infestation"
       ],
-      "quality_impact": "Medium"
+      "quality_impact": "Medium",
+      "why": "Delayed harvest causes shattering and pest damage.",
+      "what_if_ignored": "Grain loss and quality decline from shattering and pests."
     }
   },
-
   "market_impact": {
     "early_harvest": "Lower price due to immature grains and poor milling quality",
-    "late_harvest": "Higher rejection risk due to broken and damaged grains"
+    "late_harvest": "Higher rejection risk due to broken and damaged grains",
+    "good_quality": "Premium price for well-dried, clean, high-milling-recovery grain",
+    "high_demand": "Prices rise during lean months (March-May) before the new kharif harvest"
   },
-
   "stage_risk_summary": {
-    "Nursery": "Excess moisture in nursery weakens seedlings and affects field establishment.",
+    "Germination": "Excess moisture in the seedbed weakens germination and reduces stand establishment.",
+    "Seedling": "High humidity in the nursery favours damping-off and weakens seedlings.",
+    "Tillering": "Water and nutrient stress during tillering reduces tiller number and yield potential.",
+    "Panicle_Initiation": "Rain or humidity during panicle initiation reduces panicle number and grain set.",
     "Flowering": "Rain or heat during flowering disrupts pollination and significantly reduces yield.",
-    "Grain_Filling": "Water stress during grain filling lowers grain weight and market quality."
+    "Grain Filling": "Water stress during grain filling lowers grain weight and market quality.",
+    "Harvest": "Rain during harvest damages grain and reduces quality and market price."
+  },
+  "stage_aliases": {
+    "nursery": [
+      "Germination",
+      "Seedling"
+    ],
+    "vegetative": [
+      "Tillering"
+    ],
+    "flowering": [
+      "Flowering"
+    ],
+    "grain_filling": [
+      "Grain Filling"
+    ],
+    "maturity": [
+      "Harvest"
+    ],
+    "grain-filling": [
+      "Grain Filling"
+    ],
+    "grain filling": [
+      "Grain Filling"
+    ]
   }
 }

@@ -13,7 +13,7 @@ STRICT RULES:
 - Deterministic only
 - Immutable output
 """
-from disease_detection_engine import detect_disease
+
 from copy import deepcopy
 
 from crop_knowledge_engine import (
@@ -54,12 +54,13 @@ def generate_alerts(snapshot: dict, knowledge: dict) -> list:
     if sensitivity in ("High", "Medium"):
         alerts.append(f"Crop is {sensitivity.lower()}ly sensitive at {stage} stage")
 
+    # Disease Alert
+    disease_block = _safe_get(knowledge, "diseases", {})
+    diseases = _safe_get(disease_block, "diseases", [])
 
-    # Disease Alert (NEW — Track-3 based)
-    disease_info = _safe_get(knowledge, "disease_detection", {})
+    if isinstance(diseases, list) and len(diseases) > 0:
+        alerts.append(f"Disease risk present during {stage} stage")
 
-    if disease_info.get("stage_relevance") == "active":
-        alerts.append(f"Disease detected: {disease_info.get('name')}")
     return alerts
 
 
@@ -133,33 +134,10 @@ def build_advisory(snapshot_packet: dict) -> dict:
 
     # ------------------------------------------------------
     # ALERTS & SCHEDULE
-   # ------------------------------------------------------
-    # DISEASE DETECTION (Track-3 Integration)
-    # ------------------------------------------------------
-    snapshot_with_image = deepcopy(snapshot_packet)
-
-    if snapshot_with_image.get("image"):
-        disease_output = detect_disease(snapshot_with_image)
-    else:
-        disease_output = {
-            "status": "not_available",
-            "message": "No image provided"
-    }
-
-    # ------------------------------------------------------
-    # Inject disease into knowledge for alerts
-    # ------------------------------------------------------
-    knowledge["disease_detection"] = (
-        disease_output.get("disease_detection")
-        if disease_output.get("status") == "success"
-        else {}
-    )
-
-    # ------------------------------------------------------
-    # ALERTS & SCHEDULE (NOW USES UPDATED KNOWLEDGE)
     # ------------------------------------------------------
     alerts = generate_alerts(snapshot_packet, knowledge)
     schedule = generate_schedule(stage, knowledge)
+
     # ------------------------------------------------------
     # FINAL PACKET (LOCKED STRUCTURE)
     # ------------------------------------------------------
@@ -180,14 +158,9 @@ def build_advisory(snapshot_packet: dict) -> dict:
         # Knowledge Layer (Track-2)
         "advisory": {
             "stage_advice": stage_advice.get("advice"),
-            "fertilizer": fertilizer.get("fertilizer"),
-
-            "disease": (
-                disease_output.get("disease_detection")
-                if disease_output.get("status")=="success"
-                else disease_output
-            )
-                 },
+            "diseases": diseases.get("diseases"),
+            "fertilizer": fertilizer.get("fertilizer")
+        },
 
         # Aggregation Layer
         "alerts": tuple(alerts),      # 🔒 immutable

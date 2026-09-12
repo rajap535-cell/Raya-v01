@@ -14,151 +14,244 @@
 
 <body>
     <div id="navbar-placeholder"></div>
-    <header class="border-b-2 border-b-cyan-700 shadow-[0_0_20px_rgba(56,189,248,0.4) relative h-[10rem] flex justify-start items-end px-6 overflow-hidden
-         bg-gradient-to-b from-[#1D2940] via-[#16233A] to-[#0B1224]">
-        <section class="gap-3 px-20 mx-24">
-            <div class="mx-20">
-                <h1 class="text-white-300 flex justify-center text-4xl font-semibold my-15 mx-25 mb-5">The Problems RAYA
-                    Addresses</h1>
-            </div>
-            <hr class="half-length w-4/5 mx-auto my-4 border-t border-cyan-300/60
-                shadow-[0_0_20px_rgba(56,189,248,0.4)">
-            <p class="text-2xl text-slate-400 drop-shadow-lg mx-26 mb-5">When planetary systems operate as one - but human
-                intelligence does not.
-            </p>
-        </section>
-    </header>
+    <!-- ==========================================================
+     CINEMATIC PROBLEM HERO
+========================================================== -->
 
-    <section
-        class="bg-[url('../assets/integrated_planetary_system.jpg')] bg-cover bg-center border-b-2 border-b-cyan-700 shadow-[0_0_20px_rgba(56,189,248,0.4) h-[24rem]">
-        <div>
-            <h1 class="flex justify-center text-2xl font-semibold pt-4 text-slate-300 drop-shadow-lg mx-10">Planetary
-                Systems Are
-                Allready Integrated.
-            </h1>
-            <hr class="half-length w-1/3 mx-auto border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
-            <p class="flex justify-end text-xl mt-36 py-36 text-slate-400 drop-shadow-lg max-w-6xl">Planetary systems
-                interact continuously. No domain operates in isolation.</p>
-        </div>
-    </section>
+<section class="problem-hero">
 
-    <section class="border-b-2 border-b-cyan-700 shadow-[0_0_20px_rgba(56,189,248,0.4) relative h-[16rem] px-6 overflow-hidden
-         bg-gradient-to-b from-[#1D2940] via-[#16233A] to-[#0B1224]">
-        <div>
-            <h1 class="flex justify-center text-2xl mt-4 font-semibold text-slate-300 drop-shadow-lg mx-10 mb-2">Human
-                Intelligence Remains Fragmented.
-            </h1>
-            <hr class="half-length w-1/2 mx-auto border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
-        </div>
-        <div class="flex justify-center gap-2 relative mt-8">
+    <!-- Animated star field -->
+    <canvas id="problemStars"></canvas>
 
-            <div class="relative px-6 py-3 min-w-[160px] text-center
-            rounded-lg bg-white/5 backdrop-blur-md
-            border border-white/10 text-white font-medium
-            shadow-[0_0_25px_rgba(56,189,248,0.15)]">
-                Climate
-                <hr class="mt-3 border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
-            </div>
-            <div class="mt-2 text-blue-800 text-4xl">&#8594</div>
-            <div class="relative px-6 py-3 min-w-[160px] text-center
-            rounded-lg bg-white/5 backdrop-blur-md
-            border border-white/10 text-white font-medium
-            shadow-[0_0_25px_rgba(56,189,248,0.15)]">
-                Energy
-                <hr class="mt-3 border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
-            </div>
-            <div class="mt-2 text-blue-800 text-4xl">&#8594</div>
-            <div class="relative px-6 py-3 min-w-[160px] text-center
-            rounded-lg bg-white/5 backdrop-blur-md
-            border border-white/10 text-white font-medium
-            shadow-[0_0_25px_rgba(56,189,248,0.15)]">
-                Agriculture
-                <hr class="mt-3 border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
-            </div>
-            <div class="mt-2 text-blue-800 text-4xl">&#8594</div>
-            <div class="relative px-6 py-3 min-w-[160px] text-center
-            rounded-lg bg-white/5 backdrop-blur-md
-            border border-white/10 text-white font-medium
-            shadow-[0_0_25px_rgba(56,189,248,0.15)]">
-                Markets
-                <hr class="mt-3 mx-auto border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
-            </div>
-            
-        </div>
-        <h1 class="flex justify-center text-xl mt-12 font-semibold text-slate-400 drop-shadow-lg mx-10 mb-2">Divided decisions. Local reactions. Global consequences.
-            </h1>
-    </section>
+    <!-- Very subtle blue central atmosphere -->
+    <div class="problem-hero-glow"></div>
 
-    <section
-        class="bg-[url('../assets/storm.jpg')] bg-cover bg-center border-b-2 border-b-cyan-700 shadow-[0_0_20px_rgba(56,189,248,0.4) h-[20rem]">
-        <div>
-            <h1 class="flex justify-center text-2xl font-semibold pt-4 text-slate-300 drop-shadow-lg mx-10">Climate: Reaction Instead Of Coordination.
-            </h1>
-            <hr class="half-length w-1/3 mx-auto border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
-            <p class="flex justify-center text-xl mx-36 mt-20 py-36 text-slate-400 drop-shadow-lg max-w-6xl">Forecasting improves. Outcomes repeat.</p>
-        </div>
-    </section>
+    <!-- Main statement -->
+    <div class="problem-hero-content">
 
-    <section
-        class="bg-[url('../assets/energy_harmony.jpg')] bg-cover bg-center border-b-2 border-b-cyan-700 shadow-[0_0_20px_rgba(56,189,248,0.4) h-[20rem]">
-        <div>
-            <h1 class="flex justify-center text-2xl font-semibold pt-4 text-slate-300 drop-shadow-lg mx-10">Energy: Abundance Without Coherence.
-            </h1>
-            <hr class="half-length w-1/3 mx-auto border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
-            <p class="flex justify-center text-xl mx-36 mt-20 py-36 text-slate-400 drop-shadow-lg max-w-6xl">Resources exist. Systems do not align.</p>
-        </div>
-    </section>
+        <h1>
+            Planetary systems operate together.
+            <br>
+            Human intelligence does not.
+        </h1>
 
-    <section
-        class="bg-[url('../assets/integrated_approach.jpg')] bg-cover bg-center border-b-2 border-b-cyan-700 shadow-[0_0_20px_rgba(56,189,248,0.4) h-[20rem]">
-        <div>
-            <h1 class="flex justify-center text-2xl font-semibold pt-2 text-slate-300 drop-shadow-lg mx-10">Food Systems: Risk Pushed To The Edge.
-            </h1>
-            <hr class="half-length w-1/3 mx-auto border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
-            <p class="flex justify-center text-xl mx-36 mt-25 py-36 text-slate-400 drop-shadow-lg max-w-7xl"> Data exists. Farmers are left exposed.</p>
-        </div>
-    </section>
+        <p>
+            The systems are connected. The decisions are not.
+        </p>
 
-    <section
-        class="bg-[url('../assets/connection.jpg')] bg-cover bg-center border-b-2 border-b-cyan-700 shadow-[0_0_20px_rgba(56,189,248,0.4) h-[20rem]">
-        <div>
-            <h1 class="flex justify-center text-2xl font-semibold pt-4 text-slate-300 drop-shadow-lg mx-10">One Pattern Repeating Across Domains.
-            </h1>
-            <hr class="half-length w-1/3 mx-auto border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
-            <p class="flex justify-center text-xl mx-36 mt-20 py-36 text-slate-400 drop-shadow-lg max-w-6xl">Different problems. Same failure.</p>
-        </div>
-    </section>
+    </div>
 
-    <section
+</section>
+
+        <!-- ==========================================================
+     INTEGRATED EARTH
+========================================================== -->
+
+<section class="integrated-earth">
+
+    <canvas id="earthNetworkCanvas"></canvas>
+
+    <div class="earth-network-vignette"></div>
+
+    <div class="earth-network-caption">
+
+        <p>
+            Earth already functions as one connected system.
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================================
+     SECTION 3 — HUMAN FRAGMENTATION
+========================================================== -->
+
+<section class="human-fragmentation">
+
+    <canvas id="fragmentationCanvas"></canvas>
+
+    <div class="fragmentation-content">
+
+        <h2>
+            Human intelligence remains fragmented.
+        </h2>
+
+        <div class="fragmentation-line"></div>
+
+        <p>
+            Systems exist. Communication breaks.
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================================
+     SECTION 4 — CLIMATE
+========================================================== -->
+
+<section class="climate-cinematic">
+
+    <div class="climate-image"></div>
+
+    <div class="climate-overlay"></div>
+
+    <div class="climate-content">
+
+        <span class="climate-label">
+            CLIMATE
+        </span>
+
+        <h2>
+            Forecasting improves.<br>
+            Outcomes repeat.
+        </h2>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================================
+     SECTION 5 — ENERGY
+========================================================== -->
+
+<section class="energy-network">
+
+    <canvas id="energyNetworkCanvas"></canvas>
+
+    <div class="energy-network-overlay"></div>
+
+    <div class="energy-network-content">
+
+        <span class="energy-label">
+            ENERGY
+        </span>
+
+        <h2>
+            Resources exist.<br>
+            Systems do not align.
+        </h2>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================================
+     SECTION 6 — FOOD SYSTEMS
+========================================================== -->
+
+<section class="food-cinematic">
+
+    <!-- Large aerial farmland -->
+    <div class="food-landscape"></div>
+
+    <!-- Dark cinematic layer -->
+    <div class="food-overlay"></div>
+
+    <!-- Animated system visualization -->
+    <canvas id="foodNetworkCanvas"></canvas>
+
+    <!-- Main text -->
+    <div class="food-content">
+
+        <span class="food-label">
+            FOOD SYSTEMS
+        </span>
+
+        <h2>
+            Data exists.<br>
+            Farmers remain exposed.
+        </h2>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================================
+     SECTION 7 — ONE PATTERN
+========================================================== -->
+
+<section class="one-pattern">
+
+    <canvas id="onePatternCanvas"></canvas>
+
+    <div class="one-pattern-vignette"></div>
+
+    <div class="one-pattern-message">
+
+        <h2>
+            Everything is connected.
+        </h2>
+
+        <p>
+            Our intelligence isn't.
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- <section
         class="bg-[url('../assets/layered.jpg')] bg-cover bg-center border-b-2 border-b-cyan-700 shadow-[0_0_20px_rgba(56,189,248,0.4) h-[20rem]">
         <div>
             <h1 class="flex justify-center text-2xl font-semibold pt-4 text-slate-300 drop-shadow-lg mx-10">Where RAYA Operates.
             </h1>
-            <hr class="half-length w-1/3 mx-auto border-2t border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6) mb-40 pb-10">
+            <hr class="half-length w-1/3 mx-auto border-t border-cyan-300/60
+                shadow-[0_0_10px_rgba(56,189,248,0.6) mb-40 pb-10]">
             <p class="flex justify-center text-lg mx-36 mt-36 text-slate-400 max-w-6xl">Civilizatin fractures through unmanaged complexity.
             </p>
             <hr class="w-1/2 mx-auto border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
+                shadow-[0_0_10px_rgba(56,189,248,0.6)]">
             <p class="flex justify-center text-lg mx-36 mt-1 text-slate-400 max-w-6xl">RAYA exists to address one specific failure.
             </p>
             <hr class="half-length w-1/2 mx-auto border-cyan-300/60
-                shadow-[0_0_10px_rgba(56,189,248,0.6)">
+                shadow-[0_0_10px_rgba(56,189,248,0.6)]">
         </div>
-    </section>
+    </section> -->
+
+    <!-- </section> -->
+
+
+<!-- ==========================================================
+     SECTION 8 — RAYA RESOLUTION
+========================================================== -->
+
+<section class="raya-resolution">
+
+    <canvas id="rayaResolutionCanvas"></canvas>
+
+    <div class="raya-resolution-glow"></div>
+
+    <div class="raya-resolution-content">
+
+        <span class="raya-resolution-label">
+            RAYA
+        </span>
+
+        <h2>
+            One intelligence layer
+        </h2>
+
+        <p>
+            for one connected civilization.
+        </p>
+
+        <a
+            href="#"
+            class="raya-vision-button"
+        >
+            Explore Vision →
+        </a>
+
+    </div>
+
+</section>
     
     <!-- FOOTER -->
     <div id="footer-placeholder"></div>
+    
+    <script src="raya_problem.js"></script>
     <script src="../src/scripts/layout-loader.js"></script>
     
 </body>

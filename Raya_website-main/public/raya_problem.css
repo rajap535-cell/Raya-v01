@@ -5,9 +5,10 @@
 }
 
 body {
-    background: #596072;
+    background: #01040a;
     color: #d8e1ea;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
 .glow-aqua {
@@ -24,4 +25,3204 @@ body {
     background: linear-gradient(180deg, rgba(0, 230, 255, 0.04), rgba(0, 230, 255, 0.01));
     border-radius: 18px;
     border: 1px solid rgba(0, 230, 255, 0.06);
+}
+
+/* ==========================================================
+   RAYA — CINEMATIC PROBLEM HERO
+========================================================== */
+
+/* ==========================================================
+   RAYA — ANIMATED CINEMATIC HERO
+========================================================== */
+
+.problem-hero {
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 48%,
+            rgba(15, 90, 160, .20) 0%,
+            rgba(5, 30, 65, .10) 32%,
+            transparent 65%
+        ),
+        #01040a;
+
+    isolation: isolate;
+}
+
+
+/* ==========================================================
+   ANIMATED STAR FIELD
+========================================================== */
+
+#problemStars {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    opacity: .78;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   SLOW SPACE MOVEMENT
+========================================================== */
+
+.problem-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 140%;
+    height: 140%;
+
+    left: -20%;
+    top: -20%;
+
+    background:
+        radial-gradient(
+            ellipse at 25% 35%,
+            rgba(0, 110, 190, .08),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 75% 65%,
+            rgba(20, 90, 180, .06),
+            transparent 40%
+        );
+
+    filter: blur(50px);
+
+    z-index: 0;
+
+    animation:
+        spaceDrift 25s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+
+@keyframes spaceDrift {
+
+    0% {
+        transform:
+            translate3d(-2%, -1%, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(1%, 2%, 0)
+            scale(1.03);
+    }
+
+    100% {
+        transform:
+            translate3d(2%, -1%, 0)
+            scale(1.06);
+    }
+
+}
+
+
+/* ==========================================================
+   CENTRAL ATMOSPHERIC GLOW
+========================================================== */
+
+.problem-hero-glow {
+
+    position: absolute;
+
+    width: 700px;
+    height: 500px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(25, 125, 220, .20) 0%,
+            rgba(10, 80, 160, .10) 32%,
+            transparent 72%
+        );
+
+    filter: blur(70px);
+
+    opacity: .7;
+
+    z-index: 2;
+
+    animation:
+        problemGlowPulse 8s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes problemGlowPulse {
+
+    0%,
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(.90);
+
+        opacity: .48;
+    }
+
+    50% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.12);
+
+        opacity: .85;
+    }
+
+}
+
+
+/* ==========================================================
+   SECONDARY LIGHT MOVEMENT
+========================================================== */
+
+.problem-hero-glow::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(80, 190, 255, .12),
+            transparent 70%
+        );
+
+    filter: blur(35px);
+
+    animation:
+        innerPulse 5s ease-in-out infinite alternate;
+}
+
+
+@keyframes innerPulse {
+
+    from {
+        transform:
+            translate(-50%, -50%)
+            scale(.75);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%)
+            scale(1.25);
+    }
+
+}
+
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+.problem-hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(1100px, 90%);
+
+    text-align: center;
+
+    transform:
+        translateY(-2vh);
+
+    animation:
+        heroContentIn 1.8s cubic-bezier(.22, .61, .36, 1)
+        both;
+}
+
+
+@keyframes heroContentIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(.985);
+
+        filter: blur(8px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(-2vh)
+            scale(1);
+
+        filter: blur(0);
+    }
+
+}
+
+
+/* ==========================================================
+   MAIN HEADING
+========================================================== */
+
+.problem-hero-content h1 {
+
+    margin: 0;
+
+    color: #f3f7fb;
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+
+    font-size:
+        clamp(
+            3.5rem,
+            6.5vw,
+            7rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.02;
+
+    letter-spacing: -.045em;
+
+    text-shadow:
+        0 0 30px rgba(80, 170, 255, .08);
+
+}
+
+
+/* ==========================================================
+   SUPPORTING TEXT
+========================================================== */
+
+.problem-hero-content p {
+
+    margin-top: 42px;
+
+    color:
+        rgba(175, 194, 211, .62);
+
+    font-size: .82rem;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    animation:
+        supportingTextIn 1.5s ease
+        1s forwards;
+}
+
+
+@keyframes supportingTextIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================================
+   SUBTLE VIGNETTE
+========================================================== */
+
+.problem-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(0, 3, 10, .35) 100%
+        );
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 800px) {
+
+    .problem-hero {
+
+        min-height: 620px;
+    }
+
+    .problem-hero-content h1 {
+
+        font-size:
+            clamp(
+                2.7rem,
+                10vw,
+                4.8rem
+            );
+
+        line-height: 1.05;
+    }
+
+    .problem-hero-content p {
+
+        margin-top: 30px;
+
+        font-size: .68rem;
+    }
+
+}
+
+
+/* ==========================================================
+   STAR CANVAS
+========================================================== */
+
+#problemStars {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    opacity: .90;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   CENTRAL BLUE ATMOSPHERIC GLOW
+========================================================== */
+
+/* ==========================================================
+   STRONGER BUT STILL PREMIUM BLUE ATMOSPHERE
+========================================================== */
+
+.problem-hero-glow {
+
+    position: absolute;
+
+    width: 720px;
+    height: 520px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(25, 130, 220, .24) 0%,
+            rgba(15, 90, 180, .13) 32%,
+            rgba(5, 40, 90, .06) 50%,
+            transparent 72%
+        );
+
+    filter: blur(65px);
+
+    opacity: .70;
+
+    z-index: 2;
+
+    animation:
+        problemGlowPulse 7s
+        ease-in-out
+        infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes problemGlowPulse {
+
+    0% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(.88);
+
+        opacity: .45;
+    }
+
+
+    50% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.18);
+
+        opacity: .90;
+    }
+
+
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(.88);
+
+        opacity: .45;
+    }
+
+}
+
+
+/* ==========================================================
+   MAIN TYPOGRAPHY
+========================================================== */
+
+.problem-hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1100px, 90%);
+
+    text-align: center;
+
+    transform:
+        translateY(-2vh);
+}
+
+.problem-hero-content {
+
+    animation:
+        heroReveal 1.8s
+        cubic-bezier(.22,.61,.36,1)
+        both;
+}
+
+
+@keyframes heroReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.98);
+
+        filter: blur(6px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(-2vh)
+            scale(1);
+
+        filter: blur(0);
+    }
+
+}
+
+.problem-hero-content h1 {
+
+    margin: 0;
+
+    color: #f3f7fb;
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+
+    font-size:
+        clamp(
+            3.5rem,
+            6.5vw,
+            7rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.02;
+
+    letter-spacing: -0.045em;
+
+    text-shadow:
+        0 0 30px rgba(80, 170, 255, .08);
+
+}
+
+
+/* emphasize second statement */
+
+.problem-hero-content h1 br + * {
+    color: #dce6ef;
+}
+
+
+/* supporting sentence */
+
+.problem-hero-content p {
+
+    margin-top: 42px;
+
+    color:
+        rgba(175, 194, 211, .62);
+
+    font-size: .82rem;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 800px) {
+
+    .problem-hero {
+
+        min-height: 620px;
+
+    }
+
+    .problem-hero-content h1 {
+
+        font-size:
+            clamp(
+                2.7rem,
+                10vw,
+                4.8rem
+            );
+
+        line-height: 1.05;
+
+    }
+
+    .problem-hero-content p {
+
+        margin-top: 30px;
+
+        font-size: .68rem;
+
+    }
+
+}
+
+/* ==========================================================
+   FIX — CONTENT SECTIONS AFTER CINEMATIC HERO
+========================================================== */
+
+body {
+    background: #01040a;
+    color: #d8e1ea;
+}
+
+
+/* All sections after the hero */
+
+.problem-hero ~ section {
+    position: relative;
+    overflow: hidden;
+
+    background-color: #0b1224;
+
+    color: #d8e1ea;
+
+    border-bottom: 1px solid rgba(0, 230, 255, 0.35);
+}
+
+
+/* First content section */
+
+.problem-hero ~ section:nth-of-type(2) {
+    min-height: 24rem;
+}
+
+
+/* Fragmented intelligence */
+
+.problem-hero ~ section:nth-of-type(3) {
+    min-height: 16rem;
+
+    background:
+        linear-gradient(
+            180deg,
+            #101c31,
+            #081322
+        );
+}
+
+
+/* Domain sections */
+
+.problem-hero ~ section:nth-of-type(n+4) {
+    min-height: 20rem;
+}
+
+
+/* Make headings readable */
+
+.problem-hero ~ section h1 {
+    color: #dce7f2;
+}
+
+
+/* Make paragraphs readable */
+
+.problem-hero ~ section p {
+    color: #8fa5b9;
+}
+
+
+/* Keep cyan borders subtle */
+
+.problem-hero ~ section {
+    border-bottom-color:
+        rgba(0, 230, 255, 0.32);
+}
+
+
+/* ==========================================================
+   REMOVE OLD GREY LOOK
+========================================================== */
+
+.problem-hero ~ section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(0, 120, 190, .07),
+            transparent 55%
+        );
+
+    z-index: 0;
+}
+
+
+.problem-hero ~ section > div {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================================
+   SECTION 2 — INTEGRATED EARTH
+========================================================== */
+
+.integrated-earth {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 720px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 48%,
+            rgba(10, 95, 170, .13),
+            rgba(3, 18, 35, .08) 42%,
+            transparent 72%
+        ),
+        #020711;
+
+    border-bottom:
+        1px solid rgba(0, 230, 255, .28);
+
+    isolation: isolate;
+
+}
+
+
+/* ==========================================================
+   CANVAS
+========================================================== */
+
+#earthNetworkCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+}
+
+
+/* ==========================================================
+   SOFT VIGNETTE
+========================================================== */
+
+.earth-network-vignette {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(0, 4, 12, .42) 100%
+        );
+
+}
+
+
+/* ==========================================================
+   CAPTION
+========================================================== */
+
+.earth-network-caption {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 42px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 5;
+
+    text-align: center;
+
+    pointer-events: none;
+
+}
+
+
+.earth-network-caption p {
+
+    margin: 0;
+
+    color:
+        rgba(205, 222, 235, .72);
+
+    font-size: .82rem;
+
+    letter-spacing: .14em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 800px) {
+
+    .integrated-earth {
+
+        height: 620px;
+
+    }
+
+    .earth-network-caption {
+
+        bottom: 28px;
+
+        width: 90%;
+
+    }
+
+    .earth-network-caption p {
+
+        font-size: .65rem;
+
+        line-height: 1.5;
+
+    }
+
+}
+
+/* ==========================================================
+   INTEGRATED EARTH — LAYER FIX
+========================================================== */
+
+.integrated-earth {
+    position: relative;
+    z-index: 1;
+}
+
+.integrated-earth > #earthNetworkCanvas {
+    z-index: 2;
+}
+
+.integrated-earth > .earth-network-vignette {
+    z-index: 3;
+}
+
+.integrated-earth > .earth-network-caption {
+    position: absolute;
+    z-index: 10;
+}
+
+/* ==========================================================
+   SECTION 3 — HUMAN FRAGMENTATION
+========================================================== */
+
+.human-fragmentation {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 650px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 50%,
+            rgba(10, 85, 150, .12),
+            transparent 62%
+        ),
+        #020711;
+
+    border-bottom:
+        1px solid rgba(0, 230, 255, .25);
+
+    isolation: isolate;
+}
+
+
+/* ==========================================================
+   CANVAS
+========================================================== */
+
+#fragmentationCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.fragmentation-content {
+
+    position: absolute;
+
+    top: 42px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    text-align: center;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+.fragmentation-content h2 {
+
+    margin: 0;
+
+    color: #e8f2f8;
+
+    font-size: 1.65rem;
+
+    font-weight: 600;
+
+    letter-spacing: -.02em;
+
+}
+
+
+.fragmentation-line {
+
+    width: 150px;
+
+    height: 1px;
+
+    margin: 12px auto 0;
+
+    background:
+        rgba(34,232,255,.55);
+
+    box-shadow:
+        0 0 10px rgba(34,232,255,.35);
+}
+
+
+.fragmentation-content p {
+
+    margin-top: 14px;
+
+    color:
+        rgba(155,180,198,.62);
+
+    font-size: .72rem;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:800px) {
+
+    .human-fragmentation {
+
+        height: 600px;
+
+    }
+
+    .fragmentation-content h2 {
+
+        font-size: 1.25rem;
+
+    }
+
+    .fragmentation-content p {
+
+        font-size: .62rem;
+
+    }
+
+}
+
+/* ==========================================================
+   SECTION 4 — CINEMATIC CLIMATE
+========================================================== */
+
+.climate-cinematic {
+
+    position: relative;
+
+    width: 100%;
+    height: 720px;
+
+    overflow: hidden;
+
+    background: #020711;
+
+    border-bottom:
+        1px solid rgba(0, 230, 255, .25);
+
+    isolation: isolate;
+}
+
+
+/* ==========================================================
+   CINEMATIC IMAGE
+========================================================== */
+
+.climate-image {
+
+    position: absolute;
+
+    inset: -4%;
+
+    background:
+        url("../assets/storm1.jpg")
+        center center
+        / cover
+        no-repeat;
+
+    z-index: 1;
+
+    transform: scale(1.04);
+
+    animation:
+        climateSlowZoom 18s ease-in-out infinite alternate;
+}
+
+
+@keyframes climateSlowZoom {
+
+    from {
+        transform: scale(1.04);
+    }
+
+    to {
+        transform: scale(1.10);
+    }
+
+}
+
+
+/* ==========================================================
+   DARK CINEMATIC OVERLAY
+========================================================== */
+
+/* .climate-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(1, 5, 12, .60),
+            rgba(1, 5, 12, .38) 45%,
+            rgba(1, 5, 12, .78)
+        ),
+
+        radial-gradient(
+            ellipse at center,
+            rgba(0, 100, 170, .08),
+            rgba(0, 3, 10, .72) 85%
+        );
+
+} */
+
+.climate-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    background: rgba(0, 0, 0, 0.20);
+}
+
+
+/* ==========================================================
+   CINEMATIC TEXT
+========================================================== */
+
+.climate-content {
+
+    position: absolute;
+
+    z-index: 3;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: min(1000px, 90%);
+
+    text-align: center;
+
+}
+
+
+/* small label */
+
+.climate-label {
+
+    display: block;
+
+    margin-bottom: 24px;
+
+    color: #22e8ff;
+
+    font-size: .72rem;
+
+    font-weight: 600;
+
+    letter-spacing: .35em;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 15px rgba(34,232,255,.45);
+}
+
+
+/* main statement */
+
+.climate-content h2 {
+
+    margin: 0;
+
+    color: #f3f7fb;
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            6rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.02;
+
+    letter-spacing: -.045em;
+
+    text-shadow:
+        0 3px 25px rgba(0,0,0,.75),
+        0 0 35px rgba(80,170,255,.10);
+
+}
+
+
+/* ==========================================================
+   SUBTLE CINEMATIC VIGNETTE
+========================================================== */
+
+.climate-cinematic::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 30%,
+            rgba(0,0,0,.42) 100%
+        );
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:800px) {
+
+    .climate-cinematic {
+
+        height: 620px;
+
+    }
+
+    .climate-content h2 {
+
+        font-size:
+            clamp(
+                2.4rem,
+                10vw,
+                4rem
+            );
+
+    }
+
+    .climate-label {
+
+        font-size: .62rem;
+
+        letter-spacing: .25em;
+
+    }
+
+}
+
+/* ==========================================================
+   CLIMATE — FORCE CINEMATIC IMAGE
+========================================================== */
+
+section.climate-cinematic {
+
+    position: relative !important;
+
+    width: 100% !important;
+    height: 720px !important;
+
+    overflow: hidden !important;
+
+    background:
+        url("../assets/storm1.jpg")
+        center center
+        / cover
+        no-repeat !important;
+
+    isolation: isolate;
+
+}
+
+
+/* Hide the separate image layer */
+section.climate-cinematic .climate-image {
+
+    display: none !important;
+
+}
+
+
+/* Dark overlay */
+section.climate-cinematic .climate-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        rgba(0, 0, 0, .25) !important;
+
+}
+
+
+/* Text above image */
+section.climate-cinematic .climate-content {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 90%;
+
+    text-align: center;
+
+}
+
+/* ==========================================================
+   SECTION 5 — ENERGY NETWORK
+========================================================== */
+
+.energy-network {
+
+    position: relative;
+
+    width: 100%;
+    height: 720px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(15, 100, 175, .12),
+            transparent 58%
+        ),
+        #020711;
+
+    border-bottom:
+        1px solid rgba(0, 230, 255, .25);
+
+    isolation: isolate;
+}
+
+
+/* ==========================================================
+   ENERGY CANVAS
+========================================================== */
+
+#energyNetworkCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   ATMOSPHERIC OVERLAY
+========================================================== */
+
+.energy-network-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 28%,
+            rgba(0, 4, 12, .42) 100%
+        );
+}
+
+
+/* ==========================================================
+   CENTER TEXT
+========================================================== */
+
+.energy-network-content {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: min(900px, 90%);
+
+    text-align: center;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+.energy-label {
+
+    display: block;
+
+    margin-bottom: 24px;
+
+    color: #22e8ff;
+
+    font-size: .72rem;
+
+    font-weight: 600;
+
+    letter-spacing: .35em;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 15px rgba(34,232,255,.45);
+}
+
+
+.energy-network-content h2 {
+
+    margin: 0;
+
+    color: #f3f7fb;
+
+    font-size:
+        clamp(
+            3rem,
+            5.5vw,
+            5.8rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.03;
+
+    letter-spacing: -.045em;
+
+    text-shadow:
+        0 3px 30px rgba(0,0,0,.7),
+        0 0 35px rgba(80,170,255,.10);
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:800px) {
+
+    .energy-network {
+
+        height: 620px;
+
+    }
+
+    .energy-network-content h2 {
+
+        font-size:
+            clamp(
+                2.3rem,
+                9vw,
+                4rem
+            );
+
+    }
+
+    .energy-label {
+
+        font-size: .62rem;
+
+        letter-spacing: .25em;
+
+    }
+
+}
+
+/* ==========================================================
+   SECTION 6 — FOOD SYSTEMS
+========================================================== */
+
+.food-cinematic {
+
+    position: relative;
+
+    width: 100%;
+    height: 720px;
+
+    overflow: hidden;
+
+    background: #020711;
+
+    border-bottom:
+        1px solid rgba(0, 230, 255, .25);
+
+    isolation: isolate;
+}
+
+
+/* ==========================================================
+   FARMLAND IMAGE
+========================================================== */
+
+.food-landscape {
+
+    position: absolute;
+
+    inset: -5%;
+
+    background:
+        url("../assets/integrated_approach.jpg")
+        center center
+        / cover
+        no-repeat;
+
+    z-index: 1;
+
+    transform: scale(1.04);
+
+    animation:
+        foodSlowZoom 22s ease-in-out infinite alternate;
+}
+
+
+@keyframes foodSlowZoom {
+
+    from {
+        transform: scale(1.04);
+    }
+
+    to {
+        transform: scale(1.10);
+    }
+
+}
+
+
+/* ==========================================================
+   CINEMATIC DARK LAYER
+========================================================== */
+
+.food-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(1, 5, 12, .42),
+            rgba(1, 5, 12, .18) 45%,
+            rgba(1, 5, 12, .72)
+        ),
+
+        radial-gradient(
+            ellipse at center,
+            rgba(0, 100, 170, .08),
+            rgba(0, 3, 10, .62) 90%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   NETWORK CANVAS
+========================================================== */
+
+#foodNetworkCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   CENTER TEXT
+========================================================== */
+
+.food-content {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: min(900px, 90%);
+
+    text-align: center;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+.food-label {
+
+    display: block;
+
+    margin-bottom: 24px;
+
+    color: #22e8ff;
+
+    font-size: .72rem;
+
+    font-weight: 600;
+
+    letter-spacing: .35em;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 15px rgba(34,232,255,.45);
+}
+
+
+.food-content h2 {
+
+    margin: 0;
+
+    color: #f3f7fb;
+
+    font-size:
+        clamp(
+            3rem,
+            5.5vw,
+            5.8rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.03;
+
+    letter-spacing: -.045em;
+
+    text-shadow:
+        0 3px 30px rgba(0,0,0,.85),
+        0 0 35px rgba(80,170,255,.12);
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:800px) {
+
+    .food-cinematic {
+
+        height: 620px;
+
+    }
+
+    .food-content h2 {
+
+        font-size:
+            clamp(
+                2.3rem,
+                9vw,
+                4rem
+            );
+
+    }
+
+    .food-label {
+
+        font-size: .62rem;
+
+        letter-spacing: .25em;
+
+    }
+
+}
+
+/* ==========================================================
+   SECTION 7 — ONE PATTERN
+========================================================== */
+
+.one-pattern {
+
+    position: relative;
+
+    width: 100%;
+    height: 760px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(15, 100, 180, .13),
+            transparent 58%
+        ),
+        #01050d;
+
+    border-bottom:
+        1px solid rgba(0, 230, 255, .25);
+
+    isolation: isolate;
+}
+
+
+/* ==========================================================
+   CANVAS
+========================================================== */
+
+#onePatternCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   VIGNETTE
+========================================================== */
+
+.one-pattern-vignette {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 25%,
+            rgba(0, 3, 10, .58) 100%
+        );
+}
+
+
+/* ==========================================================
+   FINAL MESSAGE
+========================================================== */
+
+.one-pattern-message {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: min(1000px, 90%);
+
+    text-align: center;
+
+    z-index: 6;
+
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+
+.one-pattern-message h2 {
+
+    margin: 0;
+
+    color: #f4f8fb;
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            6rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.02;
+
+    letter-spacing: -.045em;
+
+    text-shadow:
+        0 4px 30px rgba(0,0,0,.8),
+        0 0 35px rgba(60,190,255,.12);
+}
+
+
+.one-pattern-message p {
+
+    margin: 18px 0 0;
+
+    color:
+        rgba(110,232,255,.88);
+
+    font-size:
+        clamp(
+            1.2rem,
+            2vw,
+            1.8rem
+        );
+
+    font-weight: 400;
+
+    letter-spacing: .04em;
+
+}
+
+
+/* ==========================================================
+   MESSAGE REVEAL
+========================================================== */
+
+.one-pattern-message.show {
+
+    animation:
+        patternMessageReveal
+        1.8s
+        cubic-bezier(.22,.61,.36,1)
+        forwards;
+}
+
+
+@keyframes patternMessageReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.96);
+
+        filter: blur(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        filter: blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:800px) {
+
+    .one-pattern {
+
+        height: 650px;
+
+    }
+
+}
+
+/* ==========================================================
+   SECTION 8 — RAYA RESOLUTION
+========================================================== */
+
+.raya-resolution {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 820px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(15, 120, 190, .16),
+            transparent 55%
+        ),
+        #01060e;
+
+    border-bottom:
+        1px solid rgba(0, 230, 255, .35);
+
+    isolation: isolate;
+
+}
+
+
+/* ==========================================================
+   CANVAS
+========================================================== */
+
+#rayaResolutionCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   CENTRAL ATMOSPHERIC GLOW
+========================================================== */
+
+.raya-resolution-glow {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 420px;
+
+    height: 420px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(40, 220, 255, .20),
+            rgba(20, 120, 210, .08) 35%,
+            transparent 72%
+        );
+
+    filter:
+        blur(20px);
+
+    opacity: 0;
+
+    z-index: 1;
+
+    animation:
+        rayaCoreGlow
+        2.5s
+        ease-out
+        3.8s
+        forwards;
+
+}
+
+
+@keyframes rayaCoreGlow {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.35);
+
+    }
+
+    40% {
+
+        opacity: .25;
+
+    }
+
+    100% {
+
+        opacity: .75;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   TEXT
+========================================================== */
+
+.raya-resolution-content {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width:
+        min(1000px, 90%);
+
+    text-align: center;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   RAYA LABEL
+========================================================== */
+
+.raya-resolution-label {
+
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #72efff;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+    letter-spacing: .55em;
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    text-shadow:
+        0 0 18px rgba(34,232,255,.7);
+
+    animation:
+        rayaTextReveal
+        1.2s
+        ease
+        2.5s
+        forwards;
+
+}
+
+
+/* ==========================================================
+   MAIN TITLE
+========================================================== */
+
+.raya-resolution-content h2 {
+
+    margin: 0;
+
+    color: #f5fbff;
+
+    font-size:
+        clamp(
+            3.5rem,
+            7vw,
+            7rem
+        );
+
+    font-weight: 500;
+
+    line-height: .98;
+
+    letter-spacing: -.055em;
+
+    opacity: 0;
+
+    text-shadow:
+        0 4px 35px rgba(0,0,0,.75),
+        0 0 45px rgba(70,210,255,.16);
+
+    animation:
+        rayaTextIn
+        1.5s
+        cubic-bezier(.22,.61,.36,1)
+        2.8s
+        forwards;
+
+}
+
+
+/* ==========================================================
+   SUPPORTING LINE
+========================================================== */
+
+.raya-resolution-content p {
+
+    margin:
+
+        20px
+
+        0
+
+        0;
+
+    color:
+
+        rgba(
+            190,
+            226,
+            238,
+            .82
+        );
+
+    font-size:
+
+        clamp(
+            1.2rem,
+            2vw,
+            1.7rem
+        );
+
+    letter-spacing: .02em;
+
+    opacity: 0;
+
+    animation:
+        rayaTextReveal
+        1.5s
+        ease
+        3.1s
+        forwards;
+
+}
+
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.raya-vision-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 42px;
+
+    padding:
+        14px
+        27px;
+
+    color: #eafaff;
+
+    background:
+        rgba(
+            8,
+            35,
+            52,
+            .72
+        );
+
+    border:
+        1px solid
+        rgba(
+            80,
+            225,
+            255,
+            .55
+        );
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: .78rem;
+
+    letter-spacing: .08em;
+
+    opacity: 0;
+
+    pointer-events: auto;
+
+    transition:
+
+        background .3s ease,
+
+        border-color .3s ease,
+
+        box-shadow .3s ease,
+
+        transform .3s ease;
+
+    animation:
+        rayaTextReveal
+        1.5s
+        ease
+        3.5s
+        forwards;
+
+}
+
+
+.raya-vision-button:hover {
+
+    background:
+        rgba(
+            20,
+            100,
+            135,
+            .35
+        );
+
+    border-color:
+        rgba(
+            100,
+            240,
+            255,
+            .9
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(
+            34,
+            232,
+            255,
+            .22
+        );
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ==========================================================
+   TEXT REVEAL
+========================================================== */
+
+@keyframes rayaTextReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+
+        filter:
+            blur(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+/* ==========================================================
+   SECTION 8 — RAYA RESOLUTION
+========================================================== */
+
+.raya-resolution {
+
+    position: relative;
+
+    width: 100%;
+    height: 820px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(20, 130, 210, .18),
+            rgba(4, 25, 48, .10) 38%,
+            transparent 70%
+        ),
+        #01060e;
+
+    border-bottom:
+        1px solid rgba(0, 230, 255, .35);
+
+    isolation: isolate;
+}
+
+
+/* ==========================================================
+   NETWORK CANVAS
+========================================================== */
+
+#rayaResolutionCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   CENTRAL LIGHT
+========================================================== */
+
+.raya-resolution-glow {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 500px;
+    height: 500px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(50, 220, 255, .28),
+            rgba(20, 130, 220, .12) 35%,
+            transparent 72%
+        );
+
+    filter: blur(35px);
+
+    opacity: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    animation:
+        rayaAtmosphere 8s
+        ease-in-out
+        5s
+        infinite;
+}
+
+
+@keyframes rayaAtmosphere {
+
+    0%,
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(.90);
+
+        opacity: .35;
+    }
+
+    50% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.12);
+
+        opacity: .75;
+    }
+
+}
+
+
+/* ==========================================================
+   TEXT
+========================================================== */
+
+.raya-resolution-content {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width:
+        min(900px, 90%);
+
+    text-align: center;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   RAYA
+========================================================== */
+
+.raya-resolution-label {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #72efff;
+
+    font-size: .8rem;
+
+    font-weight: 600;
+
+    letter-spacing: .55em;
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    text-shadow:
+        0 0 20px rgba(34,232,255,.8);
+
+    animation:
+        rayaTextIn
+        1.2s
+        ease
+        6s
+        forwards;
+}
+
+
+/* ==========================================================
+   MAIN MESSAGE
+========================================================== */
+
+.raya-resolution-content h2 {
+
+    margin: 0;
+
+    color: #f5fbff;
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            6rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: -.05em;
+
+    opacity: 0;
+
+    text-shadow:
+        0 0 35px rgba(80,210,255,.16);
+
+    animation:
+        rayaTextIn
+        1.4s
+        ease
+        6.4s
+        forwards;
+}
+
+
+/* ==========================================================
+   SUPPORTING LINE
+========================================================== */
+
+.raya-resolution-content p {
+
+    margin:
+        18px
+        0
+        0;
+
+    color:
+        rgba(195,225,237,.82);
+
+    font-size:
+        clamp(
+            1.1rem,
+            2vw,
+            1.6rem
+        );
+
+    letter-spacing:
+        .02em;
+
+    opacity: 0;
+
+    animation:
+        rayaTextIn
+        1.3s
+        ease
+        6.8s
+        forwards;
+}
+
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.raya-vision-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 34px;
+
+    padding:
+        13px 25px;
+
+    color: #eaffff;
+
+    background:
+        rgba(5,25,40,.55);
+
+    border:
+        1px solid
+        rgba(90,230,255,.55);
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: .76rem;
+
+    letter-spacing: .08em;
+
+    opacity: 0;
+
+    pointer-events: auto;
+
+    animation:
+        rayaTextIn
+        1.2s
+        ease
+        7.2s
+        forwards;
+
+    transition:
+        .3s ease;
+}
+
+
+.raya-vision-button:hover {
+
+    border-color:
+        rgba(110,245,255,.95);
+
+    background:
+        rgba(20,100,135,.30);
+
+    box-shadow:
+        0 0 30px
+        rgba(34,232,255,.25);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* ==========================================================
+   TEXT REVEAL
+========================================================== */
+
+@keyframes rayaTextIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+        filter:
+            blur(8px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:800px) {
+
+    .raya-resolution {
+
+        height: 700px;
+
+    }
+
+    .raya-resolution-content h2 {
+
+        font-size:
+            clamp(
+                2.8rem,
+                12vw,
+                4.8rem
+            );
+
+    }
+
+    .raya-resolution-content p {
+
+        font-size: 1rem;
+
+    }
+
+}
+
+/* ==========================================================
+   FINAL FIX — RAYA RESOLUTION TEXT VISIBILITY
+========================================================== */
+
+.raya-resolution-content {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+
+    width: min(900px, 90%) !important;
+
+    text-align: center !important;
+
+    z-index: 50 !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    pointer-events: none !important;
+}
+
+.raya-resolution-label,
+.raya-resolution-content h2,
+.raya-resolution-content p,
+.raya-vision-button {
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: none !important;
+    filter: none !important;
+
+    animation: none !important;
+}
+
+.raya-resolution-label {
+    display: block !important;
+    color: #72efff !important;
+}
+
+.raya-resolution-content h2 {
+    color: #f5fbff !important;
+}
+
+.raya-resolution-content p {
+    color: rgba(195,225,237,.90) !important;
+}
+
+.raya-vision-button {
+    pointer-events: auto !important;
+    display: inline-flex !important;
+}
+
+/* ==========================================================
+   RAYA — CONTINUOUS STORY TRANSITIONS
+   Visual concepts remain unchanged.
+========================================================== */
+
+.problem-hero ~ section {
+    border-bottom-color: rgba(0, 230, 255, 0.12);
+}
+
+/* ==========================================================
+   SOFT SECTION BRIDGES
+========================================================== */
+
+.problem-hero ~ section::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: -90px;
+
+    height: 180px;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(5, 30, 55, 0.10) 45%,
+            rgba(5, 30, 55, 0.04) 70%,
+            transparent 100%
+        );
+}
+
+/* ==========================================================
+   SCROLL-BASED ATMOSPHERIC TRANSITION
+========================================================== */
+
+.problem-hero ~ section {
+
+    opacity: .92;
+
+    transition:
+        opacity 1.2s ease;
+}
+
+
+.problem-hero ~ section.story-visible {
+
+    opacity: 1;
+
+}
+
+/* ==========================================================
+   ONE PATTERN → RAYA ATMOSPHERIC CONTINUITY
+========================================================== */
+
+.one-pattern {
+    border-bottom-color: rgba(0, 230, 255, 0.08);
+}
+
+.raya-resolution {
+    border-top: 0;
+    
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(20, 130, 210, .10),
+            transparent 48%
+        ),
+        radial-gradient(
+            ellipse at center,
+            rgba(20, 130, 210, .18),
+            rgba(4, 25, 48, .10) 38%,
+            transparent 70%
+        ),
+        #01060e;
+}
+
+/* ==========================================================
+   MOBILE RESPONSIVE — RAYA PROBLEM PAGE
+========================================================== */
+
+@media (max-width: 800px) {
+
+    /* ------------------------------------------------------
+       GENERAL
+    ------------------------------------------------------ */
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ------------------------------------------------------
+       HERO
+    ------------------------------------------------------ */
+
+    .problem-hero {
+
+        height: 100svh;
+        min-height: 620px;
+
+    }
+
+    .problem-hero-content {
+
+        width: 92%;
+        transform: translateY(-3vh);
+
+    }
+
+    .problem-hero-content h1 {
+
+        font-size: clamp(
+            2.5rem,
+            10vw,
+            4rem
+        );
+
+        line-height: 1.04;
+
+        letter-spacing: -.045em;
+
+    }
+
+    .problem-hero-content p {
+
+        margin-top: 28px;
+
+        font-size: .62rem;
+
+        line-height: 1.5;
+
+        letter-spacing: .10em;
+
+    }
+
+
+    /* ------------------------------------------------------
+       INTEGRATED EARTH
+    ------------------------------------------------------ */
+
+    .integrated-earth {
+
+        height: 620px;
+
+    }
+
+
+    /* ------------------------------------------------------
+       HUMAN FRAGMENTATION
+    ------------------------------------------------------ */
+
+    .human-fragmentation {
+
+        height: 600px;
+
+    }
+
+    .fragmentation-content {
+
+        top: 32px;
+
+        width: 92%;
+
+    }
+
+    .fragmentation-content h2 {
+
+        font-size: 1.25rem;
+
+        line-height: 1.25;
+
+    }
+
+    .fragmentation-content p {
+
+        font-size: .60rem;
+
+    }
+
+
+    /* ------------------------------------------------------
+       CLIMATE
+    ------------------------------------------------------ */
+
+    .climate-cinematic {
+
+        height: 620px !important;
+
+    }
+
+    .climate-content {
+
+        width: 92% !important;
+
+    }
+
+    .climate-label {
+
+        margin-bottom: 18px;
+
+        font-size: .60rem;
+
+        letter-spacing: .25em;
+
+    }
+
+    .climate-content h2 {
+
+        font-size: clamp(
+            2.4rem,
+            10vw,
+            4rem
+        );
+
+        line-height: 1.05;
+
+    }
+
+
+    /* ------------------------------------------------------
+       ENERGY
+    ------------------------------------------------------ */
+
+    .energy-network {
+
+        height: 650px;
+
+    }
+
+    .energy-network-content {
+
+        width: 92%;
+
+    }
+
+    .energy-label {
+
+        margin-bottom: 18px;
+
+        font-size: .60rem;
+
+        letter-spacing: .25em;
+
+    }
+
+    .energy-network-content h2 {
+
+        font-size: clamp(
+            2.4rem,
+            9.5vw,
+            4rem
+        );
+
+        line-height: 1.05;
+
+    }
+
+
+    /* ------------------------------------------------------
+       FOOD
+    ------------------------------------------------------ */
+
+    .food-cinematic {
+
+        height: 620px;
+
+    }
+
+    .food-content {
+
+        width: 92%;
+
+    }
+
+    .food-label {
+
+        margin-bottom: 18px;
+
+        font-size: .60rem;
+
+        letter-spacing: .25em;
+
+    }
+
+    .food-content h2 {
+
+        font-size: clamp(
+            2.4rem,
+            9.5vw,
+            4rem
+        );
+
+        line-height: 1.05;
+
+    }
+
+
+    /* ------------------------------------------------------
+       ONE PATTERN
+    ------------------------------------------------------ */
+
+    .one-pattern {
+
+        height: 650px;
+
+    }
+
+    .one-pattern-message {
+
+        width: 92%;
+
+    }
+
+    .one-pattern-message h2 {
+
+        font-size: clamp(
+            2.5rem,
+            10vw,
+            4.5rem
+        );
+
+        line-height: 1.04;
+
+    }
+
+    .one-pattern-message p {
+
+        margin-top: 14px;
+
+        font-size: 1rem;
+
+    }
+
+
+    /* ------------------------------------------------------
+       RAYA RESOLUTION
+    ------------------------------------------------------ */
+
+    .raya-resolution {
+
+        height: 700px;
+
+    }
+
+    .raya-resolution-content {
+
+        width: 92% !important;
+
+    }
+
+    .raya-resolution-label {
+
+        margin-bottom: 16px;
+
+        font-size: .68rem;
+
+        letter-spacing: .40em;
+
+    }
+
+    .raya-resolution-content h2 {
+
+        font-size: clamp(
+            2.6rem,
+            11vw,
+            4.8rem
+        );
+
+        line-height: 1;
+
+    }
+
+    .raya-resolution-content p {
+
+        margin-top: 14px;
+
+        font-size: 1rem;
+
+    }
+
+    .raya-vision-button {
+
+        margin-top: 28px;
+
+        padding: 12px 21px;
+
+        font-size: .70rem;
+
+    }
+
 }

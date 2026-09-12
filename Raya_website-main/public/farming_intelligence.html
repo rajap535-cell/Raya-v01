@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAYA — Farming Intelligence System</title>
+  <meta name="description" content="Farming Intelligence System: Coordinating climate-aware agricultural production, soil telemetry, and planetary supply webs." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="farming_intelligence.css">
+</head>
+
+<body class="farming-theme">
+  <!-- Dynamic Navigation Injected Here -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="farming-main">
+    
+    <!-- 1. HERO SECTION -->
+    <section class="section-container">
+      <div class="grid-2">
+        <div>
+          <span class="farming-tag">Operational Module / FARM-901</span>
+          <h1 class="farming-heading text-white">FARMING INTELLIGENCE SYSTEM</h1>
+          <p class="farming-subtext">
+            Civilization stability depends on coordinated agricultural awareness. Allying soil systems and crop growth variables with supply networks in real-time.
+          </p>
+          <a href="#live-dashboard" class="farming-cta">Explore Farming Intelligence</a>
+        </div>
+        
+        <!-- Right Side: Interactive pipeline visualization -->
+        <div class="pipeline-viz">
+          <div class="pipeline-node">
+            <span class="node-label">Soil Signals</span>
+            <span class="node-meta"><span class="live-dot font-mono"></span>Active // pH 6.8</span>
+          </div>
+          <div class="pipeline-connector-line"></div>
+          
+          <div class="pipeline-node">
+            <span class="node-label">Moisture Saturation</span>
+            <span class="node-meta text-cyan-400"><span class="live-dot dot-cyan"></span>Nominal // 48%</span>
+          </div>
+          <div class="pipeline-connector-line"></div>
+          
+          <div class="pipeline-node">
+            <span class="node-label">Vegetation Index</span>
+            <span class="node-meta text-emerald-400"><span class="live-dot dot-green"></span>Optimal // NDVI 0.74</span>
+          </div>
+          <div class="pipeline-connector-line"></div>
+          
+          <div class="pipeline-node">
+            <span class="node-label">Yield Projection</span>
+            <span class="node-meta text-yellow-500"><span class="live-dot dot-yellow"></span>Stable // 94% Yield</span>
+          </div>
+          <div class="pipeline-connector-line"></div>
+          
+          <div class="pipeline-node">
+            <span class="node-label">Distribution Opt</span>
+            <span class="node-meta"><span class="live-dot"></span>Active // Nominal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CORE IDEA SECTION -->
+    <section class="section-container">
+      <div class="grid-2">
+        <div>
+          <span class="farming-tag">Systemic Axiom</span>
+          <h2 class="farming-heading text-white" style="font-size: 2.25rem;">
+            Agricultural crises begin long before food shortages appear.
+          </h2>
+          <p class="farming-subtext" style="font-size: 1.15rem;">
+            Micro-climatic shifts and soil depletions are measurable months in advance. Delay in reaction causes crop degradation and market destabilization.
+          </p>
+        </div>
+        <div class="grid-3" style="grid-template-columns: 1fr; gap: 1.5rem;">
+          <div class="farming-card">
+            <div class="farming-card-title text-amber-400">Microclimates Shift</div>
+            <div class="farming-card-desc">Local weather anomalies affect growing seasons before macro-climate models register changes.</div>
+          </div>
+          <div class="farming-card">
+            <div class="farming-card-title text-slate-400">Soil Buffers Deplete</div>
+            <div class="farming-card-desc">Soil nutrients and moisture reserves drop below critical levels silently before visual crop stress.</div>
+          </div>
+          <div class="farming-card">
+            <div class="farming-card-title text-red-400">Yields Degrade</div>
+            <div class="farming-card-desc">Stressed crops produce lower nutritional value and biomass, cascading rapidly into regional supply imbalances.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FARMING INTELLIGENCE MEASURES -->
+    <section class="section-container">
+      <span class="farming-tag">Strategic Vectors</span>
+      <h2 class="farming-heading text-white">System Framework & Core Pillars</h2>
+      
+      <div class="grid-4" style="gap: 2rem;">
+        <div class="borderless-card" style="border-left: 1px solid var(--card-border); padding-left: 1.5rem;">
+          <span class="farming-tag" style="font-size: 0.65rem;">Awareness</span>
+          <svg class="farming-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+          <div class="farming-card-title text-white mt-2">Soil Telemetry</div>
+          <p class="farming-card-desc mb-2">Real-time mapping of global soil health and reserves.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>• Nutrient N/P/K sensors</li>
+            <li>• Moisture tracking grid</li>
+            <li>• Soil temp & pH sensors</li>
+          </ul>
+        </div>
+
+        <div class="borderless-card" style="border-left: 1px solid var(--card-border); padding-left: 1.5rem;">
+          <span class="farming-tag" style="font-size: 0.65rem;">Prediction</span>
+          <svg class="farming-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <div class="farming-card-title text-white mt-2">Predictive Cultivation</div>
+          <p class="farming-card-desc mb-2">Deterministic prediction of crop cycles and yields.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>• Weather-adaptive planting</li>
+            <li>• Dynamic biomass estimation</li>
+            <li>• Growth stress modeling</li>
+          </ul>
+        </div>
+
+        <div class="borderless-card" style="border-left: 1px solid var(--card-border); padding-left: 1.5rem;">
+          <span class="farming-tag" style="font-size: 0.65rem;">Coordination</span>
+          <svg class="farming-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          <div class="farming-card-title text-white mt-2">Resource Optimization</div>
+          <p class="farming-card-desc mb-2">Synchronizing water, seeds, and fertilizer schedules.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>• Precision irrigation plans</li>
+            <li>• Smart fertilizer dispatch</li>
+            <li>• Seed exposure mapping</li>
+          </ul>
+        </div>
+
+        <div class="borderless-card" style="border-left: 1px solid var(--card-border); padding-left: 1.5rem;">
+          <span class="farming-tag" style="font-size: 0.65rem;">Execution</span>
+          <svg class="farming-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          <div class="farming-card-title text-white mt-2">Supply Web Coordination</div>
+          <p class="farming-card-desc mb-2">Automated crop routing and logistic dispatch optimization.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>• Real-time demand routing</li>
+            <li>• Priority supply allocation</li>
+            <li>• Buffer storage coordination</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INTELLIGENCE PIPELINE SECTION -->
+    <section class="section-container">
+      <div class="text-center mb-12">
+        <span class="farming-tag">Operational Architecture</span>
+        <h2 class="farming-heading text-white">The Intelligence Pipeline</h2>
+        <p class="farming-subtext mx-auto">Visualizing the flow of data from inputs to coordinate optimization outputs.</p>
+      </div>
+
+      <div class="pipeline-chain">
+        <div class="pipeline-chain-step">
+          <div class="step-header">
+            <span class="step-number">01</span>
+            <span class="step-badge">INPUT</span>
+          </div>
+          <div class="step-title">Soil Health Feeds</div>
+          <div class="step-body">Nutrient saturation, soil moisture, pH level tracking, and telemetry inputs.</div>
+        </div>
+
+        <div class="pipeline-chain-connector">
+          <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="pipeline-chain-step">
+          <div class="step-header">
+            <span class="step-number">02</span>
+            <span class="step-badge">CLIMATE</span>
+          </div>
+          <div class="step-title">Micro-Climate Grids</div>
+          <div class="step-body">Satellite moisture radar, humidity sensors, and solar radiation mapping.</div>
+        </div>
+
+        <div class="pipeline-chain-connector">
+          <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="pipeline-chain-step">
+          <div class="step-header">
+            <span class="step-number">03</span>
+            <span class="step-badge">SIMULATION</span>
+          </div>
+          <div class="step-title">Crop Growth Simulation</div>
+          <div class="step-body">Dynamic crop growth cycle simulation and stress mapping.</div>
+        </div>
+
+        <div class="pipeline-chain-connector">
+          <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="pipeline-chain-step highlight-step">
+          <div class="step-header">
+            <span class="step-number">04</span>
+            <span class="step-badge text-amber-400">ENGINE</span>
+          </div>
+          <div class="step-title">Yield Prediction Engine</div>
+          <div class="step-body">Machine learning forecasts plotting yield levels and biomass output.</div>
+        </div>
+
+        <div class="pipeline-chain-connector">
+          <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="pipeline-chain-step">
+          <div class="step-header">
+            <span class="step-number">05</span>
+            <span class="step-badge">OPTIMIZER</span>
+          </div>
+          <div class="step-title">Harvest Optimizer</div>
+          <div class="step-body">Predicting optimal harvesting windows to maximize nutritional density.</div>
+        </div>
+
+        <div class="pipeline-chain-connector">
+          <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="pipeline-chain-step">
+          <div class="step-header">
+            <span class="step-number">06</span>
+            <span class="step-badge text-emerald-400">LOGISTICS</span>
+          </div>
+          <div class="step-title">Distribution Allocation</div>
+          <div class="step-body">Coordinating dynamic logistics dispatch to regional hubs and grain networks.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SCIENTIFIC VALIDATION SECTION -->
+    <section class="section-container">
+      <div class="grid-2">
+        <!-- Left Side: Validation Engine Dashboard -->
+        <div>
+          <span class="farming-tag">Data Integrity</span>
+          <h2 class="farming-heading text-white">Scientific Validation</h2>
+          <p class="farming-subtext">
+            Operating transparently on auditable historical validation datasets.
+          </p>
+
+          <div class="validation-card">
+            <div class="font-mono text-xs text-amber-400 mb-4">VALIDATION ENGINE RUNNING // VERSION 4.1</div>
+            <div class="val-grid">
+              <div class="val-item">
+                <div class="val-label">Mean Absolute Error (MAE)</div>
+                <div class="val-value">2.15%</div>
+              </div>
+              <div class="val-item">
+                <div class="val-label">Mean Absolute Percentage Error</div>
+                <div class="val-value">2.84%</div>
+              </div>
+              <div class="val-item">
+                <div class="val-label">RMSE (Precipitation Integration)</div>
+                <div class="val-value">0.08 mm</div>
+              </div>
+              <div class="val-item">
+                <div class="val-label">Yield Prediction Confidence</div>
+                <div class="val-value">97.2%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Metrics List -->
+        <div class="farming-card bg-slate-950/40">
+          <div class="farming-card-title text-white border-b border-slate-800 pb-3 mb-4">Operational Status Metrics</div>
+          
+          <div class="side-metric-item">
+            <span class="text-slate-300 font-medium">Prediction Stability</span>
+            <span class="font-mono text-xs text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded">Stable</span>
+          </div>
+
+          <div class="side-metric-item">
+            <span class="text-slate-300 font-medium">Validation Coverage</span>
+            <span class="font-mono text-xs text-amber-400">1925 - 2025</span>
+          </div>
+
+          <div class="side-metric-item">
+            <span class="text-slate-300 font-medium">Forecast Reliability</span>
+            <span class="font-mono text-xs text-emerald-400">High (95% CI)</span>
+          </div>
+
+          <div class="side-metric-item">
+            <span class="text-slate-300 font-medium">Integrated Datasets</span>
+            <span class="font-mono text-xs text-amber-400">5 Core Models</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FAILURE VS STABILITY FLOW -->
+    <section class="section-container">
+      <span class="farming-tag">Comparative Flow</span>
+      <h2 class="farming-heading text-white">System Scenarios & Outcomes</h2>
+      
+      <!-- Scenario 1: Failure Pattern -->
+      <div style="margin-bottom: 3rem;">
+        <div style="color: var(--accent-red); font-weight: 600; font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 0.75rem;" class="flex items-center">
+          <span class="live-dot dot-red"></span>SCENARIO A: FRAGMENTED RESPONSE (FAILURE)
+        </div>
+        <div class="horizontal-flow flow-red">
+          <div class="flow-node text-red-300">Soil Degradation</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-red-300">Delayed Irrigation</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-red-300">Crop Stress</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-red-300">Market Inefficiencies</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-red-500 font-semibold">Supply Crisis</div>
+        </div>
+      </div>
+
+      <!-- Scenario 2: Stability Pattern -->
+      <div>
+        <div style="color: var(--accent-green); font-weight: 600; font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 0.75rem;" class="flex items-center">
+          <span class="live-dot dot-green"></span>SCENARIO B: DYNAMIC COORDINATION (STABILITY)
+        </div>
+        <div class="horizontal-flow flow-green">
+          <div class="flow-node text-emerald-300">Soil Telemetry</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-emerald-300">Predictive Irrigation</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-emerald-300">Optimized Growing</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-emerald-300">Dynamic Supply Web</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-emerald-400 font-semibold">System Stability</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. RAYA FARMING INTELLIGENCE LAYER -->
+    <section class="section-container">
+      <div class="text-center mb-12">
+        <span class="farming-tag">Integrated Layer</span>
+        <h2 class="farming-heading text-white">The Alignment Core</h2>
+        <p class="farming-subtext mx-auto">Placing the intelligence framework between ecological inputs and market networks.</p>
+      </div>
+
+      <div class="arch-container">
+        <!-- Column 1 -->
+        <div class="arch-card">
+          <div class="font-mono text-xs text-slate-500 uppercase">Input Node</div>
+          <div class="water-card-title text-white mt-2">Ecological Inputs</div>
+          <ul class="arch-list">
+            <li>Satellite vegetation radar</li>
+            <li>Aquifer & soil PH probes</li>
+            <li>Local micro-climate nets</li>
+            <li>Historical yield logs</li>
+          </ul>
+        </div>
+
+        <!-- Connector SVG 1 -->
+        <div class="arch-flow-connector">
+          <svg class="arch-arrow-svg" viewBox="0 0 100 40" fill="none">
+            <defs>
+              <linearGradient id="amber-glow-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="1"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 20 H100" stroke="url(#amber-glow-grad-1)" stroke-width="2" stroke-dasharray="8 6" class="flowing-path"/>
+            <polygon points="90,15 100,20 90,25" fill="#f59e0b"/>
+          </svg>
+        </div>
+
+        <!-- Column 2 (Highlighted) -->
+        <div class="arch-card highlight">
+          <div class="font-mono text-xs text-amber-400 uppercase">Core Layer</div>
+          <div class="water-card-title text-amber-400 mt-2">RAYA Farming Intelligence</div>
+          <ul class="arch-list">
+            <li class="text-white">Predictive coordination engine</li>
+            <li class="text-white">Ecological modeling network</li>
+            <li class="text-white">Yield & supply allocator</li>
+            <li class="text-white">Planetary resource optimization</li>
+          </ul>
+        </div>
+
+        <!-- Connector SVG 2 -->
+        <div class="arch-flow-connector">
+          <svg class="arch-arrow-svg" viewBox="0 0 100 40" fill="none">
+            <defs>
+              <linearGradient id="amber-glow-grad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="1"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 20 H100" stroke="url(#amber-glow-grad-2)" stroke-width="2" stroke-dasharray="8 6" class="flowing-path"/>
+            <polygon points="90,15 100,20 90,25" fill="#f59e0b"/>
+          </svg>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="arch-card">
+          <div class="font-mono text-xs text-slate-500 uppercase">Output Node</div>
+          <div class="water-card-title text-white mt-2">Supply & Market Systems</div>
+          <ul class="arch-list">
+            <li>Municipal distribution grids</li>
+            <li>Grain elevator reserves</li>
+            <li>Logistics supply chains</li>
+            <li>Retail nutrition centers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. LIVE DASHBOARD SECTION -->
+    <section id="live-dashboard" class="section-container">
+      <span class="farming-tag">Operational Dashboard</span>
+      <h2 class="farming-heading text-white">Agricultural System Status</h2>
+      <p class="farming-subtext">Real-time indicators showing planetary soil health and production optimization targets.</p>
+
+      <div class="dash-layout">
+        <!-- Left Score Dial -->
+        <div class="score-dial">
+          <div class="dial-container">
+            <svg class="dial-svg" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" stroke="rgba(255,255,255,0.02)" stroke-width="6" fill="none" />
+              <circle cx="50" cy="50" r="42" stroke="var(--accent-amber)" stroke-width="6" fill="none" 
+                      stroke-dasharray="264" stroke-dashoffset="58" class="dial-progress-ring" />
+            </svg>
+            <div class="dial-content">
+              <span class="dial-value text-amber-400">78</span>
+              <span class="dial-max">/ 100</span>
+            </div>
+          </div>
+          <div class="font-mono text-xs text-slate-400 uppercase tracking-wider mt-4">Agricultural Stability Score</div>
+          <span class="text-[0.65rem] font-mono text-amber-500/80 bg-amber-500/10 px-2 py-0.5 rounded mt-2 uppercase">Status: Nominal</span>
+        </div>
+
+        <!-- Right System Stats & Recommendations -->
+        <div>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <span class="dash-card-label">Soil Moisture</span>
+                <span class="live-dot dot-green"></span>
+              </div>
+              <span class="dash-card-value text-emerald-400">48.2%</span>
+              <span class="dash-card-meta">Nominal Saturation</span>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <span class="dash-card-label">Nutrient Saturation</span>
+                <span class="live-dot dot-green"></span>
+              </div>
+              <span class="dash-card-value text-emerald-400">Optimal</span>
+              <span class="dash-card-meta">NPK Levels Balanced</span>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <span class="dash-card-label">Yield Forecast Delta</span>
+                <span class="live-dot dot-green"></span>
+              </div>
+              <span class="dash-card-value text-emerald-400">+4.2%</span>
+              <span class="dash-card-meta">Seasonal Projection</span>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <span class="dash-card-label">Seasonal Demand</span>
+                <span class="live-dot dot-cyan"></span>
+              </div>
+              <span class="dash-card-value text-cyan-400">Stable</span>
+              <span class="dash-card-meta">Domestic Market Sync</span>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-800 pt-4">
+            <div class="font-mono text-xs text-amber-400 uppercase mb-3">System Recommendations</div>
+            <ul class="rec-list">
+              <li>Optimize agricultural irrigation schedules for Eastern sector</li>
+              <li>Initiate soil pH balancing protocol in Southern sub-basin</li>
+              <li>Coordinate dynamic logistics dispatch to grain elevator networks</li>
+              <li>Monitor localized micro-climate temperature anomalies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. INTERCONNECTED SYSTEMS SECTION -->
+    <section class="section-container">
+      <div class="text-center mb-12">
+        <span class="farming-tag">Integrated Domain</span>
+        <h2 class="farming-heading text-white">Interconnected Systems</h2>
+        <p class="farming-subtext mx-auto">Farming intelligence is tightly coupled with all major planetary subsystems.</p>
+      </div>
+
+      <div class="systems-web">
+        <!-- SVG connecting lines -->
+        <svg class="web-svg-container">
+          <line x1="50%" y1="50%" x2="calc(50% - 140px)" y2="calc(50% - 60px)" class="web-line line-energy" />
+          <line x1="50%" y1="50%" x2="calc(50% + 140px)" y2="calc(50% - 60px)" class="web-line line-agri" />
+          <line x1="50%" y1="50%" x2="calc(50% - 150px)" y2="calc(50% + 60px)" class="web-line line-climate" />
+          <line x1="50%" y1="50%" x2="calc(50% + 150px)" y2="calc(50% + 60px)" class="web-line line-health" />
+          <line x1="50%" y1="50%" x2="50%" y2="calc(50% - 95px)" class="web-line line-urban" />
+        </svg>
+
+        <div class="web-center-node">FARMING</div>
+        
+        <a href="water_intelligence.html" class="web-satellite-node node-energy no-underline text-inherit block">Water</a>
+        <a href="energy_intelligence.html" class="web-satellite-node node-agri no-underline text-inherit block">Energy</a>
+        <a href="coming_soon.html?system=Climate" class="web-satellite-node node-climate no-underline text-inherit block">Climate</a>
+        <a href="coming_soon.html?system=Logistics" class="web-satellite-node node-health no-underline text-inherit block">Logistics</a>
+        <a href="coming_soon.html?system=Human%20Nutrition" class="web-satellite-node node-urban no-underline text-inherit block">Human Nutrition</a>
+      </div>
+    </section>
+
+    <!-- 10. FINAL SECTION -->
+    <section class="earth-grid-section">
+      <div class="grid-bg"></div>
+      <div class="relative z-10">
+        <h2 class="farming-heading text-white mb-6">Civilization Stability Depends On Agricultural Intelligence.</h2>
+        <p class="farming-subtext mx-auto mb-8">
+          Join the coordination system to model, align, and sustain planetary resources.
+        </p>
+        <a href="portal_login.html" class="farming-cta">Enter Farming System</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Dynamic Footer Injected Here -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Shared Script Manager -->
+  <script src="../src/scripts/layout-loader.js"></script>
+</body>
+
+</html>

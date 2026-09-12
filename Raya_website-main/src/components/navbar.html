@@ -81,8 +81,227 @@
         display: none;
       }
     }
+
+    /* Dropdown Container */
+    .dropdown {
+      position: relative;
+    }
+
+    /* Dropdown Trigger Button */
+    .dropdown-trigger {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      color: #cbd5e1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      transition: color 0.2s ease;
+    }
+
+    .dropdown-trigger:hover {
+      color: #22d3ee;
+    }
+
+    /* Chevron rotation */
+    .chevron-icon {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dropdown:hover .chevron-icon,
+    .dropdown.active .chevron-icon {
+      transform: rotate(180deg);
+      color: #22d3ee;
+    }
+
+    /* Dropdown Menu Box */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(12px);
+      width: 18rem;
+      background: rgba(8, 13, 28, 0.96);
+      border: 1px solid rgba(34, 211, 238, 0.15);
+      border-radius: 1rem;
+      padding: 0.75rem;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(6, 182, 212, 0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, visibility 0.2s;
+      z-index: 100;
+    }
+
+    /* Invisible bridge to prevent mouseleave when moving cursor over the gap */
+    .dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+      background: transparent;
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown.active .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(8px);
+    }
+
+    /* Dropdown Item */
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      color: #94a3b8;
+      text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dropdown-item:hover {
+      background: rgba(15, 23, 42, 0.6);
+      color: #f8fafc;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Icon Container */
+    .dropdown-item-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.5rem;
+      transition: all 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    /* Specific Module Theme Styles */
+    .item-energy .dropdown-item-icon {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+    }
+    .item-energy:hover .dropdown-item-icon {
+      background: rgba(245, 158, 11, 0.25);
+      border-color: rgba(245, 158, 11, 0.5);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+    }
+    .item-energy:hover {
+      border-left: 2px solid #fbbf24;
+      padding-left: calc(0.75rem - 2px);
+    }
+
+    .item-water .dropdown-item-icon {
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      color: #22d3ee;
+    }
+    .item-water:hover .dropdown-item-icon {
+      background: rgba(34, 211, 238, 0.25);
+      border-color: rgba(34, 211, 238, 0.5);
+      box-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+    }
+    .item-water:hover {
+      border-left: 2px solid #22d3ee;
+      padding-left: calc(0.75rem - 2px);
+    }
+
+    .item-farming .dropdown-item-icon {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      color: #10b981;
+    }
+    .item-farming:hover .dropdown-item-icon {
+      background: rgba(16, 185, 129, 0.25);
+      border-color: rgba(16, 185, 129, 0.5);
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+    }
+    .item-farming:hover {
+      border-left: 2px solid #10b981;
+      padding-left: calc(0.75rem - 2px);
+    }
+
+    .item-hsi .dropdown-item-icon {
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      color: #a855f7;
+    }
+    .item-hsi:hover .dropdown-item-icon {
+      background: rgba(168, 85, 247, 0.25);
+      border-color: rgba(168, 85, 247, 0.5);
+      box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+    }
+    .item-hsi:hover {
+      border-left: 2px solid #a855f7;
+      padding-left: calc(0.75rem - 2px);
+    }
+
+    /* Mobile Accordion Styles */
+    .mobile-dropdown-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0;
+      color: #cbd5e1;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(30, 41, 59, 0.6);
+      background: transparent;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      cursor: pointer;
+    }
+
+    .mobile-dropdown-btn:hover {
+      color: #22d3ee;
+    }
+
+    .mobile-dropdown-menu {
+      max-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding-left: 1rem;
+      gap: 0.5rem;
+      border-left: 1px solid rgba(30, 41, 59, 0.6);
+      transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-top 0.3s ease, padding 0.3s ease;
+      margin-top: 0;
+    }
+
+    .mobile-dropdown-menu.active {
+      max-height: 12rem;
+      margin-top: 0.5rem;
+      padding: 0.25rem 0;
+    }
+
+    .mobile-dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.925rem;
+      transition: color 0.2s ease;
+    }
+
+    .mobile-dropdown-item:hover {
+      color: #22d3ee;
+    }
 </style>
-<div class="nav-container relative overflow-hidden">
+<div class="nav-container relative">
   <!-- Subtle Grid Background -->
   <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px); background-size: 32px 32px; opacity: 0.5;"></div>
 
@@ -110,7 +329,7 @@
       >
       <a
         class="text-slate-300 hover:text-cyan-400 font-medium transition-colors"
-        href="public/vision_main.html"
+        href="public/vision.html"
         >Vision</a
       >
       <a
@@ -128,11 +347,68 @@
         href="public/raya_problem.html"
         >Challenges</a
       >
-      <a
-        class="text-slate-300 hover:text-cyan-400 font-medium transition-colors"
-        href="public/water_intelligence.html"
-        >Module</a
-      >
+      <!-- Dropdown Modules Menu -->
+      <div class="dropdown">
+        <button class="dropdown-trigger text-slate-300 hover:text-cyan-400 font-medium transition-colors flex items-center gap-1 focus:outline-none cursor-pointer">
+          Modules
+          <svg class="w-4 h-4 chevron-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <!-- Energy -->
+          <a href="public/energy_intelligence.html" class="dropdown-item item-energy">
+            <div class="dropdown-item-icon">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-sm text-slate-200">Energy</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Simulating renewable transitions</div>
+            </div>
+          </a>
+
+          <!-- Water -->
+          <a href="public/water_intelligence.html" class="dropdown-item item-water">
+            <div class="dropdown-item-icon">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-sm text-slate-200">Water</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Understanding water cycles & scarcity</div>
+            </div>
+          </a>
+
+          <!-- Farming -->
+          <a href="public/farming_intelligence.html" class="dropdown-item item-farming">
+            <div class="dropdown-item-icon">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-sm text-slate-200">Farming</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Climate-aware agriculture</div>
+            </div>
+          </a>
+
+          <!-- Human Sustainability -->
+          <a href="public/hsi_module.html" class="dropdown-item item-hsi">
+            <div class="dropdown-item-icon">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-sm text-slate-200">Human Sustainability</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Measuring human well-being</div>
+            </div>
+          </a>
+        </div>
+      </div>
       <a
         class="px-5 py-2 rounded-full btn-rune text-sm font-bold text-white hover:bg-cyan-500/20 transition-all border border-cyan-500/30"
         href="public/portal_login.html"
@@ -164,7 +440,7 @@
   >
   <a
     class="text-slate-300 hover:text-cyan-400 font-medium py-2 border-b border-slate-800"
-    href="public/vision_main.html"
+    href="public/vision.html"
     >Vision</a
   >
   <a
@@ -182,11 +458,29 @@
     href="public/raya_problem.html"
     >Challenges</a
   >
-  <a
-    class="text-slate-300 hover:text-cyan-400 font-medium py-2 border-b border-slate-800"
-    href="public/water_intelligence.html"
-    >Module</a
-  >
+  <!-- Mobile Modules Dropdown Container -->
+  <div class="mobile-dropdown-container">
+    <button id="mobile-dropdown-toggle" class="mobile-dropdown-btn">
+      <span>Modules</span>
+      <svg class="w-4 h-4 chevron-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+    <div id="mobile-dropdown-menu" class="mobile-dropdown-menu">
+      <a href="public/energy_intelligence.html" class="mobile-dropdown-item">
+        <span style="color: #fbbf24;">⚡</span> Energy
+      </a>
+      <a href="public/water_intelligence.html" class="mobile-dropdown-item">
+        <span style="color: #22d3ee;">💧</span> Water
+      </a>
+      <a href="public/farming_intelligence.html" class="mobile-dropdown-item">
+        <span style="color: #10b981;">🌾</span> Farming
+      </a>
+      <a href="public/hsi_module.html" class="mobile-dropdown-item">
+        <span style="color: #a855f7;">🧬</span> Human Sustainability
+      </a>
+    </div>
+  </div>
   <a
     class="px-5 py-3 rounded-xl btn-rune text-center font-bold text-white bg-cyan-500/20 border border-cyan-500/30 mt-2"
     href="public/portal_login.html"
@@ -194,3 +488,5 @@
     Join the Mission
   </a>
 </div>
+
+<!-- </body> -->

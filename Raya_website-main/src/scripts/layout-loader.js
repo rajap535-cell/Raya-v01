@@ -19,6 +19,11 @@ function initializeNavbar() {
 
   if (!toggle || !menu) return;
 
+  const mobileDropdownToggle = document.getElementById("mobile-dropdown-toggle");
+  const mobileDropdownMenu = document.getElementById("mobile-dropdown-menu");
+  const desktopDropdown = document.querySelector(".dropdown");
+  const desktopDropdownTrigger = document.querySelector(".dropdown-trigger");
+
   // Toggle Menu
   toggle.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -27,8 +32,33 @@ function initializeNavbar() {
     toggle.setAttribute("aria-expanded", isActive);
   });
 
+  // Mobile Dropdown Toggle
+  if (mobileDropdownToggle && mobileDropdownMenu) {
+    mobileDropdownToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isActive = mobileDropdownMenu.classList.toggle("active");
+      const chevron = mobileDropdownToggle.querySelector(".chevron-icon");
+      if (chevron) {
+        if (isActive) {
+          chevron.style.transform = "rotate(180deg)";
+        } else {
+          chevron.style.transform = "";
+        }
+      }
+    });
+  }
+
+  // Desktop Dropdown Toggle
+  if (desktopDropdown && desktopDropdownTrigger) {
+    desktopDropdownTrigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      desktopDropdown.classList.toggle("active");
+    });
+  }
+
   // Close on Outside Click
   document.addEventListener("click", (e) => {
+    // Close mobile menu
     if (
       menu.classList.contains("active") &&
       !menu.contains(e.target) &&
@@ -37,15 +67,40 @@ function initializeNavbar() {
       menu.classList.remove("active");
       toggle.classList.remove("active");
       toggle.setAttribute("aria-expanded", "false");
+
+      // Reset mobile dropdown
+      if (mobileDropdownMenu) {
+        mobileDropdownMenu.classList.remove("active");
+        const chevron = mobileDropdownToggle?.querySelector(".chevron-icon");
+        if (chevron) chevron.style.transform = "";
+      }
+    }
+
+    // Close desktop dropdown
+    if (desktopDropdown && !desktopDropdown.contains(e.target)) {
+      desktopDropdown.classList.remove("active");
     }
   });
 
   // Close on ESC
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && menu.classList.contains("active")) {
-      menu.classList.remove("active");
-      toggle.classList.remove("active");
-      toggle.setAttribute("aria-expanded", "false");
+    if (e.key === "Escape") {
+      if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        toggle.classList.remove("active");
+        toggle.setAttribute("aria-expanded", "false");
+
+        // Reset mobile dropdown
+        if (mobileDropdownMenu) {
+          mobileDropdownMenu.classList.remove("active");
+          const chevron = mobileDropdownToggle?.querySelector(".chevron-icon");
+          if (chevron) chevron.style.transform = "";
+        }
+      }
+
+      if (desktopDropdown) {
+        desktopDropdown.classList.remove("active");
+      }
     }
   });
 

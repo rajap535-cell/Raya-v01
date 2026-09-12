@@ -157,13 +157,14 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      text-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
-      letter-spacing: -0.05em;
+      text-shadow: 0 4px 24px rgba(10, 15, 29, 0.85), 0 0 35px rgba(0, 242, 255, 0.6);
+      letter-spacing: -0.04em;
       width: 100%;
       text-align: center;
       z-index: 10;
       color: white;
       font-weight: 800;
+      pointer-events: none;
     }
 
     #planetary-canvas {
@@ -204,16 +205,16 @@
     }
 
     /* Size Utilities for Scrollytelling */
-    .text-6xl { font-size: 3.75rem; }
-    .text-8xl { font-size: 6rem; }
-    .text-9xl { font-size: 8rem; }
+    .text-6xl { font-size: clamp(2.5rem, 5vw, 3.75rem); }
+    .text-8xl { font-size: clamp(3.5rem, 7vw, 5.5rem); }
+    .text-9xl { font-size: clamp(4.25rem, 8vw, 7.5rem); }
 
     @media (min-width: 768px) {
-        .md\:text-8xl { font-size: 6rem; }
+        .md\:text-8xl { font-size: clamp(3.5rem, 7vw, 5.5rem); }
     }
 
     @media (min-width: 1024px) {
-        .lg\:text-9xl { font-size: 10vw; }
+        .lg\:text-9xl { font-size: clamp(4.5rem, 8vw, 7.5rem); }
     }
 
 

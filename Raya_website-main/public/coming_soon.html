@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAYA — System Under Development</title>
+  <meta name="description" content="Operational module pending clearance. Telemetry buffers and verification protocols under active simulation." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-darker: #030407;
+      --accent-cyan: #06b6d4;
+      --accent-cyan-glow: rgba(6, 182, 212, 0.06);
+      --card-bg: rgba(15, 22, 35, 0.4);
+      --card-border: rgba(255, 255, 255, 0.03);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
+    body {
+      background-color: var(--bg-darker);
+      background-image: 
+        radial-gradient(at 50% 0%, rgba(6, 182, 212, 0.08) 0px, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.003) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.003) 1px, transparent 1px);
+      background-size: 100% 100%, 64px 64px, 64px 64px;
+      background-attachment: fixed;
+      color: #f1f5f9;
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+    }
+
+    .coming-soon-container {
+      max-width: 800px;
+      margin: auto;
+      padding: 4rem 2rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    .tech-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-cyan);
+      background: var(--accent-cyan-glow);
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(6, 182, 212, 0.15);
+    }
+
+    .terminal-window {
+      background: rgba(3, 4, 7, 0.6);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin: 2.5rem 0;
+      min-height: 200px;
+      position: relative;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.7);
+    }
+
+    .terminal-header {
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .terminal-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      display: inline-block;
+      animation: pulse-dot 2s infinite;
+    }
+
+    .terminal-line {
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateY(4px);
+      animation: reveal-line 0.3s forwards;
+    }
+
+    .terminal-cursor {
+      display: inline-block;
+      width: 8px;
+      height: 14px;
+      background: var(--accent-cyan);
+      animation: blink 1s infinite;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+
+    @keyframes reveal-line {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    @keyframes pulse-dot {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.6; }
+    }
+
+    .tech-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      font-size: 0.825rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.75rem 1.75rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid var(--accent-cyan);
+      cursor: pointer;
+    }
+
+    .tech-btn:hover {
+      background: var(--accent-cyan);
+      color: #030407;
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top bar -->
+  <div class="w-full border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center bg-[#07090e]/40 backdrop-blur-md">
+    <div class="flex items-center gap-3">
+      <img src="../assets/raya_logo.jpg" alt="Raya Logo" class="w-8 h-8 rounded">
+      <span class="font-bold text-sm tracking-wider font-mono uppercase text-white">RAYA NETWORK</span>
+    </div>
+    <div class="text-xs text-slate-500 font-mono">SECURE LINK // AUTH-OK</div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="coming-soon-container">
+    <span class="tech-tag" id="system-tag">Module RJ-905</span>
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4 uppercase" id="system-title">SYSTEM PENDING</h1>
+    <p class="text-slate-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+      This operational system sector is currently being constructed. The core coordination layer is running verification simulations against historical planetary variables.
+    </p>
+
+    <!-- Terminal simulator -->
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <span class="text-[10px] text-slate-500 tracking-wider">RAYA SYSTEM COMPILER v1.9.4</span>
+        <span class="flex items-center gap-2">
+          <span class="terminal-dot"></span>
+          <span class="text-[10px] text-cyan-400">ACTIVE SIM</span>
+        </span>
+      </div>
+      <div id="terminal-content">
+        <!-- Lines dynamically inserted here -->
+      </div>
+      <div id="cursor-line" class="text-[11px] font-mono text-cyan-500 mt-2">
+        <span id="current-task">Initializing compiler</span><span class="terminal-cursor"></span>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <button onclick="window.history.back()" class="tech-btn mt-4">
+      ← Return to Connected Web
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <div class="w-full border-t border-white/5 py-6 px-12 text-center text-xs text-slate-600 font-mono bg-[#030407]">
+    RAYA INTELLECTUAL INFRASTRUCTURE // ALL RIGHTS RESERVED © 2026
+  </div>
+
+  <script>
+    // Get query param for System Name
+    const urlParams = new URLSearchParams(window.location.search);
+    const systemName = urlParams.get('system') || 'Operational Node';
+    
+    // Update titles and tags
+    document.getElementById('system-title').innerText = `${systemName} System`;
+    document.getElementById('system-tag').innerText = `Development / ${systemName.toUpperCase().replace(/\s+/g, '-')}-901`;
+    document.title = `RAYA — ${systemName} System`;
+
+    // Simulated terminal output logs
+    const logs = [
+      `[INFO] Booting system context for ${systemName}...`,
+      `[OK] Establishing neural connection paths to main coordination web`,
+      `[INFO] Querying atmospheric and terrestrial model vectors...`,
+      `[OK] 1,480 telemetry channels connected successfully`,
+      `[INFO] Initializing stability check protocols...`,
+      `[WARN] Missing local verification database for ${systemName}. Deferring to simulation bounds`,
+      `[INFO] Running Monte Carlo yield analysis against 100-year history...`,
+      `[OK] Convergence reached in 1,204 iterations (p < 0.05)`,
+      `[INFO] Launching output alignment optimizer...`,
+      `[INFO] Mapping optimization targets to municipal energy & logistics networks...`,
+      `[PENDING] Awaiting final coordinator confirmation signatures...`,
+      `[STATUS] System active in passive verification mode. Operational override locked.`
+    ];
+
+    const terminalContent = document.getElementById('terminal-content');
+    const currentTask = document.getElementById('current-task');
+    let logIndex = 0;
+
+    function addNextLog() {
+      if (logIndex < logs.length) {
+        const line = document.createElement('div');
+        line.className = 'terminal-line text-[11px] font-mono leading-relaxed';
+        
+        // Dynamic coloring for logs
+        const text = logs[logIndex];
+        if (text.includes('[OK]')) {
+          line.innerHTML = `<span class="text-emerald-400">${text.substring(0, 4)}</span>${text.substring(4)}`;
+        } else if (text.includes('[WARN]')) {
+          line.innerHTML = `<span class="text-yellow-500">${text.substring(0, 6)}</span>${text.substring(6)}`;
+        } else if (text.includes('[PENDING]')) {
+          line.innerHTML = `<span class="text-cyan-400 animate-pulse">${text.substring(0, 9)}</span>${text.substring(9)}`;
+        } else {
+          line.innerHTML = `<span class="text-slate-500">${text.substring(0, 6)}</span>${text.substring(6)}`;
+        }
+        
+        terminalContent.appendChild(line);
+        currentTask.innerText = `Executing: ${text.substring(0, 40)}...`;
+        
+        logIndex++;
+        
+        // Auto-scroll terminal
+        terminalContent.scrollTop = terminalContent.scrollHeight;
+        
+        // Random timeout for realistic typing feel
+        setTimeout(addNextLog, 600 + Math.random() * 800);
+      } else {
+        currentTask.innerHTML = `<span class="text-emerald-400">READY</span> // System initialized in sandbox verification environment.`;
+        document.getElementById('cursor-line').querySelector('.terminal-cursor').style.display = 'inline-block';
+      }
+    }
+
+    // Start simulation after short delay
+    setTimeout(addNextLog, 500);
+  </script>
+</body>
+
+</html>

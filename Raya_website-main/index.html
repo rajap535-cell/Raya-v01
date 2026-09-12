@@ -47,20 +47,20 @@
       <canvas id="planetary-canvas" class="w-full h-full"></canvas>
       
       <div id="story-overlay" class="absolute inset-0 pointer-events-none flex items-center justify-center">
-        <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl px-4" data-start="0" data-end="15">
+        <div class="story-text opacity-0 transition-opacity duration-1000 text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-extrabold tracking-tight text-center px-4 select-none" data-start="0" data-end="15">
           Unified Intelligence
         </div>
-        <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl px-4" data-start="20" data-end="35">
-          <span class="text-scrolly-cyan mr-2">1.</span> Energy
+        <div class="story-text opacity-0 transition-opacity duration-1000 text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-extrabold tracking-tight text-center px-4 select-none whitespace-nowrap" data-start="20" data-end="35">
+          <span class="text-cyan-300 text-scrolly-cyan mr-2">1.</span> Energy
         </div>
-        <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl px-4" data-start="40" data-end="55">
-          <span class="text-scrolly-cyan mr-2">2.</span> Water
+        <div class="story-text opacity-0 transition-opacity duration-1000 text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-extrabold tracking-tight text-center px-4 select-none whitespace-nowrap" data-start="40" data-end="55">
+          <span class="text-cyan-300 text-scrolly-cyan mr-2">2.</span> Water
         </div>
-        <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl px-4" data-start="60" data-end="75">
-          <span class="text-scrolly-cyan mr-2">3.</span> Farming
+        <div class="story-text opacity-0 transition-opacity duration-1000 text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-extrabold tracking-tight text-center px-4 select-none whitespace-nowrap" data-start="60" data-end="75">
+          <span class="text-cyan-300 text-scrolly-cyan mr-2">3.</span> Farming
         </div>
-        <div class="story-text opacity-0 transition-opacity duration-1000 text-6xl md:text-8xl lg:text-9xl px-4" data-start="80" data-end="95">
-          <span class="text-scrolly-cyan mr-2">4.</span> Humanity
+        <div class="story-text opacity-0 transition-opacity duration-1000 text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-extrabold tracking-tight text-center px-4 select-none whitespace-nowrap" data-start="80" data-end="95">
+          <span class="text-cyan-300 text-scrolly-cyan mr-2">4.</span> Humanity
         </div>
       </div>
     </div>
@@ -73,8 +73,8 @@
   <main class="max-w-6xl ml-auto mr-auto px-6">
     <section class="gap-3 items-center py-12">
       <div class="space-y-6">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Raya — Open Knowledge Intelligence for Planetary Coordination</h1>
-        <p class="text-slate-800">Building transparent, community-governed intelligence to coordinate energy, resources, and knowledge at a planetary scale.</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Raya — Open Knowledge Intelligence for Planetary Co-Ordinate</h1>
+        <p class="text-slate-800">Building transparent, community-governed intelligence to co-ordinate energy, resources, and knowledge at a planetary scale.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center py-4">
           <div class="planet-card">
             <div class="planet-title">How Raya Thinks</div>
@@ -131,20 +131,21 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-stretch py-2">
 
           <!-- Energy -->
-          <a href="public/energy_intelligence.html" class="no-underline text-inherit">
-          <div class="planet-card">
+          <a href="public/energy_intelligence.html" class="no-underline text-inherit h-full block">
+          <div class="planet-card h-full">
             <div class="planet-icon">
               <img src="assets/raya_energy.jpg" alt="Raya Energy" class="rounded-lg">
             </div>
             <div class="planet-title">Energy</div>
             <div class="planet-desc">
-              Simulating renewable transitions, grid coordination, and long-term planetary energy balance.
+              Simulating renewable transitions, grid co-ordinate, and long-term planetary energy balance.
             </div>
           </div>
           </a>
 
           <!-- Water -->
-          <div class="planet-card">
+          <a href="public/water_intelligence.html" class="no-underline text-inherit h-full block">
+          <div class="planet-card h-full">
             <div class="planet-icon">
               <img src="assets/raya_water.jpg" alt="Raya Water" class="rounded-lg">
             </div>
@@ -153,9 +154,11 @@
               Understanding water cycles, demand, scarcity, and sustainable distribution systems.
             </div>
           </div>
+          </a>
 
           <!-- Farming -->
-          <div class="planet-card">
+          <a href="public/farming_intelligence.html" class="no-underline text-inherit h-full block">
+          <div class="planet-card h-full">
             <div class="planet-icon">
               <img src="assets/raya_farming.jpg" alt="Raya Farming" class="rounded-lg">
             </div>
@@ -164,10 +167,11 @@
               Supporting climate-aware agriculture, food security, and resource-efficient farming systems.
             </div>
           </div>
+          </a>
 
           <!-- Human Sustainability -->
-          <a href="public/hsi_module.html" class="no-underline text-inherit">
-          <div class="planet-card">
+          <a href="public/hsi_module.html" class="no-underline text-inherit h-full block">
+          <div class="planet-card h-full">
             <div class="planet-icon">
               <img src="assets/raya_hsi.jpg" alt="Raya Human Sustainability" class="rounded-lg">
             </div>
@@ -187,7 +191,7 @@
               Grid Synchronization Experiment
             </h2>
             <p class="text-slate-800 py-2">
-              Experience the complexity of planetary coordination. Synchronize fluctuating energy nodes to maintain global stability.
+              Experience the complexity of planetary co-ordinate. Synchronize fluctuating energy nodes to maintain global stability.
             </p>
             
             <div id="raya-game-container" class="mt-6 p-6 rounded-2xl bg-[#0a0f1d] border border-cyan-500/30 relative overflow-hidden ring-1 ring-cyan-500/10 shadow-[0_0_30px_rgba(6,182,212,0.1)]">

@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RAYA | Vision</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<link rel="stylesheet" href="vision.css">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- BACKGROUND -->
+<!-- ========================= -->
+<!-- =================================================
+     REAL-TIME PLANETARY BACKGROUND
+     Slides 2–6
+================================================= -->
+
+<div id="planetary-bg" class="planetary-bg">
+
+    <!-- Layer 1: Space + procedural Earth -->
+    <canvas id="planetaryBgCanvas"></canvas>
+
+    <!-- Layer 2: Nebula -->
+    <div class="bg-nebula bg-nebula-1"></div>
+    <div class="bg-nebula bg-nebula-2"></div>
+    <div class="bg-nebula bg-nebula-3"></div>
+
+    <!-- Earth breathing atmosphere -->
+    <div class="bg-earth-glow"></div>
+
+</div>
+<canvas id="particles"></canvas>
+
+<div class="gradient-bg"></div>
+
+<div class="mouse-glow"></div>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<div id="navbar-placeholder">
+    <!-- Shared Navbar Loaded Here -->
+  </div>
+<!-- ========================= -->
+<!-- PROGRESS -->
+<!-- ========================= -->
+
+<div class="progress">
+
+<div class="dot active" data-slide="0"></div>
+
+<div class="dot" data-slide="1"></div>
+
+<div class="dot" data-slide="2"></div>
+
+<div class="dot" data-slide="3"></div>
+
+<div class="dot" data-slide="4"></div>
+
+<div class="dot" data-slide="5"></div>
+
+</div>
+
+<!-- ========================= -->
+<!-- LEFT / RIGHT -->
+<!-- ========================= -->
+
+<button id="prevSlide" class="nav-btn left">
+
+❮
+
+</button>
+
+<button id="nextSlide" class="nav-btn right">
+
+❯
+
+</button>
+
+<!-- ========================= -->
+<!-- HORIZONTAL WRAPPER -->
+<!-- ========================= -->
+
+<div id="viewport">
+
+<div id="slides">
+
+<!-- ================================================= -->
+<!-- SLIDE 1 -->
+<!-- ================================================= -->
+
+<section class="slide hero" id="slide1" data-index="0">
+
+<div class="content">
+
+<p class="eyebrow">
+
+OPEN PLANETARY INTELLIGENCE
+
+</p>
+
+<h1>
+
+Building the Intelligence Required
+for a Type-1 Civilization
+
+</h1>
+
+<p>
+
+Humanity has extraordinary technology.
+
+But intelligence remains fragmented.
+
+RAYA is the architecture designed to co-ordinate planetary intelligence.
+
+</p>
+
+</div>
+
+<div class="visual planetary-visual">
+
+    <div class="space-scene">
+
+        <!-- Nebula -->
+        <div class="nebula nebula-one"></div>
+        <div class="nebula nebula-two"></div>
+
+        <!-- Planet -->
+        <div class="planet-container">
+
+            <canvas id="planetCanvas"></canvas>
+
+            <!-- Atmospheric glow -->
+            <div class="atmosphere"></div>
+
+            <!-- Aurora -->
+            <div class="aurora aurora-north"></div>
+            <div class="aurora aurora-south"></div>
+
+            <!-- Pulse rings -->
+            <div class="pulse-ring pulse-1"></div>
+            <div class="pulse-ring pulse-2"></div>
+            <div class="pulse-ring pulse-3"></div>
+
+            <!-- Floating intelligence indicators -->
+            <div class="intel-tag tag-energy">
+                <span></span>
+                ENERGY
+                <strong>98.4%</strong>
+            </div>
+
+            <div class="intel-tag tag-water">
+                <span></span>
+                WATER
+                <strong>92.7%</strong>
+            </div>
+
+            <div class="intel-tag tag-climate">
+                <span></span>
+                CLIMATE
+                <strong>STABLE</strong>
+            </div>
+
+            <div class="intel-tag tag-network">
+                <span></span>
+                GLOBAL NETWORK
+                <strong>ONLINE</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- <button class="continue" id="continueBtn">
+
+Continue →
+
+</button> -->
+
+</section>
+
+<!-- ================================================= -->
+<!-- SLIDE 2 -->
+<!-- ================================================= -->
+
+<section class="slide problem" id="slide2" data-index="1">
+
+<div class="section-title">
+
+01
+
+</div>
+
+<h2>
+
+Why Earth is still below Type-1
+
+</h2>
+
+<!-- <div class="cards">
+
+<div class="card">
+
+<h3>Governments</h3>
+
+<p>
+
+Optimize nations.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Companies</h3>
+
+<p>
+
+Optimize profit.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Researchers</h3>
+
+<p>
+
+Optimize disciplines.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>AI Models</h3>
+
+<p>
+
+Optimize isolated tasks.
+
+</p>
+
+</div>
+
+</div> -->
+
+<p class="problem-subtitle">
+    Fragmented intelligence. Isolated goals. No unified co-ordinate.
+</p>
+
+<div class="cards problem-system-grid">
+
+    <div class="card problem-panel">
+
+        <div class="panel-corner top-left"></div>
+        <div class="panel-corner top-right"></div>
+
+        <div class="problem-icon">
+            🏛
+        </div>
+
+        <div class="problem-content">
+            <span class="problem-code">SYSTEM / 01</span>
+            <h3>Governments</h3>
+            <p>Optimize nations.</p>
+        </div>
+
+        <div class="problem-signal">
+            <span></span>
+            <i></i>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <div class="card problem-panel">
+
+        <div class="panel-corner top-left"></div>
+        <div class="panel-corner top-right"></div>
+
+        <div class="problem-icon">
+            ▥
+        </div>
+
+        <div class="problem-content">
+            <span class="problem-code">SYSTEM / 02</span>
+            <h3>Companies</h3>
+            <p>Optimize profit.</p>
+        </div>
+
+        <div class="problem-signal">
+            <span></span>
+            <i></i>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <div class="card problem-panel">
+
+        <div class="panel-corner top-left"></div>
+        <div class="panel-corner top-right"></div>
+
+        <div class="problem-icon">
+            ◉
+        </div>
+
+        <div class="problem-content">
+            <span class="problem-code">SYSTEM / 03</span>
+            <h3>Researchers</h3>
+            <p>Optimize Discipline.</p>
+        </div>
+
+        <div class="problem-signal">
+            <span></span>
+            <i></i>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <div class="card problem-panel">
+
+        <div class="panel-corner top-left"></div>
+        <div class="panel-corner top-right"></div>
+
+        <div class="problem-icon">
+            ⎈
+        </div>
+
+        <div class="problem-content">
+            <span class="problem-code">SYSTEM / 04</span>
+            <h3>AI Models</h3>
+            <p>Optimize isolated tasks.</p>
+        </div>
+
+        <div class="problem-signal">
+            <span></span>
+            <i></i>
+            <span></span>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- </section> -->
+</section>
+
+<!-- ================================================= -->
+<!-- SLIDE 3 -->
+<!-- ================================================= -->
+
+<section class="slide architecture" id="slide3" data-index="2">
+
+<div class="section-title">
+
+02
+
+</div>
+
+<h2>
+
+The Architecture of RAYA
+
+</h2>
+
+<div class="architecture-diagram neural-architecture">
+
+    <!-- CONNECTION NETWORK -->
+    <svg class="neural-lines"
+         viewBox="0 0 900 520"
+         preserveAspectRatio="none">
+
+        <!-- Water -->
+        <path class="neural-path path-water"
+              data-node="water"
+              d="M450 260 Q560 160 700 105"/>
+
+        <!-- Climate -->
+        <path class="neural-path path-climate"
+              data-node="climate"
+              d="M450 260 Q330 155 190 120"/>
+
+        <!-- Energy -->
+        <path class="neural-path path-energy"
+              data-node="energy"
+              d="M450 260 Q450 160 455 70"/>
+
+        <!-- Farming -->
+        <path class="neural-path path-farming"
+              data-node="farming"
+              d="M450 260 Q570 310 700 385"/>
+
+        <!-- Humanity -->
+        <path class="neural-path path-humanity"
+              data-node="humanity"
+              d="M450 260 Q335 310 190 380"/>
+
+        <!-- Economy -->
+        <path class="neural-path path-economy"
+              data-node="economy"
+              d="M450 260 Q450 365 455 465"/>
+
+    </svg>
+
+
+    <!-- RAYA CORE -->
+
+    <div class="raya-core">
+
+        <div class="core-pulse"></div>
+
+        <span>RAYA</span>
+
+        <small>
+            PLANETARY<br>
+            INTELLIGENCE
+        </small>
+
+    </div>
+
+
+    <!-- ENERGY -->
+
+    <div class="neural-node node-energy"
+         data-node="energy">
+
+        <div class="node-icon">⚡</div>
+
+        <span>Energy</span>
+
+    </div>
+
+
+    <!-- WATER -->
+
+    <div class="neural-node node-water"
+         data-node="water">
+
+        <div class="node-icon">◉</div>
+
+        <span>Water</span>
+
+    </div>
+
+
+    <!-- CLIMATE -->
+
+    <div class="neural-node node-climate"
+         data-node="climate">
+
+        <div class="node-icon">◎</div>
+
+        <span>Climate</span>
+
+    </div>
+
+
+    <!-- FARMING -->
+
+    <div class="neural-node node-farming"
+         data-node="farming">
+
+        <div class="node-icon">⌁</div>
+
+        <span>Farming</span>
+
+    </div>
+
+
+    <!-- HUMANITY -->
+
+    <div class="neural-node node-humanity"
+         data-node="humanity">
+
+        <div class="node-icon">◇</div>
+
+        <span>Humanity</span>
+
+    </div>
+
+
+    <!-- ECONOMY -->
+
+    <div class="neural-node node-economy"
+         data-node="economy">
+
+        <div class="node-icon">◈</div>
+
+        <span>Economy</span>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SLIDE 4 -->
+<!-- ================================================= -->
+
+<section class="slide modules" id="slide4" data-index="3">
+
+<div class="section-title">
+
+03
+
+</div>
+
+<h2>
+
+Current Intelligence Modules
+
+</h2>
+
+<div class="module-grid system-grid">
+
+    <!-- ENERGY -->
+    <div class="system-panel energy-panel">
+
+        <div class="panel-scan"></div>
+
+        <div class="system-header">
+            <span class="system-icon">⚡</span>
+
+            <div>
+                <span class="system-code">RAYA / ENERGY</span>
+                <h3>Energy Intelligence</h3>
+            </div>
+
+            <span class="live-dot"></span>
+        </div>
+
+        <div class="system-mode">
+            <span>Live Simulation</span>
+            <strong>ACTIVE</strong>
+        </div>
+
+        <div class="system-data">
+            <span>Nodes Online</span>
+            <strong>248</strong>
+        </div>
+
+        <div class="system-status">
+            <div class="status-label">
+                <span>Status</span>
+                <span>98%</span>
+            </div>
+
+            <div class="status-track">
+                <div class="status-fill" style="--level:98%"></div>
+            </div>
+        </div>
+
+        <a href="#" class="system-explore">
+            Explore <span>→</span>
+        </a>
+
+    </div>
+
+
+    <!-- WATER -->
+    <div class="system-panel">
+
+        <div class="panel-scan"></div>
+
+        <div class="system-header">
+            <span class="system-icon">💧</span>
+
+            <div>
+                <span class="system-code">RAYA / WATER</span>
+                <h3>Water Intelligence</h3>
+            </div>
+
+            <span class="live-dot"></span>
+        </div>
+
+        <div class="system-mode">
+            <span>Live Simulation</span>
+            <strong>ACTIVE</strong>
+        </div>
+
+        <div class="system-data">
+            <span>Nodes Online</span>
+            <strong>184</strong>
+        </div>
+
+        <div class="system-status">
+            <div class="status-label">
+                <span>Status</span>
+                <span>94%</span>
+            </div>
+
+            <div class="status-track">
+                <div class="status-fill" style="--level:94%"></div>
+            </div>
+        </div>
+
+        <a href="#" class="system-explore">
+            Explore <span>→</span>
+        </a>
+
+    </div>
+
+
+    <!-- FARMER -->
+    <div class="system-panel">
+
+        <div class="panel-scan"></div>
+
+        <div class="system-header">
+            <span class="system-icon">🌾</span>
+
+            <div>
+                <span class="system-code">RAYA / FARMING</span>
+                <h3>Farmer Intelligence</h3>
+            </div>
+
+            <span class="live-dot"></span>
+        </div>
+
+        <div class="system-mode">
+            <span>Live Simulation</span>
+            <strong>ACTIVE</strong>
+        </div>
+
+        <div class="system-data">
+            <span>Nodes Online</span>
+            <strong>316</strong>
+        </div>
+
+        <div class="system-status">
+            <div class="status-label">
+                <span>Status</span>
+                <span>91%</span>
+            </div>
+
+            <div class="status-track">
+                <div class="status-fill" style="--level:91%"></div>
+            </div>
+        </div>
+
+        <a href="#" class="system-explore">
+            Explore <span>→</span>
+        </a>
+
+    </div>
+
+
+    <!-- HEIE -->
+    <div class="system-panel">
+
+        <div class="panel-scan"></div>
+
+        <div class="system-header">
+            <span class="system-icon">🌍</span>
+
+            <div>
+                <span class="system-code">RAYA / HEIE</span>
+                <h3>HEIE</h3>
+            </div>
+
+            <span class="live-dot"></span>
+        </div>
+
+        <div class="system-mode">
+            <span>Live Simulation</span>
+            <strong>ACTIVE</strong>
+        </div>
+
+        <div class="system-data">
+            <span>Nodes Online</span>
+            <strong>152</strong>
+        </div>
+
+        <div class="system-status">
+            <div class="status-label">
+                <span>Status</span>
+                <span>89%</span>
+            </div>
+
+            <div class="status-track">
+                <div class="status-fill" style="--level:89%"></div>
+            </div>
+        </div>
+
+        <a href="#" class="system-explore">
+            Explore <span>→</span>
+        </a>
+
+    </div>
+
+
+    <!-- HSI -->
+    <div class="system-panel">
+
+        <div class="panel-scan"></div>
+
+        <div class="system-header">
+            <span class="system-icon">♥</span>
+
+            <div>
+                <span class="system-code">RAYA / HSI</span>
+                <h3>HSI</h3>
+            </div>
+
+            <span class="live-dot"></span>
+        </div>
+
+        <div class="system-mode">
+            <span>Live Simulation</span>
+            <strong>ACTIVE</strong>
+        </div>
+
+        <div class="system-data">
+            <span>Nodes Online</span>
+            <strong>207</strong>
+        </div>
+
+        <div class="system-status">
+            <div class="status-label">
+                <span>Status</span>
+                <span>96%</span>
+            </div>
+
+            <div class="status-track">
+                <div class="status-fill" style="--level:96%"></div>
+            </div>
+        </div>
+
+        <a href="#" class="system-explore">
+            Explore <span>→</span>
+        </a>
+
+    </div>
+
+
+    <!-- PLANETARY -->
+    <div class="system-panel">
+
+        <div class="panel-scan"></div>
+
+        <div class="system-header">
+            <span class="system-icon">🛰</span>
+
+            <div>
+                <span class="system-code">RAYA / PLANETARY</span>
+                <h3>Planetary Intelligence</h3>
+            </div>
+
+            <span class="live-dot"></span>
+        </div>
+
+        <div class="system-mode">
+            <span>Live Simulation</span>
+            <strong>ACTIVE</strong>
+        </div>
+
+        <div class="system-data">
+            <span>Nodes Online</span>
+            <strong>642</strong>
+        </div>
+
+        <div class="system-status">
+            <div class="status-label">
+                <span>Status</span>
+                <span>99%</span>
+            </div>
+
+            <div class="status-track">
+                <div class="status-fill" style="--level:99%"></div>
+            </div>
+        </div>
+
+        <a href="#" class="system-explore">
+            Explore <span>→</span>
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SLIDE 5 -->
+<!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SLIDE 5 — MISSION ROADMAP -->
+<!-- ================================================= -->
+
+<section class="slide roadmap" id="slide5" data-index="4">
+
+    <div class="section-title">04</div>
+
+    <h2>Roadmap</h2>
+
+    <div class="mission-roadmap">
+
+        <!-- MAIN TRAJECTORY -->
+        <div class="mission-axis">
+            <div class="mission-axis-progress"></div>
+        </div>
+
+
+        <!-- =========================
+             2026
+        ========================== -->
+        <div class="mission-stage stage-1">
+
+            <div class="mission-year">
+                <span>2026</span>
+                <small>PHASE 01</small>
+            </div>
+
+            <div class="year-line"></div>
+
+            <div class="mission-node">
+                <span></span>
+            </div>
+
+            <div class="mission-content">
+                <span class="mission-code">
+                    SYSTEM ORIGIN
+                </span>
+
+                <h3>AI Core</h3>
+
+                <p>
+                    Foundation intelligence architecture
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             2027
+        ========================== -->
+        <div class="mission-stage stage-2">
+
+            <div class="mission-year">
+                <span>2027</span>
+                <small>PHASE 02</small>
+            </div>
+
+            <div class="year-line"></div>
+
+            <div class="mission-node">
+                <span></span>
+            </div>
+
+            <div class="mission-content">
+                <span class="mission-code">
+                    PLANETARY LAYER
+                </span>
+
+                <h3>Planetary Modules</h3>
+
+                <p>
+                    Energy · Water · Farming · HSI · HEIE
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             2028
+        ========================== -->
+        <div class="mission-stage stage-3">
+
+            <div class="mission-year">
+                <span>2028</span>
+                <small>PHASE 03</small>
+            </div>
+
+            <div class="year-line"></div>
+
+            <div class="mission-node">
+                <span></span>
+            </div>
+
+            <div class="mission-content">
+                <span class="mission-code">
+                    GLOBAL LAYER
+                </span>
+
+                <h3>Global Intelligence Layer</h3>
+
+                <p>
+                    Planetary systems begin operating as one network
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             TYPE 1
+        ========================== -->
+        <div class="mission-stage stage-4">
+
+            <div class="mission-year">
+                <span>2030+</span>
+                <small>PHASE 04</small>
+            </div>
+
+            <div class="year-line"></div>
+
+            <div class="mission-node final-node">
+                <span></span>
+            </div>
+
+            <div class="mission-content">
+                <span class="mission-code">
+                    CIVILIZATION LAYER
+                </span>
+
+                <h3>Type-1 Foundation</h3>
+
+                <p>
+                    Co-ordinated planetary intelligence
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================================================= -->
+<!-- SLIDE 6 -->
+<!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SLIDE 6 — CINEMATIC FINALE -->
+<!-- ================================================= -->
+
+<section class="slide final cinematic-final"
+         id="slide6"
+         data-index="5">
+
+    <div class="final-space">
+
+        <!-- EARTH -->
+        <div class="final-earth-wrap">
+
+            <canvas id="finalEarthCanvas"></canvas>
+
+            <div class="final-atmosphere"></div>
+
+            <div class="final-earth-glow"></div>
+
+        </div>
+
+
+        <!-- FINAL MESSAGE -->
+        <div class="final-message">
+
+            <div class="final-line line-one">
+                <span>ONE</span>
+                <strong>PLANET</strong>
+            </div>
+
+            <div class="final-line line-two">
+                <span>ONE</span>
+                <strong>INTELLIGENCE</strong>
+            </div>
+
+            <div class="final-line line-three">
+                <span>ONE</span>
+                <strong>FUTURE</strong>
+            </div>
+
+        </div>
+
+
+        <!-- CTA -->
+
+        <div class="final-cta">
+
+            <div class="final-divider"></div>
+
+            <a href="portal_login.html" class="journey-btn">
+                Join the Journey
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+</div>
+<div id="footer-placeholder"></div>
+<div id="raya-assistant-container"></div>
+
+<script>
+fetch("../src/components/footer.html")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Footer file not found: " + response.status);
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => {
+        console.error("Footer loading failed:", error);
+    });
+</script>
+<script src="../src/scripts/layout-loader.js"></script>
+<script src="vision.js"></script>
+
+</body>
+
+</html>

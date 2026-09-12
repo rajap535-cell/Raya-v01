@@ -322,3 +322,126 @@ body {
     top: 1.5rem;
   }
 }
+
+/* =========================================================
+   PORTAL LOGIN — MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .login-container {
+    width: 100%;
+    min-height: 100svh;
+    height: auto;
+    display: block;
+  }
+
+  /* Hide desktop identity panel */
+  .system-identity {
+    display: none;
+  }
+
+  /* Full mobile login area */
+  .login-form-area {
+    width: 100%;
+    min-height: 100svh;
+    height: auto;
+    padding: 80px 18px 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  /* Top system label */
+  .top-system-context {
+    top: 24px;
+    left: 0;
+    font-size: 0.52rem;
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Login card */
+  .login-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 28px 20px 24px;
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  /* Authentication heading */
+  .auth-header {
+    margin-bottom: 28px;
+  }
+
+  .auth-tag {
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+  }
+
+  .auth-title {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    margin-top: 8px;
+  }
+
+  /* Form */
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-label {
+    font-size: 0.68rem;
+    margin-bottom: 7px;
+  }
+
+  .form-input {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.75rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  /* Authenticate button */
+  .btn-authenticate {
+    min-height: 48px;
+    margin-top: 24px;
+    padding: 0.8rem;
+    font-size: 0.82rem;
+  }
+
+  /* Footer links */
+  .form-footer {
+    margin-top: 22px;
+    gap: 10px;
+  }
+
+  .footer-link {
+    font-size: 0.78rem;
+  }
+
+  /* Security message */
+  .security-note {
+    margin-top: 26px;
+    padding-top: 18px;
+    font-size: 0.65rem;
+    line-height: 1.5;
+  }
+
+}

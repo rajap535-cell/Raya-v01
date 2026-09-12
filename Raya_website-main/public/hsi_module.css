@@ -516,3 +516,13 @@ body.hsi-theme {
     grid-template-columns: 1fr;
   }
 }
+
+/* --- Navbar Alignment Override --- */
+#navbar-placeholder .max-w-6xl {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+

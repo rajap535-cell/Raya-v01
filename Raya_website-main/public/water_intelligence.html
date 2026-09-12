@@ -4,115 +4,534 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Water Intelligence System </title>
-  <meta name="description"
-    content="Raya: an open, community-first knowledge intelligence. Follow the journey toward a transparent knowledge future." />
+  <title>RAYA — Water Intelligence System</title>
+  <meta name="description" content="Water Intelligence System: Coordinating planetary water systems across time, geography, and human use." />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+  <link rel="stylesheet" href="../index.css">
   <link rel="stylesheet" href="water_intelligence.css">
 </head>
 
-<body>
-  <header class="header h-[8rem]">
-    <div>
-      <div class="font-bold text-font-Arial text-5xl text-white text-center mb-2 pt-6">WATER INTELLIGENCE</div>
-      <div class="text-2xl text-slate-200 -mt-1 text-center">Coordinating Planetary Water Systems Across Time,
-        Geography, And Human Use.</div>
-    </div>
-  </header>
-  <section class="bg-[url('../assets/earth_connectivity.jpg')] bg-cover bg-center h-[30rem]">
-  </section>
-  <div class="header py-8 border-b border-white/5 flex justify-center items-center">
-    <p class="text-slate-400 text-xl font-normal italic tracking-wide text-center max-w-5xl px-6">
-      &ldquo;Grounded in hydrological science, climate systems modeling, and governance research.&rdquo;
-    </p>
-  </div>
-  <section class="header h-[12rem]">
-    <h1 class="text-slate-200 text-font-Arial font-bold text-4xl pt-6 px-4">Water Is a Planetary Circulation System</h1>
-    <p class="text-slate-200 text-xl mt-3 mx-4">Water is not a resource.</br>
-      It is a continuous circulation system linking oceans, atmosphere, glaciers, rivers, groundwater, and soil
-      moisture.</br>
-      It operates through physics, temperature gradients, and pressure dynamics.</p>
-  </section>
-  </section>
-  <section class="header1 h-[20rem]">
-    <div class="grid grid-cols-1 md:grid-cols-2 items-stretch">
-      <div class="header1 mt-10">
-        <div class="flow">
-          <div class="single_rectangle">Planetary Water System</div>
-          <div style="line-height: 40px; font-size: 40px; color: white; margin-top: 5px; margin-bottom: 5px; margin-left: 25px">↓</div>
-          <div class="container">
-            <div class="rectangle">Dams</div>
-            <div class="rectangle">Borders</div>
-            <div class="rectangle">Forecast Silos</div>
-          </div>
-          <div style="line-height: 40px; font-size: 40px; color: white; margin-top: 5px; margin-bottom: 5px; margin-left: 25px">↓</div>
-          <div class="single_rectangle">Fragmented Decisions</div>
-        </div>
-      </div>
-      <div class="my-0">
-        <h1 class="text-slate-200 text-font-Arial font-bold text-4xl pt-6">Fragmentation Creates Prediction Without
-          Coordination
-        </h1>
-        <p class="text-slate-200 text-xl mt-3">Human intervention isolates flow.</br>
-          Governance isolates responsibility.</br>
-          Forecasts isolate time.</br>
-          The result is repeated damage — despite better prediction.</p>
-      </div>
-      < </div>
-  </section>
-  <section class="header border-t border-white/10 pt-16 pb-20 px-4 min-h-[26rem]">
-    <h1 class="text-slate-100 text-font-Arial font-bold text-5xl tracking-tight mb-8">
-      Forecasting Improves. Outcomes Repeat.
-    </h1>
-    <p class="text-slate-200 text-xl mt-2 mx-4">Humanity can forecast:
-    </p>
-    <ul class="text-slate-200 text-lg mt-1 ml-16 list-disc space-y-1">
-      <li>Cyclones</li>
-      <li>Floods</li>
-      <li>Droughts</li>
-      <li>Monsoon shifts</li>
-    </ul>
-    <p class="text-slate-200 text-xl mt-2 mx-4">Yet:
-    </p>
-    <ul class="text-slate-200 text-lg mt-1 ml-16 list-disc space-y-1">
-      <li>Infrastructure damage continues</li>
-      <li>Agricultural loss repeats</li>
-      <li>Emergency response dominates prevention</li>
-    </ul>
-  </section>
-  <section class="header1 h-[21rem]">
-    <div class="grid grid-cols-1 md:grid-cols-2">
-      <div class="mx-4">
-        <h1 class="text-slate-200 text-font-Arial font-bold text-4xl pt-6">RAYA does not control water.
-        </h1>
-        <p class="text-slate-200 text-xl mt-3">It aligns human decision timelines with planetary signals.</br>
-          It: </p>
-        <ul class="text-slate-200 text-xl mt-1 ml-12 list-disc space-y-2">
-          <li>Integrates atmospheric, surface, and subsurface data</li>
-          <li>Synchronizes early signals with governance cycles
-          </li>
-          <li>Translates dynamics into coordinated regional intelligence</li>
-        </ul>
-        <p class="text-slate-200 text-xl mt-6">Humans do not gain control over water.
-          They gain coordination with it. </p>
-      </div>
-      <div class="header1 mt-12">
-        <div class="flow">
-          <div class="single_rectangle">Planetary Water Signals</div>
-          <div style="line-height: 40px; font-size: 40px; color: white; margin-top: 5px; margin-bottom: 5px; margin-left: 25px">↓</div>
-          
-          <div class="single_rectangle">Raya- Water Intelligence Layer</div>
-          <div style="line-height: 40px; font-size: 40px; color: white; margin-top: 5px; margin-bottom: 5px; margin-left: 25px">↓</div>
-          <div class="container">
-            <div class="rectangle">Institution</div>
-            <div class="rectangle">Goverments</div>
-            <div class="rectangle">Farmers</div>
-            <div class="rectangle">Energy Grids</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<body class="water-theme">
+  <!-- Dynamic Navigation Injected Here -->
+  <div id="navbar-placeholder"></div>
 
+  <main class="water-main">
+    
+    <!-- 1. HERO SECTION -->
+    <section class="section-container">
+      <div class="grid-2">
+        <div>
+          <span class="water-tag">Operational Module / WATER-901</span>
+          <h1 class="water-heading text-white">WATER INTELLIGENCE SYSTEM</h1>
+          <p class="water-subtext">
+            Hydrological stability depends on coordinated planetary awareness. Allying human resource systems with climate variables in real-time.
+          </p>
+          <a href="#live-dashboard" class="water-cta">Explore Water Intelligence</a>
+        </div>
+        
+        <!-- Right Side: Interactive pipeline visualization -->
+        <div class="pipeline-viz">
+          <div class="pipeline-node">
+            <span class="node-label">Atmospheric Signals</span>
+            <span class="node-meta"><span class="live-dot font-mono"></span>Active // 1013 hPa</span>
+          </div>
+          <div class="pipeline-connector-line"></div>
+          
+          <div class="pipeline-node">
+            <span class="node-label">Rainfall Systems</span>
+            <span class="node-meta text-yellow-500"><span class="live-dot dot-yellow"></span>Rainfall Instability // +14.2%</span>
+          </div>
+          <div class="pipeline-connector-line"></div>
+          
+          <div class="pipeline-node">
+            <span class="node-label">Reservoirs & Rivers</span>
+            <span class="node-meta text-cyan-400"><span class="live-dot"></span>Reservoir Status // 82%</span>
+          </div>
+          <div class="pipeline-connector-line"></div>
+          
+          <div class="pipeline-node">
+            <span class="node-label">Agriculture & Cities</span>
+            <span class="node-meta text-red-400"><span class="live-dot dot-red"></span>Groundwater Stress // High</span>
+          </div>
+          <div class="pipeline-connector-line"></div>
+          
+          <div class="pipeline-node">
+            <span class="node-label">Human Outcomes</span>
+            <span class="node-meta text-emerald-400"><span class="live-dot dot-green"></span>Nominal // Coordinated</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CORE IDEA SECTION -->
+    <section class="section-container">
+      <div class="grid-2">
+        <div>
+          <span class="water-tag">Systemic Axiom</span>
+          <h2 class="water-heading text-white" style="font-size: 2.25rem;">
+            Water crises begin long before shortages appear.
+          </h2>
+          <p class="water-subtext" style="font-size: 1.15rem;">
+            Signals already exist. Failure happens because institutions react too late to system shifts.
+          </p>
+        </div>
+        <div class="grid-3" style="grid-template-columns: 1fr; gap: 1.5rem;">
+          <div class="water-card">
+            <div class="water-card-title text-cyan-400">Signals Exist</div>
+            <div class="water-card-desc">Environmental instability is measurable. Pre-crisis indicators are active months in advance.</div>
+          </div>
+          <div class="water-card">
+            <div class="water-card-title text-slate-400">Responses Lag</div>
+            <div class="water-card-desc">Institutions react after physical escalation. Decision paths remain siloed and slow.</div>
+          </div>
+          <div class="water-card">
+            <div class="water-card-title text-red-400">Instability Spreads</div>
+            <div class="water-card-desc">Water stress cascades rapidly, impacting food security, local energy grids, migration, and regional economies.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WATER INTELLIGENCE MEASURES -->
+    <section class="section-container">
+      <span class="water-tag">Strategic Vectors</span>
+      <h2 class="water-heading text-white">System Framework & Core Pillars</h2>
+      
+      <div class="grid-4" style="gap: 2rem;">
+        <div class="borderless-card" style="border-left: 1px solid var(--card-border); padding-left: 1.5rem;">
+          <span class="water-tag" style="font-size: 0.65rem;">Awareness</span>
+          <svg class="water-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+          <div class="water-card-title text-white mt-2">Hydrological Awareness</div>
+          <p class="water-card-desc mb-2">Real-time mapping of global water stocks and flows.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>• Atmospheric rainfall telemetries</li>
+            <li>• River basin sensor grids</li>
+            <li>• Aquifer groundwater probes</li>
+          </ul>
+        </div>
+
+        <div class="borderless-card" style="border-left: 1px solid var(--card-border); padding-left: 1.5rem;">
+          <span class="water-tag" style="font-size: 0.65rem;">Prediction</span>
+          <svg class="water-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <div class="water-card-title text-white mt-2">Predictive Timing</div>
+          <p class="water-card-desc mb-2">Deterministic prediction of environmental shifts.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>• Drought prediction modeling</li>
+            <li>• Dynamic flood forecasting</li>
+            <li>• Rainfall instability indexing</li>
+          </ul>
+        </div>
+
+        <div class="borderless-card" style="border-left: 1px solid var(--card-border); padding-left: 1.5rem;">
+          <span class="water-tag" style="font-size: 0.65rem;">Coordination</span>
+          <svg class="water-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          <div class="water-card-title text-white mt-2">Infrastructure Coordination</div>
+          <p class="water-card-desc mb-2">Synchronizing storage allocations with human demands.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>• Cities & municipal demand alignment</li>
+            <li>• Agriculture irrigation scheduling</li>
+            <li>• Reservoir release dispatch</li>
+          </ul>
+        </div>
+
+        <div class="borderless-card" style="border-left: 1px solid var(--card-border); padding-left: 1.5rem;">
+          <span class="water-tag" style="font-size: 0.65rem;">Execution</span>
+          <svg class="water-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          <div class="water-card-title text-white mt-2">Adaptive Response</div>
+          <p class="water-card-desc mb-2">Automated system actions to maintain hydrological limits.</p>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>• Dynamic water allocation rules</li>
+            <li>• Inter-basin priority dispatch</li>
+            <li>• Proactive storage shifts</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INTELLIGENCE PIPELINE SECTION -->
+    <section class="section-container">
+      <div class="text-center mb-12">
+        <span class="water-tag">Operational Architecture</span>
+        <h2 class="water-heading text-white">The Intelligence Pipeline</h2>
+        <p class="water-subtext mx-auto">Visualizing the flow of data from inputs to coordinate optimization outputs.</p>
+      </div>
+
+      <div class="pipeline-chain">
+        <div class="pipeline-chain-step">
+          <div class="step-header">
+            <span class="step-number">01</span>
+            <span class="step-badge">INPUT</span>
+          </div>
+          <div class="step-title">Population Data</div>
+          <div class="step-body">Demographics, urban distribution rates, and static base requirements.</div>
+        </div>
+
+        <div class="pipeline-chain-connector">
+          <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="pipeline-chain-step">
+          <div class="step-header">
+            <span class="step-number">02</span>
+            <span class="step-badge">ANALYTICS</span>
+          </div>
+          <div class="step-title">Water Demand Analysis</div>
+          <div class="step-body">Dynamic monitoring of agricultural demand patterns and industrial requirements.</div>
+        </div>
+
+        <div class="pipeline-chain-connector">
+          <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="pipeline-chain-step">
+          <div class="step-header">
+            <span class="step-number">03</span>
+            <span class="step-badge">CLIMATE</span>
+          </div>
+          <div class="step-title">Climate & Rainfall Factors</div>
+          <div class="step-body">Atmospheric moisture grids, rainfall patterns, and temperature anomalies.</div>
+        </div>
+
+        <div class="pipeline-chain-connector">
+          <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="pipeline-chain-step highlight-step">
+          <div class="step-header">
+            <span class="step-number">04</span>
+            <span class="step-badge text-cyan-400">ENGINE</span>
+          </div>
+          <div class="step-title">Prediction Engine</div>
+          <div class="step-body">Deterministic models plotting water balance shifts up to 90 days out.</div>
+        </div>
+
+        <div class="pipeline-chain-connector">
+          <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="pipeline-chain-step">
+          <div class="step-header">
+            <span class="step-number">05</span>
+            <span class="step-badge">INTEGRITY</span>
+          </div>
+          <div class="step-title">Validation Layer</div>
+          <div class="step-body">Historical comparison error check and uncertainty bounds checking.</div>
+        </div>
+
+        <div class="pipeline-chain-connector">
+          <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="pipeline-chain-step">
+          <div class="step-header">
+            <span class="step-number">06</span>
+            <span class="step-badge text-teal-400">OUTPUT</span>
+          </div>
+          <div class="step-title">Resource Intelligence Output</div>
+          <div class="step-body">Actionable directives pushed to infrastructure operators, reservoirs, and grids.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SCIENTIFIC VALIDATION SECTION -->
+    <section class="section-container">
+      <div class="grid-2">
+        <!-- Left Side: Validation Engine Dashboard -->
+        <div>
+          <span class="water-tag">Data Integrity</span>
+          <h2 class="water-heading text-white">Scientific Validation</h2>
+          <p class="water-subtext">
+            Operating transparently on auditable historical validation datasets.
+          </p>
+
+          <div class="validation-card">
+            <div class="font-mono text-xs text-cyan-400 mb-4">VALIDATION ENGINE RUNNING // VERSION 3.1</div>
+            <div class="val-grid">
+              <div class="val-item">
+                <div class="val-label">Mean Absolute Error (MAE)</div>
+                <div class="val-value">2.41%</div>
+              </div>
+              <div class="val-item">
+                <div class="val-label">Mean Absolute Percentage Error</div>
+                <div class="val-value">3.08%</div>
+              </div>
+              <div class="val-item">
+                <div class="val-label">RMSE (Precipitation)</div>
+                <div class="val-value">0.12 mm</div>
+              </div>
+              <div class="val-item">
+                <div class="val-label">Forecast Confidence</div>
+                <div class="val-value">96.8%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Metrics List -->
+        <div class="water-card bg-slate-950/40">
+          <div class="water-card-title text-white border-b border-slate-800 pb-3 mb-4">Operational Status Metrics</div>
+          
+          <div class="side-metric-item">
+            <span class="text-slate-300 font-medium">Prediction Stability</span>
+            <span class="font-mono text-xs text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded">Stable</span>
+          </div>
+
+          <div class="side-metric-item">
+            <span class="text-slate-300 font-medium">Validation Coverage</span>
+            <span class="font-mono text-xs text-cyan-400">1925 - 2025</span>
+          </div>
+
+          <div class="side-metric-item">
+            <span class="text-slate-300 font-medium">Forecast Reliability</span>
+            <span class="font-mono text-xs text-emerald-400">High (95% CI)</span>
+          </div>
+
+          <div class="side-metric-item">
+            <span class="text-slate-300 font-medium">Integrated Datasets</span>
+            <span class="font-mono text-xs text-cyan-400">4 Core Models</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FAILURE VS STABILITY FLOW -->
+    <section class="section-container">
+      <span class="water-tag">Comparative Flow</span>
+      <h2 class="water-heading text-white">System Scenarios & Outcomes</h2>
+      
+      <!-- Scenario 1: Failure Pattern -->
+      <div style="margin-bottom: 3rem;">
+        <div style="color: var(--accent-red); font-weight: 600; font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 0.75rem;" class="flex items-center">
+          <span class="live-dot dot-red"></span>SCENARIO A: FRAGMENTED RESPONSE (FAILURE)
+        </div>
+        <div class="horizontal-flow flow-red">
+          <div class="flow-node text-red-300">Climate Signal</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-red-300">Delayed Monitoring</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-red-300">Water Stress</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-red-300">Fragmented Response</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-red-500 font-semibold">Crisis</div>
+        </div>
+      </div>
+
+      <!-- Scenario 2: Stability Pattern -->
+      <div>
+        <div style="color: var(--accent-green); font-weight: 600; font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 0.75rem;" class="flex items-center">
+          <span class="live-dot dot-green"></span>SCENARIO B: DYNAMIC COORDINATION (STABILITY)
+        </div>
+        <div class="horizontal-flow flow-green">
+          <div class="flow-node text-emerald-300">Climate Signal</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-emerald-300">Real-Time Awareness</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-emerald-300">Predictive Coordination</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-emerald-300">Adaptive Allocation</div>
+          <div class="flow-connector"></div>
+          <div class="flow-node text-emerald-400 font-semibold">System Stability</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. RAYA WATER INTELLIGENCE LAYER -->
+    <section class="section-container">
+      <div class="text-center mb-12">
+        <span class="water-tag">Integrated Layer</span>
+        <h2 class="water-heading text-white">The Alignment Core</h2>
+        <p class="water-subtext mx-auto">Placing the intelligence framework between physical inputs and civilization nodes.</p>
+      </div>
+
+      <div class="arch-container">
+        <!-- Column 1 -->
+        <div class="arch-card">
+          <div class="font-mono text-xs text-slate-500 uppercase">Input Node</div>
+          <div class="water-card-title text-white mt-2">Planetary Inputs</div>
+          <ul class="arch-list">
+            <li>Satellite hydrological feeds</li>
+            <li>Rainfall radar arrays</li>
+            <li>Aquifer groundwater probes</li>
+            <li>River basin flow sensors</li>
+          </ul>
+        </div>
+
+        <!-- Connector SVG 1 -->
+        <div class="arch-flow-connector">
+          <svg class="arch-arrow-svg" viewBox="0 0 100 40" fill="none">
+            <defs>
+              <linearGradient id="cyan-glow-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#06b6d4" stop-opacity="1"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 20 H100" stroke="url(#cyan-glow-grad-1)" stroke-width="2" stroke-dasharray="8 6" class="flowing-path"/>
+            <polygon points="90,15 100,20 90,25" fill="#06b6d4"/>
+          </svg>
+        </div>
+
+        <!-- Column 2 (Highlighted) -->
+        <div class="arch-card highlight">
+          <div class="font-mono text-xs text-cyan-400 uppercase">Core Layer</div>
+          <div class="water-card-title text-cyan-400 mt-2">RAYA Water Intelligence</div>
+          <ul class="arch-list">
+            <li class="text-white">Predictive coordination engine</li>
+            <li class="text-white">Hydrological modeling network</li>
+            <li class="text-white">Adaptive response allocator</li>
+            <li class="text-white">Planetary resource optimization</li>
+          </ul>
+        </div>
+
+        <!-- Connector SVG 2 -->
+        <div class="arch-flow-connector">
+          <svg class="arch-arrow-svg" viewBox="0 0 100 40" fill="none">
+            <defs>
+              <linearGradient id="cyan-glow-grad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#06b6d4" stop-opacity="1"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 20 H100" stroke="url(#cyan-glow-grad-2)" stroke-width="2" stroke-dasharray="8 6" class="flowing-path"/>
+            <polygon points="90,15 100,20 90,25" fill="#06b6d4"/>
+          </svg>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="arch-card">
+          <div class="font-mono text-xs text-slate-500 uppercase">Output Node</div>
+          <div class="water-card-title text-white mt-2">Human Systems</div>
+          <ul class="arch-list">
+            <li>Municipal utilities</li>
+            <li>Agricultural boards</li>
+            <li>Urban infrastructure</li>
+            <li>Hydroelectric power grids</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. LIVE DASHBOARD SECTION -->
+    <section id="live-dashboard" class="section-container">
+      <span class="water-tag">Operational Dashboard</span>
+      <h2 class="water-heading text-white">Water System Status</h2>
+      <p class="water-subtext">Real-time indicators showing planetary hydrological health and optimization targets.</p>
+
+      <div class="dash-layout">
+        <!-- Left Score Dial -->
+        <div class="score-dial">
+          <div class="dial-container">
+            <svg class="dial-svg" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="42" stroke="rgba(255,255,255,0.02)" stroke-width="6" fill="none" />
+              <circle cx="50" cy="50" r="42" stroke="var(--accent-cyan)" stroke-width="6" fill="none" 
+                      stroke-dasharray="264" stroke-dashoffset="69" class="dial-progress-ring" />
+            </svg>
+            <div class="dial-content">
+              <span class="dial-value text-cyan-400">74</span>
+              <span class="dial-max">/ 100</span>
+            </div>
+          </div>
+          <div class="font-mono text-xs text-slate-400 uppercase tracking-wider mt-4">Hydrological Stability Score</div>
+          <span class="text-[0.65rem] font-mono text-cyan-500/80 bg-cyan-500/10 px-2 py-0.5 rounded mt-2 uppercase">Status: Nominal</span>
+        </div>
+
+        <!-- Right System Stats & Recommendations -->
+        <div>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <span class="dash-card-label">Reservoir Capacity</span>
+                <span class="live-dot dot-green"></span>
+              </div>
+              <span class="dash-card-value text-emerald-400">82.4%</span>
+              <span class="dash-card-meta">Nominal Storage</span>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <span class="dash-card-label">Groundwater Stress</span>
+                <span class="live-dot dot-yellow"></span>
+              </div>
+              <span class="dash-card-value text-yellow-500">Moderate</span>
+              <span class="dash-card-meta">Eastern Basin Drawdown</span>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <span class="dash-card-label">Flood Probability</span>
+                <span class="live-dot dot-green"></span>
+              </div>
+              <span class="dash-card-value text-emerald-400">Low (3%)</span>
+              <span class="dash-card-meta">90-Day Outlook</span>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <span class="dash-card-label">Agricultural Demand</span>
+                <span class="live-dot dot-cyan"></span>
+              </div>
+              <span class="dash-card-value text-cyan-400">Elevated</span>
+              <span class="dash-card-meta">Peak Seasonal Load</span>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-800 pt-4">
+            <div class="font-mono text-xs text-cyan-400 uppercase mb-3">System Recommendations</div>
+            <ul class="rec-list">
+              <li>Optimize agricultural irrigation schedules for Eastern sector</li>
+              <li>Increase retention buffers at major river reservoirs</li>
+              <li>Monitor Eastern sub-basin rainfall anomalies</li>
+              <li>Coordinate regional grid allocation to mitigate localized stress</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. INTERCONNECTED SYSTEMS SECTION -->
+    <section class="section-container">
+      <div class="text-center mb-12">
+        <span class="water-tag">Integrated Domain</span>
+        <h2 class="water-heading text-white">Interconnected Systems</h2>
+        <p class="water-subtext mx-auto">Water intelligence is tightly coupled with all major planetary subsystems.</p>
+      </div>
+
+      <div class="systems-web">
+        <!-- SVG connecting lines -->
+        <svg class="web-svg-container">
+          <line x1="50%" y1="50%" x2="calc(50% - 140px)" y2="calc(50% - 60px)" class="web-line line-energy" />
+          <line x1="50%" y1="50%" x2="calc(50% + 140px)" y2="calc(50% - 60px)" class="web-line line-agri" />
+          <line x1="50%" y1="50%" x2="calc(50% - 150px)" y2="calc(50% + 60px)" class="web-line line-climate" />
+          <line x1="50%" y1="50%" x2="calc(50% + 150px)" y2="calc(50% + 60px)" class="web-line line-health" />
+          <line x1="50%" y1="50%" x2="50%" y2="calc(50% - 95px)" class="web-line line-urban" />
+        </svg>
+
+        <div class="web-center-node">WATER</div>
+        
+        <a href="energy_intelligence.html" class="web-satellite-node node-energy no-underline text-inherit block">Energy</a>
+        <a href="farming_intelligence.html" class="web-satellite-node node-agri no-underline text-inherit block">Agriculture</a>
+        <a href="coming_soon.html?system=Climate" class="web-satellite-node node-climate no-underline text-inherit block">Climate</a>
+        <a href="hsi_module.html" class="web-satellite-node node-health no-underline text-inherit block">Human Health</a>
+        <a href="coming_soon.html?system=Urban%20Systems" class="web-satellite-node node-urban no-underline text-inherit block">Urban Systems</a>
+      </div>
+    </section>
+
+    <!-- 10. FINAL SECTION -->
+    <section class="earth-grid-section">
+      <div class="grid-bg"></div>
+      <div class="relative z-10">
+        <h2 class="water-heading text-white mb-6">Civilization Stability Depends On Water Intelligence.</h2>
+        <p class="water-subtext mx-auto mb-8">
+          Join the coordination system to model, align, and sustain planetary resources.
+        </p>
+        <a href="portal_login.html" class="water-cta">Enter Water System</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Dynamic Footer Injected Here -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Shared Script Manager -->
+  <script src="../src/scripts/layout-loader.js"></script>
 </body>
+
+</html>

@@ -7658,5 +7658,1019 @@
       }
     },
     "created_at": "2026-09-27T09:10:36+00:00"
+  },
+  {
+    "advisory_id": "ADV_146C8660DC1A",
+    "farmer_id": "FARMER_492D0DCA49DB",
+    "farm_id": "FARM_B70C93C67CDA",
+    "field_id": "FIELD_FAA0859B8AC9",
+    "season_id": "SEASON_9218BB09F775",
+    "crop": "rice",
+    "stage": "Tillering",
+    "overall_priority": "Medium",
+    "recommendations": [
+      {
+        "type": "disease_prevention",
+        "priority": "High",
+        "action": "Increase disease scouting frequency",
+        "reason": "Weather intelligence indicates elevated humidity-related risk.",
+        "source": "weather",
+        "base_priority": "High",
+        "personalization_applied": false
+      },
+      {
+        "type": "budget_constraint",
+        "priority": "High",
+        "action": "Prioritize essential interventions first and avoid non-essential expenditure",
+        "reason": "The farmer profile reports a low budget constraint.",
+        "source": "farmer_context",
+        "context_factor": "budget_limited",
+        "base_priority": "High",
+        "personalization_applied": false
+      },
+      {
+        "type": "field_management",
+        "priority": "Medium",
+        "action": "Improve field aeration and drainage",
+        "reason": "Field conditions can influence disease pressure.",
+        "source": "weather",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "spraying_advisory",
+        "priority": "Medium",
+        "action": "Avoid pesticide spraying during expected rainfall",
+        "reason": "Weather operational signal indicates spraying is unsafe.",
+        "source": "weather",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "risk_impact",
+        "priority": "Medium",
+        "action": "Monitor crop impact: Increased leaf disease pressure",
+        "reason": "Weather intelligence identified a crop-impact signal.",
+        "source": "weather",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "critical_operation",
+        "priority": "Medium",
+        "action": "Weed management within first 3 weeks after transplanting",
+        "reason": "This operation is listed as important for the current crop stage.",
+        "source": "crop_stage",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "critical_operation",
+        "priority": "Medium",
+        "action": "Tillering monitoring and count assessment at 30 DAT",
+        "reason": "This operation is listed as important for the current crop stage.",
+        "source": "crop_stage",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "critical_operation",
+        "priority": "Medium",
+        "action": "Split nutrient application as per growth stage",
+        "reason": "This operation is listed as important for the current crop stage.",
+        "source": "crop_stage",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "critical_operation",
+        "priority": "Medium",
+        "action": "Zinc deficiency scouting and corrective application",
+        "reason": "This operation is listed as important for the current crop stage.",
+        "source": "crop_stage",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "critical_operation",
+        "priority": "Medium",
+        "action": "Water level management at 2-5 cm",
+        "reason": "This operation is listed as important for the current crop stage.",
+        "source": "crop_stage",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "water_management",
+        "priority": "Medium",
+        "action": "Maintain high water availability. Keep soil moisture keep soil saturated with 2-5 cm standing water. Maintain shallow standing water (2-5 cm). Drainage intervention is only needed if waterlogging appears. Avoid prolonged dry periods that reduce tillering.",
+        "reason": "Water intelligence supplied the current irrigation and moisture guidance.",
+        "source": "water",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "disease_prevention",
+        "priority": "Medium",
+        "action": "Monitor and manage Blast Disease: Balanced nitrogen application; Avoid dense planting; Ensure proper drainage; Use resistant varieties",
+        "reason": "Blast Disease is present in the existing disease intelligence for this crop stage.",
+        "source": "disease",
+        "disease_name": "Blast Disease",
+        "disease_severity": "Medium",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "disease_prevention",
+        "priority": "Medium",
+        "action": "Monitor and manage Sheath Blight: Proper plant spacing; Avoid excessive standing water; Balanced nitrogen; Field hygiene",
+        "reason": "Sheath Blight is present in the existing disease intelligence for this crop stage.",
+        "source": "disease",
+        "disease_name": "Sheath Blight",
+        "disease_severity": "Medium",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      },
+      {
+        "type": "disease_prevention",
+        "priority": "Medium",
+        "action": "Monitor and manage Brown Spot: Balanced fertilization; Proper drainage; Use resistant varieties; Field hygiene",
+        "reason": "Brown Spot is present in the existing disease intelligence for this crop stage.",
+        "source": "disease",
+        "disease_name": "Brown Spot",
+        "disease_severity": "Medium",
+        "base_priority": "Medium",
+        "personalization_applied": false
+      }
+    ],
+    "personalization_reasons": [],
+    "agricultural_packet": {
+      "status": "success",
+      "meta": {
+        "generated_at": "2026-10-23T05:39:57.858235+00:00",
+        "engine": "RAYA Farmer Search Engine"
+      },
+      "location": {
+        "state": "Uttar Pradesh",
+        "district": "Varanasi"
+      },
+      "crop": "rice",
+      "stage": "Tillering",
+      "stage_snapshot": {
+        "status": "success",
+        "stage": "Tillering",
+        "duration_days": "30-40",
+        "sensitivity": "Medium",
+        "yield_risk_level": "Medium",
+        "critical_operations": [
+          "Weed management within first 3 weeks after transplanting",
+          "Tillering monitoring and count assessment at 30 DAT",
+          "Split nutrient application as per growth stage",
+          "Zinc deficiency scouting and corrective application",
+          "Water level management at 2-5 cm"
+        ],
+        "water_management": {
+          "requirement": "High",
+          "irrigation_frequency": "Maintain shallow standing water (2-5 cm)",
+          "drainage_required": false,
+          "critical_condition": "Avoid prolonged dry periods that reduce tillering",
+          "soil_moisture": "Keep soil saturated with 2-5 cm standing water",
+          "ideal_soil_moisture": "Saturated with 2-5 cm standing water",
+          "water_stress_symptoms": "Reduced tillering, leaf rolling, premature drying of leaves",
+          "recovery_guidance": "Restore standing water promptly; if stress prolonged, apply light nitrogen to recover tiller production"
+        },
+        "risk_summary": "Water and nutrient stress during tillering reduces tiller number and yield potential.",
+        "risk_impact_map": {
+          "high_humidity": {
+            "primary_impacts": [
+              "Foliar disease development"
+            ],
+            "secondary_impacts": [
+              "Reduced photosynthetic efficiency",
+              "Delayed tillering"
+            ],
+            "severity": "Medium",
+            "why": "Humid canopy favours blast and sheath blight.",
+            "what_if_ignored": "Disease reduces tiller vigor and yield.",
+            "check_next": "Scout for leaf lesions and control nitrogen."
+          }
+        },
+        "meta": {
+          "generated_at": "2026-10-23T05:39:57.842690+00:00",
+          "engine": "RAYA Query Engine"
+        }
+      },
+      "weather": {
+        "status": "success",
+        "location": {
+          "state": "Uttar Pradesh",
+          "district": "Varanasi"
+        },
+        "timestamp": "2026-10-23T05:39:57.848901+00:00",
+        "current": {
+          "temperature_min": 25,
+          "temperature_max": 34,
+          "temperature_avg": 29,
+          "humidity_percent": 70,
+          "rainfall_mm": 12,
+          "wind_speed_kmh": 10,
+          "condition": "partly_cloudy"
+        },
+        "forecast": {
+          "window": "48h",
+          "forecast_probability": 0.7,
+          "expected_event": "humidity",
+          "temperature_trend": "stable"
+        },
+        "risk": {
+          "risk_level": "Medium",
+          "risk_type": "humidity",
+          "impact": [
+            "Increased leaf disease pressure"
+          ]
+        },
+        "climate_risks": [
+          {
+            "type": "humidity",
+            "source": "high_humidity",
+            "risk_level": "Medium",
+            "effects": [
+              "Increased leaf disease pressure"
+            ]
+          }
+        ],
+        "signals": {
+          "irrigation_needed": false,
+          "spraying_safe": false,
+          "harvest_risk": "Medium",
+          "reason": "Stage-specific climate risk detected"
+        },
+        "meta": {
+          "source": "crop_master_rule_engine",
+          "last_updated": "2026-10-23T05:39:57.848936+00:00"
+        }
+      },
+      "water": {
+        "status": "success",
+        "stage": "Tillering",
+        "water_management": {
+          "requirement": "High",
+          "irrigation_frequency": "Maintain shallow standing water (2-5 cm)",
+          "drainage_required": false,
+          "critical_condition": "Avoid prolonged dry periods that reduce tillering",
+          "soil_moisture": "Keep soil saturated with 2-5 cm standing water",
+          "ideal_soil_moisture": "Saturated with 2-5 cm standing water",
+          "water_stress_symptoms": "Reduced tillering, leaf rolling, premature drying of leaves",
+          "recovery_guidance": "Restore standing water promptly; if stress prolonged, apply light nitrogen to recover tiller production"
+        },
+        "water_requirement": null,
+        "meta": {
+          "generated_at": "2026-10-23T05:39:57.845547+00:00",
+          "engine": "RAYA Query Engine"
+        }
+      },
+      "market": {
+        "status": "no_price_data",
+        "message": "No market data for Varanasi, Uttar Pradesh",
+        "location": {
+          "state": "Uttar Pradesh",
+          "district": "Varanasi"
+        },
+        "meta": {
+          "source": "market_engine",
+          "last_updated": "2026-10-23T05:39:57.849695+00:00"
+        }
+      },
+      "stage_advice": {
+        "status": "success",
+        "stage": "Tillering",
+        "advice": {
+          "sowing_guidance": "Transplant healthy 20-25 day old seedlings at proper spacing (20x15 cm). Maintain 2-3 seedlings per hill for optimum tillering.",
+          "water_principles": "Maintain shallow standing water (2-5 cm) to promote tillering. Avoid prolonged dry periods.",
+          "fertilizer_principles": "Apply nitrogen and phosphorus for tillering and canopy development. Split nitrogen application for better efficiency.",
+          "critical_operations": [
+            "Weed management within first 3 weeks after transplanting",
+            "Tillering monitoring and count assessment at 30 DAT",
+            "Split nutrient application as per growth stage",
+            "Zinc deficiency scouting and corrective application",
+            "Water level management at 2-5 cm"
+          ],
+          "water_management": {
+            "requirement": "High",
+            "irrigation_frequency": "Maintain shallow standing water (2-5 cm)",
+            "drainage_required": false,
+            "critical_condition": "Avoid prolonged dry periods that reduce tillering",
+            "soil_moisture": "Keep soil saturated with 2-5 cm standing water",
+            "ideal_soil_moisture": "Saturated with 2-5 cm standing water",
+            "water_stress_symptoms": "Reduced tillering, leaf rolling, premature drying of leaves",
+            "recovery_guidance": "Restore standing water promptly; if stress prolonged, apply light nitrogen to recover tiller production"
+          },
+          "preventive_actions": [
+            "Monitor for weed infestation and control within first 3 weeks",
+            "Apply recommended herbicides or conduct manual weeding",
+            "Maintain shallow water depth for maximum tillering",
+            "Monitor for early signs of blast disease and stem borer",
+            "Apply zinc sulfate if deficiency symptoms appear"
+          ],
+          "avoid_actions": [
+            "Avoid deep water (>5 cm) during early tillering stage",
+            "Avoid excess nitrogen that promotes lodging and disease",
+            "Avoid herbicide application during stress conditions",
+            "Avoid skipping weed control beyond 4 weeks after transplanting"
+          ],
+          "risk_summary": "Water and nutrient stress during tillering reduces tiller number and yield potential.",
+          "yield_risk_level": "Medium"
+        },
+        "meta": {
+          "generated_at": "2026-10-23T05:39:57.852500+00:00",
+          "engine": "RAYA Crop Knowledge Engine"
+        }
+      },
+      "diseases": {
+        "status": "success",
+        "stage": "Tillering",
+        "diseases": [
+          {
+            "name": "Blast Disease",
+            "severity": "Medium",
+            "symptoms": [
+              "Diamond-shaped lesions on leaves",
+              "Neck rot at panicle base",
+              "Panicle blast on nodes"
+            ],
+            "prevention": [
+              "Balanced nitrogen application",
+              "Avoid dense planting",
+              "Ensure proper drainage",
+              "Use resistant varieties"
+            ],
+            "weather_risk_links": [
+              "High moisture may increase disease pressure"
+            ],
+            "climate_triggers": [
+              "high_humidity",
+              "low_temperature"
+            ]
+          },
+          {
+            "name": "Sheath Blight",
+            "severity": "Medium",
+            "symptoms": [
+              "Oval lesions on leaf sheath",
+              "White fungal growth",
+              "Grain discoloration in severe cases"
+            ],
+            "prevention": [
+              "Proper plant spacing",
+              "Avoid excessive standing water",
+              "Balanced nitrogen",
+              "Field hygiene"
+            ],
+            "weather_risk_links": [
+              "High moisture may increase disease pressure"
+            ],
+            "climate_triggers": [
+              "high_humidity",
+              "low_temperature"
+            ]
+          },
+          {
+            "name": "Brown Spot",
+            "severity": "Medium",
+            "symptoms": [
+              "Brown circular spots on grains",
+              "Brown lesions on leaves",
+              "Reduced grain quality"
+            ],
+            "prevention": [
+              "Balanced fertilization",
+              "Proper drainage",
+              "Use resistant varieties",
+              "Field hygiene"
+            ],
+            "weather_risk_links": [
+              "High moisture may increase disease pressure"
+            ],
+            "climate_triggers": [
+              "high_humidity",
+              "low_temperature"
+            ]
+          }
+        ],
+        "meta": {
+          "generated_at": "2026-10-23T05:39:57.855090+00:00",
+          "engine": "RAYA Crop Knowledge Engine"
+        }
+      },
+      "fertilizer": {
+        "status": "success",
+        "stage": "Tillering",
+        "fertilizer": {
+          "nutrient_principles": "Focus on Nitrogen for maximum tiller production and Phosphorus for strong root and shoot development. Zinc is critical in submerged conditions.",
+          "primary_nutrients": [
+            "Nitrogen",
+            "Phosphorus"
+          ],
+          "timing_guidance": "Apply first top dressing at 20-25 DAT, second at 40-45 DAT if required",
+          "application_stage": "Tillering",
+          "notes": "Zinc deficiency is common in submerged rice. Apply zinc sulfate at 25 kg/ha or 0.5% foliar spray if deficiency observed.",
+          "risk_if_skipped": "Reduced tillering, weak canopy, and poor yield potential",
+          "application_method": "Top dressing in split doses",
+          "soil_type_adjustment": "For light-textured sandy soils, split nitrogen into 3-4 doses; for heavy clay soils, 2-3 splits are adequate.",
+          "deficiency_symptoms": "Yellowing of lower leaves (N), reduced tillering, stunted height, purple tinge on older leaves (P), leaf bronzing (Zn)",
+          "avoid_overuse": "Avoid applying all nitrogen as basal. Excessive vegetative growth from over-fertilization increases lodging and disease risk.",
+          "weather_precautions": "Apply fertilizer when soil is moist and no heavy rain is expected. Avoid application during continuous overcast or waterlogged conditions.",
+          "recommended_focus": "Nitrogen and phosphorus support for maximum tiller production and canopy development",
+          "organic_alternatives": "Green manuring with dhaincha or sunn hemp incorporated before transplanting. Apply well-decomposed compost at 10-15 tons/ha.",
+          "cost_efficiency_tip": "Use leaf color chart (LCC) for need-based nitrogen application to reduce costs by 20-25% while maintaining yield."
+        },
+        "meta": {
+          "generated_at": "2026-10-23T05:39:57.858098+00:00",
+          "engine": "RAYA Crop Knowledge Engine"
+        }
+      }
+    },
+    "contextual_advisory": {
+      "status": "success",
+      "meta": {
+        "generated_at": "2026-10-23T05:39:57.885806+00:00",
+        "engine": "RAYA Contextual Decision Engine",
+        "version": "Phase 3B.1",
+        "farmer_context_schema_version": "3B.1",
+        "personalization_active": true,
+        "agricultural_packet_supplied": true,
+        "farmer_search_executed_here": false,
+        "context_validation": {
+          "valid": true,
+          "status": "valid",
+          "missing": [],
+          "errors": [],
+          "warnings": [
+            "Farm contains no fields."
+          ],
+          "schema_version": "3B.1"
+        }
+      },
+      "location": {
+        "state": "Uttar Pradesh",
+        "district": "Varanasi"
+      },
+      "crop": "rice",
+      "stage": "Tillering",
+      "priority": "Medium",
+      "signals": {
+        "weather_risk": "Medium",
+        "weather_type": "humidity",
+        "market_trend": null,
+        "disease_count": 3,
+        "crop_stage": "Tillering",
+        "farmer_context_active": true
+      },
+      "farmer_context": {
+        "available": true,
+        "farmer": {
+          "farmer_id": "FARMER_492D0DCA49DB",
+          "name": "Farmer A 20260830_150700",
+          "preferred_language": null,
+          "farming_experience_years": 20,
+          "primary_objective": null,
+          "farming_goals": [],
+          "labor_availability": "high",
+          "budget_constraint": "low",
+          "market_access": null,
+          "guidance_preference": "detailed",
+          "preferred_input_type": "organic",
+          "equipment_available": [],
+          "crops_grown_historically": [],
+          "known_recurring_problems": []
+        },
+        "farm": {
+          "farm_id": "FARM_B70C93C67CDA",
+          "farm_name": "Validation Farm A 20260830_150700",
+          "farmer_id": "FARMER_492D0DCA49DB",
+          "state": "Uttar Pradesh",
+          "district": "Varanasi",
+          "village": "Validation Village A",
+          "gps_coordinates": {},
+          "total_area_acres": 5.0,
+          "current_season": null,
+          "current_crops": [],
+          "previous_season_crops": [],
+          "fields": [],
+          "irrigation_source": "Canal",
+          "irrigation_type": null,
+          "irrigation_reliability": null,
+          "farming_practice": null,
+          "uses_crop_rotation": null
+        },
+        "soil": {
+          "soil_profile_id": "SOIL_C72CF3FFAD49",
+          "field_id": "FIELD_FAA0859B8AC9",
+          "soil_type": "Loamy",
+          "soil_texture": null,
+          "drainage_characteristics": null,
+          "soil_ph": null,
+          "ph_category": null,
+          "organic_carbon_percent": null,
+          "fertility_level": null,
+          "nitrogen_status": null,
+          "phosphorus_status": null,
+          "potassium_status": null,
+          "moisture_retention": null,
+          "waterlogging_risk": null,
+          "suitable_crops": [],
+          "soil_limitations": [],
+          "soil_risks": []
+        },
+        "personalization_signals": {
+          "budget_limited": true,
+          "labor_limited": false,
+          "preventive_guidance": false,
+          "reactive_guidance": false,
+          "organic_preference": true,
+          "integrated_preference": false,
+          "chemical_preference": false,
+          "income_objective": false,
+          "single_market": false,
+          "unreliable_irrigation": false,
+          "seasonal_irrigation": false,
+          "nitrogen_deficient": false,
+          "phosphorus_deficient": false,
+          "potassium_deficient": false,
+          "waterlogging_risk": false,
+          "poor_drainage": false,
+          "low_soil_fertility": false,
+          "low_organic_carbon": false,
+          "blast_disease_history": false,
+          "irregular_rainfall_history": false,
+          "soil_fertility_concern": false,
+          "farmer_id": "FARMER_492D0DCA49DB",
+          "farm_id": "FARM_B70C93C67CDA",
+          "crop": "rice",
+          "stage": "tillering",
+          "labor_availability": "high",
+          "budget_constraint": "low",
+          "guidance_preference": "detailed",
+          "preferred_input_type": "organic"
+        },
+        "active_factors": [
+          "Low budget constraint"
+        ]
+      },
+      "decision_context": {
+        "crop": "rice",
+        "stage": "Tillering",
+        "location": {
+          "state": "Uttar Pradesh",
+          "district": "Varanasi"
+        },
+        "farmer_context": {
+          "available": true,
+          "schema_version": "3B.1",
+          "alignment_warnings": [],
+          "status": "valid",
+          "active_factors": [
+            "Low budget constraint"
+          ]
+        },
+        "intelligence": {
+          "weather": {
+            "status": "success",
+            "location": {
+              "state": "Uttar Pradesh",
+              "district": "Varanasi"
+            },
+            "timestamp": "2026-10-23T05:39:57.848901+00:00",
+            "current": {
+              "temperature_min": 25,
+              "temperature_max": 34,
+              "temperature_avg": 29,
+              "humidity_percent": 70,
+              "rainfall_mm": 12,
+              "wind_speed_kmh": 10,
+              "condition": "partly_cloudy"
+            },
+            "forecast": {
+              "window": "48h",
+              "forecast_probability": 0.7,
+              "expected_event": "humidity",
+              "temperature_trend": "stable"
+            },
+            "risk": {
+              "risk_level": "Medium",
+              "risk_type": "humidity",
+              "impact": [
+                "Increased leaf disease pressure"
+              ]
+            },
+            "climate_risks": [
+              {
+                "type": "humidity",
+                "source": "high_humidity",
+                "risk_level": "Medium",
+                "effects": [
+                  "Increased leaf disease pressure"
+                ]
+              }
+            ],
+            "signals": {
+              "irrigation_needed": false,
+              "spraying_safe": false,
+              "harvest_risk": "Medium",
+              "reason": "Stage-specific climate risk detected"
+            },
+            "meta": {
+              "source": "crop_master_rule_engine",
+              "last_updated": "2026-10-23T05:39:57.848936+00:00"
+            }
+          },
+          "water": {
+            "status": "success",
+            "stage": "Tillering",
+            "water_management": {
+              "requirement": "High",
+              "irrigation_frequency": "Maintain shallow standing water (2-5 cm)",
+              "drainage_required": false,
+              "critical_condition": "Avoid prolonged dry periods that reduce tillering",
+              "soil_moisture": "Keep soil saturated with 2-5 cm standing water",
+              "ideal_soil_moisture": "Saturated with 2-5 cm standing water",
+              "water_stress_symptoms": "Reduced tillering, leaf rolling, premature drying of leaves",
+              "recovery_guidance": "Restore standing water promptly; if stress prolonged, apply light nitrogen to recover tiller production"
+            },
+            "water_requirement": null,
+            "meta": {
+              "generated_at": "2026-10-23T05:39:57.845547+00:00",
+              "engine": "RAYA Query Engine"
+            }
+          },
+          "disease": {
+            "status": "success",
+            "stage": "Tillering",
+            "diseases": [
+              {
+                "name": "Blast Disease",
+                "severity": "Medium",
+                "symptoms": [
+                  "Diamond-shaped lesions on leaves",
+                  "Neck rot at panicle base",
+                  "Panicle blast on nodes"
+                ],
+                "prevention": [
+                  "Balanced nitrogen application",
+                  "Avoid dense planting",
+                  "Ensure proper drainage",
+                  "Use resistant varieties"
+                ],
+                "weather_risk_links": [
+                  "High moisture may increase disease pressure"
+                ],
+                "climate_triggers": [
+                  "high_humidity",
+                  "low_temperature"
+                ]
+              },
+              {
+                "name": "Sheath Blight",
+                "severity": "Medium",
+                "symptoms": [
+                  "Oval lesions on leaf sheath",
+                  "White fungal growth",
+                  "Grain discoloration in severe cases"
+                ],
+                "prevention": [
+                  "Proper plant spacing",
+                  "Avoid excessive standing water",
+                  "Balanced nitrogen",
+                  "Field hygiene"
+                ],
+                "weather_risk_links": [
+                  "High moisture may increase disease pressure"
+                ],
+                "climate_triggers": [
+                  "high_humidity",
+                  "low_temperature"
+                ]
+              },
+              {
+                "name": "Brown Spot",
+                "severity": "Medium",
+                "symptoms": [
+                  "Brown circular spots on grains",
+                  "Brown lesions on leaves",
+                  "Reduced grain quality"
+                ],
+                "prevention": [
+                  "Balanced fertilization",
+                  "Proper drainage",
+                  "Use resistant varieties",
+                  "Field hygiene"
+                ],
+                "weather_risk_links": [
+                  "High moisture may increase disease pressure"
+                ],
+                "climate_triggers": [
+                  "high_humidity",
+                  "low_temperature"
+                ]
+              }
+            ],
+            "meta": {
+              "generated_at": "2026-10-23T05:39:57.855090+00:00",
+              "engine": "RAYA Crop Knowledge Engine"
+            }
+          },
+          "fertilizer": {
+            "status": "success",
+            "stage": "Tillering",
+            "fertilizer": {
+              "nutrient_principles": "Focus on Nitrogen for maximum tiller production and Phosphorus for strong root and shoot development. Zinc is critical in submerged conditions.",
+              "primary_nutrients": [
+                "Nitrogen",
+                "Phosphorus"
+              ],
+              "timing_guidance": "Apply first top dressing at 20-25 DAT, second at 40-45 DAT if required",
+              "application_stage": "Tillering",
+              "notes": "Zinc deficiency is common in submerged rice. Apply zinc sulfate at 25 kg/ha or 0.5% foliar spray if deficiency observed.",
+              "risk_if_skipped": "Reduced tillering, weak canopy, and poor yield potential",
+              "application_method": "Top dressing in split doses",
+              "soil_type_adjustment": "For light-textured sandy soils, split nitrogen into 3-4 doses; for heavy clay soils, 2-3 splits are adequate.",
+              "deficiency_symptoms": "Yellowing of lower leaves (N), reduced tillering, stunted height, purple tinge on older leaves (P), leaf bronzing (Zn)",
+              "avoid_overuse": "Avoid applying all nitrogen as basal. Excessive vegetative growth from over-fertilization increases lodging and disease risk.",
+              "weather_precautions": "Apply fertilizer when soil is moist and no heavy rain is expected. Avoid application during continuous overcast or waterlogged conditions.",
+              "recommended_focus": "Nitrogen and phosphorus support for maximum tiller production and canopy development",
+              "organic_alternatives": "Green manuring with dhaincha or sunn hemp incorporated before transplanting. Apply well-decomposed compost at 10-15 tons/ha.",
+              "cost_efficiency_tip": "Use leaf color chart (LCC) for need-based nitrogen application to reduce costs by 20-25% while maintaining yield."
+            },
+            "meta": {
+              "generated_at": "2026-10-23T05:39:57.858098+00:00",
+              "engine": "RAYA Crop Knowledge Engine"
+            }
+          },
+          "market": {
+            "status": "no_price_data",
+            "message": "No market data for Varanasi, Uttar Pradesh",
+            "location": {
+              "state": "Uttar Pradesh",
+              "district": "Varanasi"
+            },
+            "meta": {
+              "source": "market_engine",
+              "last_updated": "2026-10-23T05:39:57.849695+00:00"
+            }
+          },
+          "stage": {
+            "status": "success",
+            "stage": "Tillering",
+            "duration_days": "30-40",
+            "sensitivity": "Medium",
+            "yield_risk_level": "Medium",
+            "critical_operations": [
+              "Weed management within first 3 weeks after transplanting",
+              "Tillering monitoring and count assessment at 30 DAT",
+              "Split nutrient application as per growth stage",
+              "Zinc deficiency scouting and corrective application",
+              "Water level management at 2-5 cm"
+            ],
+            "water_management": {
+              "requirement": "High",
+              "irrigation_frequency": "Maintain shallow standing water (2-5 cm)",
+              "drainage_required": false,
+              "critical_condition": "Avoid prolonged dry periods that reduce tillering",
+              "soil_moisture": "Keep soil saturated with 2-5 cm standing water",
+              "ideal_soil_moisture": "Saturated with 2-5 cm standing water",
+              "water_stress_symptoms": "Reduced tillering, leaf rolling, premature drying of leaves",
+              "recovery_guidance": "Restore standing water promptly; if stress prolonged, apply light nitrogen to recover tiller production"
+            },
+            "risk_summary": "Water and nutrient stress during tillering reduces tiller number and yield potential.",
+            "risk_impact_map": {
+              "high_humidity": {
+                "primary_impacts": [
+                  "Foliar disease development"
+                ],
+                "secondary_impacts": [
+                  "Reduced photosynthetic efficiency",
+                  "Delayed tillering"
+                ],
+                "severity": "Medium",
+                "why": "Humid canopy favours blast and sheath blight.",
+                "what_if_ignored": "Disease reduces tiller vigor and yield.",
+                "check_next": "Scout for leaf lesions and control nitrogen."
+              }
+            },
+            "meta": {
+              "generated_at": "2026-10-23T05:39:57.842690+00:00",
+              "engine": "RAYA Query Engine"
+            }
+          }
+        },
+        "personalization": {
+          "signals": {
+            "budget_limited": true,
+            "labor_limited": false,
+            "preventive_guidance": false,
+            "reactive_guidance": false,
+            "organic_preference": true,
+            "integrated_preference": false,
+            "chemical_preference": false,
+            "income_objective": false,
+            "single_market": false,
+            "unreliable_irrigation": false,
+            "seasonal_irrigation": false,
+            "nitrogen_deficient": false,
+            "phosphorus_deficient": false,
+            "potassium_deficient": false,
+            "waterlogging_risk": false,
+            "poor_drainage": false,
+            "low_soil_fertility": false,
+            "low_organic_carbon": false,
+            "blast_disease_history": false,
+            "irregular_rainfall_history": false,
+            "soil_fertility_concern": false,
+            "farmer_id": "FARMER_492D0DCA49DB",
+            "farm_id": "FARM_B70C93C67CDA",
+            "crop": "rice",
+            "stage": "tillering",
+            "labor_availability": "high",
+            "budget_constraint": "low",
+            "guidance_preference": "detailed",
+            "preferred_input_type": "organic"
+          },
+          "summary": {
+            "active_factors": [
+              "Low budget constraint"
+            ],
+            "reasons": [],
+            "personalized_recommendation_count": 0
+          }
+        },
+        "decision": {
+          "base_priority": "Medium",
+          "final_priority": "Medium",
+          "recommendation_count": 14,
+          "timeline_signals": []
+        }
+      },
+      "final_recommendation": {
+        "headline": "Prioritize: Increase disease scouting frequency",
+        "top_action": "Increase disease scouting frequency",
+        "why": [
+          "Weather intelligence indicates elevated humidity-related risk."
+        ],
+        "what_to_do": [
+          "Increase disease scouting frequency",
+          "Prioritize essential interventions first and avoid non-essential expenditure",
+          "Improve field aeration and drainage",
+          "Avoid pesticide spraying during expected rainfall",
+          "Monitor crop impact: Increased leaf disease pressure"
+        ],
+        "what_to_avoid": []
+      },
+      "recommendations": [
+        {
+          "type": "disease_prevention",
+          "priority": "High",
+          "action": "Increase disease scouting frequency",
+          "reason": "Weather intelligence indicates elevated humidity-related risk.",
+          "source": "weather",
+          "base_priority": "High",
+          "personalization_applied": false
+        },
+        {
+          "type": "budget_constraint",
+          "priority": "High",
+          "action": "Prioritize essential interventions first and avoid non-essential expenditure",
+          "reason": "The farmer profile reports a low budget constraint.",
+          "source": "farmer_context",
+          "context_factor": "budget_limited",
+          "base_priority": "High",
+          "personalization_applied": false
+        },
+        {
+          "type": "field_management",
+          "priority": "Medium",
+          "action": "Improve field aeration and drainage",
+          "reason": "Field conditions can influence disease pressure.",
+          "source": "weather",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "spraying_advisory",
+          "priority": "Medium",
+          "action": "Avoid pesticide spraying during expected rainfall",
+          "reason": "Weather operational signal indicates spraying is unsafe.",
+          "source": "weather",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "risk_impact",
+          "priority": "Medium",
+          "action": "Monitor crop impact: Increased leaf disease pressure",
+          "reason": "Weather intelligence identified a crop-impact signal.",
+          "source": "weather",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "critical_operation",
+          "priority": "Medium",
+          "action": "Weed management within first 3 weeks after transplanting",
+          "reason": "This operation is listed as important for the current crop stage.",
+          "source": "crop_stage",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "critical_operation",
+          "priority": "Medium",
+          "action": "Tillering monitoring and count assessment at 30 DAT",
+          "reason": "This operation is listed as important for the current crop stage.",
+          "source": "crop_stage",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "critical_operation",
+          "priority": "Medium",
+          "action": "Split nutrient application as per growth stage",
+          "reason": "This operation is listed as important for the current crop stage.",
+          "source": "crop_stage",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "critical_operation",
+          "priority": "Medium",
+          "action": "Zinc deficiency scouting and corrective application",
+          "reason": "This operation is listed as important for the current crop stage.",
+          "source": "crop_stage",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "critical_operation",
+          "priority": "Medium",
+          "action": "Water level management at 2-5 cm",
+          "reason": "This operation is listed as important for the current crop stage.",
+          "source": "crop_stage",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "water_management",
+          "priority": "Medium",
+          "action": "Maintain high water availability. Keep soil moisture keep soil saturated with 2-5 cm standing water. Maintain shallow standing water (2-5 cm). Drainage intervention is only needed if waterlogging appears. Avoid prolonged dry periods that reduce tillering.",
+          "reason": "Water intelligence supplied the current irrigation and moisture guidance.",
+          "source": "water",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "disease_prevention",
+          "priority": "Medium",
+          "action": "Monitor and manage Blast Disease: Balanced nitrogen application; Avoid dense planting; Ensure proper drainage; Use resistant varieties",
+          "reason": "Blast Disease is present in the existing disease intelligence for this crop stage.",
+          "source": "disease",
+          "disease_name": "Blast Disease",
+          "disease_severity": "Medium",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "disease_prevention",
+          "priority": "Medium",
+          "action": "Monitor and manage Sheath Blight: Proper plant spacing; Avoid excessive standing water; Balanced nitrogen; Field hygiene",
+          "reason": "Sheath Blight is present in the existing disease intelligence for this crop stage.",
+          "source": "disease",
+          "disease_name": "Sheath Blight",
+          "disease_severity": "Medium",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        },
+        {
+          "type": "disease_prevention",
+          "priority": "Medium",
+          "action": "Monitor and manage Brown Spot: Balanced fertilization; Proper drainage; Use resistant varieties; Field hygiene",
+          "reason": "Brown Spot is present in the existing disease intelligence for this crop stage.",
+          "source": "disease",
+          "disease_name": "Brown Spot",
+          "disease_severity": "Medium",
+          "base_priority": "Medium",
+          "personalization_applied": false
+        }
+      ],
+      "personalization_reasons": [],
+      "timeline_context": {
+        "field_id": "FIELD_FAA0859B8AC9",
+        "season_id": "SEASON_9218BB09F775",
+        "window_days": 60,
+        "events": [],
+        "signals": [],
+        "personalization_reasons": [],
+        "recommendations": []
+      }
+    },
+    "created_at": "2026-10-23T05:39:57+00:00"
   }
 ]

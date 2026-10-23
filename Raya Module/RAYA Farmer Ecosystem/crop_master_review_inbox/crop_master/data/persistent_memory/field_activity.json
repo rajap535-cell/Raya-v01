@@ -96,5 +96,21 @@
       "priority": "Critical"
     },
     "created_at": "2026-09-27T09:10:37+00:00"
+  },
+  {
+    "event_id": "EVENT_C061682B5267",
+    "field_id": "FIELD_FAA0859B8AC9",
+    "event_type": "advisory_generated",
+    "title": "Advisory generated for Rice (Tillering)",
+    "occurred_at": "2026-10-23T05:39:57+00:00",
+    "season_id": "SEASON_9218BB09F775",
+    "idempotency_key": "FIELD_FAA0859B8AC9:advisory:ADV_146C8660DC1A",
+    "details": {
+      "advisory_id": "ADV_146C8660DC1A",
+      "crop": "rice",
+      "stage": "Tillering",
+      "priority": "Medium"
+    },
+    "created_at": "2026-10-23T05:39:57+00:00"
   }
 ]

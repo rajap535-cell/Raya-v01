@@ -1,0 +1,299 @@
+[
+  {
+    "soil_profile_id": "SOIL_DCC09F77F8FB",
+    "field_id": "FIELD_4EB213946BDB",
+    "soil_type": "Loamy",
+    "ph": 6.8,
+    "nitrogen": 240.0,
+    "phosphorus": 32.0,
+    "potassium": 280.0,
+    "organic_carbon": 0.75,
+    "moisture_percent": 52.0,
+    "electrical_conductivity": 0.42,
+    "status": "active",
+    "created_at": "2026-08-30T08:51:38+00:00",
+    "updated_at": "2026-08-30T08:52:30+00:00",
+    "history": [
+      {
+        "timestamp": "2026-08-30T08:51:38+00:00",
+        "soil_type": "Loamy",
+        "ph": 6.8,
+        "nitrogen": 240.0,
+        "phosphorus": 32.0,
+        "potassium": 280.0,
+        "organic_carbon": 0.75,
+        "moisture_percent": 45.0,
+        "electrical_conductivity": 0.42
+      },
+      {
+        "timestamp": "2026-08-30T08:52:30+00:00",
+        "soil_type": "Loamy",
+        "ph": 6.8,
+        "nitrogen": 240.0,
+        "phosphorus": 32.0,
+        "potassium": 280.0,
+        "organic_carbon": 0.75,
+        "moisture_percent": 52.0,
+        "electrical_conductivity": 0.42
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "soil_profile_id": "SOIL_C72CF3FFAD49",
+    "field_id": "FIELD_FAA0859B8AC9",
+    "soil_type": "Loamy",
+    "ph": 6.8,
+    "nitrogen": 280.0,
+    "phosphorus": 22.0,
+    "potassium": 180.0,
+    "organic_carbon": 0.75,
+    "moisture_percent": 35.0,
+    "electrical_conductivity": 0.45,
+    "status": "active",
+    "created_at": "2026-08-30T09:37:00+00:00",
+    "updated_at": "2026-08-30T09:37:00+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_BBC42DE006C4",
+    "field_id": "FIELD_1A9597DE7791",
+    "soil_type": "Sandy",
+    "ph": 7.8,
+    "nitrogen": 120.0,
+    "phosphorus": 12.0,
+    "potassium": 95.0,
+    "organic_carbon": 0.35,
+    "moisture_percent": 18.0,
+    "electrical_conductivity": 0.7,
+    "status": "active",
+    "created_at": "2026-08-30T09:37:00+00:00",
+    "updated_at": "2026-08-30T09:37:00+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_458C72AB116D",
+    "field_id": "FIELD_D48B388FB255",
+    "soil_type": "Loamy",
+    "ph": 6.8,
+    "nitrogen": 280.0,
+    "phosphorus": 22.0,
+    "potassium": 180.0,
+    "organic_carbon": 0.75,
+    "moisture_percent": 35.0,
+    "electrical_conductivity": 0.45,
+    "status": "active",
+    "created_at": "2026-08-30T09:38:02+00:00",
+    "updated_at": "2026-08-30T09:38:02+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_BA74764C1A4F",
+    "field_id": "FIELD_0E02A0ED60A8",
+    "soil_type": "Sandy",
+    "ph": 7.8,
+    "nitrogen": 120.0,
+    "phosphorus": 12.0,
+    "potassium": 95.0,
+    "organic_carbon": 0.35,
+    "moisture_percent": 18.0,
+    "electrical_conductivity": 0.7,
+    "status": "active",
+    "created_at": "2026-08-30T09:38:02+00:00",
+    "updated_at": "2026-08-30T09:38:02+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_CFBD5AC7A0E9",
+    "field_id": "FIELD_BD945819BBDE",
+    "soil_type": "Loamy",
+    "ph": 6.8,
+    "nitrogen": 280.0,
+    "phosphorus": 22.0,
+    "potassium": 180.0,
+    "organic_carbon": 0.75,
+    "moisture_percent": 35.0,
+    "electrical_conductivity": 0.45,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:06+00:00",
+    "updated_at": "2026-08-30T09:39:06+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_265C8E2B4D8D",
+    "field_id": "FIELD_E5B304D7C4E7",
+    "soil_type": "Sandy",
+    "ph": 7.8,
+    "nitrogen": 120.0,
+    "phosphorus": 12.0,
+    "potassium": 95.0,
+    "organic_carbon": 0.35,
+    "moisture_percent": 18.0,
+    "electrical_conductivity": 0.7,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:06+00:00",
+    "updated_at": "2026-08-30T09:39:06+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_03F001EEE27E",
+    "field_id": "FIELD_20F73F0D59B3",
+    "soil_type": "Loamy",
+    "ph": 6.8,
+    "nitrogen": 280.0,
+    "phosphorus": 22.0,
+    "potassium": 180.0,
+    "organic_carbon": 0.75,
+    "moisture_percent": 35.0,
+    "electrical_conductivity": 0.45,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:25+00:00",
+    "updated_at": "2026-08-30T09:39:25+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_D57E0FBA0571",
+    "field_id": "FIELD_46A1CF356504",
+    "soil_type": "Sandy",
+    "ph": 7.8,
+    "nitrogen": 120.0,
+    "phosphorus": 12.0,
+    "potassium": 95.0,
+    "organic_carbon": 0.35,
+    "moisture_percent": 18.0,
+    "electrical_conductivity": 0.7,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:25+00:00",
+    "updated_at": "2026-08-30T09:39:25+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_F25292516F9C",
+    "field_id": "FIELD_9C5149229372",
+    "soil_type": "Loamy",
+    "ph": 6.8,
+    "nitrogen": 280.0,
+    "phosphorus": 22.0,
+    "potassium": 180.0,
+    "organic_carbon": 0.75,
+    "moisture_percent": 35.0,
+    "electrical_conductivity": 0.45,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:22+00:00",
+    "updated_at": "2026-08-30T09:52:22+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_C3F0E89294F9",
+    "field_id": "FIELD_EDE97AD9E5F8",
+    "soil_type": "Sandy",
+    "ph": 7.8,
+    "nitrogen": 120.0,
+    "phosphorus": 12.0,
+    "potassium": 95.0,
+    "organic_carbon": 0.35,
+    "moisture_percent": 18.0,
+    "electrical_conductivity": 0.7,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:22+00:00",
+    "updated_at": "2026-08-30T09:52:22+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_8C46C738DE53",
+    "field_id": "FIELD_A6022FB714FF",
+    "soil_type": "Loamy",
+    "ph": 6.8,
+    "nitrogen": 280.0,
+    "phosphorus": 22.0,
+    "potassium": 180.0,
+    "organic_carbon": 0.75,
+    "moisture_percent": 35.0,
+    "electrical_conductivity": 0.45,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:48+00:00",
+    "updated_at": "2026-08-30T09:52:48+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_C3E309668B98",
+    "field_id": "FIELD_7373BBBA5039",
+    "soil_type": "Sandy",
+    "ph": 7.8,
+    "nitrogen": 120.0,
+    "phosphorus": 12.0,
+    "potassium": 95.0,
+    "organic_carbon": 0.35,
+    "moisture_percent": 18.0,
+    "electrical_conductivity": 0.7,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:48+00:00",
+    "updated_at": "2026-08-30T09:52:48+00:00",
+    "history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "soil_profile_id": "SOIL_37AC197DF3CF",
+    "field_id": "FIELD_206CC6EA74D0",
+    "soil_type": "Loamy",
+    "ph": 6.5,
+    "nitrogen": 40.0,
+    "phosphorus": 25.0,
+    "potassium": 45.0,
+    "organic_carbon": 0.8,
+    "moisture_percent": 40.0,
+    "electrical_conductivity": 0.5,
+    "status": "active",
+    "created_at": "2026-09-27T06:33:47+00:00",
+    "updated_at": "2026-09-27T06:33:47+00:00",
+    "history": [],
+    "metadata": {}
+  }
+]

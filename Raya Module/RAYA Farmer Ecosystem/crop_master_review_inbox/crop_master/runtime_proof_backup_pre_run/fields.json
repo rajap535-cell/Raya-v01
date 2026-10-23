@@ -1,0 +1,278 @@
+[
+  {
+    "field_id": "FIELD_56635577BAA5",
+    "farm_id": "FARM_0B37D6357749",
+    "farmer_id": "FARMER_435F2AC679AD",
+    "field_name": "Field A1",
+    "area_acres": 4.0,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T07:16:39+00:00",
+    "updated_at": "2026-08-30T07:16:39+00:00",
+    "metadata": {}
+  },
+  {
+    "field_id": "FIELD_2285BD4BDD51",
+    "farm_id": "FARM_0B37D6357749",
+    "farmer_id": "FARMER_435F2AC679AD",
+    "field_name": "Field A2",
+    "area_acres": 6.5,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T07:16:39+00:00",
+    "updated_at": "2026-08-30T07:16:39+00:00",
+    "metadata": {}
+  },
+  {
+    "field_id": "FIELD_F90B4F4023C3",
+    "farm_id": "FARM_8EB85C04FA19",
+    "farmer_id": "FARMER_435F2AC679AD",
+    "field_name": "Field B1",
+    "area_acres": 6.0,
+    "irrigation_available": false,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T07:16:39+00:00",
+    "updated_at": "2026-08-30T07:16:39+00:00",
+    "metadata": {}
+  },
+  {
+    "field_id": "FIELD_4EB213946BDB",
+    "farm_id": "FARM_ECF9AD2E4B33",
+    "farmer_id": "FARMER_245EFFD7562B",
+    "field_name": "Farmer A Field 1",
+    "area_acres": 5.0,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T08:06:31+00:00",
+    "updated_at": "2026-08-30T08:06:31+00:00",
+    "metadata": {}
+  },
+  {
+    "field_id": "FIELD_886ABA7A542C",
+    "farm_id": "FARM_8801D7E2D54B",
+    "farmer_id": "FARMER_ACBF63A4376E",
+    "field_name": "Farmer B Field 1",
+    "area_acres": 3.0,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T08:06:31+00:00",
+    "updated_at": "2026-08-30T08:06:31+00:00",
+    "metadata": {}
+  },
+  {
+    "field_id": "FIELD_FAA0859B8AC9",
+    "farm_id": "FARM_B70C93C67CDA",
+    "farmer_id": "FARMER_492D0DCA49DB",
+    "field_name": "Validation Field A 20260830_150700",
+    "area_acres": 3.0,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:37:00+00:00",
+    "updated_at": "2026-08-30T09:37:00+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_1A9597DE7791",
+    "farm_id": "FARM_1AE853DAD3BC",
+    "farmer_id": "FARMER_BFD18A2EF817",
+    "field_name": "Validation Field B 20260830_150700",
+    "area_acres": 1.5,
+    "irrigation_available": false,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:37:00+00:00",
+    "updated_at": "2026-08-30T09:37:00+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_D48B388FB255",
+    "farm_id": "FARM_41F03C44590E",
+    "farmer_id": "FARMER_96E63A831E62",
+    "field_name": "Validation Field A 20260830_150802",
+    "area_acres": 3.0,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:38:02+00:00",
+    "updated_at": "2026-08-30T09:38:02+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_0E02A0ED60A8",
+    "farm_id": "FARM_98D55D97FC06",
+    "farmer_id": "FARMER_D023D9A5AD40",
+    "field_name": "Validation Field B 20260830_150802",
+    "area_acres": 1.5,
+    "irrigation_available": false,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:38:02+00:00",
+    "updated_at": "2026-08-30T09:38:02+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_BD945819BBDE",
+    "farm_id": "FARM_EDAF28E96D52",
+    "farmer_id": "FARMER_F69DB5F16ACE",
+    "field_name": "Validation Field A 20260830_150906",
+    "area_acres": 3.0,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:06+00:00",
+    "updated_at": "2026-08-30T09:39:06+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_E5B304D7C4E7",
+    "farm_id": "FARM_E40095AC984B",
+    "farmer_id": "FARMER_5F4CEC4661D0",
+    "field_name": "Validation Field B 20260830_150906",
+    "area_acres": 1.5,
+    "irrigation_available": false,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:06+00:00",
+    "updated_at": "2026-08-30T09:39:06+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_20F73F0D59B3",
+    "farm_id": "FARM_D859B926E7F1",
+    "farmer_id": "FARMER_1E7C3F7CCB8F",
+    "field_name": "Validation Field A 20260830_150925",
+    "area_acres": 3.0,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:25+00:00",
+    "updated_at": "2026-08-30T09:39:25+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_46A1CF356504",
+    "farm_id": "FARM_B12615F2FAA5",
+    "farmer_id": "FARMER_554375C36537",
+    "field_name": "Validation Field B 20260830_150925",
+    "area_acres": 1.5,
+    "irrigation_available": false,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:25+00:00",
+    "updated_at": "2026-08-30T09:39:25+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_9C5149229372",
+    "farm_id": "FARM_5E2C7B02D282",
+    "farmer_id": "FARMER_2C374617F192",
+    "field_name": "Validation Field A 20260830_152222",
+    "area_acres": 3.0,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:22+00:00",
+    "updated_at": "2026-08-30T09:52:22+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_EDE97AD9E5F8",
+    "farm_id": "FARM_928C6CDCFA63",
+    "farmer_id": "FARMER_5ED0F467F420",
+    "field_name": "Validation Field B 20260830_152222",
+    "area_acres": 1.5,
+    "irrigation_available": false,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:22+00:00",
+    "updated_at": "2026-08-30T09:52:22+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_A6022FB714FF",
+    "farm_id": "FARM_2D993F4D6B50",
+    "farmer_id": "FARMER_CCF23405B644",
+    "field_name": "Validation Field A 20260830_152248",
+    "area_acres": 3.0,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:48+00:00",
+    "updated_at": "2026-08-30T09:52:48+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_7373BBBA5039",
+    "farm_id": "FARM_50E031FF1489",
+    "farmer_id": "FARMER_EA1455F9956B",
+    "field_name": "Validation Field B 20260830_152248",
+    "area_acres": 1.5,
+    "irrigation_available": false,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:48+00:00",
+    "updated_at": "2026-08-30T09:52:48+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "field_id": "FIELD_206CC6EA74D0",
+    "farm_id": "FARM_73F2937D5A7B",
+    "farmer_id": "FARMER_5F0422CD08DA",
+    "field_name": "Runtime Proof Field",
+    "area_acres": 1.0,
+    "irrigation_available": true,
+    "latitude": null,
+    "longitude": null,
+    "status": "active",
+    "created_at": "2026-09-27T06:33:15+00:00",
+    "updated_at": "2026-09-27T06:33:15+00:00",
+    "metadata": {}
+  }
+]

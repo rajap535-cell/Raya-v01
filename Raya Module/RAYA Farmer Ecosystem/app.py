@@ -49,8 +49,12 @@ st.title("🚜 Agricultural Market & Weather Dashboard")
 # 5. Sidebar Configuration
 with st.sidebar:
     st.header("Control Panel")
-    sel_date = st.date_input("Target Date", value=date.today(), 
-                             min_value=date(2010,1,1), max_value=date(2025,12,31))
+    sel_date = st.date_input(
+    "Target Date",
+    value=date.today(),
+    min_value=date(2010, 1, 1),
+    max_value=date(2030, 12, 31)
+)
     sel_market = st.selectbox("Select Market", list(MARKET_REGISTRY.keys()))
     sel_commodity = st.selectbox("Commodity", ["Banana - Green"])
     sel_variety = st.selectbox("Variety", ["Banana - Green"])

@@ -1,0 +1,296 @@
+[
+  {
+    "season_id": "SEASON_F23BC45D2BA7",
+    "field_id": "FIELD_4EB213946BDB",
+    "season_name": "Kharif 2025",
+    "crop": "Rice",
+    "current_stage": "Post Harvest",
+    "start_date": "2026-08-30T08:58:00+00:00",
+    "end_date": "2026-08-30T08:58:00+00:00",
+    "status": "completed",
+    "created_at": "2026-08-30T08:58:00+00:00",
+    "updated_at": "2026-08-30T08:58:00+00:00",
+    "stage_history": [
+      {
+        "timestamp": "2026-08-30T08:58:00+00:00",
+        "previous_stage": "Harvest",
+        "new_stage": "Post Harvest",
+        "notes": "Harvest completed."
+      }
+    ],
+    "metadata": {
+      "completion_notes": "Validation season completed."
+    }
+  },
+  {
+    "season_id": "SEASON_762AEE286C89",
+    "field_id": "FIELD_4EB213946BDB",
+    "season_name": "Rabi 2026",
+    "crop": "Wheat",
+    "current_stage": "Vegetative",
+    "start_date": "2026-08-30T08:58:00+00:00",
+    "end_date": "2026-08-30T08:59:00+00:00",
+    "status": "completed",
+    "created_at": "2026-08-30T08:58:00+00:00",
+    "updated_at": "2026-08-30T08:59:00+00:00",
+    "stage_history": [],
+    "metadata": {
+      "completion_notes": "Automatically completed before Phase 4C validation."
+    }
+  },
+  {
+    "season_id": "SEASON_723297B77D04",
+    "field_id": "FIELD_4EB213946BDB",
+    "season_name": "Kharif 2025",
+    "crop": "Rice",
+    "current_stage": "Post Harvest",
+    "start_date": "2026-08-30T08:59:00+00:00",
+    "end_date": "2026-08-30T08:59:00+00:00",
+    "status": "completed",
+    "created_at": "2026-08-30T08:59:00+00:00",
+    "updated_at": "2026-08-30T08:59:00+00:00",
+    "stage_history": [
+      {
+        "timestamp": "2026-08-30T08:59:00+00:00",
+        "previous_stage": "Harvest",
+        "new_stage": "Post Harvest",
+        "notes": "Harvest completed."
+      }
+    ],
+    "metadata": {
+      "completion_notes": "Validation season completed."
+    }
+  },
+  {
+    "season_id": "SEASON_747D529417CE",
+    "field_id": "FIELD_4EB213946BDB",
+    "season_name": "Rabi 2026",
+    "crop": "Wheat",
+    "current_stage": "Vegetative",
+    "start_date": "2026-08-30T08:59:00+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T08:59:00+00:00",
+    "updated_at": "2026-08-30T08:59:00+00:00",
+    "stage_history": [],
+    "metadata": {}
+  },
+  {
+    "season_id": "SEASON_9218BB09F775",
+    "field_id": "FIELD_FAA0859B8AC9",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:37:00+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:37:00+00:00",
+    "updated_at": "2026-08-30T09:37:00+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "season_id": "SEASON_66AEC6DB09F8",
+    "field_id": "FIELD_1A9597DE7791",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:37:00+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:37:00+00:00",
+    "updated_at": "2026-08-30T09:37:00+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "season_id": "SEASON_FAA25BA8DF07",
+    "field_id": "FIELD_D48B388FB255",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:38:02+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:38:02+00:00",
+    "updated_at": "2026-08-30T09:38:02+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "season_id": "SEASON_86DE024D431C",
+    "field_id": "FIELD_0E02A0ED60A8",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:38:02+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:38:02+00:00",
+    "updated_at": "2026-08-30T09:38:02+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "season_id": "SEASON_05E34DD34325",
+    "field_id": "FIELD_BD945819BBDE",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:39:06+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:06+00:00",
+    "updated_at": "2026-08-30T09:39:06+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "season_id": "SEASON_7629D36F71A7",
+    "field_id": "FIELD_E5B304D7C4E7",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:39:06+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:06+00:00",
+    "updated_at": "2026-08-30T09:39:06+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "season_id": "SEASON_A0A1548C3DBE",
+    "field_id": "FIELD_20F73F0D59B3",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:39:25+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:25+00:00",
+    "updated_at": "2026-08-30T09:39:25+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "season_id": "SEASON_032D5998B22B",
+    "field_id": "FIELD_46A1CF356504",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:39:25+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:39:25+00:00",
+    "updated_at": "2026-08-30T09:39:25+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "season_id": "SEASON_2FDEE312987E",
+    "field_id": "FIELD_9C5149229372",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:52:22+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:22+00:00",
+    "updated_at": "2026-08-30T09:52:22+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "season_id": "SEASON_318403C33970",
+    "field_id": "FIELD_EDE97AD9E5F8",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:52:22+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:22+00:00",
+    "updated_at": "2026-08-30T09:52:22+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "season_id": "SEASON_5D36CF6B7C31",
+    "field_id": "FIELD_A6022FB714FF",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:52:48+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:48+00:00",
+    "updated_at": "2026-08-30T09:52:48+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "A"
+    }
+  },
+  {
+    "season_id": "SEASON_91F781991725",
+    "field_id": "FIELD_7373BBBA5039",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Tillering",
+    "start_date": "2026-08-30T09:52:48+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-08-30T09:52:48+00:00",
+    "updated_at": "2026-08-30T09:52:48+00:00",
+    "stage_history": [],
+    "metadata": {
+      "validation_run": true,
+      "validation_farmer": "B"
+    }
+  },
+  {
+    "season_id": "SEASON_17F4754227B3",
+    "field_id": "FIELD_206CC6EA74D0",
+    "season_name": "Kharif",
+    "crop": "Rice",
+    "current_stage": "Flowering",
+    "start_date": "2026-09-27T06:34:06+00:00",
+    "end_date": null,
+    "status": "active",
+    "created_at": "2026-09-27T06:34:06+00:00",
+    "updated_at": "2026-09-27T06:34:06+00:00",
+    "stage_history": [],
+    "metadata": {}
+  }
+]

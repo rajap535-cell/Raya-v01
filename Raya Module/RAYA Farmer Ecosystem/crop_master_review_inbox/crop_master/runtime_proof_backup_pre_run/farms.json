@@ -1,0 +1,296 @@
+[
+  {
+    "farm_id": "FARM_0B37D6357749",
+    "farmer_id": "FARMER_435F2AC679AD",
+    "farm_name": "North Farm",
+    "location": null,
+    "village": "Demo Village",
+    "district": "Mandya",
+    "state": "Karnataka",
+    "total_area_acres": 10.5,
+    "irrigation_source": "Borewell",
+    "status": "active",
+    "created_at": "2026-08-30T07:16:39+00:00",
+    "updated_at": "2026-08-30T07:16:39+00:00",
+    "metadata": {}
+  },
+  {
+    "farm_id": "FARM_8EB85C04FA19",
+    "farmer_id": "FARMER_435F2AC679AD",
+    "farm_name": "South Farm",
+    "location": null,
+    "village": "Demo Village",
+    "district": "Mandya",
+    "state": "Karnataka",
+    "total_area_acres": 6.0,
+    "irrigation_source": "Canal",
+    "status": "active",
+    "created_at": "2026-08-30T07:16:39+00:00",
+    "updated_at": "2026-08-30T07:16:39+00:00",
+    "metadata": {}
+  },
+  {
+    "farm_id": "FARM_ECF9AD2E4B33",
+    "farmer_id": "FARMER_245EFFD7562B",
+    "farm_name": "Farmer A Main Farm",
+    "location": null,
+    "village": null,
+    "district": "Mandya",
+    "state": "Karnataka",
+    "total_area_acres": 12.0,
+    "irrigation_source": null,
+    "status": "active",
+    "created_at": "2026-08-30T08:06:31+00:00",
+    "updated_at": "2026-08-30T08:06:31+00:00",
+    "metadata": {}
+  },
+  {
+    "farm_id": "FARM_8801D7E2D54B",
+    "farmer_id": "FARMER_ACBF63A4376E",
+    "farm_name": "Farmer B Main Farm",
+    "location": null,
+    "village": null,
+    "district": "Mysuru",
+    "state": "Karnataka",
+    "total_area_acres": 8.0,
+    "irrigation_source": null,
+    "status": "active",
+    "created_at": "2026-08-30T08:06:31+00:00",
+    "updated_at": "2026-08-30T08:06:31+00:00",
+    "metadata": {}
+  },
+  {
+    "farm_id": "FARM_3FB29A467682",
+    "farmer_id": "FARMER_A3B5A4286EDA",
+    "farm_name": "mohan lal",
+    "location": null,
+    "village": "Hulikere",
+    "district": "Mandya",
+    "state": "Karnataka",
+    "total_area_acres": 1.0,
+    "irrigation_source": "Canal",
+    "status": "active",
+    "created_at": "2026-08-30T09:25:03+00:00",
+    "updated_at": "2026-08-30T09:25:03+00:00",
+    "metadata": {}
+  },
+  {
+    "farm_id": "FARM_B70C93C67CDA",
+    "farmer_id": "FARMER_492D0DCA49DB",
+    "farm_name": "Validation Farm A 20260830_150700",
+    "location": null,
+    "village": "Validation Village A",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 5.0,
+    "irrigation_source": "Canal",
+    "status": "active",
+    "created_at": "2026-08-30T09:37:00+00:00",
+    "updated_at": "2026-08-30T09:37:00+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_1AE853DAD3BC",
+    "farmer_id": "FARMER_BFD18A2EF817",
+    "farm_name": "Validation Farm B 20260830_150700",
+    "location": null,
+    "village": "Validation Village B",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 2.0,
+    "irrigation_source": "Borewell",
+    "status": "active",
+    "created_at": "2026-08-30T09:37:00+00:00",
+    "updated_at": "2026-08-30T09:37:00+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_41F03C44590E",
+    "farmer_id": "FARMER_96E63A831E62",
+    "farm_name": "Validation Farm A 20260830_150802",
+    "location": null,
+    "village": "Validation Village A",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 5.0,
+    "irrigation_source": "Canal",
+    "status": "active",
+    "created_at": "2026-08-30T09:38:02+00:00",
+    "updated_at": "2026-08-30T09:38:02+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_98D55D97FC06",
+    "farmer_id": "FARMER_D023D9A5AD40",
+    "farm_name": "Validation Farm B 20260830_150802",
+    "location": null,
+    "village": "Validation Village B",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 2.0,
+    "irrigation_source": "Borewell",
+    "status": "active",
+    "created_at": "2026-08-30T09:38:02+00:00",
+    "updated_at": "2026-08-30T09:38:02+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_EDAF28E96D52",
+    "farmer_id": "FARMER_F69DB5F16ACE",
+    "farm_name": "Validation Farm A 20260830_150906",
+    "location": null,
+    "village": "Validation Village A",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 5.0,
+    "irrigation_source": "Canal",
+    "status": "active",
+    "created_at": "2026-08-30T09:39:06+00:00",
+    "updated_at": "2026-08-30T09:39:06+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_E40095AC984B",
+    "farmer_id": "FARMER_5F4CEC4661D0",
+    "farm_name": "Validation Farm B 20260830_150906",
+    "location": null,
+    "village": "Validation Village B",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 2.0,
+    "irrigation_source": "Borewell",
+    "status": "active",
+    "created_at": "2026-08-30T09:39:06+00:00",
+    "updated_at": "2026-08-30T09:39:06+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_D859B926E7F1",
+    "farmer_id": "FARMER_1E7C3F7CCB8F",
+    "farm_name": "Validation Farm A 20260830_150925",
+    "location": null,
+    "village": "Validation Village A",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 5.0,
+    "irrigation_source": "Canal",
+    "status": "active",
+    "created_at": "2026-08-30T09:39:25+00:00",
+    "updated_at": "2026-08-30T09:39:25+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_B12615F2FAA5",
+    "farmer_id": "FARMER_554375C36537",
+    "farm_name": "Validation Farm B 20260830_150925",
+    "location": null,
+    "village": "Validation Village B",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 2.0,
+    "irrigation_source": "Borewell",
+    "status": "active",
+    "created_at": "2026-08-30T09:39:25+00:00",
+    "updated_at": "2026-08-30T09:39:25+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_5E2C7B02D282",
+    "farmer_id": "FARMER_2C374617F192",
+    "farm_name": "Validation Farm A 20260830_152222",
+    "location": null,
+    "village": "Validation Village A",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 5.0,
+    "irrigation_source": "Canal",
+    "status": "active",
+    "created_at": "2026-08-30T09:52:22+00:00",
+    "updated_at": "2026-08-30T09:52:22+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_928C6CDCFA63",
+    "farmer_id": "FARMER_5ED0F467F420",
+    "farm_name": "Validation Farm B 20260830_152222",
+    "location": null,
+    "village": "Validation Village B",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 2.0,
+    "irrigation_source": "Borewell",
+    "status": "active",
+    "created_at": "2026-08-30T09:52:22+00:00",
+    "updated_at": "2026-08-30T09:52:22+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_2D993F4D6B50",
+    "farmer_id": "FARMER_CCF23405B644",
+    "farm_name": "Validation Farm A 20260830_152248",
+    "location": null,
+    "village": "Validation Village A",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 5.0,
+    "irrigation_source": "Canal",
+    "status": "active",
+    "created_at": "2026-08-30T09:52:48+00:00",
+    "updated_at": "2026-08-30T09:52:48+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_50E031FF1489",
+    "farmer_id": "FARMER_EA1455F9956B",
+    "farm_name": "Validation Farm B 20260830_152248",
+    "location": null,
+    "village": "Validation Village B",
+    "district": "Varanasi",
+    "state": "Uttar Pradesh",
+    "total_area_acres": 2.0,
+    "irrigation_source": "Borewell",
+    "status": "active",
+    "created_at": "2026-08-30T09:52:48+00:00",
+    "updated_at": "2026-08-30T09:52:48+00:00",
+    "metadata": {
+      "validation_run": true
+    }
+  },
+  {
+    "farm_id": "FARM_73F2937D5A7B",
+    "farmer_id": "FARMER_5F0422CD08DA",
+    "farm_name": "Runtime Proof Farm",
+    "location": null,
+    "village": "Runtime Proof Village",
+    "district": "Mandya",
+    "state": "Karnataka",
+    "total_area_acres": 1.0,
+    "irrigation_source": "Canal",
+    "status": "active",
+    "created_at": "2026-09-27T06:33:08+00:00",
+    "updated_at": "2026-09-27T06:33:08+00:00",
+    "metadata": {}
+  }
+]

@@ -1,0 +1,2 @@
+Forecast_Start,Forecast_End,Forecast_Records,Average_Predicted_Temp,Minimum_Predicted_Temp,Maximum_Predicted_Temp,Forecast_Trend,High_Temperature_Days,Temperature_Risk
+2014-01-01,2025-01-30,4048,30.61,15.59,40.66,RISING,1202,HIGH

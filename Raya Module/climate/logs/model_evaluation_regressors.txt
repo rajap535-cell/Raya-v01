@@ -1,0 +1,7 @@
+Prophet Model Evaluation Results
+================================
+
+MAE  : 1.2007
+RMSE : 1.5521
+MAPE : 3.8291%
+R2   : 0.8269

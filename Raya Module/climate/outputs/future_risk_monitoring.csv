@@ -1,0 +1,2 @@
+Anomaly_Level,Forecast_Trend,Temperature_Risk,High_Temperature_Days,Maximum_Predicted_Temp,Future_Risk_Score,Future_Risk_Level,Risk_Reason
+HIGH,RISING,HIGH,1202,40.66,12,HIGH,Emerging anomaly level is HIGH; Forecast temperature risk is HIGH; Forecast temperature trend is rising; 1202 high-temperature forecast days detected; Maximum predicted temperature reaches 40.66 °C

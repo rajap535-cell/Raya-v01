@@ -1,0 +1,2 @@
+Date,Baseline_Temp_Max,Recent_Temp_Max,Temp_Max_Change_Percent,Baseline_Temp_Min,Recent_Temp_Min,Temp_Min_Change_Percent,Baseline_Rainfall,Recent_Rainfall,Rainfall_Change_Percent,Baseline_WindSpeed,Recent_WindSpeed,WindSpeed_Change_Percent,Anomaly_Flags,Emerging_Anomaly_Level
+2024-12-31,28.87,29.49,2.15,19.83,17.31,-12.72,3.54,0.2,-94.44,14.91,10.59,-28.98,"Minimum temperature change, Rainfall change, Wind speed change",HIGH

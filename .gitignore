@@ -12,3 +12,10 @@ outputs/*
 !outputs/.gitkeep
 
 .ipynb_checkpoints/
+
+# Generated intermediate and processed datasets
+data/interim/*
+!data/interim/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep

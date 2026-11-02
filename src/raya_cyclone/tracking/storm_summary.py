@@ -428,7 +428,7 @@ def build_storm_summaries():
     print(
         "Observation count reconciled:",
         int(summary_df["observation_count"].sum()) == len(data)
-    )
+    ) 
 
     print("Track type validation: passed")
     print("Output:", OUTPUT_PATH)
